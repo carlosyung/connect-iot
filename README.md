@@ -8,6 +8,7 @@ Homepage for [connect-iot.com](https://connect-iot.com): Hong Kong news, AI/LLM,
 
 - **Change the schedule:** edit the `cron:` line in `.github/workflows/update.yml` (e.g. `"0 */6 * * *"` for every 6 hours).
 - **Update now:** Actions tab → *Daily update* → *Run workflow*.
+- **Daily briefing (今日重點):** `briefing.py` asks Claude (`claude-opus-5`) to write an original analysis of the day's headlines once per HK day, saved to `content/briefings/YYYY-MM-DD.json` and published at `/briefing/`. Needs the `ANTHROPIC_API_KEY` repository secret; without it the rest of the site still updates.
 - **Add or remove sources:** edit `FEEDS` / `MARKETS` at the top of `build.py`.
 - **Change the design:** edit `template.html`.
 

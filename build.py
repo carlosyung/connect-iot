@@ -18,6 +18,8 @@ from datetime import datetime, timezone, timedelta
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
+import briefing
+
 ROOT = Path(__file__).parent
 DIST = ROOT / "dist"
 HKT = timezone(timedelta(hours=8))
@@ -239,17 +241,23 @@ def main():
     if len(articles) < 20:
         sys.exit(f"Only {len(articles)} articles fetched; refusing to publish a near-empty page.")
 
-    DIST.mkdir(exist_ok=True)
+    briefing.generate(data)
+    briefings = briefing.load_all()
+    data["briefing"] = briefing.homepage_card(briefings)
+
+    shutil.rmtree(DIST, ignore_errors=True)
+    DIST.mkdir()
+    briefing.render(DIST, briefings)
     payload = json.dumps(data, ensure_ascii=False)
     (DIST / "data.json").write_text(payload, encoding="utf-8")
     page = (ROOT / "template.html").read_text(encoding="utf-8")
     # Escape "</" so feed text can never close the inline <script>
     page = page.replace("/*__DATA__*/null", payload.replace("</", "<\\/"))
     (DIST / "index.html").write_text(page, encoding="utf-8")
-    for extra in ("favicon.svg", "CNAME"):
+    for extra in ("favicon.svg",):
         if (ROOT / extra).exists():
             shutil.copy(ROOT / extra, DIST / extra)
-    print(f"Built {len(articles)} articles, {len(data['markets'])} quotes -> {DIST / 'index.html'}")
+    print(f"Built {len(articles)} articles, {len(data['markets'])} quotes, {len(briefings)} briefings -> {DIST}")
 
 
 if __name__ == "__main__":

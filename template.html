@@ -135,6 +135,21 @@ main{max-width:1320px;margin:-48px auto 40px;padding:0 16px;position:relative;z-
 .list a:hover{color:var(--brand)}
 .list small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
 
+/* Daily briefing */
+.brief{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:0;border:1px solid var(--line)}
+.brief .lead-col{padding:20px 22px;background:linear-gradient(135deg,rgba(10,108,255,.08),rgba(0,179,164,.08))}
+.brief .kick{font-size:12px;font-weight:700;color:var(--brand);letter-spacing:.06em}
+.brief h2{margin:6px 0 8px;font-size:22px;line-height:1.35}
+.brief h2 a:hover{color:var(--brand)}
+.brief p{margin:0 0 12px;color:var(--muted);font-size:14px}
+.brief .go{display:inline-block;background:var(--brand);color:#fff;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:600}
+.brief .arch{margin-left:12px;font-size:13px;color:var(--brand)}
+.brief ul{list-style:none;margin:0;padding:14px 20px}
+.brief li{padding:7px 0;border-bottom:1px solid var(--line);font-size:14px;display:flex;gap:8px;align-items:baseline}
+.brief li:last-child{border:0}
+.brief li .pill{flex:none}
+@media (max-width:820px){.brief{grid-template-columns:minmax(0,1fr)}}
+
 .section-title{grid-column:1/-1;font-size:18px;font-weight:700;margin:12px 0 -4px;display:flex;align-items:center;gap:10px}
 .section-title::after{content:"";flex:1;height:1px;background:var(--line)}
 footer{max-width:1320px;margin:0 auto;padding:24px 16px 40px;color:var(--muted);font-size:12px;text-align:center}
@@ -334,6 +349,19 @@ function listCard(title, color, items, withSource){
     el("ul",{class:"list"}, items.map(a=>el("li",null, link(a.link,null,a.title), withSource ? el("small",null, a.source+" · "+ago(a.time)) : null))));
 }
 
+function briefingCard(b){
+  if (!b) return null;
+  const d = new Date(b.date + "T00:00:00+08:00").toLocaleDateString("zh-HK",{month:"long",day:"numeric",weekday:"short",timeZone:"Asia/Hong_Kong"});
+  return el("div",{class:"card brief"},
+    el("div",{class:"lead-col"},
+      el("div",{class:"kick"}, "今日重點 DAILY BRIEFING · " + d),
+      el("h2",null, el("a",{href:b.url}, b.title)),
+      el("p",null, b.summary),
+      el("a",{class:"go",href:b.url}, "閱讀全文 →"),
+      el("a",{class:"arch",href:"briefing/"}, "往期重點")),
+    el("ul",null, b.points.map(p=>el("li",null, el("span",{class:"pill"},p.topic), el("a",{href:b.url}, p.headline)))));
+}
+
 /* ---------- page ---------- */
 let current = "top";
 function render(){
@@ -343,6 +371,7 @@ function render(){
   const add = n => n && grid.append(n);
 
   if (current === "top"){
+    add(briefingCard(DATA.briefing));
     // Mix: newest items with images from each category for the carousel
     const mix = [];
     for (const c of ["hk","ai","iot","tech"]) mix.push(...all.filter(a=>a.cat===c && a.image).sort(byTime).slice(0,2));
