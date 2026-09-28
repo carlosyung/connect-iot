@@ -29,11 +29,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install anthropic
       - run: python build.py
         env:
-          # Optional: without it the site still updates, just without the daily briefing
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Daily briefing: Gemini first, Cloudflare Workers AI as backup.
+          # All optional; without them the site still updates, just without the briefing.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
       - name: Save new briefings to main
         run: |
           git add content/

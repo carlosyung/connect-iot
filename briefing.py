@@ -1,13 +1,18 @@
-"""Daily original briefing ("今日重點") written by Claude from the day's headlines.
+"""Daily original briefing ("今日重點") written by an LLM from the day's headlines.
 
-generate(data) writes content/briefings/YYYY-MM-DD.json once per HK day (needs
-ANTHROPIC_API_KEY; skipped quietly without it). render(dist) turns every saved
-briefing into dist/briefing/<date>.html plus an archive page and sitemap.
+generate(data) writes content/briefings/YYYY-MM-DD.json once per HK day. It tries
+Gemini first (GEMINI_API_KEY), then Cloudflare Workers AI (CLOUDFLARE_API_TOKEN +
+CLOUDFLARE_ACCOUNT_ID); with neither configured it is skipped quietly.
+render(dist) turns every saved briefing into dist/briefing/<date>.html plus an
+archive page and sitemap.
 """
 import html
 import json
 import os
+import re
 import sys
+import urllib.error
+import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -15,7 +20,8 @@ ROOT = Path(__file__).parent
 BRIEFINGS = Path(os.environ.get("BRIEFINGS_DIR", ROOT / "content" / "briefings"))
 SITE = "https://connect-iot.com"
 HKT = timezone(timedelta(hours=8))
-MODEL = "claude-opus-5"
+GEMINI_MODEL = "gemini-3.8-flash"
+CLOUDFLARE_MODEL = "@cf/deepseek-ai/deepseek-v4-flash-0731"
 MAX_ARTICLES = 90
 TOPICS = ["香港", "AI・LLM", "IoT", "科技", "財經", "國際"]
 CAT_LABEL = {"hk": "香港", "ai": "AI", "iot": "IoT", "tech": "科技", "finance": "財經", "world": "國際"}
@@ -41,19 +47,16 @@ SCHEMA = {
                                 "sources": {"type": "array", "items": {"type": "integer"}},
                             },
                             "required": ["headline", "analysis", "sources"],
-                            "additionalProperties": False,
                         },
                     },
                 },
                 "required": ["topic", "items"],
-                "additionalProperties": False,
             },
         },
         "takeaway": {"type": "string"},
         "en_summary": {"type": "string"},
     },
     "required": ["title", "summary", "sections", "takeaway", "en_summary"],
-    "additionalProperties": False,
 }
 
 SYSTEM = """你是 Connect-IoT 的編輯，為香港讀者撰寫每日「今日重點」簡報，主題涵蓋香港本地新聞、AI 與大型語言模型、物聯網 (IoT)、科技、財經及國際要聞。
@@ -62,12 +65,87 @@ SYSTEM = """你是 Connect-IoT 的編輯，為香港讀者撰寫每日「今日�
 - 用香港常用的繁體中文書面語，語氣專業、易讀；專有名詞可保留英文。
 - 只根據提供的新聞列表內容撰寫，不可加入列表以外的事實、數字、人名或引述。資料不足時寫得保守一點，不要推測成事實。
 - 每則重點用自己的文字重寫（不要照抄標題），analysis 用 2 至 4 句：先交代發生了甚麼，再說明對香港市民、企業或科技業界的意義。
-- 挑選 6 至 10 則最值得香港讀者關注的新聞，分到合適的 topic；同一事件的多個來源合併為一則，sources 列出所有相關新聞的編號。
+- 挑選 6 至 10 則最值得香港讀者關注的新聞，分到合適的 topic；同一事件的多個來源合併為一則，sources 列出所有相關新聞的編號（方括號內的數字）。
 - title 是今日簡報的標題（30 字以內），summary 是 2 至 3 句導讀，takeaway 是一段 3 至 5 句的編輯觀點，en_summary 是 2 至 3 句英文摘要。"""
+
+JSON_SHAPE = """只輸出一個 JSON 物件，不要任何其他文字或 Markdown，格式如下：
+{"title": "...", "summary": "...", "sections": [{"topic": "香港|AI・LLM|IoT|科技|財經|國際", "items": [{"headline": "...", "analysis": "...", "sources": [0, 3]}]}], "takeaway": "...", "en_summary": "..."}"""
 
 
 def today():
     return datetime.now(HKT).strftime("%Y-%m-%d")
+
+
+def post_json(url, body, headers, timeout=240):
+    req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
+                                 headers={"Content-Type": "application/json", **headers})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"HTTP {e.code}: {e.read()[:300].decode('utf-8', 'ignore')}") from None
+
+
+def gemini_schema(node):
+    """Gemini's responseSchema is an OpenAPI subset with upper-case type names."""
+    out = {"type": node["type"].upper()}
+    if "enum" in node:
+        out["enum"] = node["enum"]
+    if "properties" in node:
+        out["properties"] = {k: gemini_schema(v) for k, v in node["properties"].items()}
+        out["propertyOrdering"] = list(node["properties"])
+    if "required" in node:
+        out["required"] = node["required"]
+    if "items" in node:
+        out["items"] = gemini_schema(node["items"])
+    return out
+
+
+def ask_gemini(prompt):
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key:
+        return None
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+    res = post_json(url, {
+        "systemInstruction": {"parts": [{"text": SYSTEM}]},
+        "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+        "generationConfig": {"responseMimeType": "application/json", "responseSchema": gemini_schema(SCHEMA)},
+    }, {"x-goog-api-key": key})
+    cand = res["candidates"][0]
+    if cand.get("finishReason") not in (None, "STOP"):
+        raise RuntimeError(f"finishReason={cand.get('finishReason')}")
+    text = "".join(p.get("text", "") for p in cand["content"]["parts"] if not p.get("thought"))
+    return text, GEMINI_MODEL
+
+
+def ask_cloudflare(prompt):
+    token, account = os.environ.get("CLOUDFLARE_API_TOKEN"), os.environ.get("CLOUDFLARE_ACCOUNT_ID")
+    if not (token and account):
+        return None
+    url = f"https://api.cloudflare.com/client/v4/accounts/{account}/ai/run/{CLOUDFLARE_MODEL}"
+    res = post_json(url, {
+        "messages": [{"role": "system", "content": SYSTEM + "\n\n" + JSON_SHAPE},
+                     {"role": "user", "content": prompt}],
+        "max_completion_tokens": 8000,
+        "reasoning_effort": "low",
+    }, {"Authorization": f"Bearer {token}"})
+    result = res.get("result") or {}
+    text = result.get("response") or result["choices"][0]["message"]["content"]
+    return (text if isinstance(text, str) else json.dumps(text, ensure_ascii=False)), CLOUDFLARE_MODEL
+
+
+def parse_brief(text):
+    """Pull the JSON object out of the reply and check it has the fields the page needs."""
+    text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip())
+    brief = json.loads(text[text.index("{"):text.rindex("}") + 1])
+    for k in SCHEMA["required"]:
+        if not brief.get(k):
+            raise ValueError(f"missing {k}")
+    for sec in brief["sections"]:
+        sec["items"] = [i for i in sec.get("items", []) if i.get("headline") and i.get("analysis")]
+        for i in sec["items"]:
+            i["sources"] = [n for n in i.get("sources", []) if isinstance(n, int)]
+    return brief
 
 
 def generate(data):
@@ -76,17 +154,6 @@ def generate(data):
     if path.exists():
         print(f"  briefing: {path.name} already exists")
         return
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        print("  briefing: ANTHROPIC_API_KEY not set, skipped")
-        return
-    try:
-        _generate(data, path)
-    except Exception as e:  # a failed briefing must never block the daily news update
-        print(f"  ! briefing failed: {type(e).__name__}: {e}", file=sys.stderr)
-
-
-def _generate(data, path):
-    import anthropic
 
     pool = sorted((a for a in data["articles"] if a["cat"] in CAT_LABEL),
                   key=lambda a: a.get("time") or "", reverse=True)[:MAX_ARTICLES]
@@ -94,22 +161,21 @@ def _generate(data, path):
         f"[{i}] ({CAT_LABEL[a['cat']]}) {a['source']}｜{a['title']}" + (f"｜{a['summary']}" if a["summary"] else "")
         for i, a in enumerate(pool)
     )
-    client = anthropic.Anthropic()
-    response = client.beta.messages.create(
-        model=MODEL,
-        max_tokens=16000,
-        betas=["server-side-fallback-2026-07-01"],
-        extra_body={"fallbacks": "default"},
-        thinking={"type": "adaptive"},
-        output_config={"effort": "medium", "format": {"type": "json_schema", "schema": SCHEMA}},
-        system=SYSTEM,
-        messages=[{"role": "user", "content": f"今日日期：{today()}（香港時間）\n\n新聞列表：\n{listing}"}],
-    )
-    if response.stop_reason != "end_turn":
-        print(f"  ! briefing: stop_reason={response.stop_reason}, skipped", file=sys.stderr)
+    prompt = f"今日日期：{today()}（香港時間）\n\n新聞列表：\n{listing}"
+
+    for ask in (ask_gemini, ask_cloudflare):
+        try:
+            reply = ask(prompt)
+            if reply is None:
+                print(f"  briefing: {ask.__name__} not configured")
+                continue
+            brief, model = parse_brief(reply[0]), reply[1]
+            break
+        except Exception as e:  # try the next provider; a failed briefing never blocks the news update
+            print(f"  ! briefing via {ask.__name__} failed: {type(e).__name__}: {e}", file=sys.stderr)
+    else:
+        print("  briefing: skipped (no provider succeeded)")
         return
-    text = next(b.text for b in response.content if b.type == "text")
-    brief = json.loads(text)
 
     # Resolve source numbers to real links so the page never shows invented URLs
     for sec in brief["sections"]:
@@ -118,11 +184,10 @@ def _generate(data, path):
                                for i in dict.fromkeys(item["sources"]) if 0 <= i < len(pool)]
     brief["sections"] = [s for s in brief["sections"] if s["items"]]
     brief["date"] = today()
-    brief["model"] = response.model
+    brief["model"] = model
     BRIEFINGS.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(brief, ensure_ascii=False, indent=1), encoding="utf-8")
-    u = response.usage
-    print(f"  briefing: wrote {path.name} ({u.input_tokens} in / {u.output_tokens} out tokens)")
+    print(f"  briefing: wrote {path.name} with {model}")
 
 
 def load_all():
