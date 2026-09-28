@@ -1,5 +1,8 @@
 name: Daily update
 
+# Builds the homepage and pushes it to the `site` branch.
+# Cloudflare Pages watches `site` and publishes every new push to connect-iot.com.
+
 on:
   schedule:
     # 22:00 UTC = 06:00 Hong Kong time, every day.
@@ -10,29 +13,28 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: pages
+  group: site
   cancel-in-progress: true
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: python build.py
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-      - id: deploy
-        uses: actions/deploy-pages@v4
+      - name: Publish dist/ to the site branch
+        run: |
+          cd dist
+          git init -q -b site
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Site build $(TZ=Asia/Hong_Kong date '+%Y-%m-%d %H:%M HKT')"
+          # Force-push a single commit so the branch never accumulates history
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" site
