@@ -22,7 +22,7 @@ BRIEFINGS = Path(os.environ.get("BRIEFINGS_DIR", ROOT / "content" / "briefings")
 SITE = "https://connect-iot.com"
 HKT = timezone(timedelta(hours=8))
 # Tried in order; free-tier Flash models are sometimes briefly overloaded (HTTP 503)
-GEMINI_MODELS = ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.5-flash"]
+GEMINI_MODELS = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]
 CLOUDFLARE_MODEL = "@cf/deepseek-ai/deepseek-v4-flash-0731"
 MAX_ARTICLES = 90
 TOPICS = ["香港", "AI・LLM", "IoT", "科技", "財經", "國際"]
@@ -121,7 +121,7 @@ def ask_gemini(prompt):
     last = None
     for model in GEMINI_MODELS:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-        for wait in (0, 20, 60):
+        for wait in (0, 20):
             time.sleep(wait)
             try:
                 res = post_json(url, body, {"x-goog-api-key": key})
