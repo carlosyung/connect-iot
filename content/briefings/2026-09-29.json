@@ -1,0 +1,116 @@
+{
+ "title": "Connect-IoT 今日重點：啟德醫院下周起分階段投入服務 貿發局大幅上調全年出口預測",
+ "summary": "醫管局公布啟德醫院下周起分階段啟用，而貿發局受惠於強勁的人工智能需求，大幅上調本港全年出口增長預測。另一方面，本港教育界調查顯示香港教師的AI應用普及率遠超全球平均水平。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "啟德醫院下周一起分階段投入服務 專科門診大樓設全港最大藥劑部",
+     "analysis": "醫管局宣佈啟德醫院將於下周一（10月5日）起分階段投入服務，伊利沙伯醫院的醫療服務將循序漸進轉移至新院，其專科門診服務亦會於10月下旬起分批轉移。新院的專科門診大樓設有全港最大的藥劑部，並將承擔更多專科與日間醫療服務。這項大型醫療基建落實有助紓緩九龍區的醫療負荷，並為香港市民提供更現代化的公營醫療體驗。",
+     "sources": [
+      {
+       "title": "October 5 phased opening set for Kai Tak Hospital",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1871907-20260928.htm"
+      },
+      {
+       "title": "啟德醫院下周一起分階段投入服務 專科門診大樓設全港最大藥劑部",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1871901-20260928.htm"
+      }
+     ]
+    },
+    {
+     "headline": "運輸署預告明年第二季啟用「空鐵聯運」自動車項目 持續推動自動駕駛商業化",
+     "analysis": "運輸署署長謝詠誼主持自動駕駛車輛應用促進工作組會議時透露，署方年內將開始接受自動駕駛車輛營運商申請商業化運作。其中接駁西九龍站與九龍站的「空鐵聯運」自動車項目預計明年第二季啓用，並會積極推動連接港珠澳大橋香港口岸與機場的「航天走廊」。這些智慧出行項目的推進，有助提升香港交通網絡的科技應用水平，為旅客帶來更便捷的轉乘體驗。",
+     "sources": [
+      {
+       "title": "自動駕駛車輛應用促進工作組會議 謝詠誼稱更多應用場景陸續推出",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1871891-20260928.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "香港教師AI應用率達86% 遠超全球平均水平 助推動智慧教育轉型",
+     "analysis": "本地一項調查顯示，高達86%的香港教師使用AI進行備課，表現遠超67%的全球平均水平。這反映出香港教育界對先進科技的接受程度甚高，並積極將生成式AI融入日常教學流程中。高普及率有助本地教育界加快數碼轉型，並為學生營造更具前瞻性的智慧學習環境。",
+     "sources": [
+      {
+       "title": "香港老師 AI 應用超全球 86% 教師使用 AI 備課 遠超全球平均 67%",
+       "source": "unwire",
+       "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE85M1ZMWEFyMzNhaTJWeGlKUlVHTE1JXzJnaV8tenJrS2RoOWJkamF3Q2x4cVFwZnREVWM4a21CamlBRFgzTEVubjBqcEk0V0pCR3pZeWd5YW1mUnZSZWw4WjFzNXlzZ25jd2lBckVEOU0xRWppRWNZ?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "Anthropic發布Sonnet 5.5模型 旨在降低企業運行成本並加快回應速度",
+     "analysis": "人工智能公司Anthropic正式發布中階模型 Sonnet 5.5，主打更快的反應時間以及大幅減少代價高昂的token消耗。這款更具成本效益的工作夥伴模型，將有助企業用戶在實際業務場景中更低成本地部署AI代理與自動化工作流程，進一步推動AI技術在各行各業的落地應用。",
+     "sources": [
+      {
+       "title": "Claude Sonnet 5.5",
+       "source": "Hacker News",
+       "link": "https://www.anthropic.com/news/claude-sonnet-5-5"
+      },
+      {
+       "title": "Anthropic releases Sonnet 5.5, which it calls a significantly cheaper, faster work partner",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/09/28/anthropic-releases-sonnet-5-5-which-it-calls-a-significantly-cheaper-faster-work-partner/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "受惠AI需求強勁 貿發局大幅上調今年本港出口增長預測至42%至47%",
+     "analysis": "香港貿易發展局鑑於今年首8個月本港整體出口貨值按年上升42.5%，加上全球對人工智能相關科技的需求較預期強勁，決定將今年全年商品出口增長預測大幅上調至42%至47%。貿發局指出中美積極正面的磋商結果對香港等經濟體的營商信心與貿易有正面好處。這項數據反映本港傳統出口與新興科技產業鏈正迎來強勁復甦，對香港整體經濟增長注入強心針。",
+     "sources": [
+      {
+       "title": "Export target raised amid AI boom: HKTDC",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1871873-20260928.htm"
+      },
+      {
+       "title": "貿發局：中美磋商結果積極正面對香港等經濟體貿易有好處",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1871869-20260928.htm"
+      },
+      {
+       "title": "貿發局大幅上調本港今年出口增長預測到42%至47%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1871850-20260928.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "IoT",
+   "items": [
+    {
+     "headline": "全球工業機械人操作存量創新高達5台 智能製造需求持續擴大",
+     "analysis": "最新行業數據顯示，隨着全球工廠自動化需求急速上升，全球營運中的工業機械人總數在2025年已達到5permal（500萬）台的歷史新高。這項發展趨勢反映物聯網與智能製造在國際工業界已成為核心生產力，對推動全球供應鏈轉型及工業物聯網（IIoT）設備的普及帶來深遠影響。",
+     "sources": [
+      {
+       "title": "Five Million Industrial Robots Are Now Operating in Factories Worldwide",
+       "source": "IoT Business News",
+       "link": "https://iotbusinessnews.com/2026/09/28/five-million-industrial-robots-are-now-operating-in-factories-worldwide/"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點集中在香港的實質民生基建推進與科技應用的雙軌發展。醫療方面，啟德醫院即將分階段啟用，配合運輸署積極推動自動駕駛商業化，有助提升香港整體的智慧城市與醫療韌性。另一方面，本地教育界展現出極高的AI應用熱情，備課普及率遠超全球平均，加上貿發局受惠AI浪潮大幅上調出口增長預測，顯示香港在融入全球數字經濟與科技轉型方面正取得實質進展。業界應把握這些基建與AI帶來的雙重機遇，加速業務升級。",
+ "en_summary": "Kai Tak Hospital is set to begin phased operations starting October 5, while the HKTDC has significantly raised its annual export growth forecast to 47% amid strong global demand for AI technologies. Meanwhile, a local survey shows that Hong Kong teachers' AI adoption rate has outpaced the global average.",
+ "date": "2026-09-29",
+ "model": "gemini-3.5-flash-lite"
+}
