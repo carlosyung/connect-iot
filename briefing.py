@@ -11,6 +11,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -20,7 +21,8 @@ ROOT = Path(__file__).parent
 BRIEFINGS = Path(os.environ.get("BRIEFINGS_DIR", ROOT / "content" / "briefings"))
 SITE = "https://connect-iot.com"
 HKT = timezone(timedelta(hours=8))
-GEMINI_MODEL = "gemini-3.8-flash"
+# Tried in order; free-tier Flash models are sometimes briefly overloaded (HTTP 503)
+GEMINI_MODELS = ["gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.5-flash"]
 CLOUDFLARE_MODEL = "@cf/deepseek-ai/deepseek-v4-flash-0731"
 MAX_ARTICLES = 90
 TOPICS = ["香港", "AI・LLM", "IoT", "科技", "財經", "國際"]
@@ -83,7 +85,13 @@ def post_json(url, body, headers, timeout=240):
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
-        raise RuntimeError(f"HTTP {e.code}: {e.read()[:300].decode('utf-8', 'ignore')}") from None
+        raise HTTPFailure(e.code, e.read()[:300].decode("utf-8", "ignore")) from None
+
+
+class HTTPFailure(RuntimeError):
+    def __init__(self, code, body):
+        super().__init__(f"HTTP {code}: {' '.join(body.split())}")
+        self.code = code
 
 
 def gemini_schema(node):
@@ -105,17 +113,30 @@ def ask_gemini(prompt):
     key = os.environ.get("GEMINI_API_KEY")
     if not key:
         return None
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
-    res = post_json(url, {
+    body = {
         "systemInstruction": {"parts": [{"text": SYSTEM}]},
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {"responseMimeType": "application/json", "responseSchema": gemini_schema(SCHEMA)},
-    }, {"x-goog-api-key": key})
-    cand = res["candidates"][0]
-    if cand.get("finishReason") not in (None, "STOP"):
-        raise RuntimeError(f"finishReason={cand.get('finishReason')}")
-    text = "".join(p.get("text", "") for p in cand["content"]["parts"] if not p.get("thought"))
-    return text, GEMINI_MODEL
+    }
+    last = None
+    for model in GEMINI_MODELS:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+        for wait in (0, 20, 60):
+            time.sleep(wait)
+            try:
+                res = post_json(url, body, {"x-goog-api-key": key})
+            except HTTPFailure as e:
+                last = e
+                if e.code in (429, 500, 503):  # overloaded or rate-limited: retry, then try the next model
+                    print(f"  briefing: {model} busy ({e.code}), retrying")
+                    continue
+                raise
+            cand = res["candidates"][0]
+            if cand.get("finishReason") not in (None, "STOP"):
+                raise RuntimeError(f"{model} finishReason={cand.get('finishReason')}")
+            text = "".join(p.get("text", "") for p in cand["content"]["parts"] if not p.get("thought"))
+            return text, model
+    raise last
 
 
 def ask_cloudflare(prompt):
