@@ -1,0 +1,229 @@
+{
+ "title": "機管局收回11 SKIES、美AI巨頭自律監管惹議",
+ "summary": "機管局與新世界達成協議提前終止11 SKIES合約並收回資產，新世界虧損擴大且需支付逾30億元代價；美國政府召集六大AI巨頭簽署自我監管協議，但因缺乏約束力受輿論質疑。國際金融方面，美債長息升至多年高位，道指連跌三日。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "新世界與機管局提前終止11 SKIES合約並交還資產",
+     "analysis": "機管局宣布與新世界發展達成協議，提前終止11 SKIES發展項目合約，項目旗下3幢辦公大樓及娛樂樞紐將於明年4月無償轉交機管局，新世界亦須支付23億元現金補償及提供上限約10.5億元的工程服務。新世界因相關資產減值致去年度虧損擴大至近281.5億元。此舉讓項目日後營運由機管局全面主導，同時讓地產商止蝕，為航天城周邊商業發展確立新方向。",
+     "sources": [
+      {
+       "title": "政府：機管局與新世界達協議為11 SKIES項目確立清晰方向",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872212-20261001.htm"
+      },
+      {
+       "title": "新世界去年度虧損擴大近73% 11 SKIES項目致虧損擴大",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872205-20260930.htm"
+      },
+      {
+       "title": "新世界發展：與機管局達成協議為下一階段發展踏出重要一步",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872204-20260930.htm"
+      },
+      {
+       "title": "New World to hand over 11 Skies project in April",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1872203-20260930.htm"
+      },
+      {
+       "title": "機管局就11 SKIES與新世界達協議 交回資產包括3幢大樓",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872202-20260930.htm"
+      },
+      {
+       "title": "新世界發展明年4月向機管局交還11 SKIES項目",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872199-20260930.htm"
+      }
+     ]
+    },
+    {
+     "headline": "特區政府與各界慶祝國慶77周年",
+     "analysis": "中華人民共和國成立77周年之際，金紫荊廣場、中聯辦及外交部駐港公署均舉行升旗儀式，政府與餐飲界及戲院推出多項全港優惠活動。行政長官李家超在國慶酒會致辭時指出，這是香港公布首個五年規劃後的首個國慶，強調要融入國家發展大局。官方藉連串活動營造慶祝氛圍，並透過商戶折扣帶動本地節日消費。",
+     "sources": [
+      {
+       "title": "李家超：五年規劃抓緊機遇融入和服務國家發展大局令香港發展更好",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872245-20261001.htm"
+      },
+      {
+       "title": "國慶酒會播放載荷專家黎家盈短片 祝願祖國山河錦繡盛世長青",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872244-20261001.htm"
+      },
+      {
+       "title": "國慶77周年 金紫荊廣場舉行升旗儀式",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872240-20261001.htm"
+      },
+      {
+       "title": "國慶77周年 外交部駐港公署舉行升國旗儀式",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872239-20261001.htm"
+      },
+      {
+       "title": "國慶77周年 中聯辦舉行升國旗儀式",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872237-20261001.htm"
+      },
+      {
+       "title": "特區政府與各界齊推活動及優惠 同賀國慶77周年",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872209-20261001.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "特朗普促六大AI巨頭簽自我監管協議遭質疑欠約束力",
+     "analysis": "美國總統特朗普召集六家科技巨頭簽署人工智能安全協議，倡導以企業「自我監管」為主，但協議未有設立具體執法細節與違規處罰機制。外界及輿論普遍批評此舉缺乏法律約束力，難以有效防範先進AI模型帶來的潛在風險。對全球科技業界而言，各國在AI監管尺度上分歧加劇，可能增加跨國合規與治理的不確定性。",
+     "sources": [
+      {
+       "title": "特朗普召六大AI巨頭簽「自我監管」協議 無法律效力欠執行細節 輿論質疑無助提升安全 - 20261001 - 國際",
+       "source": "news.mingpao.com",
+       "link": "https://news.google.com/rss/articles/CBMi0ARBVV95cUxPTVd6bjFrUDlGMmFtQlg1TXRhR3AzQmNvbGt3cjlSSmp5aGJCc0pRUkdCdG9Dd2YycVpYanRtR25JNWxzWFoyUGhkVVFCaVJ5TDVOM2RITFJPMFNrSE1nWllSX2x6VEFEc1NBdHBORkFtUk5aVnluTzhycVFFM2ZiRExUTWp3TDRndF9DMFloTXJ1bWFkYnk0ai1sblhrOXp2TExPZ1FIV1Z0OUdtdDZRbVF1SDR0NnlLT1V0YzVneVFTRVVIeVg4OHhpTS1CQUQyMzdGNFNyYmV6UFR2VjBNUjg1TDV0S2pjZFl4aFlWem1qMlFDMXM2akR0QlJtNVhWUWdhcjM2SzhfR1JwdW9zRWI2MHN6R3lHZHpSX2JBclEtYXJYNG4wQnNrS3FIaWN0X01GR2s2S1VRa1VLMEdCQjg2VVYzdEc4Q1JJdEtHVEZkMUp1M1E5ZmlpQ2ZRVjdMUk1kSm9KLWdPbHpfbmhEbnNfeHlpNHM5cWZnOXoteU9wVjhxaGlfSUJ5SVNtQzZINXFGWEc0bGQ0U1A5c0U0Q09NcTRGeXBKc2F3TTlhSVdPVk1UNFdXODJXMUhrc2lfOERSQVdzOG16bXRrQlp1QWpjVGlaZExJTndGa0ZCQk5fVTZTX1dUYW9BdklMUVBKZWFJNEpBLTk2MWRMeWY4RHRjd2NrcUtFUU5xbDJFVFpIbC1ZMDlBNm1KSEFIbjBfQldidFV5Q2x1aUNuYXYzaTZMZGNJMFFDX1hhRmo4LUhrQzJCX0NWVVI2WThJUm1m?oc=5"
+      },
+      {
+       "title": "自己管自己？科技巨頭簽AI安全承諾違規處罰機制一片空白- 國際",
+       "source": "dotdotnews",
+       "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9VSVRsclk0OXR4dGpIam81S2hIZWpYcVdTM3R5eGRmRnBHNUpUTUxnblg3eno0angyMzl0WUVNam9YQXVJSEI5M25EaDgxNG5YZzd0OS1GU3dmY2Uzb1NYRHRsdUdOZlZoT3BjT1JlZDBpVzkxTEhjcVBR?oc=5"
+      },
+      {
+       "title": "美科技巨頭簽「AI君子協定」 零罰則全憑業界自律 特朗普圖替AI洗底 智能體失控後改名「超級智能」",
+       "source": "香港文匯報",
+       "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1iWlV0QzFIUGppelVTa0Zyb3dFM1hMYkxwVGtkbTBfZXBlVUpOUVhZZWctSGhfTUFkQTRXOW9OX1NRYUc5VUZaZXgtNlhsQ0ZubmR2a2V4N3VQZWdCRGJCdHZjLWNpZDNHcm9ld3RVeGl1Zm9DR2Rz?oc=5"
+      },
+      {
+       "title": "特朗普與科企簽AI安全協議落實存疑倡企業自我監管無法律約束力- 國際",
+       "source": "大公文匯網",
+       "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5ZVzE1ZVZHZzlyVXE5Nm9YSmt3MTJBUTRVS3pFcmdSbGVRMU56X1ZwME5ld0s4TmRyWTlCbkE2cnRRbEtZdG5LT2JRTzZ6OXNVMlRvU0k1YVlaUVE0WHRLSmRXcHk0VWNUdnN4QkxhekNYdVFH?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "Google發表新旗艦模型Gemini 4 Argon強化資安與編程",
+     "analysis": "Google正式發布其最新且效能最強的Gemini 4 Argon模型，主打在程式編寫與網絡安全領域的複雜工作流表現，目前首波僅向獲信任的網絡防護專家提供。該模型代表前沿大語言模型在工程實用度上的躍進，凸顯防禦型AI在企業資安架構中的戰略地位。",
+     "sources": [
+      {
+       "title": "Google releases Gemini 4 Argon, called its most powerful model yet",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/"
+      },
+      {
+       "title": "Gemini 4 Argon",
+       "source": "Hacker News",
+       "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      },
+      {
+       "title": "Google announces Gemini 4 and says it’s so capable that only ‘trusted cyber defenders’ can have it right now",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/tech/1002980/google-gemini-4-argon"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "美防長設立自主作戰司令部變革無人機與AI應用",
+     "analysis": "美國國防部宣布成立四星級聯合作戰司令部「自主作戰司令部」，涵蓋無人機、人工智能及指揮控制系統，以改革國防尖端科技的採購與部署。防長赫格塞思亦委託 Elon Musk 等科技領袖展開為期120天的未來戰爭研究。此舉標誌先進軍事科技進一步制度化整合自主系統，將對全球防務科技生態產生深遠影響。",
+     "sources": [
+      {
+       "title": "美防長宣布組建自主作戰司令部",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872242-20261001.htm"
+      },
+      {
+       "title": "The Pentagon taps Elon Musk and Palmer Luckey to help decide what the military should do next",
+       "source": "TechCrunch",
+       "link": "https://techcrunch.com/2026/09/30/the-pentagon-taps-elon-musk-and-palmer-luckey-to-help-decide-what-the-military-should-do-next/"
+      }
+     ]
+    },
+    {
+     "headline": "HONOR擬於自家銀包整合八達通支援本地支付",
+     "analysis": "手機品牌HONOR於媒體交流會透露，正研究將八達通直接整合至自家 Wallet，同時公布新機X9e Pro的在港策略及對系統更新的規劃。若成功原生支援八達通，將顯著提升Android陣營用戶在香港日常通勤與小額消費的便利性，加強品牌在本地手機市場的競爭力。",
+     "sources": [
+      {
+       "title": "HONOR 八達通擬整合 Wallet！X9e Pro 香港上市時間曝光 官方解答 AI、系統更新及 Power 定位",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/09/30/honor-x9e-pro-octopus-wallet/people-interview/?utm_source=rss&utm_medium=rss&utm_campaign=honor-x9e-pro-octopus-wallet"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "美長債孳息創多年新高拖累美股表現",
+     "analysis": "美國長年期國債孳息率持續攀升，30年期債息突破5.65厘刷逾24年高位，10年期債息亦升破5.3厘，道指連跌三日收報50906點，港股多隻藍籌ADR亦見回軟。儘管通脹數據偏軟減低即時加息壓力，但高息環境維持時間拉長，持續對依賴融資的港企及環球股市估值帶來壓力。",
+     "sources": [
+      {
+       "title": "美國長債債息持續攀升 30年期債息突破5.65厘",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872236-20261001.htm"
+      },
+      {
+       "title": "多隻藍籌股ADR跌近1%或以上",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872231-20261001.htm"
+      },
+      {
+       "title": "道指低收443點 第3季跌近3% 標指納指連升兩季",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872228-20261001.htm"
+      }
+     ]
+    },
+    {
+     "headline": "油價受美伊局勢影響造好金價高位爭持",
+     "analysis": "受到美伊談判陷入停滯及供應市場趨緊推動，布蘭特期油收報每桶103.53美元，連升3個月；現貨金則於每盎司4200美元水平得而復失，先升後回至4155美元附近。大宗商品價格在高位波動，令環球通脹回落進程存在變數，牽動金融市場對能源及避險資產的配置部署。",
+     "sources": [
+      {
+       "title": "金價先升後回 一度失守4150美元",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872234-20261001.htm"
+      },
+      {
+       "title": "英美期油反彈 9月累計連升3個月",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872233-20261001.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "美軍宣告結束伊拉克打擊極端組織軍事任務",
+     "analysis": "美國國防部正式宣布由美方主導的國際聯盟已結束在伊拉克的軍事任務，最後一批美軍撤離該國。總統特朗普稱撤離標誌著自2003年展開的軍事行動告一段落，此決定將深刻重塑中東地緣政治格局，並引發各界對伊拉克後續局勢穩定性的關注。",
+     "sources": [
+      {
+       "title": "美國宣布結束伊拉克軍事任務",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1872243-20261001.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點集中於商業項目調整與前沿科技治理。香港大型地標11 SKIES經協商後由機管局收回主導權，讓陷入巨虧的新世界發展得以止蝕重整步伐，反映大型商業地產在宏觀經濟轉型期下的重組趨勢。與此同時，美國在推進軍事AI司令部的同時，對民用AI巨頭僅推出不具罰則的自律協議，凸顯技術快跑與監管真空之間的巨大矛盾。在債息高企與地緣政局變動下，本港企業需加倍警惕資本成本與合規風險。",
+ "en_summary": "Hong Kong's Airport Authority has agreed to terminate the 11 SKIES contract with New World Development and take over the project's assets, while New World incurred heavy losses. Meanwhile, the US government faced criticism over non-binding self-regulation commitments signed with leading AI tech giants. In financial markets, US long-term bond yields soared to multi-decade highs, weighing on global equity performance.",
+ "date": "2026-10-01",
+ "model": "gemini-3.8-flash"
+}
