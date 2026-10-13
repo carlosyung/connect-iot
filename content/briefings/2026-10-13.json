@@ -1,0 +1,188 @@
+{
+ "title": "新皇崗口岸啟用運作順暢 Meta發布前沿模型Muse Wonder",
+ "summary": "新皇崗口岸正式啟用，客流顯著上升且交通與通關大致暢順；同時本港正籌備「粵艇南下」首航。科技與國際焦點方面，Meta推出新一代Muse Wonder模型進軍前沿梯隊，法國則有超市製冷物聯網系統遭到黑客攻擊釀成損失。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "新皇崗口岸開通首日通關暢順 當局部署應對長假期人流",
+     "analysis": "新皇崗口岸實施「合作查驗、一次放行」模式，開通首日首段出入境人次破4.2萬，交通接駁整體運作符合預期，巴士公司亦對加開北區新路線持開放態度。口岸升級有效疏導深港跨境交通，為即將到來的重陽節等長假期高人流考驗提供緩衝，有利促進大灣區人員往來。",
+     "sources": [
+      {
+       "title": "九巴對加設來往新皇崗口岸至北區巴士線持開放態度",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873712-20261013.htm"
+      },
+      {
+       "title": "陳美寶：新皇崗口岸出入境和交通接駁整體順暢及符合預期",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873709-20261013.htm"
+      },
+      {
+       "title": "運輸署：新皇崗口岸整體交通大致運作暢順",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873658-20261012.htm"
+      },
+      {
+       "title": "新皇崗口岸截至下午5時逾42200人次出入境 較平日多近兩倍",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873654-20261012.htm"
+      }
+     ]
+    },
+    {
+     "headline": "「粵艇南下」周五首航 香港構建實時遊艇監察系統",
+     "analysis": "運輸及物流局宣布「粵艇南下」將於星期五啟航，港方與廣東當局加強協調，並已設立實時遊艇動態監察系統與電子一站式平台。新措施標誌著跨境水上休閒旅遊的新嘗試，帶動本港海事監控科技的實際應用，為高增值旅遊業拓展新客源。",
+     "sources": [
+      {
+       "title": "「粵艇南下」周五首航 陳美寶：海事處與內地密切溝通做好準備",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873711-20261013.htm"
+      }
+     ]
+    },
+    {
+     "headline": "數碼港前高層等6人涉詐騙2000萬元轉型資助遭廉署起訴",
+     "analysis": "廉政公署落案起訴數碼港時任創業家總監及科技公司東主等人，指其涉嫌在「數碼轉型支援先導計劃」中行賄受賄並詐騙約2000萬港元資助。案件凸顯政府資助科技轉型項目的審批防弊機制面臨考驗，對本地科創體系的監管透明度帶來警示。",
+     "sources": [
+      {
+       "title": "廉署起訴6人包括數碼港時任創業家總監 涉造假詐騙政府資助",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873653-20261012.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "Meta推出頂級AI模型Muse Wonder 性能直逼前沿水準",
+     "analysis": "Meta正式發布新一代旗艦AI模型「Muse Wonder」，創辦人朱克伯格表示其能力已躋身業界前列，Full版本跑分更緊貼Anthropic等頂尖陣營。此舉顯示開源與閉源頂級大模型競逐白熱化，有助為各行業的AI開發者與企業提供更多高階運算模型的選擇。",
+     "sources": [
+      {
+       "title": "Meta發布AI模型Muse Wonder 聲稱屬業界前沿水平",
+       "source": "橙新聞",
+       "link": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQNS16UlBuS3RxekczaFNoWmtLMFIyQXFQeHcwN1VJdVEyR0ZJUWtiZjRQUlExekJyTl9OMXdXLVNuUHJXN2g0ejNSRDdvbE9TZEs0cFpmSXlKZDFtMDdKcEZQbE5Ia2M4ejJiZzRjZTNSWjRBSWxTMUpkdjZSWDlCaGV1NUlRaEt4dXF2YU9felUtM0VwS19jN29Lc3M4azNmY2lkQUtVTUM5dmhyMC14NTZZT3pXanVZMVN4cHJCeXdaYWh3TDc5VFIxQVJiak9ac1YxeHQ1ZlhRQjBTV1ltMVV5dGNmTF9nSWJMdGVQczljQlpWR2dNRlhJbnlZNk1RZXBkcmRXb2ZGYkk?oc=5"
+      },
+      {
+       "title": "科技｜Meta推兩款頂級AI新模型 朱克伯格稱已追上業界前沿水平",
+       "source": "Yahoo 財經",
+       "link": "https://news.google.com/rss/articles/CBMiiANBVV95cUxQSFhuLTctZldqODl2TXJNckNGRDZ4aWZ4OF9kd2pZR0dpQVJ6UkIyRURHaW8tNlBBTGtmcUViN25jUHlxaVEzRnlMbnVVZFo4WkJKODZRd3hDWFdvN1VTdTFlcG1FemRSSC1JUUxKeXdNRWhjR2NncHltQ1BvRVcxcUNXRUNQWTl6M2ZjRGRmMTByTFpDUHViMTdLdUFTYlhjOXZEUklEU1NJZG5RS0Vtczg2bU1pSzFETDNOQzNOdlpuSm9Ndl9ZUnkyX2ZEQW1FN2hhUXJ4NE5fWG1BZWwwOXo5WllaR2hEeXpvd0Zyck56UVFQMnoyNFE0cmg2VmIya1lmQk1YUVVod1I5OHR2d29Fa003WlBNZzFUbmZlZWRXaGNpZThtM3BVRXFEX1otTFZKc1gwd0tjN3NoNE9nM1RqQ0RRUVBWQUUzT1hfRTRwakR5dnNuN0ZKcndaaElEeGxEMkhBZDlWc2YzdTg0cUxoakNkelFOSHlGV3E3Y2hkUFJQNURiaw?oc=5"
+      },
+      {
+       "title": "歷經14個月 Meta推出具備「前沿級能力」的Muse Wonder AI模型",
+       "source": "香港01",
+       "link": "https://news.google.com/rss/articles/CBMi1AJBVV95cUxQWl9tQ3UzOEhORll4dTFnZDhpbGdBd2RaNzZQV0Q0TWdvNGpxb0p3bl9hMUpIOTNPX3NIWml1V1M4ZFR6MWZvaHlzNm52T1VHQmZCbkFSNGRhZTlKZG1TbmNfeC1EREw2bVVYLThneXdHaUlYS25Yb1JuZUFhQndZTU52S1RGX3pRVDRtNDFxQlhZWlJfTVFxYXhScmZSZVNaV0lXaEh5Tm5DOXdxcUhXR1A2NC1JUkhhNzh2cW1IamNaejEtcnRnWW93OXNjWUZkRTJjSU05QU9nRm1QaldZYXMzRVMyRHNxaWRsREdRM01XSEJyUDdOUmFNY3JKTW1mdzc4WUFpMERWUjFCSXFrb09qb2VBOF9DX2xxNFEyQ3VjSGhQcWVKaS1tZEdSVzBsME5odG4wUUdVNTl3UWNPc1dRQ0dhQXJXbUl0QzZDX19IVl9p?oc=5"
+      },
+      {
+       "title": "【META震撼彈】Meta推兩新AI模型 Muse Wonder Full排世界第4 僅次Anthropic 股價一度升逾4.5%",
+       "source": "香港經濟日報HKET",
+       "link": "https://news.google.com/rss/articles/CBMitwNBVV95cUxPYVBvMG1Sek5hdXBmWXlaZFJCN2ZSczBqd2hBRGdfUFZWamlfeV9pRllJOWlHdWxBbW1OU1ZabG9iZzgxd29USFkxQ0s2QjlZU3JuUnlEb3hOcThVYU5MUkdobkRfdHhtYzJyM0YtTm43VnA1T284Ql9XM2xrbGNjRG5wUEZnZF9Tbm5LTjh0ZHVoal9kc1VxTHFKTEx0SXE0S2hobUJfV2p0eXAtTUJVbGtMeEVRSHdXMEVlMUU5QVVldVE1Y1V0cmNJejJSSDRZbEhBRnRHaDRZYUdjWDMwalZMQ3VoWU5lZEp2UXhIMzd2bm5QSmtodjFPdkF3b0llU2hCaERpODJOdkQyc29oSmZDVHc1RVV6OHlpTEhjb3ZEU3BGeTF2ejJIU3FuejB0ZmJ1QjdlVkM4WGtVN181SG01SEhXTjNuSk1mWmw2YjN6M052aFQ0Z2JfQWdjV3pYR0YzNTNZc2QxekJJdUh1aHBGci1TMWJONl96RXBPUEFaZ2lLSnZqWFlyU1UzZUFHdzhZLUxyeHZzNDhEZVRXQ003LWFyLUV4ZDM2bG5YbmY2RTljVGln?oc=5"
+      },
+      {
+       "title": "Meta releases its first frontier model, Muse Wonder",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "IoT",
+   "items": [
+    {
+     "headline": "法國數百間超市製冷系統遭黑客入侵 設備被強制升溫致食品變壞",
+     "analysis": "黑客針對法國廣泛使用的超市製冷物聯網控制系統漏洞發動遠程攻擊，強行啟動除霜並將溫度調高至攝氏50度，導致大量生鮮及冷凍商品變質損壞。這宗事件為智慧物聯網及工業設施的安全敲響警鐘，企業必須正視物聯網邊緣裝置遠程控制權限防護的重要性。",
+     "sources": [
+      {
+       "title": "法國數百間超市製冷系統受網絡攻擊 大量食品變壞",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873705-20261013.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "亞太股市普遍受壓 恒指跌逾200點、韓股挫逾6%",
+     "analysis": "亞太區股市全線偏軟，恒生指數跌逾220點，科技指數再度失守4100點關口，韓國股市更在半導體巨頭拖累下重挫逾6%。區域市場波動加劇反映投資者對宏觀經濟前景及高估值科技板塊轉趨審慎，本地投資者需提防外圍震盪對港股帶來的連鎖反應。",
+     "sources": [
+      {
+       "title": "亞太區股市受壓 恒指跌逾220點 韓股挫逾6%失守6千點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873707-20261013.htm"
+      },
+      {
+       "title": "內地股市初段跌約1%至逾2%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873702-20261013.htm"
+      },
+      {
+       "title": "恒指競價時段跌近百點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873699-20261013.htm"
+      },
+      {
+       "title": "台股初段跌逾700點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873696-20261013.htm"
+      },
+      {
+       "title": "韓股初段急跌逾4%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873691-20261013.htm"
+      },
+      {
+       "title": "日股初段跌近千點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873690-20261013.htm"
+      }
+     ]
+    },
+    {
+     "headline": "聯儲局官員促迅速轉向限制性政策 抗擊廣泛通脹壓力",
+     "analysis": "克利夫蘭聯儲總裁哈瑪克指出通脹壓力已廣泛蔓延並影響企業定價，促請聯儲局相對迅速地轉向限制性貨幣政策立場。鷹派言論進一步收緊市場對利率回落的預期，本地企業的融資成本及資產市場定價或將繼續受高息環境牽制。",
+     "sources": [
+      {
+       "title": "有聯儲局官員指通脹壓力擴大 應轉向限制性貨幣政策立場",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873688-20261013.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "美烏關係急轉直下 特朗普促結束衝突並放寬俄柴油限制",
+     "analysis": "美國總統特朗普公開要求烏克蘭更換總統並促使達成停火協議，同時放寬對俄羅斯的柴油出口限制，引起烏克蘭總統澤連斯基強烈不滿。美方立場的顯著轉變為俄烏局勢帶來重大變數，牽動全球能源市場供應及地緣政治安全架構。",
+     "sources": [
+      {
+       "title": "《環看天下》：特朗普稱烏克蘭應「換新總統」 兩國關係急轉直下",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873714-20261013.htm"
+      },
+      {
+       "title": "特朗普：俄烏必須達成協議結束衝突",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1873693-20261013.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點集中在跨境互聯與基礎建設安全。新皇崗口岸與即將首航的「粵艇南下」展現香港與內地基建對接的提速，然而數碼港資助詐騙案亦提醒當局必須加強資助項目的合規審查。同時，法國超市製冷系統遭網絡攻擊事件深刻凸顯物聯網安全脆弱性，隨著AI與智能連網深入商業營運，香港企業在引進新技術時，必須將網絡安全與基礎設施韌性置於首位。",
+ "en_summary": "Hong Kong's newly renovated Huanggang Port began operations smoothly as the city prepares for the maiden voyage of southern-bound Guangdong yachts. In global developments, Meta launched its cutting-edge Muse Wonder AI models, while a severe cyberattack on supermarket refrigeration systems in France raised alarm bells over IoT infrastructure security.",
+ "date": "2026-10-13",
+ "model": "gemini-3.8-flash"
+}
