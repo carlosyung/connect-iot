@@ -1,0 +1,210 @@
+{
+ "title": "金管局推ART框架監管AI、美股抗通脹倒升、兩屋邨電梯工程缺失嚴查",
+ "summary": "今日焦點包括金管局發布「ART」框架規範銀行應用代理式AI，消委會則關注AI客服投訴大幅上升；本港房委會與機電署嚴肅跟進兩租置屋邨升降機工程涉嫌欺詐及嚴重缺失；外圍方面，美股在通脹數據高於預期下反彈倒升，烏軍星鏈系統亦已恢復運作。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "機電署及房委會嚴查兩租置屋邨升降機工程缺失 涉嫌欺詐未裝門框組件",
+     "analysis": "機電工程署巡查發現，沙田博康邨及觀塘翠屏北邨由「臺日電梯」承接的更換工程中，承辦商僅安裝耐火門而未按要求安裝耐火門框組件，涉嫌欺詐及虛假陳述，房委會表示高度關注並正嚴肅追究責任。這項公共設施工程缺失直接牽涉數以萬計居民的日常乘搭及消防安全，特區政府與房委會的跟進行動，突顯監管機構對老舊屋邨基建更新的合規標準與工程問責絕不妥協。",
+     "sources": [
+      {
+       "title": "房委會高度關注兩屋邨更換升降機工程存在嚴重缺失",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874115-20261016.htm"
+      },
+      {
+       "title": "機電署：臺日電梯兩屋苑換升降機存嚴重缺失 疑欺詐及虛假陳述",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874108-20261015.htm"
+      }
+     ]
+    },
+    {
+     "headline": "政府第四季推售沙田石門住宅用地 預計提供約960個單位",
+     "analysis": "發展局公布本季度賣地計劃，將推出沙田石門一幅住宅地皮，預料可提供約960個單位；當局指出首三季私人房屋土地供應已達15680伙，超越全年度目標但不會放慢推地步伐。這反映政府維持土地穩定供應的長期政策決心，為本地地產及建築產業鏈注入持續動能，有助平抑市場對未來住屋供求失衡的顧慮。",
+     "sources": [
+      {
+       "title": "政府推售石門住宅地料可提供960個單位",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874087-20261015.htm"
+      },
+      {
+       "title": "Shek Mun residential site to yield 960 flats",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1874078-20261015.htm"
+      }
+     ]
+    },
+    {
+     "headline": "13歲男童急性肝衰竭情況危急 醫管局呼籲捐贈器官並擬向內地求助",
+     "analysis": "一名患有急性肝功能衰竭的13歲男童目前在瑪麗醫院留醫，位列O+血型移植名冊首位，醫管局緊急呼籲市民支持器官捐贈，並已準備向內地相關部門尋求跨境器官配對協助。這項緊急呼籲關乎年輕病患的生命救援，亦再次喚起香港社會對器官捐贈意願的關注，並體現跨境醫療救援機制在救治危重病人時的關鍵互補角色。",
+     "sources": [
+      {
+       "title": "13歲男童急需肝臟移植 醫管局呼籲市民支持器官捐贈",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874112-20261016.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "金管局推動「ART」監管框架引領銀行應用AI 消委會反映AI客服投訴大增逾1.4倍",
+     "analysis": "金管局正式發布「ART」框架以規範銀行業負責任地使用代理式人工智能，並要求設立緊急中止機制；與此同時，消委會公布今年首9個月接獲涉及AI客服的投訴按年急升逾140%。對於香港龐大的金融及零售企業而言，這顯示AI自動化技術在提升營運效率的同時，必須審慎兼顧風控與客戶體驗，避免因過度依賴算法而損害消費者權益。",
+     "sources": [
+      {
+       "title": "香港金融AI競爭力全球第三金管局「ART」框架護航- 香港",
+       "source": "大公文匯網",
+       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9zTkZVT2prcG42Z3lyNGdUVWNHMjRONi1rcm1NZlVhQ0c4ZTNtTVNhTmZoVzhoYVg3ZjlqamFYRVhiT2Nyb19wTERsSXVZa3B2R3I5TTBlZUV5WkdRMElUVkRnTGtkbjJqbTcyaU9uYVI?oc=5"
+      },
+      {
+       "title": "規管AI代理金管局促設緊急中止機制- 財經",
+       "source": "香港文匯報",
+       "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9rT2tJNTBVWDZEMnltUzZmOXFkU1pGMHRuRUhmdVdYUWtoamJycC1BTFZCV3diUUJTYzZtT0VZTUlSS25jQ0pabjJyVWlfckJPNzI2cmlpd0tPemJobUZxNDRNVGJoVTNpbjNuVW5SMHlzeTBHdGxZ?oc=5"
+      },
+      {
+       "title": "生產力局設首個具身智能及人形機械人實景應用訓練場",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874090-20261015.htm"
+      },
+      {
+       "title": "消委會接獲AI服務投訴個案較去年升超過140%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874091-20261015.htm"
+      },
+      {
+       "title": "金管發布新框架 規範銀行負責任應用AI",
+       "source": "東方日報",
+       "link": "https://news.google.com/rss/articles/CBMi0AJBVV95cUxNSGpraV9Rd0tPMHh0THpjSXNpTEdnTUpwV3U2c2NYVG4xaFpjLXpiSXpNRzVMYklEcy1kSkZyMmVLY0VqNHBMZ29ScnhkT3h6Z2NmRFViQ3lDcl8yQzF4M1pxRS1iTzdJb2RJVGRldFpfdVBXdk5ZWWlxenV4WnljZnRIWlZYd09PR2w4dUJ4aEZQTnlIbldkNU9maGlSRVFCRnc2Um5DRTF3WGVacXJveFJiVzJfUmR0cTlxTTRaUGhMZk9uTUFOazBZLU1zMmN1QjFhVnJSY2xXVlhBZ0xZX1BJamozYlNEWnlKWEFtTTdsN0ZHMXRRc2VCcWYxajJMaUVhTkhxbmFBRkJfRWVWLVFmUDlKYmtYNWtKUF9yM0xKS2lWV2txTnF4RFJYZHhVdzNxd29yaHViRHVINFlzSlhHaTJBbVpqeE1uSmFwNWY?oc=5"
+      },
+      {
+       "title": "銀行應用代理式AI 金管研監管發布「ART」框架 推動負責任使用",
+       "source": "信報網站",
+       "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPMWRMRnJLc2sybFA0Sjl0aXVXUzJGbEN2VGR5eXBNcFpVWktlbEgtQ2ZCcmVONGN5ckNQdm9Nbl9IV3VXUHdNdDdlT3k4TzdkaW1oZ0lwM21od0hIVlh0OC1XWjZVLXNSVm56a3h4UmducE8wdHhaSzJmbzZHVnBGSEpJUGlBTUkwUnpaYXNnRnY1aFoyZy10Q1pVOVVaczUxUC1UUHJZd2JlZndvVHZTT2haNUJqZGN5NkJDLXRwM0NvRHBOa1JPWHoxc2R3bkxCN2pzdndhRnFicXZQMWlZNVc3MVV0QkswT1BMTEk2YnB5NWlYblNxWjBuMA?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "Meta聯手蘋果推開源模型Muse Spark Open 支援Mac晶片本地運算",
+     "analysis": "Meta夥同蘋果公司推出全新開放權重模型Muse Spark Open，能夠直接在Apple Silicon晶片上本地運行，進一步加劇與各家AI企業的模型競爭。本地化邊緣運算能力的提升，讓香港的AI開發者與企業可以在無需依賴雲端伺服器的情況下部署先進模型，大幅降低推理解決方案的延遲與數據隱私合規成本。",
+     "sources": [
+      {
+       "title": "Meta推出強大開放AI模型 與中國企業展開競爭",
+       "source": "RFI",
+       "link": "https://news.google.com/rss/articles/CBMitAJBVV95cUxQaklZcDdfdE5RTTlSU3hNQWZkakJTOTRaSHFoX3Y0djdnZTROTl9jOERKbm5ZSXRscFRNdUZ6MmRSc0cyX2hfYU1pNlZnUU9UWEQtQUJEQWpSTEJSdGhDUkZKdnlyYlhOZTAxS1VUY1FIV1kyQjBxaDF4N3MyanZGR1gtWFNFV0VVeWZwc2ZjMnFweWthOWdkcW5URkRhRWFkYnhQX01aTzJUZzk0NExrWGc4TWJiVy1uVkIta2ZXRkZMV2VYRHRRNmp3d0MwSDJrd2ZnN3hCaHEwUUFRRTEweWxTeHRMTW5BV0I1VmEzWUtCOHhZQW1ra0xDN0c1V1EyeWtfY19OVnplTHcxcVJJZW5CeURLZTBDZW5za2QtRmVDS2RjQlo4RUhKWmVZd3VKZUNWRg?oc=5"
+      },
+      {
+       "title": "Meta launches an open-weight AI model that runs on Macs",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/"
+      },
+      {
+       "title": "Muse Spark Open",
+       "source": "Hacker News",
+       "link": "https://research.meta.ai/blog/muse-spark-open"
+      }
+     ]
+    },
+    {
+     "headline": "滙豐擴充本地AI專才團隊至300人 計劃在港設立全球人工智能研究院",
+     "analysis": "滙豐集團亞洲及中東地區聯席行政總裁廖宜建透露，目前香港已組建150人的AI專才團隊，未來兩至三年將翻倍至約300人，並正籌備在香港設立全球人工智能研究院。這項重要策略部署不僅鞏固了香港作為國際金融科技研發樞紐的地位，更為本地創科人才庫及金融數據分析生態注入強大就業機會與科研資源。",
+     "sources": [
+      {
+       "title": "滙豐廖宜建：香港設150名AI專才團隊 未來兩三年規模翻倍",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874086-20261015.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "IoT",
+   "items": [
+    {
+     "headline": "Iridium與Altair展開合作 將衛星連接整合至蜂窩物聯網晶片",
+     "analysis": "衛星通訊商Iridium與Altair攜手將衛星物聯網連接功能直接整合至蜂窩IoT晶片組中，為全球低功耗物聯網設備提供混合連網能力。這項技術突破將解決傳統流動通訊網絡無法覆蓋的偏遠地區痛點，對於香港以至全球的航運物流、離岸基建監測以及供應鏈追蹤系統，提供了更高可靠度且無縫銜接的通訊方案。",
+     "sources": [
+      {
+       "title": "Iridium, Altair Integrate Satellite Connectivity Into Cellular IoT Chipsets",
+       "source": "The Fast Mode",
+       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOYWRRYm9YOEpxZ2VjdzNlbldWZnBHczBLaHlONl9qMjROT1E4aFFnbVNKYjV2NmF6QnBrNGIxb1hob1pISkZQckNDRVFHZTRuSEtYU2dUdDhHRGxPQjFOTS1vc0JCSlFLUHR3UTd4VFBld2w3U2pNb2luYk5fMjMtWE1wdzMxY2ZBUVFYWUZpTVR5TDYxdTRqak1idmZsLUtDUXZ0UXJHZlJrYUxKeEtDdlEyRjJsaHNibEtKMmxxWlBnYm9NX2hxNjM1Y1h1YU0?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "美國9月PPI及零售銷售高於預期 避險與防守股帶動美股三大指數倒升",
+     "analysis": "美國勞工部公布9月最終需求PPI按月升1.3%，零售銷售亦按月升0.8%，雙雙高於市場預期，反映通脹壓力仍在；美股早段受挫後靠醫藥與消費等防守板塊帶動倒升，道指收報急升556點。市場對聯儲局本月加息步伐預期維持溫和，美元及美債息率回落亦帶動金價反彈，為密切注視外圍息口走向的香港資本市場提供暫時的穩定支撐。",
+     "sources": [
+      {
+       "title": "金價反彈逾1% 美元及債息回落",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874128-20261016.htm"
+      },
+      {
+       "title": "納指及標普500指數轉升收市 道指升556點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874126-20261016.htm"
+      },
+      {
+       "title": "美股初段個別發展",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874103-20261015.htm"
+      },
+      {
+       "title": "美國9月PPI按月升1.3% 零售銷售升0.8% 均高過預期",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874098-20261015.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "烏克蘭軍方星鏈服務據報復常 國防部徹查日前突然限速原因",
+     "analysis": "烏克蘭軍方使用的SpaceX「星鏈」衛星網絡終端在日前突遭限速後，現已恢復正常運作，烏克蘭國防部表示正徹查限速事件的詳細原因。事件凸顯商業化衛星通訊在重大地緣政治衝突中的關鍵戰略角色，同時引發全球軍工及科技界對過度依賴單一商業供應商提供通訊基建所帶來的脆弱性進行深刻反思。",
+     "sources": [
+      {
+       "title": "烏軍星鏈服務據報復常 國防部徹查曾被限速原因及有關情況",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874138-20261016.htm"
+      }
+     ]
+    },
+    {
+     "headline": "也門胡塞武裝襲擊利雅得機場及亞丁總統府 加劇中東地緣安全風險",
+     "analysis": "也門胡塞武裝於本月持續發動襲擊，沙特方面指其襲擊利雅得哈立德國王國際機場已造成17死逾300傷，該組織周四亦向亞丁總統府發射彈道導彈導致守衛傷亡。持續惡化的中東軍事衝突直接威脅中東民航與關鍵基建安全，亦使國際能源市場與供應鏈的避險情緒持續高漲。",
+     "sources": [
+      {
+       "title": "沙特稱胡塞武裝本月襲擊利雅得機場致17死逾300傷",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874125-20261016.htm"
+      },
+      {
+       "title": "也門官員稱胡塞武裝襲擊亞丁總統府 3人死亡",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874119-20261016.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "從金管局針對代理式AI推出「ART」監管框架，到滙豐計劃在港設立全球AI研究院並將本地專才團隊擴倍，顯現香港在金融科技創新與合規架構上持續提速。然而，消委會最新公布的投訴數據顯示，AI客服應用出現超過1.4倍的投訴增幅，凸顯前端落地應用與用戶滿意度之間仍存在落差。企業在加速數碼化及自動化轉型的過程中，除了引入領先算法模型，亦必須設立健全的風控中止機制與保留真人支援彈性，才能在追求效率的同時維繫公眾信任。",
+ "en_summary": "Hong Kong's financial regulator has rolled out the ART framework to guide the responsible adoption of agentic AI in banking, while HSBC plans to double its local AI specialist team and establish a global AI research institute in the city. Globally, US markets reversed early losses driven by defensive sectors despite hotter-than-expected PPI and retail sales figures, and SpaceX's Starlink service for the Ukrainian military has reportedly returned to normal operations following speed restrictions.",
+ "date": "2026-10-16",
+ "model": "gemini-3.8-flash"
+}
