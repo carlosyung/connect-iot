@@ -11,5 +11,6 @@ Homepage for [connect-iot.com](https://connect-iot.com): Hong Kong news, AI/LLM,
 - **Daily briefing (今日重點):** `briefing.py` asks Gemini (`gemini-3.8-flash`, free tier) to write an original analysis of the day's headlines once per HK day, falling back to Cloudflare Workers AI (DeepSeek V4 Flash) if Gemini fails. Saved to `content/briefings/YYYY-MM-DD.json` and published at `/briefing/`. Needs the `GEMINI_API_KEY` and/or `CLOUDFLARE_API_TOKEN` secrets plus the `CLOUDFLARE_ACCOUNT_ID` variable; without them the rest of the site still updates.
 - **Add or remove sources:** edit `FEEDS` / `MARKETS` at the top of `build.py`.
 - **Change the design:** edit `template.html`.
+- **Extra static pages:** anything in `static/` is copied into the site as-is. `static/ham/` is Ham's Zoo 6.0 study page at `/ham/`; `static/_headers` keeps it out of search engines (`noindex`).
 
 Run locally: `python3 build.py` then open `dist/index.html`. Standard library only, no dependencies.

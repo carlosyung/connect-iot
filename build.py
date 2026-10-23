@@ -257,6 +257,9 @@ def main():
     for extra in ("favicon.svg",):
         if (ROOT / extra).exists():
             shutil.copy(ROOT / extra, DIST / extra)
+    # Hand-made pages (e.g. /ham/) and Cloudflare _headers, copied as-is
+    if (ROOT / "static").is_dir():
+        shutil.copytree(ROOT / "static", DIST, dirs_exist_ok=True)
     print(f"Built {len(articles)} articles, {len(data['markets'])} quotes, {len(briefings)} briefings -> {DIST}")
 
 
