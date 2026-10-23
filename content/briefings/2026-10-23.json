@@ -1,0 +1,220 @@
+{
+ "title": "科技股受壓與AI融資浪潮並存",
+ "summary": "美股受AI巨額資本開支憂慮拖累，納指收挫逾2.6%，然而市場對AI基礎架構投資依然狂熱，OpenAI據報正以1.25萬億美元估值洽購高達300億美元新融資。本地方面，超強颱風「薔琵」影響多班港台航班，港府數字辦亦就PHP嚴重漏洞向各部門發出資安警報。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "強颱風薔琵迫近台灣 多班往返港台航班取消及台灣金融市場休市",
+     "analysis": "受強颱風薔琵逼近台灣及沖繩一帶影響，香港航空宣布取消周五6班往返香港與台北的航班，台灣金融市場（包括股匯債市）亦於周五全面休市。對於計劃前往台灣或有商務往來的香港市民與機構，需及時跟進航空公司退改安排與資金調度。",
+     "sources": [
+      {
+       "title": "薔琵預計明天前後靠近日本沖繩一帶 料將帶來惡劣天氣",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874980-20261023.htm"
+      },
+      {
+       "title": "受強颱風「薔琵」影響 台股明日休市",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874976-20261022.htm"
+      },
+      {
+       "title": "超強颱風薔琵影響 多班來往香港及台灣航班取消",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874966-20261022.htm"
+      }
+     ]
+    },
+    {
+     "headline": "青協調查：逾五成中學生現抑鬱表徵 近半傾向向AI傾訴",
+     "analysis": "香港青年協會最新調查顯示超過五成六受訪中學生出現抑鬱情緒表徵，且有約四成六人曾向AI傾訴心事，比例甚至高於尋求教師及社工協助。這反映生成式AI在本地青少年日常生活中漸成心靈寄託，同時提醒教育界與社福機構須密切關注輔導模式的轉變與潛在心理健康盲點。",
+     "sources": [
+      {
+       "title": "調查指五成六受訪學生有抑鬱表徵 青協籲家長留意子女情緒變化",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874973-20261022.htm"
+      },
+      {
+       "title": "調查：近半中學生AI訴苦 多於求助教師社工 - 20261023 - 教育",
+       "source": "明報新聞網",
+       "link": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxPeXZhRDBZVm5XRUQ5bjV5NVA3SXNLRWdQbC0zY0VLQl9UQVBERnNGSG8wcTdJUTcyRk5MS21IXzJBaFFqSXBFQ25wMlZkT2M5VU1IUUdQYmhHZzFpRGVHRVFmcm56bERkRG50cktRamhiNVNIck9fQ1FaUl9ibHNsOHk2Z2VtbXpmZ3JKdVNULWtKM3p0X2J6M1FKYnQ0OEVKS1NFUVNkdGxOOFpjcnZUNm50V0dRQUlPTGJsYmpKSjRmQ0Jxby15V0pmc0pURGd1U1lUenFJckNjOUxFU2FaR0JJdldwUzJVTDU0UENnY3RINnJER0FpYmVRWk9RWGw2T3JqSFpHbE9CM0lMMERiR2trenpvdGhCOFFPdnVqVlktZ0RVaXZXTWRYYWlxT0pHRGNQeFhqNGNja1NNaHJCLWQ1YVNJTkxndHpXdEVmSG1LTXQyUHZZMGRSQm9NS3lz?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "數字辦發出保安警報 促各部門全面排查及修補PHP嚴重漏洞",
+     "analysis": "數字政策辦公室針對廣泛應用於網站後端的PHP程式語言嚴重安全漏洞，向特區政府各決策局、部門及公營機構發出保安警報，要求立即檢視並修補系統，否則須暫時離線。此舉突顯公共行政系統面對網絡攻擊的高度防禦姿態，本地企業及IT管理員亦應從速自查以降低黑客入侵風險。",
+     "sources": [
+      {
+       "title": "數字辦：高度關注PHP存有嚴重安全漏洞 向政府部門發保安警報",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874960-20261022.htm"
+      }
+     ]
+    },
+    {
+     "headline": "亞殘運港隊表現亮眼 陳睿琳百米蝶泳連續三屆摘金",
+     "analysis": "在亞殘運賽事中，香港泳手陳睿琳於女子S14級100米蝶泳奪金，成功蟬聯三屆冠軍，連同輪椅劍擊女重團體銀牌、羽毛球單打銅牌及接力賽事，港隊單日進帳多面獎牌。運動員的頂尖表現為香港體育界注入強心針，亦展示出本地殘疾運動員長年訓練的深厚實力。",
+     "sources": [
+      {
+       "title": "羅淑佩恭賀港隊在亞殘運游泳、乒乓、劍擊及羽毛球項目增添獎牌",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874978-20261022.htm"
+      },
+      {
+       "title": "亞殘運游泳項目 港隊混合S14級4X100米自由泳接力奪銅",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874963-20261022.htm"
+      },
+      {
+       "title": "亞殘運羽毛球SH6級男單準決賽 港隊朱文佳摘銅",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874959-20261022.htm"
+      },
+      {
+       "title": "SAR wins second gold in Nagoya",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1874951-20261022.htm"
+      },
+      {
+       "title": "HK wins more medals in para table tennis",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1874942-20261022.htm"
+      },
+      {
+       "title": "HK wins silver in women's épée at Asian Para Games",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1874937-20261022.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "OpenAI據報尋求按1.25萬億美元估值 融資最多300億美元",
+     "analysis": "市場消息指OpenAI正籌劃在IPO前進行新一輪高達300億美元的融資，若以估值逾1.25萬億美元落實，將刷新全球最高估值私營企業紀錄。這顯示頂尖大型語言模型研發的資金門檻已飆升至國家級規模，吸引全球科技資本進一步向頭部寡頭集中。",
+     "sources": [
+      {
+       "title": "【AI+OpenAI】OpenAI據報按估值1.25萬億美元 籌最多300億美元 冀下周末落實",
+       "source": "香港經濟日報HKET",
+       "link": "https://news.google.com/rss/articles/CBMipwNBVV95cUxNOHVSNFBBZExBdjZkLUdaOWdJNC1QeXBqN1V0QmZlclBCOU1OTVhCdDVXVnpXQ2hVOEdmb3dzaXZ3Y1B5cXhhTXl2U29mQ0hKS0JEOW00TF9JNk11MVVNN3hCMjFDR0h5ZWJCS2lFMkN5eFJuNXVsUTIyYnBKUjBBbGdubVdlR21tUG9faWNZWlA1amRDYXRNT1MwRDd2a0c0NVFIdFZNS0hyM2F4a0JLcWRGdWxpeDNxN3NTdVk5MGxhUUtqLXFnVEwxNGFLZ3J6bjFPck9pV2FXbEl1TU5MY1l6Mm1KYVFJYU8xQ2doUGI2QVFLR1BUMDVScVltcEhOVlBuYkE3N2xXOGNjN0JidmN0ajVOR1IxZ013Z2VzT0I3QnJmaEZNTHIycG91NE9hMzEwdUxiZW5KVUFZYnZEU1VSTzRRczh5MXJES3lrdHl6UnhWZnlVTDh3dDQxajl2ZHRLcWtZcFNMM3JTZFE1T3V0TXVtVm1abFhHdWRSWVNRVENvNjJOd0phN2pLTDl1R1lCc0ZiXzk1NUp5REhBUjg3bERLSm8?oc=5"
+      },
+      {
+       "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/"
+      }
+     ]
+    },
+    {
+     "headline": "銀行及企業發現未授權AI智能體風險 1Password推出憑證隔離方案",
+     "analysis": "美國多家銀行據報於客戶賬戶中發現未經授權的AI Agent活動，引起金融界對自主智能體安全風險的警惕；與此同時，密碼管理商1Password推出新功能，讓AI智能體代為登入時無需直接接觸原始密碼。隨著AI Agent加速接管企業及個人操作流程，安全架構與身份驗證將成為科技界下一波核心攻防戰。",
+     "sources": [
+      {
+       "title": "AI風險丨美國多家銀行據報發現客戶賬戶有未經授權AI智能體",
+       "source": "信報網站",
+       "link": "https://news.google.com/rss/articles/CBMiigNBVV95cUxQSUdkb2Q0TC1SVk1ET1U5N1F1NEktajFWMFljUFU1M1E4OWE3UjJhSUFxTmI0NUZMbFR5VkdjVVl1aElRSXNuRnpWSGVENnh0Y2tMbEZNYnJ3dHpTUG93ODBKT0c3eG5jYzloTmlGWXB6Q2NSVmRPUUsydmlRZ09JbmRoNThyMWFSMl9FcnBwMlVGOHNRV3BxTDZtbWQ4andUOW9QZ1pMS0c2dzh1ZFVFN2E1QjkwYW93eTNvYy1yVnpmX1lKN0FqeTVWaFdQTFl6emdQMXpqay1YNTZJV3ZHRS1Kci02R3RObFJXUXY4RDdpNDY4SkdIZ2QtekluNzlPenJZUmJsM3Bkc0k5NWNXWFpmTUMzaFRpTmc5TFJFYUxHbUpnWlRBalQ4VXF3d05lNGVZaDJNYlktTGdhaE9GRE56enJBR0p5eHUtQ1JQSEt0a3VRU0lNV0MtQ09Ya2JtejE1SFIyYnU5QjdrOUdZSlQ3Rm1TTFhJV05WRzRxSVpJQ014QldWUU9n?oc=5"
+      },
+      {
+       "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "市場憂慮AI資本支出過大 納指收挫2.6%美債息回落",
+     "analysis": "市場對科技巨企在AI上的龐大資本開支憂慮升溫，Meta跌近7%，拖累納斯達克指數大跌2.6%，道指則微幅靠穩，避險資金亦推動美國10年期債息跌穿5厘。科技股高估值面臨回報期過長的考驗，香港投資者需留意環球科技股板塊短期的波動風險。",
+     "sources": [
+      {
+       "title": "美元變動不大 美國10年期債息跌穿5厘",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875000-20261023.htm"
+      },
+      {
+       "title": "納指低收近3% Meta跌近7% 道指反覆靠穩",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874997-20261023.htm"
+      },
+      {
+       "title": "美股初段下跌 納指跌逾1% Meta挫近6%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874974-20261022.htm"
+      },
+      {
+       "title": "美股｜周四美股走勢分化 AI股拖累納指挫2.6% 道指微升",
+       "source": "Yahoo 財經",
+       "link": "https://news.google.com/rss/articles/CBMi2AJBVV95cUxOSExBQVREcnQ0a0lFQVY0TkN6emlTVzRUNFFHai1selZ0cXI4LWppYVpwR05kWGNBOFNua0E5cGFjMTY3bXZrMHVhQmUxNy1yYWxQWGVyaXFZd3ZHOEl6UHQ3TUplMVZneHZidkJyOUQtdmwzN3lCX1dnNUFyeUdJRk1iNWUxdEZtdFFTRG1Hd3RDZ3I0WFc5TFAzR3RFRkhTQWZPbS1DVGltdUVhMFFsZS1XeXdoZGNaTi1vMnAwN0YzeGVMQ0dlSHdCSGoxV1ZaWEZuVEZlV2k2bExKNHpJSWRuWDlCWUplQkNOazhweURMYmxpZHAwcUdYNFdTamg3ODlaR3IwZjFrcFFmc0N5VW4wMWV4NTZBSWZxWG1jUzNsZTFpeVA3UEdBZEtoNWRQMi05ME1mRVVWeENOc0N0ejRqT2ttcElKeVlIa0xUck9ibmFzRjZYRA?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "中東局勢升溫及胡塞襲擊沙特 布蘭特期油飆升4%創逾五個月高",
+     "analysis": "因胡塞武裝襲擊沙特阿拉伯引發供應中斷疑慮，加上美以擬定打擊伊朗計劃的消息，布蘭特期油收市升至每桶113.17美元，紐約期油亦逼近百美元關口。國際能源成本急升將進一步加劇全球通脹黏性，為本地航運、物流及製造業帶來經營成本壓力。",
+     "sources": [
+      {
+       "title": "布蘭特期油高收約4% 創逾5個月高位",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875001-20261023.htm"
+      },
+      {
+       "title": "納指低收近3% Meta跌近7% 道指反覆靠穩",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874997-20261023.htm"
+      },
+      {
+       "title": "美媒稱美以軍方已制定美國中期選舉後打擊伊朗計劃",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874972-20261022.htm"
+      }
+     ]
+    },
+    {
+     "headline": "恒大清盤人累計追回逾4億美元 目標2027年上半年首次分派",
+     "analysis": "中國恒大清盤人發表進展報告，透露已透過出售飛機及藝術品等資產追回4.359億美元，但僅佔申索總額460億美元的不足1%，並預計2027年上半年進行首批中期債款攤還。內房債務重組進度緩慢，市場對於清盤回收率的保守預期將繼續壓抑中港地產債券的投資氣氛。",
+     "sources": [
+      {
+       "title": "恒大清盤人：已回收逾4億美元 目標明年上半年首次中期債款攤還",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1874956-20261022.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "瀏覽器市場再洗牌 創新瀏覽器Arc宣布於12月停運",
+     "analysis": "曾備受科技愛好者推崇的Arc瀏覽器宣布將於12月22日停止運作，母公司The Browser Company將資源轉向全新型態的Dia項目。這表明即使產品在用戶體驗上屢獲好評，要在Chrome壟斷的市場中轉化為大眾普及產品依然極具挑戰，垂直工具軟件的商業模式探索步步為營。",
+     "sources": [
+      {
+       "title": "Arc browser sunsets December 22 as The Browser Company doubles down on Dia",
+       "source": "TechCrunch",
+       "link": "https://techcrunch.com/2026/10/22/arc-browser-sunsets-december-22-as-the-browser-company-doubles-down-on-dia/"
+      },
+      {
+       "title": "A farewell to Arc browser",
+       "source": "Hacker News",
+       "link": "https://arc.net/"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日科技與金融市場呈現鮮明的分化景象：一方面，二級市場對科技巨頭在AI基礎設施投入的龐大資本開支失去耐性，引發納指大幅回調；另一方面，一級市場及企業應用卻絲毫未見冷卻，OpenAI估值邁向萬億美元級別，AI Agent亦在金融與個人領域快速滲透。對香港而言，從青少年高度依賴AI傾訴心事，到政府連環發布系統安全修補警報，均表明AI與軟件技術正深刻重塑社會運作方式。本地企業與個人在擁抱技術賦能的同時，更須加緊建立健全的資安防護與心理健康支援體系。",
+ "en_summary": "Wall Street diverged as tech giants faced a steep sell-off over heavy AI capital expenditure, with the Nasdaq dropping 2.6%, yet OpenAI is reportedly seeking up to $30 billion at a staggering $1.25 trillion valuation. In Hong Kong, Typhoon Champi prompted severe flight cancellations to Taiwan, while the government issued an urgent security alert regarding critical PHP vulnerabilities across official IT systems.",
+ "date": "2026-10-23",
+ "model": "gemini-3.8-flash"
+}
