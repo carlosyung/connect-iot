@@ -1,0 +1,173 @@
+{
+ "title": "OpenAI切斷聯網訓練防風險　中東局勢再推升油價美股挫",
+ "summary": "OpenAI宣布不再利用實時聯網環境訓練前沿模型以減低資安風險；中東緊張局勢推動國際油價急升逾3%，拖累道指收市跌逾600點。本地方面，財委會通過撥款16億元延長新生嬰兒獎勵金，港隊則在亞殘運收官前夕再奪多面獎牌。",
+ "sections": [
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "OpenAI為防範重大風險　停止在即時網絡環境訓練前沿模型",
+     "analysis": "OpenAI宣布將不再於即時聯網環境下訓練其最先進的前沿AI模型，並強調此舉是基於資安風險考量及強化訓練環境的安全。這反映頂尖AI機構日益警惕模型訓練期遭黑客入侵或受不良網絡數據污染的威脅。對於依賴AI技術的香港科研機構及企業而言，未來在開發或部署高階模型時，數據沙盒隔離與供應鏈安全將成為核心合規指標。",
+     "sources": [
+      {
+       "title": "OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/"
+      },
+      {
+       "title": "Securing our frontier model training environment",
+       "source": "Hacker News",
+       "link": "https://openai.com/index/securing-our-frontier-model-training-environment/"
+      },
+      {
+       "title": "OpenAI now trains its frontier AI models with no internet access",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet"
+      }
+     ]
+    },
+    {
+     "headline": "Jack Dorsey旗下Block發表全雙工語音模型Dessa",
+     "analysis": "Jack Dorsey掌舵的Block推出名為Dessa的AI語音模型，強調完全以人類真實對話從頭訓練，展現高度逼真的全雙工對話能力。隨著即時語音交互技術迅速成熟，預計將對客戶服務、虛擬助理及跨境商務溝通帶來顯著革新。香港金融及零售等高度依賴客服的行業，可密切關注此類擬真語音模型落地應用的可能性。",
+     "sources": [
+      {
+       "title": "Dessa: the most authentic full-duplex speech model ever built",
+       "source": "Hacker News",
+       "link": "https://block.xyz/dessa"
+      },
+      {
+       "title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "中東局勢緊張刺激油價漲逾3%　美股道指急挫逾600點",
+     "analysis": "受胡塞武裝襲擊沙特阿拉伯影響，國際油價單日高收逾3%，布蘭特期油收報每桶116.72美元，連帶美股三大指數承壓，道瓊斯指數收市下瀉652點。能源成本再度上漲加深了市場對通脹回升的憂慮，令即將面臨多國央行議息的環球金融市場波動加劇。香港投資者需留意外圍高通脹及高利率預期對本地資產市場形成的持續折讓壓力。",
+     "sources": [
+      {
+       "title": "美元上升 市場關注下周聯儲局議息",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875149-20261024.htm"
+      },
+      {
+       "title": "國際油價高收逾3% 中東局勢緊張",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875147-20261024.htm"
+      },
+      {
+       "title": "道指低收逾600點 本周累升0.4%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875146-20261024.htm"
+      },
+      {
+       "title": "美股初段延續跌勢 道指跌近500點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875130-20261023.htm"
+      }
+     ]
+    },
+    {
+     "headline": "通脹憂慮推升債息　現貨金價跌穿4000美元大關",
+     "analysis": "隨著能源價格上漲引發通脹疑慮及美國10年期國債孳息率迫近5厘水平，金價錄得逾4個月以來最大單周跌幅，現貨金跌穿每盎司4000美元。全星期現貨金累跌4%，收報3995.52美元，創今年6月以來最差單周表現。商品市場大幅波動反映避險資金於強美元及高債息環境下出現重新配置，本地投資者應謹慎管理貴金屬倉位風險。",
+     "sources": [
+      {
+       "title": "美元上升 市場關注下周聯儲局議息",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875149-20261024.htm"
+      },
+      {
+       "title": "金價失守4000美元關口 創逾4個月最大單周跌幅",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875148-20261024.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "立法會財委會通過16億元額外撥款　延續新生嬰兒獎勵金計劃",
+     "analysis": "立法會財務委員會正式通過追加16億元撥款，以落實延長及優化《施政報告》提出鼓勵生育「組合拳」中的新生嬰兒獎勵金措施。政府期望藉現金補貼及配套措施減輕家庭負擔並推動生育率回升。這項政策延長為本地育齡家庭提供直接的財政誘因，但長遠能否逆轉人口老化趨勢仍需視乎各項配套成效。",
+     "sources": [
+      {
+       "title": "財委會通過額外撥款延長及優化新生嬰兒獎勵金計劃",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875104-20261023.htm"
+      }
+     ]
+    },
+    {
+     "headline": "亞殘運港隊健兒接連奪牌　劍擊代表湯雅婷獲任閉幕持旗手",
+     "analysis": "第五屆亞洲殘疾人運動會即將閉幕，中國香港代表團在游泳、乒乓球及劍擊項目持續傳來捷報，累計斬獲多面獎牌；個人奪得2銀1銅的劍擊代表湯雅婷獲委任為閉幕禮持旗手。港隊殘疾運動員在國際賽事展現出色的競技水平與毅力，有助帶動本地社會對殘疾人士運動發展及支援政策的關注。",
+     "sources": [
+      {
+       "title": "Fencer Tong named flagbearer at Para Games closing",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1875136-20261023.htm"
+      },
+      {
+       "title": "亞殘運明閉幕 湯雅婷將擔任中國香港代表團閉幕禮持旗手",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875134-20261023.htm"
+      },
+      {
+       "title": "羅淑佩恭賀港隊於亞殘運游泳、乒乓球及劍擊項目增添獎牌",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875131-20261023.htm"
+      },
+      {
+       "title": "More Para table tennis medals for Hong Kong, China",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1875091-20261023.htm"
+      }
+     ]
+    },
+    {
+     "headline": "盧寵茂指「醫健通+」不宜合併「HA Go」以免系統過於臃腫",
+     "analysis": "醫務衞生局局長盧寵茂表示，「醫健通+」登記人數已突破657萬，但表明反對將其與醫管局的「HA Go」合併，認為強行整合會使應用程式演變成功能過載的「大笨象」。兩者維持明確分工有助系統在市民日常健康管理與公立醫院就診流程中保持運作穩定，避免因架構過度複雜而影響公眾數碼醫療體驗。",
+     "sources": [
+      {
+       "title": "盧寵茂：「醫健通+」與「HA Go」不宜合併",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875101-20261023.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "中東地緣局勢再度吃緊　特朗普稱或對伊朗採取新軍事行動",
+     "analysis": "美國總統特朗普在造勢活動中宣稱可能針對伊朗展開新一波小規模軍事行動，同時胡塞武裝襲擊沙特設施，令中東地緣政治緊張顯著升溫。若地區軍事對峙進一步擴大，勢將危及波斯灣沿岸的原油供應鏈及國際航運通道。地緣不確定性將直接衝擊環球貿易與能源供應，香港作為外向型商貿中心亦難以置身事外。",
+     "sources": [
+      {
+       "title": "特朗普表示或對伊朗採取新一波軍事行動 之後將處理古巴問題",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875145-20261024.htm"
+      },
+      {
+       "title": "國際油價高收逾3% 中東局勢緊張",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875147-20261024.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點集中在地緣政局與先進技術安全的雙重變局。OpenAI停止以實時聯網方式訓練模型，反映前沿AI已進入將模型安全性與數據隔離置於首位的成熟監管期，香港科研與金融業界在引進或微調大模型時，必須將防範污染及系統防禦納入底層架構。另一方面，中東火頭不斷推高油價至高位，加上美債孳息高企，令環球股市與貴金屬受壓，本地市場需警惕新一輪輸入性通脹與加息預期反覆的潛在衝擊。",
+ "en_summary": "OpenAI announced it will no longer train its frontier AI models on the live internet due to security concerns, highlighting growing caution around model safety. Meanwhile, escalating tensions in the Middle East drove crude oil prices up over 3%, sending the Dow Jones tumbling by more than 600 points. In Hong Kong, the LegCo Finance Committee approved a HK$1.6 billion fund to extend the newborn baby bonus scheme.",
+ "date": "2026-10-24",
+ "model": "gemini-3.8-flash"
+}
