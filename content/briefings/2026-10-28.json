@@ -1,0 +1,175 @@
+{
+ "title": "今日重點：筲箕灣爆水管陸續恢復供水 港股隨外圍偏軟",
+ "summary": "今日焦點包括筲箕灣道爆水管致過萬戶受影響並於晚上陸續恢復供水、港股隨外圍偏軟及多隻科技與AI企業有新動向。 Connect-IoT 為讀者精選本地、科技及財經要聞。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "筲箕灣道地下食水管爆裂 逾萬戶停水後晚上陸續恢復供水",
+     "analysis": "筲箕灣道地盤進行工程期間引致地下食水管爆裂，導致西灣河及筲箕灣一帶約一萬戶受影響。水務署經緊急搶修及重啟供水系統後，供水已於晚上9時半起陸續恢復正常。事件提醒市民及相關部門在進行路面工程時需加強管網保護，以確保社區基本民生不受影響。",
+     "sources": [
+      {
+       "title": "Shau Kei Wan water supply returns after pipe burst",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1875553-20261027.htm"
+      },
+      {
+       "title": "筲箕灣及部分西灣河用戶食水供應晚上9時半起陸續恢復正常",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875549-20261027.htm"
+      },
+      {
+       "title": "工程人員稱筲箕灣道食水管接駁大致完成 正重啟供水系統",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875543-20261027.htm"
+      },
+      {
+       "title": "筲箕灣道地下食水管爆裂 逾萬戶受影響",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875530-20261027.htm"
+      },
+      {
+       "title": "筲箕灣道爆水管 水務署：爭取午夜12時前完成維修及恢復供水",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875527-20261027.htm"
+      }
+     ]
+    },
+    {
+     "headline": "香港航空等企業發生資料外洩 騙徒冒客服行騙致市民損失過百萬",
+     "analysis": "近日香港航空、友和香港及百老匯攝影器材等企業相繼發生資料外洩事故，合共超過1600名客戶接到詐騙電話。騙徒能準確說出受害人的航班及消費等具體資料，誘使市民登入虛假網站或啟用螢幕共享進行轉帳。這對本港企業敲響了資安警號，提醒企業必須加強客戶數據保護，市民亦提高警覺防範新型電話騙案。",
+     "sources": [
+      {
+       "title": "騙徒冒充香港航空客服準確說出具體航班資料 受害人損失120萬",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875542-20261027.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "Oracle 聯手 OpenAI 推出 AI Workspace Fusion 及 NetSuite 可經 ChatGPT 操作",
+     "analysis": "Oracle 與 OpenAI 宣布深化合作，推出 AI Workspace Fusion 並讓 NetSuite 能夠透過 ChatGPT 直接操作。這項整合讓企業用戶能更直觀地利用大型語言模型處理日常業務與數據。對於香港企業而言，這類企業級 AI 工具將有助進一步提升辦公自動化與營運效率。",
+     "sources": [
+      {
+       "title": "Oracle 聯手 OpenAI 推 AI Workspace Fusion 及 NetSuite 可經 ChatGPT 操作",
+       "source": "unwire PRO",
+       "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNV0pRLUNSeHlGUWxhdGs3RVZsU0t4VVZ0cldZRHg0cWhqZHYyT29VbUhTX2JvZlFxc0xLTlNIUWZXNjVVRWYwcmFoemJueFpCRHZaOGNPbklPaFNPaHlIRVltakZ5cWRXMlo0QmhnTGJILXUwNEV3UWpxU2RHSHNJaFdfNUMtNG1GeWc?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "城大調查指港人AI使用意願上升 逾半憂工作遭取代",
+     "analysis": "香港城市大學的一項調查顯示，港人對人工智能的使用意願持續上升，但同時有超過一半受訪者擔憂工作崗位會被AI取代，而在醫療決策方面則普遍傾向由醫生主導。這反映出社會在擁抱科技的同時，對於就業保障與倫理界線仍存有戒心，對本地企業推動數碼轉型具參考價值。",
+     "sources": [
+      {
+       "title": "城大調查：港人AI使用意願續升 惟逾半憂工作遭取代 醫療決策傾向由醫生主導",
+       "source": "香港財經時報HKBT",
+       "link": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxNcXNZWlpSMURMb3RHd1dsQnBXRkQtRFJ3T19iYUFwWURNTGtGSElEcFUwV2lYQ3RybjZFdU02VjVsWmRpN1F0UlBTbkN2bFhTSDlpWEFnaEZudVJpVkw3dDBSRldrR0JCS0lGRTc3T3NUektsMG1NSlNvbWVtR0t4aFB5NjhqWUdody02bGowLW02UkQ1eldzcUZTXzJSY0trNEFHU29hajI3WkFrUUYwNHFkUG13OHUtN1J5dXgtS2ZvS1JSU0Z6TXdpeVU5TGRUWXZlX0ZkMzdxYjNLdTB4SXdEYV9lejJwVHIwdFB0ZzBpRk55ZENSdHlWMXpZZWYxUXg1cmU1NG5lWXg3WnNXT1NtcFNKVTYzVVozWl9lM2hMeTVFS3Y2U1dmakVLWnRCR21CVjY5Y1UydWcyVVpwdkExRTV3bGZ3QUE1cWxhYUZBeXlZb2RBOGdpc0FzeEdl?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "Apple 發布全新 M6 晶片 MacBook Pro 香港售價 15,999 元起",
+     "analysis": "Apple 宣佈推出配備全新 M6 晶片的 14 吋 MacBook Pro，升級支援 Wi-Fi 7 及 Bluetooth 6，並強調 AI 工作效能較上一代顯著提升。新機將於香港展開預訂，定價由 15,999 港元起。這款新硬件的推出將吸引追求高效能流動運算的本地專業人士及創作者換機。",
+     "sources": [
+      {
+       "title": "Apple M6 MacBook Pro MBP 2026 香港售價 HK$15,999 起、10 月 29 日預訂",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/10/28/apple-m6-macbook-pro-14-hong-kong-price/notebook/?utm_source=rss&utm_medium=rss&utm_campaign=apple-m6-macbook-pro-14-hong-kong-price"
+      }
+     ]
+    },
+    {
+     "headline": "Apple Creator Studio 將迎來大更新 Keynote 支援 MCP",
+     "analysis": "Apple 宣布旗下創作軟件訂閱組合 Apple Creator Studio 將於 11 月推出重大更新，包括 Final Cut Pro 整合 MotionVFX 特效、Logic Pro 加入鼓聲分離，以及 Keynote 等辦公軟件支援 MCP。這些功能升級將進一步優化本港創意工作者的創作流程，提升多媒體製作效率。",
+     "sources": [
+      {
+       "title": "Apple Creator Studio 11 月大更新 Final Cut Pro 加入 MotionVFX、Keynote 支援 MCP",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/10/28/apple-creator-studio-motionvfx-mcp-update/notebook/mac-os/?utm_source=rss&utm_medium=rss&utm_campaign=apple-creator-studio-motionvfx-mcp-update"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "港股午後跌幅擴大恒指收市跌170點 滙控因業績挫近6%",
+     "analysis": "港股今日走勢反覆偏軟，恒生指數午後跌幅擴大，一度失守23000點關口，最終收市報23041點，跌170點，主板成交額逾1783億元。其中，中午公布業績的滙豐控股表現遜於市場預期，引致股價午後跌近6%，成大市主要拖累因素。市場目前正密切觀望環球央行本周的議息動向。",
+     "sources": [
+      {
+       "title": "滙控拖低英股 法德股市靠穩收市",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875565-20261028.htm"
+      },
+      {
+       "title": "恒指低收170點 滙控挫近6%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875510-20261027.htm"
+      }
+     ]
+    },
+    {
+     "headline": "ASMPT上季轉盈賺逾5億元 季內新增訂單創新高",
+     "analysis": "ASMPT公布截至9月底止第3季業績，錄得盈利5.33億元，相對去年同期為虧損，經調整經營利潤按年大幅上升。期內收入錄得強勁增長，新增訂單總額更創下新高，主要受惠於持續的人工智能基礎設施投資帶動先進封裝及半導體設備需求。這反映環球 AI 相關產業鏈的強勁需求正直接利好本港上市的高科技設備供應商。",
+     "sources": [
+      {
+       "title": "ASMPT上季轉盈 賺逾5億元",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875577-20261028.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "以色列議會選舉投票結束 出口民調顯示選情膠著反對派領先",
+     "analysis": "以色列新一屆議會選舉投票順利結束，出口民調顯示現任總理內塔尼亞胡領導的右翼陣營與前參謀長埃森科特領導的反對陣營均未能取得過半數議席，但反對派陣營暫時領先。由於雙方選情膠著，未來能否順利籌組政府將直接影響中東地區的政治局勢與安全走向。",
+     "sources": [
+      {
+       "title": "以色列議會選舉錄得高投票率 出口民調顯示選情膠著",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875564-20261028.htm"
+      },
+      {
+       "title": "以色列議會選舉正在投票 內塔尼亞胡籲選民作出正確選擇",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875546-20261027.htm"
+      }
+     ]
+    },
+    {
+     "headline": "俄羅斯將 7 名英國軍工企業高管列入禁止入境名單",
+     "analysis": "俄羅斯外交部宣布對 7 名英國軍工企業高管實施制裁，禁止其入境，以回應英國向烏克蘭提供遠程打擊武器及相關技術的敵對政策。莫斯科批評相關軍工企業藉此獲得經濟利益並加劇地區緊張局勢。此舉標誌着俄烏衝突背後的國際地緣政治角力持續升溫，對全球供應鏈及國防安全帶來深遠影響。",
+     "sources": [
+      {
+       "title": "俄羅斯將7名英國軍工企業高管列入禁止入境名單",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1875562-20261028.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點集中在本地突發民生事故、企業網絡安全風險，以及環球科技與金融市場的最新動向。筲箕灣爆水管事件在水務署搶修下迅速恢復，突顯緊急基建應變的重要性；同時，多宗企業數據外洩導致電話騙案頻生，再次敲響本港企業及市民的資安警號。在科技與財經層面，ASMPT 受惠 AI 基礎設施投資令業績轉盈創新高，反映實質科技需求正在帶動相關產業鏈。整體而言，香港企業在擁抱 AI 轉型的同時，必須加強風險管理與網絡防禦，以應對瞬息萬變的經貿環境。",
+ "en_summary": "Today's briefing covers the restoration of water supply in Shau Kei Wan following a pipe burst, local corporate data breaches leading to phone scams, and ASMPT's strong Q3 results driven by AI infrastructure demand. Internationally, markets are closely monitoring central bank decisions and geopolitical developments.",
+ "date": "2026-10-28",
+ "model": "gemini-3.5-flash-lite"
+}
