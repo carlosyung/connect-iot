@@ -1,3 +1,6 @@
 # Keep the private study page out of search engines
 /ham/*
   X-Robots-Tag: noindex, nofollow
+
+/sis/*
+  X-Robots-Tag: noindex, nofollow
