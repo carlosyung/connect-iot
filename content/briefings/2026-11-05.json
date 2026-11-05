@@ -1,0 +1,84 @@
+{
+ "title": "港股重上24000點 | 創新科技及工業局預告明年發布智能體安全管理指引",
+ "summary": "今日焦點包括港股在競價時段大升並重上24000點關口，創半個月新高。在科技領域方面，本港創新科技及工業局局長孫東預告將於明年發布智能體安全管理指引，完善AI治理框架。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "五間本地大學躋身QS亞洲大學排名十強 陳國基稱是政策與努力成果",
+     "analysis": "國際高等教育研究機構QS公布最新亞洲大學排名，香港共有五間大學躋身十強。署理行政長官陳國基指這是政府持續投放資源與各大學努力的成果。這項佳績有助進一步鞏固香港作為國際專上教育樞紐的地位，吸引全球優秀人才來港。",
+     "sources": [
+      {
+       "title": "五間大學躋身亞洲十強 陳國基：政府及大學努力成果",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876559-20261104.htm"
+      }
+     ]
+    },
+    {
+     "headline": "孫東預告明年將發布智能體安全管理指引 完善AI治理框架",
+     "analysis": "創新科技及工業局局長孫東在浙江出席世界互聯網大會烏鎮峰會時預告，將於明年與香港人工智能研發院共同發布適用於全社會的智能體安全管理指引。此舉旨在完善人工智能開發及應用的治理框架，確保本地技術向善發展並安全可控，對推動香港成為負責任的AI應用城市具關鍵意義。",
+     "sources": [
+      {
+       "title": "孫東預告明年將發布智能體安全管理指引",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876571-20261104.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "蘋果據報削減內部AI使用預算 促工程團隊改用平價模型",
+     "analysis": "外媒報道指蘋果公司正大幅削減內部工程團隊的AI使用預算，要求改用較平價的模型以降低支出。此舉反映大型科技企業在面對龐大AI基建成本時，正積極尋求成本效益的最佳平衡，對業界評估AI商業化模式帶來啟示。",
+     "sources": [
+      {
+       "title": "蘋果據報削員工AI使用預算 促改用較平價模型 內部憂成裁員先兆",
+       "source": "星島頭條",
+       "link": "https://news.google.com/rss/articles/CBMiqwNBVV95cUxQZDNyZnBPQWVNTDQwNVh3TF9MeHBiUkNiU3M2VURQRlNWWXBNNXp6TVdBbFlxTzBFTEsxSHZla3g5ZlQtT2N3a0dnSWRqR3BYU2hfYVNyYVd5T2MzMWhVZ1M2dFI5bFUxTXFJbkh0N0VzMjhJQ2FOUFZxaVJ2b3JySG9pMG90QWpXT3VPMUNxdFNCRU0zVUY2VkZpYmZENmlMMGRrWEw2bzUwVnVpclBRZTNGSjR0cFZDNHc0bEEyTE1Qa2NSY1RrVk50c20tTkNkaXlqUDh6eklidktjclR2QXpOZlBzUldRMjJVNUhXSlk0Nk5xRVc5MGF4a0pUaWNlU25lQWpreF9CUC14YkdlQ0duM3MtbnBpWnlITjBkTzB2ZEIyZEZ0cW1uTjU2a3JxVVNGRXFxeWh6ZWVjVXJheDN6MzZhYTJjOXFNNGdjcjRCLTVzenhTcUJKRWJWTlQwTXAyREJfbFdpZnJPemtDTlIxYUtrREF0cW1mZEphRUs3ZHhsMzZZdzA3dV9ITDRsR3pqRC1vcHp0bGUxelRjWUxiQzF5ek1rdDA0?oc=5"
+      },
+      {
+       "title": "Apple is reportedly cutting budgets for its internal AI usage",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/"
+      },
+      {
+       "title": "蘋果削減內部AI使用預算以減少支出",
+       "source": "Yahoo 財經",
+       "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNNW0zVXhhb0tNd3hzTkhFUi1mNnNXVGpfZVB2b2ZVUDNPdmd1dkN3SVJhdkVtN2NkZC05emhxUEljQmlpTkVmYlU5MjhBUjdkcEY3TDJGQ3pLQXBLc2RKRVRpV1hvWEV6aTVHQUJxbzk1a3dscHVVRld6ajBRVHE0QkxUeFktRXlmWGZuTFYtdzRiZkdkZzA1aXhGSzZEWGF1MjAxbnRjc3doeW82V09ESVJKZFltNlRJX0IzQVQzUWdxZUVTSDF0eVkyTWxTT29DOWhkTmlfakRRUURiYjU0VWxockptSVZwd2lsNW5BNHZJcHpSblRCeEtFZlRRX2NlUlg5RFdCdGdYZDlSX05xU3Z6dzU?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "港股競價時段升397點 半個月以來首次重上24000點",
+     "analysis": "港股在競價時段表現強勁，恒生指數報24316點，升397點或1.66%，為半個月以來首次重上24000點關口，科技指數亦升逾1%。市場氣氛改善配合多隻藍籌股ADR造好，有助提振本地投資市場信心。",
+     "sources": [
+      {
+       "title": "港股競價時段升397點 半個月以來首次重上24000點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876626-20261105.htm"
+      },
+      {
+       "title": "多隻藍籌股ADR升約1%至近3%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876608-20261105.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日市場焦點落在港股重上24000點的強勁反彈，以及環球科技巨頭對AI預算和成本效益的重新審視。在本地科技政策方面，政府正積極完善人工智能的治理與安全框架，預告推出智能體安全管理指引，顯示香港在推動創新科技的同時，亦重視合規與安全風險管理，為本地企業與創科界提供清晰的發展指引。",
+ "en_summary": "Hong Kong stocks rebounded past the 24,000 mark for the first time in half a month. Meanwhile, the HKSAR government announced plans to release safety management guidelines for AI agents next year to ensure secure and responsible technological development.",
+ "date": "2026-11-05",
+ "model": "gemini-3.5-flash-lite"
+}
