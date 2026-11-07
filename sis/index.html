@@ -1,0 +1,1366 @@
+<!doctype html><html><head><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><script type='text/javascript' nonce='hzve3BuzbaH3wg59I70HfQ==' src='https://9115c2ec-8632-4fcc-b1b3-914fc9e0d4fd.frame.claudeusercontent.com/C9eZmiHe3hiykkyYjups78g03WENtOv2IFf5dMfWUTnVFj5W3RadA781JTQ0aYhU8rg0bWCLZq45BBzKLLF6mnfu4wjrIT-GpmXqMQAIwoq9C-jXljTXS-MZt981a2AlLoHumFLAYmbZ15Ctq9RPWxOtc_3_cBN5O5CqL6c4UBQxcV6fkV3YZvs1uahQCDGRh8pSKUlt1xSem8KmRdMR7hBDK_2HvkIET-2dpE0g2vjC-9FC-kAi8Yx7n20vi96s8UM5WWnaOLCU7NrUXTXKIvzSoqnsr_bXssVJi_Myy_Sns9nZitTpVJNb7K-SS9rAtZl1fCh09_1bmtf-DJXJIbExVgy5U5m7S2GTzTd313YrQrfaz1GhkfsUPKT6-HNCuPBSzv1bXBAd_kEFWKefJ8mgdb6j1BZvP36a3cDLFHF3wOPJVr3K5FtDK4T6onk3oUjMpUh7dqVZCwExVGQd0ZZm6XCsQB1VJDAnp8xKh92ZCr1pmJgehXsolzMLMx5PUCDqN5W4BNQz1mXa1NDCofuZXH_AfuOo2VwK3nNM8p2VkbUq_Yd_uHLAyGW9UFjJn8jY90icObJJNtRH-XrBaOPI_9y3c4RTQwTane--_E-OtMle-tFQBFcsbaYIrgqK12XcFzzW6Lj1K4iSGEVLUTML9BgayFOOc9JLtEhtdt62coPGyBYmdTLsD-BzZx-Yd9-bC6AUHYRzqaVueiZstQ'></script></head><body>
+<title>JRE 2026 Study File</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=Noto+Serif+TC:wght@600;700;900&amp;display=swap">
+<style>
+/* Layout: a government case file. Sticky file index on the left (chips on phones), one reading column, minute-ruled exhibits. */
+:root{
+  --paper:#f5f6f8; --sheet:#ffffff; --ink:#15213b; --muted:#5a6479; --faint:#8a93a6;
+  --line:#dde1e8; --tint:#eef1f6; --seal:#b3261e; --seal-soft:#f8e7e5;
+  --jade:#1e6b57; --jade-soft:#e2f0eb; --amber:#9a6200; --amber-soft:#fbf0dc;
+  --en:#2d4f8f; --en-soft:#e6ecf7; --zh:#8a3b12; --zh-soft:#f7ebe3;
+  --f-display:"Noto Serif TC","Songti TC","SimSun",Georgia,serif;
+  --f-body:"IBM Plex Sans","Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0e131d; --sheet:#151c29; --ink:#e7eaf0; --muted:#a3acbd; --faint:#7b8496;
+  --line:#2a3344; --tint:#1b2333; --seal:#ef6b5f; --seal-soft:#3a1b1a;
+  --jade:#5cc4a3; --jade-soft:#15302a; --amber:#e6b154; --amber-soft:#34280f;
+  --en:#8fb0ec; --en-soft:#1a2741; --zh:#eaa47c; --zh-soft:#3a2216; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0e131d; --sheet:#151c29; --ink:#e7eaf0; --muted:#a3acbd; --faint:#7b8496;
+  --line:#2a3344; --tint:#1b2333; --seal:#ef6b5f; --seal-soft:#3a1b1a;
+  --jade:#5cc4a3; --jade-soft:#15302a; --amber:#e6b154; --amber-soft:#34280f;
+  --en:#8fb0ec; --en-soft:#1a2741; --zh:#eaa47c; --zh-soft:#3a2216; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+a{color:var(--en);text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--seal);outline-offset:2px;border-radius:3px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.25;margin:0}
+h2{font-size:clamp(1.55rem,1.2rem + 1.2vw,2rem);font-weight:900;letter-spacing:.01em}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;padding-block:28px 80px}
+@media (max-width:960px){.wrap{grid-template-columns:minmax(0,1fr);gap:0;padding-block:12px 64px}}
+
+/* index */
+.index{position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px);align-self:start;font-size:.9rem}
+.index .ref{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+.index ol{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:s}
+.index a{display:flex;gap:10px;align-items:baseline;padding:6px 10px;border-radius:var(--r);color:var(--muted);text-decoration:none;border-left:2px solid transparent}
+.index a::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--f-mono);font-size:.72rem;color:var(--faint)}
+.index a:hover{background:var(--tint);color:var(--ink)}
+.index a.on{color:var(--ink);border-left-color:var(--seal);background:var(--sheet);font-weight:500}
+.index .prog{margin-top:20px;padding:12px;border:1px solid var(--line);border-radius:var(--r);background:var(--sheet)}
+.index .prog small{display:block;color:var(--muted);font-size:.78rem}
+@media (max-width:960px){
+  .index{top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);margin:0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding:8px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line)}
+  .index .ref,.index .prog{display:none}
+  .index ol{display:flex;overflow-x:auto;gap:6px;scrollbar-width:none}
+  .index ol::-webkit-scrollbar{display:none}
+  .index a{white-space:nowrap;border:1px solid var(--line);border-radius:99px;padding:4px 12px;background:var(--sheet)}
+  .index a.on{border-color:var(--seal)}
+}
+.bar{height:6px;background:var(--tint);border-radius:9px;overflow:hidden;margin:8px 0 4px}
+.bar i{display:block;height:100%;background:var(--jade);width:0;transition:width .4s}
+
+main{min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:72px}
+section{grid-template-columns:minmax(0,1fr)}
+section{display:grid;gap:22px;min-width:0}
+.eyebrow{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--seal)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:66ch}
+.prose{max-width:68ch;display:grid;gap:12px}
+.sheet{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px}
+.tag{display:inline-block;justify-self:start;width:max-content;max-width:100%;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px;font-weight:500}
+.tag.en{background:var(--en-soft);color:var(--en)} .tag.zh{background:var(--zh-soft);color:var(--zh)}
+.tag.cre{background:var(--amber-soft);color:var(--amber)} .tag.ok{background:var(--jade-soft);color:var(--jade)}
+ul.clean{margin:0;padding-left:1.15em;display:grid;gap:6px}
+ul.clean li::marker{color:var(--faint)}
+.note{border-left:3px solid var(--amber);background:var(--amber-soft);padding:12px 16px;border-radius:0 var(--r) var(--r) 0;max-width:72ch}
+.note.red{border-color:var(--seal);background:var(--seal-soft)}
+.note.green{border-color:var(--jade);background:var(--jade-soft)}
+.mono{font-family:var(--f-mono)}
+.num{font-variant-numeric:tabular-nums}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--sheet)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--tint)}
+tr:last-child td{border-bottom:0}
+button{font:inherit;cursor:pointer}
+.btn{border:1px solid var(--line);background:var(--sheet);color:var(--ink);padding:8px 14px;border-radius:var(--r);font-weight:500;font-size:.92rem}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.small{padding:4px 10px;font-size:.82rem}
+
+/* cover */
+.cover{border:1px solid var(--line);background:var(--sheet);border-radius:var(--r);padding:28px;display:grid;gap:22px;position:relative;overflow:hidden}
+.cover .fileline{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--f-mono);font-size:.74rem;letter-spacing:.06em;color:var(--faint);text-transform:uppercase}
+.cover h1{font-size:clamp(2rem,1.4rem + 2.6vw,3.2rem);font-weight:900}
+.cover h1 span{color:var(--seal)}
+.chop{position:absolute;right:22px;top:22px;width:84px;height:84px;border:3px solid var(--seal);border-radius:8px;color:var(--seal);font-family:var(--f-display);font-weight:900;display:grid;place-items:center;text-align:center;line-height:1.05;font-size:1.25rem;transform:rotate(-6deg);opacity:.85}
+@media (max-width:560px){.chop{display:none}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px}
+.stat{border-top:2px solid var(--ink);padding-top:10px}
+.stat b{display:block;font-family:var(--f-display);font-size:2rem;font-weight:900;line-height:1.1}
+.stat small{color:var(--muted);font-size:.85rem}
+
+/* time ruler */
+.ruler{display:flex;height:56px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);font-size:.78rem}
+.ruler div{display:flex;flex-direction:column;justify-content:center;padding:0 8px;min-width:0;border-right:1px solid var(--sheet)}
+.ruler div b{font-family:var(--f-mono);font-weight:500}
+.ruler div span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ruler .zr{background:var(--zh-soft);color:var(--zh)} .ruler .zw{background:var(--zh);color:var(--sheet)}
+.ruler .er{background:var(--en-soft);color:var(--en)} .ruler .ew{background:var(--en);color:var(--sheet)}
+.ticks{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:.7rem;color:var(--faint);margin-top:4px}
+
+/* plan */
+.weeks{display:grid;gap:14px}
+.week{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px}
+.week.now{border-color:var(--seal);box-shadow:0 0 0 1px var(--seal)}
+.week .wk{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);letter-spacing:.04em}
+.week .wk b{display:block;font-family:var(--f-display);font-size:1.6rem;color:var(--ink);letter-spacing:0}
+.week .wk .nowtag{display:inline-block;margin-top:6px;background:var(--seal);color:var(--sheet);border-radius:99px;padding:1px 8px;font-size:.68rem}
+.week h3{margin-bottom:8px}
+@media (max-width:620px){.week{grid-template-columns:minmax(0,1fr);gap:8px}.week .wk b{display:inline;font-size:1.2rem;margin-right:8px}}
+.tasks{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.tasks label{display:flex;gap:10px;align-items:flex-start;padding:6px 8px;border-radius:var(--r);cursor:pointer}
+.tasks label:hover{background:var(--tint)}
+.tasks input{margin-top:5px;accent-color:var(--jade);width:16px;height:16px;flex:none}
+.tasks input:checked + span{color:var(--faint);text-decoration:line-through;text-decoration-color:var(--faint)}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;counter-reset:st}
+.steps li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.steps li:first-child{border-top:0}
+.steps .t{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+.steps .t b{display:block;font-family:var(--f-display);font-size:1.5rem;color:var(--ink)}
+.steps h3{margin-bottom:4px}
+
+/* template */
+.paper{font-family:var(--f-mono);font-size:.86rem;line-height:1.7;background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:22px;white-space:pre-wrap;overflow-x:auto}
+.paper .h{color:var(--seal);font-weight:500}
+.paper .c{color:var(--faint)}
+
+/* angles */
+.angle{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:6px;align-content:start}
+.angle h3{font-size:1.02rem}
+.angle p{color:var(--muted);font-size:.92rem}
+
+/* phrase */
+.phr{display:grid;gap:10px}
+.phr div{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.phr q{quotes:none;font-style:italic}
+.phr small{display:block;color:var(--muted);font-size:.8rem;margin-top:2px}
+
+/* timer */
+.timer{background:var(--ink);color:var(--paper);border-radius:var(--r);padding:24px;display:grid;gap:18px}
+.timer .modes{display:flex;flex-wrap:wrap;gap:8px}
+.timer .modes button{background:transparent;color:var(--paper);border:1px solid color-mix(in srgb,var(--paper) 35%,transparent);border-radius:99px;padding:5px 14px;font-size:.86rem}
+.timer .modes button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.clock{font-family:var(--f-mono);font-size:clamp(3rem,2rem + 5vw,5rem);font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.phase{font-size:1rem;opacity:.85}
+.phase b{color:var(--paper)}
+.tl{display:flex;height:10px;border-radius:9px;overflow:hidden;background:color-mix(in srgb,var(--paper) 15%,transparent);position:relative}
+.tl i{display:block;height:100%}
+.tl .cur{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--seal);left:0}
+.timer .ctl{display:flex;gap:8px;flex-wrap:wrap}
+.timer .ctl button{border:0;border-radius:var(--r);padding:9px 18px;font-weight:600;background:var(--paper);color:var(--ink)}
+.timer .ctl button.ghost{background:transparent;color:var(--paper);border:1px solid color-mix(in srgb,var(--paper) 35%,transparent)}
+.timer .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8rem;opacity:.8}
+.timer .legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;background:var(--c);vertical-align:-1px}
+
+/* prompts */
+.prompt{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:10px;align-content:start}
+.prompt .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-family:var(--f-mono);font-size:.72rem;color:var(--faint)}
+.prompt p{font-size:.92rem;color:var(--muted)}
+.prompt ol{margin:0;padding-left:1.2em;font-size:.92rem;display:grid;gap:3px}
+.prompt .row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto}
+
+/* drill */
+.drill{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:16px}
+.drill .q{font-size:1.1rem;line-height:1.6}
+.drill .opts{display:grid;gap:8px}
+.drill .opts button{text-align:left;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:10px 14px;border-radius:var(--r);display:flex;gap:12px}
+.drill .opts button b{font-family:var(--f-mono);color:var(--muted)}
+.drill .opts button:hover:not(:disabled){border-color:var(--ink)}
+.drill .opts button.right{border-color:var(--jade);background:var(--jade-soft)}
+.drill .opts button.wrong{border-color:var(--seal);background:var(--seal-soft)}
+.drill .opts button:disabled{cursor:default}
+.drill .fb{min-height:1.5em}
+.drill .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
+
+details{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r)}
+details summary{cursor:pointer;padding:14px 18px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font-family:var(--f-mono);color:var(--faint)}
+details[open] summary::after{content:"–"}
+details .body{padding:0 18px 18px;display:grid;gap:10px}
+
+/* progress hub */
+.hub{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:16px}
+@media (max-width:760px){.hub{grid-template-columns:minmax(0,1fr)}}
+.today{background:var(--ink);color:var(--paper);border-radius:var(--r);padding:22px;display:grid;gap:10px;align-content:start}
+.today .k{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.today h3{font-size:1.45rem;color:var(--paper)}
+.today ul{margin:0;padding-left:1.1em;display:grid;gap:4px;opacity:.92}
+.today .go{justify-self:start;margin-top:4px;background:var(--paper);color:var(--ink);border:0;border-radius:var(--r);padding:8px 14px;font-weight:600}
+.rings{display:grid;gap:12px}
+.ringcard{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;gap:14px;align-items:center}
+.ring{--p:0;--c:var(--jade);width:64px;height:64px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:conic-gradient(var(--c) calc(var(--p)*1%),var(--tint) 0)}
+.ring b{width:48px;height:48px;border-radius:50%;background:var(--sheet);display:grid;place-items:center;font-family:var(--f-mono);font-size:.82rem;font-weight:500}
+.ringcard small{display:block;color:var(--muted);font-size:.82rem;line-height:1.4}
+.ringcard strong{font-family:var(--f-display);font-size:1.05rem}
+
+.journey{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));position:relative}
+.journey::before{content:"";position:absolute;left:calc(100%/12);right:calc(100%/12);top:23px;height:3px;background:var(--line);border-radius:3px}
+.jwrap{position:relative}
+.jwrap .fill{position:absolute;left:calc(100%/12);top:23px;height:3px;background:var(--seal);border-radius:3px;width:0;transition:width .6s;z-index:0}
+.journey li{display:grid;justify-items:center;text-align:center;gap:6px;position:relative;z-index:1;padding:0 4px}
+.journey .node{--p:0;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--jade) calc(var(--p)*1%),var(--line) 0)}
+.journey .node span{width:38px;height:38px;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:1.05rem;color:var(--muted)}
+.journey li.past .node span{color:var(--ink)}
+.journey li.cur .node{box-shadow:0 0 0 4px var(--seal-soft)}
+.journey li.cur .node span{background:var(--seal);color:var(--sheet)}
+.journey li.full .node span{background:var(--jade);color:var(--sheet)}
+.journey b{font-size:.86rem;line-height:1.25;min-height:2.5em;display:flex;align-items:flex-start;justify-content:center}
+@media (max-width:640px){.journey b{min-height:0;justify-content:flex-start}}
+.journey small{font-family:var(--f-mono);font-size:.68rem;color:var(--faint)}
+.journey .here{font-family:var(--f-mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--seal);font-weight:500}
+@media (max-width:640px){
+  .journey{grid-template-columns:minmax(0,1fr);gap:10px}
+  .journey::before,.jwrap .fill{display:none}
+  .journey li{grid-template-columns:48px minmax(0,1fr);justify-items:start;text-align:left;column-gap:14px;row-gap:0;align-items:center}
+  .journey li .node{grid-row:span 3}
+}
+.heat{display:grid;grid-template-columns:28px repeat(7,minmax(0,1fr));gap:5px;max-width:400px}
+.heat .dl{font-family:var(--f-mono);font-size:.66rem;color:var(--faint);text-align:center}
+.heat .wl{font-family:var(--f-mono);font-size:.66rem;color:var(--faint);align-self:center}
+.heat .cell{aspect-ratio:1;border-radius:5px;background:var(--tint);display:grid;place-items:center;font-family:var(--f-mono);font-size:.66rem;color:var(--faint);max-width:100%}
+.heat .l1{background:color-mix(in srgb,var(--jade) 30%,var(--tint));color:var(--ink)}
+.heat .l2{background:color-mix(in srgb,var(--jade) 60%,var(--tint));color:var(--sheet)}
+.heat .l3{background:var(--jade);color:var(--sheet)}
+.heat .td{outline:2px solid var(--seal);outline-offset:1px}
+.heat .ex{background:var(--seal);color:var(--sheet);font-weight:500}
+.heat .off{opacity:.35}
+.hkey{display:flex;gap:6px;align-items:center;font-size:.78rem;color:var(--muted);flex-wrap:wrap}
+.hkey i{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+/* mock log */
+.log{display:grid;gap:14px}
+.logform{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px;align-items:end}
+.logform label{display:grid;gap:4px;font-size:.8rem;color:var(--muted)}
+.logform select,.logform input{font:inherit;font-size:.92rem;padding:7px 9px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper);color:var(--ink);min-width:0;width:100%}
+.chart{width:100%;height:auto;display:block}
+.loglist{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.88rem}
+.loglist li{display:flex;gap:10px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:6px;flex-wrap:wrap}
+.loglist .x{border:0;background:none;color:var(--faint);padding:2px 6px}
+.empty{color:var(--muted);font-size:.9rem;border:1px dashed var(--line);border-radius:var(--r);padding:16px;text-align:center}
+
+/* model answer */
+.model{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:0;background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.model .row{display:contents}
+.model .txt{padding:14px 20px;border-top:1px solid var(--line);font-size:.95rem;display:grid;gap:6px}
+.model .why{padding:14px 16px;border-top:1px solid var(--line);border-left:1px solid var(--line);background:var(--jade-soft);color:var(--jade);font-size:.84rem;line-height:1.5}
+.model .row:first-child .txt,.model .row:first-child .why{border-top:0}
+.model .txt h4{margin:0;font-family:var(--f-display);font-size:1rem}
+.model .txt ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.model .ph{background:var(--amber-soft);color:var(--amber);padding:0 4px;border-radius:3px;font-family:var(--f-mono);font-size:.82rem}
+@media (max-width:700px){.model{grid-template-columns:minmax(0,1fr)}.model .why{border-left:0;border-top:0;padding-top:0;background:var(--sheet)}.model .why::before{content:"Why it scores · ";font-weight:600}}
+.issue{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:8px;align-content:start}
+.issue h3{font-size:1.02rem}
+.issue .fig{font-family:var(--f-mono);font-size:.78rem;color:var(--ink);background:var(--tint);border-radius:4px;padding:8px 10px;line-height:1.55}
+.issue .q{font-size:.9rem;color:var(--zh)}
+.issue .pc{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:.84rem;color:var(--muted)}
+.issue .pc b{color:var(--ink);font-size:.78rem;display:block}
+
+footer{color:var(--faint);font-size:.82rem;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:6px}
+.zh{font-family:"Noto Sans TC",var(--f-body)}
+
+/* chinese section */
+.zhsec{font-family:"Noto Sans TC",var(--f-body)}
+.zhsec .lead{max-width:60ch}
+.paper.zh{font-family:"Noto Sans TC",var(--f-body);font-size:.9rem;line-height:1.85}
+.angle .no{font-size:.84rem;color:var(--seal)}
+.typo{display:flex;flex-wrap:wrap;gap:6px}
+.typo span{border:1px solid var(--line);background:var(--sheet);border-radius:99px;padding:3px 10px;font-size:.88rem;white-space:nowrap}
+.typo s{color:var(--seal);text-decoration-thickness:1px}
+.typo b{color:var(--jade);font-weight:600}
+.src{font-size:.76rem;color:var(--faint);line-height:1.55}
+.src a{color:inherit}
+.issue .row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:4px}
+.issue{align-content:stretch}
+.prompt.zh p{font-size:.92rem}
+table.lbl td:first-child{white-space:nowrap}
+@media (max-width:700px){.model.zh .why::before{content:"點解攞分 · "}}
+</style>
+
+<div class="wrap">
+<nav class="index" aria-label="Sections">
+  <div class="ref">File ref. JRE/2026/EN-ZH</div>
+  <ol id="nav">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#progress">My progress</a></li>
+    <li><a href="#plan">5-week plan</a></li>
+    <li><a href="#english">English question</a></li>
+    <li><a href="#points">Finding points</a></li>
+    <li><a href="#chinese">Chinese question</a></li>
+    <li><a href="#models">Model answers</a></li>
+    <li><a href="#practice">Practice &amp; timer</a></li>
+    <li><a href="#cre">CRE English (if needed)</a></li>
+    <li><a href="#examday">Exam day</a></li>
+    <li><a href="#materials">Materials</a></li>
+  </ol>
+  <div class="prog"><small>Plan progress</small><div class="bar"><i id="navbar"></i></div><small id="navpct">0 of 0 tasks</small></div>
+</nav>
+
+<main>
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="cover">
+    <div class="chop" aria-hidden="true">聯招<br>必過</div>
+    <div class="fileline"><span>Joint Recruitment Examination</span><span>Sat 5 Dec 2026 (tentative)</span><span>3 hours · 2 questions</span></div>
+    <h1>One paper. Two questions. <span>Five weeks.</span></h1>
+    <p class="lead">Everything from the shared materials, boiled down to what wins marks in the JRE: how each question works, a week-by-week plan, practice prompts with a built-in exam timer, and an exam-day routine.</p>
+    <div class="stats">
+      <div class="stat"><b class="num" id="days">–</b><small>days until 5 Dec</small></div>
+      <div class="stat"><b class="num">180</b><small>minutes for both questions</small></div>
+      <div class="stat"><b class="num">~28%</b><small>of sitters passed in 2019-20</small></div>
+      <div class="stat"><b class="num">0</b><small>marks for copying the case material</small></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="sheet" style="display:grid;gap:10px;align-content:start">
+      <span class="tag en">Question 1 · English</span>
+      <h3>Case paper</h3>
+      <p>A fictional city with a policy problem and a data file of roughly 10 pages: background, statistics, letters, survey results, stakeholder views. You write a paper (discussion paper, report, brief) as a government officer.</p>
+      <p style="color:var(--muted);font-size:.92rem">Tests: choosing the relevant facts, weighing options, practical and innovative recommendations, clear English.</p>
+    </div>
+    <div class="sheet" style="display:grid;gap:10px;align-content:start">
+      <span class="tag zh">Question 2 · 中文</span>
+      <h3>Hong Kong policy essay</h3>
+      <p>A real Hong Kong social or policy issue with only a short background. You analyse pros and cons, take a clear stance, justify it, and propose measures.</p>
+      <p style="color:var(--muted);font-size:.92rem">Tests: analysis from a government viewpoint, a balanced argument, plain clear Chinese. Knowing current policy helps with examples.</p>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:10px">How to spend the 180 minutes</h3>
+    <div class="ruler" role="img" aria-label="Time plan: Chinese reading 10 minutes, Chinese outline 5, Chinese writing 60, English reading 25, English outline 5, English writing 75">
+      <div class="zr" style="flex:10"><b>10</b><span>讀題</span></div>
+      <div class="zr" style="flex:5"><b>5</b></div>
+      <div class="zw" style="flex:60"><b>60 min</b><span>中文 writing</span></div>
+      <div class="er" style="flex:25"><b>25</b><span>Read data file</span></div>
+      <div class="er" style="flex:5"><b>5</b></div>
+      <div class="ew" style="flex:75"><b>75 min</b><span>English writing</span></div>
+    </div>
+    <div class="ticks"><span>0</span><span>75</span><span>180 min</span></div>
+    <p style="color:var(--muted);font-size:.9rem;margin-top:8px">Split suggested in the JRE 寫文心得 guide. Both questions must be answered to pass, and you can divide the time freely, so pick one split in your mocks and keep it on the day.</p>
+  </div>
+
+  <div class="note red"><b>Don't confuse it with the CRE.</b> The CRE is three separate 45-minute multiple-choice papers (Use of English, Use of Chinese, Aptitude Test). The JRE is the 3-hour written paper. Most of the shared files are CRE practice; they only matter if she still needs a CRE Level 2 result.</div>
+
+  <div class="prose">
+    <h3>What markers are looking for</h3>
+    <p>The official description says candidates should give "practical and innovative solutions on the basis of good understanding and independent analysis", and that "mere reproduction of background materials indiscriminately in content and language will not earn any marks."</p>
+    <p>Markers are civil servants who read hundreds of scripts and skim. They check whether each part of the task is answered, usually by reading the first sentence of each paragraph. Clear headings and a point up front matter more than fancy vocabulary.</p>
+  </div>
+</section>
+
+<!-- PROGRESS -->
+<section id="progress">
+  <div><div class="eyebrow">Section 02</div><h2>My progress</h2></div>
+  <div class="hub">
+    <div class="today" id="today"></div>
+    <div class="rings">
+      <div class="ringcard"><div class="ring" id="r1"><b id="r1t">0%</b></div><div><strong>Plan tasks</strong><small id="r1s">0 of 24 ticked</small></div></div>
+      <div class="ringcard"><div class="ring" id="r2" style="--c:var(--en)"><b id="r2t">0/4</b></div><div><strong>Full mocks</strong><small>3-hour papers logged. Target: 4 before exam week</small></div></div>
+      <div class="ringcard"><div class="ring" id="r3" style="--c:var(--seal)"><b id="r3t">0</b></div><div><strong>Study streak</strong><small id="r3s">days in a row with activity</small></div></div>
+    </div>
+  </div>
+  <div class="sheet" style="display:grid;gap:18px">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px"><h3>The road to 5 December</h3><span class="mono" style="font-size:.75rem;color:var(--muted)">Ring = share of that stage's tasks ticked</span></div>
+    <div class="jwrap"><ol class="journey" id="journey"></ol><span class="fill" id="jfill"></span></div>
+  </div>
+  <div class="sheet" style="display:grid;gap:12px">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline"><h3>Study calendar</h3><span class="hkey">Less <i style="background:var(--tint)"></i><i style="background:color-mix(in srgb,var(--jade) 30%,var(--tint))"></i><i style="background:color-mix(in srgb,var(--jade) 60%,var(--tint))"></i><i style="background:var(--jade)"></i> More · <i style="background:var(--seal)"></i> Exam</span></div>
+    <div class="heat" id="heat"></div>
+    <p style="color:var(--muted);font-size:.85rem">Each tick and each logged practice fills in that day. Aim to keep the squares green from now until the exam.</p>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan">
+  <div><div class="eyebrow">Section 03</div><h2>5-week plan</h2></div>
+  <p class="lead">Built around about 12 hours a week: 1.5 hours on weekdays, 4 hours at the weekend. It works up to four full 3-hour mocks before exam week. Ticks are saved in this browser.</p>
+  <div class="sheet" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
+    <div style="flex:1;min-width:200px"><div class="bar" style="height:8px"><i id="planbar"></i></div><small id="planpct" style="color:var(--muted)">0 of 0 tasks done</small></div>
+    <button class="btn small" id="planreset" type="button">Clear all ticks</button>
+    <span id="planconfirm" hidden="" style="font-size:.85rem">Clear every tick? <button class="btn small" id="planyes" type="button">Yes, clear</button> <button class="btn small" id="planno" type="button">Keep</button></span>
+  </div>
+  <div class="weeks" id="weeks"></div>
+  <div class="grid2">
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">Weekday routine · 90 min</h3>
+      <ul class="clean">
+        <li><b>20 min</b> news reading, adding to the issue log</li>
+        <li><b>50 min</b> that week's English or Chinese task</li>
+        <li><b>20 min</b> marking yesterday's work against the checklist</li>
+      </ul>
+    </div>
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">Issue log format</h3>
+      <p style="color:var(--muted);font-size:.92rem;margin-bottom:6px">One line per HK issue. Aim for 12 by week 4.</p>
+      <p class="mono" style="font-size:.8rem;line-height:1.6">Policy · 2 pros · 2 cons · 1 figure · 1 overseas example · my stance</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENGLISH -->
+<section id="english">
+  <div><div class="eyebrow">Section 04 · Question 1</div><h2>The English case paper</h2></div>
+  <p class="lead">Answer every part of the task, in order, under headings that copy the task's own words. Use the data file as evidence, then go beyond it.</p>
+
+  <div class="sheet">
+    <h3 style="margin-bottom:6px">The method · 105 minutes</h3>
+    <ol class="steps">
+      <li><div class="t"><b>3</b>min</div><div><h3>Dissect the task</h3><p>Before reading the data file, underline: who you are, who the paper is for, the document type, and every item asked for. Count how many points each item needs ("two problems", "pros and cons", "at least two arguments"). Watch for if/then branches: "If yes, state two arguments… If no, recommend two methods".</p></div></li>
+      <li><div class="t"><b>22</b>min</div><div><h3>Read the data file with the task in hand</h3><p>Sort every item into four piles: background, supporters, opponents, numbers. Mark 2 or 3 figures worth quoting and the stakeholder each item speaks for. Some material is deliberately irrelevant; skip it.</p></div></li>
+      <li><div class="t"><b>5</b>min</div><div><h3>Outline</h3><p>One heading per task item. Under each, one line per point with its evidence. This is your buffer: if time is tight, keep it short.</p></div></li>
+      <li><div class="t"><b>75</b>min</div><div><h3>Write</h3><p>Most important point first under every heading (inverted pyramid), so a skimming marker sees your best material. Point in the first sentence, then reason, then evidence from the data file, then what it means.</p></div></li>
+      <li><div class="t"><b>2</b>min</div><div><h3>Check against the task</h3><p>Tick each task item against a heading. A missing part costs far more than a rough sentence.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h3 style="margin-bottom:10px">Paper skeleton</h3>
+<div class="paper"><span class="h">To:</span>   Prime Minister's Evaluation Group
+<span class="h">From:</span> Officer, Investment Promotion
+<span class="h">Date:</span> 5 December 2026
+<span class="h">Subject:</span> The Aero City Proposal
+
+<span class="h">Purpose</span>
+This paper assesses the Aero City proposal
+and recommends the Government's position.
+<span class="c">// one sentence, under 50 words</span>
+
+<span class="h">Background</span>
+<span class="c">// 2-3 sentences. Never retell the data file.</span>
+
+<span class="h">Pros of the Proposal</span>   <span class="c">// task wording</span>
+1. Point first. Reason. Evidence. So what.
+2. ...
+
+<span class="h">Cons of the Proposal</span>
+1. ...
+
+<span class="h">Recommendations</span>
+Direction · how it is done (who, cost,
+timing) · expected outcome
+
+<span class="h">Conclusion</span>
+<span class="c">// 2 sentences: position + top action</span></div>
+    </div>
+    <div style="display:grid;gap:14px;align-content:start">
+      <h3>Document types you may be asked for</h3>
+      <div class="tw"><table>
+        <tr><th>Type</th><th>Must include</th></tr>
+        <tr><td>Discussion paper</td><td>Purpose, issue, analysis of options, recommendation</td></tr>
+        <tr><td>Report</td><td>Summary, background, findings, recommendations</td></tr>
+        <tr><td>Reply letter</td><td>Thank, confirm their concern, answer point by point, offer follow-up</td></tr>
+        <tr><td>Speech</td><td>Opening that hooks, clear theme, points in order, call to action</td></tr>
+      </table></div>
+      <div class="note green"><b>Write as an officer, not a campaigner.</b> Weigh both sides, consider public money, legal limits and human rights, and land on a clear, defensible recommendation.</div>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:10px">Writing a recommendation that scores</h3>
+    <div class="grid3">
+      <div class="angle"><span class="tag ok">1 · Direction</span><p>What you propose and why it fits the policy goal. One sentence.</p></div>
+      <div class="angle"><span class="tag ok">2 · Implementation</span><p>Who does it, money, staff, steps, timeline, phasing or a pilot. This is where EO thinking shows.</p></div>
+      <div class="angle"><span class="tag ok">3 · Expected outcome</span><p>The concrete result, the main risk, and how you will monitor and adjust.</p></div>
+    </div>
+    <p style="color:var(--muted);font-size:.92rem;margin-top:10px">Weak: "The government should consider promoting public transport." Strong: "Pilot a HK$300 million bus-priority scheme on the three most congested corridors from 2027, run by the Transport Department, with journey times reviewed after 12 months."</p>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:10px">Three recommendation tasks to expect</h3>
+    <div class="grid3">
+      <div class="angle"><h3>Supporting measures · 配套</h3><p>"Ensure the policy works." List the likely obstacles (funding, staff, law, opposition) and give one specific fix for each.</p></div>
+      <div class="angle"><h3>Damage control · 損害控制</h3><p>Someone loses out (relocated villagers, shop owners). Offer compensation or support, consultation channels, and ongoing monitoring.</p></div>
+      <div class="angle"><h3>Alternative · 替代方案</h3><p>If you oppose the plan, give a different one and show it beats the original on goal, feasibility, fairness and risk.</p></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">Common traps</h3>
+      <ul class="clean">
+        <li>Outlining before reading the whole task, then missing a part</li>
+        <li>40 minutes on the data file, leaving too little writing time</li>
+        <li>Long background that restates the material</li>
+        <li>"The government should consider…" with no who, how or cost</li>
+        <li>Answering as a citizen or activist instead of a balanced officer</li>
+        <li>Literary language. Plain, short sentences a legislator can skim</li>
+        <li>Fence-sitting ("it depends"): take a position</li>
+      </ul>
+    </div>
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">Small touches markers notice</h3>
+      <ul class="clean">
+        <li>Headings that copy the task's wording</li>
+        <li>The point of each paragraph in its first sentence</li>
+        <li>Full name once, then the short form: Hong Kong Science and Technology Parks ("HKSTP")</li>
+        <li>A figure from the data file plus what it means</li>
+        <li>Foreign currency converted in brackets: US$3 billion (about HK$23 billion)</li>
+      </ul>
+      <p class="mono" style="font-size:.75rem;color:var(--muted);margin-top:10px">US$1 ≈ HK$7.8 · RMB1 ≈ HK$1.1 · £1 ≈ HK$9.7 · €1 ≈ HK$8.5 · A$1 ≈ HK$5 · ¥100 ≈ HK$5.2 <br>(approximate rates from the guide; ballpark is enough)</p>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:10px">Borrow the language of government papers</h3>
+    <div class="phr" id="phrases"></div>
+  </div>
+
+  <div class="tw"><table>
+    <tr><th>To…</th><th>Signposting that keeps a skimming marker on track</th></tr>
+    <tr><td>Open a pro</td><td>A key advantage of the proposal is… · The scheme would also…</td></tr>
+    <tr><td>Open a con</td><td>The main drawback is… · This, however, comes at a cost: …</td></tr>
+    <tr><td>Use the data</td><td>As shown in Annex B, … · The survey indicates that 62% of respondents… which suggests…</td></tr>
+    <tr><td>Weigh up</td><td>On balance, … · While X is a valid concern, it can be mitigated by…</td></tr>
+    <tr><td>Recommend</td><td>It is recommended that… · The Department should, as a first step, …</td></tr>
+    <tr><td>Phase it</td><td>In the short term… In the medium to long term… · A pilot in two districts, reviewed after 12 months, …</td></tr>
+    <tr><td>Answer critics</td><td>To address the concerns of [group], we propose… · Concessions would be offered to…</td></tr>
+  </table></div>
+
+  <div class="note">The 2023 and 2024 sample answers in the shared files are short and generic. Use their prompts for practice, but aim higher: more specific points, real numbers from the data, and recommendations with implementation detail.</div>
+</section>
+
+<!-- POINTS -->
+<section id="points">
+  <div><div class="eyebrow">Section 05 · Both questions</div><h2>Finding points fast</h2></div>
+  <p class="lead">Running out of ideas under time pressure is the most common way marks are lost. A government officer weighs the same few things every time. Run through these angles for any pros, cons or recommendations.</p>
+  <div class="grid3">
+    <div class="angle"><h3>Public money · 公帑</h3><p>Set-up and running cost, administrative cost (complex eligibility rules multiply it), value for money, risk of bad debt if loans are involved.</p></div>
+    <div class="angle"><h3>Feasibility · 可行性</h3><p>Legal basis, staffing, technology, land, timeline, whether the public and LegCo will accept it.</p></div>
+    <div class="angle"><h3>Effectiveness · 有效性</h3><p>Does it solve the problem quickly? Any side effects or backlash?</p></div>
+    <div class="angle"><h3>Root cause · 針對性</h3><p>Does it hit the source of the problem or only the symptom?</p></div>
+    <div class="angle"><h3>Time frame · 時效性</h3><p>Short-term relief versus a long-term fix. Will it last?</p></div>
+    <div class="angle"><h3>Urgency · 迫切性</h3><p>Is it needed now? Does it take resources from other policies? Is there a cheaper alternative?</p></div>
+    <div class="angle"><h3>Stakeholders · 持份者</h3><p>Who gains, who loses, who will object: residents, businesses, green groups, professionals, legislators.</p></div>
+    <div class="angle"><h3>Environment · 可持續發展</h3><p>Emissions, waste, conservation, and the cost of being green (who pays, is a subsidy needed).</p></div>
+    <div class="angle"><h3>Government's role · 政府角色</h3><p>Free market versus intervention. Too little and the market fails; too much and investment and freedom suffer.</p></div>
+    <div class="angle"><h3>Rights &amp; fairness · 適當性</h3><p>Equality, privacy, freedom of movement and expression (Cap. 383 Bill of Rights), vulnerable groups, international practice.</p></div>
+  </div>
+  <div class="note green">For suggestions, the easiest move is to adjust the existing policy: change its eligibility, rate, phasing, enforcement or support measures, rather than inventing something unrelated.</div>
+</section>
+
+<!-- CHINESE -->
+<section id="chinese" class="zhsec">
+  <div><div class="eyebrow">Section 06 · Question 2</div><h2>The Chinese policy essay</h2></div>
+  <p class="lead">中文題只附一小段背景，沒有 Data File。分數來自分析：看出議題背後的核心矛盾，以政府身份表明清晰立場（立場鮮明），再提出可行建議。文采不是重點，淺白、清楚、讓閱卷員一眼找到論點才是。「視乎實際需要」一類模棱兩可的說法會失分。</p>
+
+  <div class="grid3">
+    <div class="angle"><span class="tag zh">題型</span><h3>香港真實政策議題</h3><p>官方說明：考生須就香港某項社會或政策議題，以個人觀點作答，並為立場提供理據；只提供簡短背景。常見要求是分析利弊、表明支持或反對，再按立場提出落實建議或替代措施。</p></div>
+    <div class="angle"><span class="tag zh">與英文題的分別</span><h3>沒有資料，也不點明病根</h3><p>英文題有約十頁 Data File，並直接寫出問題成因；中文題兩樣都沒有。例如大牌檔一題，關鍵其實是土地，題目卻沒有說。《實戰攻略》認為中文題的挑戰比英文題更大。</p></div>
+    <div class="angle"><span class="tag zh">閱卷員看甚麼</span><h3>分析能力，不是文筆</h3><p>由公務員批改，每天看數百份，多數只看每段第一句和最後一句。中英文題各佔一半分數，任何一題不及格都不會獲邀面試。</p></div>
+  </div>
+
+  <div class="sheet">
+    <h3 style="margin-bottom:6px">75 分鐘的做法</h3>
+    <ol class="steps">
+      <li><div class="t"><b>10</b>min</div><div><h3>讀題、拆題</h3><p>把題目拆成三部分：<b>題幹</b>（議題是甚麼）、<b>內容要求</b>（利弊？立場？要幾多個建議？）、<b>格式要求</b>（文章、報告、覆函還是演講辭）。圈出「如果贊成……如果反對……」的分支。再問三條問題：問題的根源是甚麼？誰得益、誰受損？這題有沒有「大眾立場」？</p></div></li>
+      <li><div class="t"><b>5</b>min</div><div><h3>大綱、定立場</h3><p>用下面的「皇牌答題框架」逐個角度掃一次，記下想到的論點。哪一邊論點多就站哪一邊：支持的話約 3 至 4 個利對 1 至 2 個弊，反對則倒轉。每個弊旁邊寫一個對應的建議。</p></div></li>
+      <li><div class="t"><b>58</b>min</div><div><h3>寫作</h3><p>按五層架構寫。每段第一句就是論點。先寫完利弊部分和頭一兩個建議，確保有完整骨架，時間多就再加建議。</p></div></li>
+      <li><div class="t"><b>2</b>min</div><div><h3>檢查</h3><p>對照題目每一項要求；立場前後是否一致；掃一次錯別字。</p></div></li>
+    </ol>
+    <p class="src" style="margin-top:10px">時間分配各材料略有不同：《寫文心得》建議讀題 10、大綱 5、寫作 60 分鐘；《筆試攻略》的例子是 5、10、60；《實戰攻略》建議每題先寫一小時，各再用 20 分鐘補完，最後 20 分鐘複卷。揀一個方法，模擬試和考試都用同一個。下方計時器用 10／5／58／2。</p>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h3 style="margin-bottom:10px">五層文章架構</h3>
+<div class="paper zh"><span class="h">引言</span>（兩三行）
+從題目抽出重點交代背景，可即時表態；
+未決定立場也可寫「本局會視乎建議的可行性及效用考慮」。
+<span class="c">// 引言不顯示分析能力，短即可</span>
+
+<span class="h">第一部分　議題利與弊</span>（每段一個論點）
+首先，【關鍵詞】……　<span class="c">← 主旨句</span>
+闡述 → 例子／數據 → 結尾句換個說法重申關鍵詞
+其次……　第三……
+然而，【弊】……
+
+<span class="h">過渡段</span>（一兩行）
+權衡上述利弊，交代立場，引出建議。
+
+<span class="h">第二部分　建議／替代措施</span>（最少三個）
+第一，本局會……　<span class="c">← 主旨句</span>
+闡述 → 例子
+<span class="c">// 贊成：確保方案達到政策目的的建議
+// 反對：達到同一目標的其他措施</span>
+
+<span class="h">總結</span>（一兩行）
+重申立場和政策目標。</div>
+    </div>
+    <div style="display:grid;gap:14px;align-content:start">
+      <h3>段落規格</h3>
+      <div class="tw"><table>
+        <tr><th>項目</th><th>建議</th></tr>
+        <tr><td>每段</td><td>一個論點；4 至 5 句；約 6 行</td></tr>
+        <tr><td>每句</td><td>盡量不超過約 20 字</td></tr>
+        <tr><td>段落長度</td><td>前後一致，方便閱卷員掃讀</td></tr>
+        <tr><td>利弊比例</td><td>支持：利 3–4 對弊 1–2；反對倒轉</td></tr>
+        <tr><td>建議數目</td><td>最少三個</td></tr>
+        <tr><td>全文篇幅</td><td>《實戰攻略》範文約 1,400 字</td></tr>
+        <tr><td>次序</td><td>最重要的論點放最前（倒三角）</td></tr>
+      </table></div>
+      <div class="note green">引言、過渡段和總結只是令結構完整，不顯示分析能力。時間不夠時，寧願多寫一個建議，也不要寫長總結。</div>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:10px">怎樣揀立場</h3>
+    <div class="grid2">
+      <div class="sheet"><ul class="clean">
+        <li><b>你代表政府，不是你自己。</b>應屆畢業生個人一定支持「為畢業生開設合約職位」，但政府要顧及其他失業人士和納稅人的感受。</li>
+        <li><b>揀論點多的一邊。</b>想不出足夠理據支撐的立場，寫不出有說服力的文章。</li>
+        <li><b>沒有標準答案。</b>同一條題，支持和反對的範文都可以合格；分數看分析和理據。</li>
+      </ul></div>
+      <div class="sheet"><ul class="clean">
+        <li><b>留意「大眾立場」。</b>環保、人權、醫療、創科題目通常有一面倒的取向。《實戰攻略》的例子：安樂死合法化宜反對，創科發展宜支持。</li>
+        <li><b>用字配合立場。</b>支持立場的文章寫弊處，用較輕的「不利」；反對立場用較重的「有損」。</li>
+        <li><b>貼合時局。</b>疫情封關時還寫「吸引海外旅客」會顯得脫節。反對時寫「現時貿然修例」，點明論點有時限。</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:4px">皇牌答題框架 · 第一部分：找利弊的角度</h3>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:12px">整理自《JRE 聯合招聘考試實戰攻略》第三章。每個角度都可以寫成利或弊，視乎立場。紅字是不宜用的情況。</p>
+    <div class="grid3">
+      <div class="angle"><h3>經濟發展</h3><p>政策是雙刃劍：一些行業得益，一些受損（例：走塑利好替代品行業，打擊膠餐具業）。香港以經濟為主導，第一部分最少寫一個經濟角度。</p><p class="no">環保題的經濟論點限一至兩個，以免顯得抓錯重點。</p></div>
+      <div class="angle"><h3>投資</h3><p>收緊或放寬市場限制都會影響投資意欲（例：劏房租務管制減少業主投資誘因）。</p><p class="no">影響輕微時不要硬寫。香港膠餐具多數是進口貨，寫「走塑打擊本地投資」會顯得離地。</p></div>
+      <div class="angle"><h3>就業機會</h3><p>新政策創造職位；收緊規管會減少職位。進階寫法：受影響的低技術工人難以轉行，形成結構性失業。</p></div>
+      <div class="angle"><h3>政府開支／收入</h3><p>任何研究、修例、新措施都有行政成本，是冷門題的「百搭」論點。長遠而言，部分政策可減少開支或擴闊收入。</p><p class="no">開支相對效益微不足道時不宜用。</p></div>
+      <div class="angle"><h3>社會凝聚力</h3><p>政策引起爭議、兩方對立，會增加社會矛盾。</p><p class="no">只在支持和反對聲音勢均力敵時才用；一面倒就不要牽強。</p></div>
+      <div class="angle"><h3>社會安全</h3><p>保障市民生命財產（例：收緊迷你倉防火指引）。</p><p class="no">用了這個論點，就不要再強調行政成本高；生命比成本重要。</p></div>
+      <div class="angle"><h3>政府形象</h3><p>正面形象有助施政和爭取支持；同一政策在不同持份者眼中觀感可以相反（例：放寬輸入外勞，勞方與商界看法不同）。</p><p class="no">反對立場時不宜把「有利政府形象」列為優點，角色會尷尬。</p></div>
+      <div class="angle"><h3>文化發展／多樣性</h3><p>適用於文化、體育、人口流動政策（例：大灣區青年就業計劃）。可寫成鼓勵本土文化或文化交流，也可寫成文化差異引起磨擦。</p></div>
+      <div class="angle"><h3>環境保護</h3><p>減少污染、提升環保意識。也可以寫反面：禁了一種即棄品，市場可能轉用另一種，長遠未必改善環境。</p></div>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:4px">皇牌答題框架 · 第二部分：建議百子櫃</h3>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:12px">政府部門回應公眾和立法會時常用的方案。贊成和反對都用得著，關鍵是每個建議要回應第一部分提出的弊處。</p>
+    <div class="grid3">
+      <div class="angle"><h3>公眾諮詢</h3><p>約見業界、環團等持份者；設專題網站、收電郵及書面意見，再研究可行性。諮詢期一般兩三個月。</p></div>
+      <div class="angle"><h3>參考海外經驗</h3><p>寫出國家或地區名稱已足夠（例：走塑可參考歐盟、台灣；回收可參考日本、南韓）。刪去具體例子，這段幾乎可套用於任何題目。</p></div>
+      <div class="angle"><h3>教育及推廣</h3><p>學校巡迴講座、電視電台廣告、巴士車身及網上廣告、單張海報、專題講座。進階：與香港郵政合作推出主題郵票。</p></div>
+      <div class="angle"><h3>定期檢討</h3><p>承諾檢討成效、與時並進，可爭取對新政策有保留的中間人士。</p></div>
+      <div class="angle"><h3>政策限制、防止濫用</h3><p>為措施加設資格和證明要求。例：防疫抗疫基金曾出現同一處所多次申請、業務不存在等濫用，日後可規定一個處所只可申請一次、須提交租約及照片。</p></div>
+      <div class="angle"><h3>寬限期、分階段</h3><p>讓業界有時間調整，減少反對。例：規管食物反式脂肪的修例，寬限期分別於 2023 年 6 月及 12 月屆滿，分兩階段生效；走塑按「先易後難」分階段。</p></div>
+      <div class="angle"><h3>替代方案、經濟手段</h3><p>收費、回贈、自願參加的約章，或把服務外判以減行政成本。替代方案不必完美，只要能補足原方案的不足。</p></div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h3 style="margin-bottom:10px">三類建議題</h3>
+      <div class="tw"><table>
+        <tr><th>題型</th><th>寫法</th></tr>
+        <tr><td>配套／完善政策</td><td>先列出推行時的困難（資源、法律、利益衝突），再逐一提出具體可行的對策</td></tr>
+        <tr><td>損害控制</td><td>指出受損群體，提出補償或支援（例：遷居津貼、再培訓），建立溝通平台，持續監察成效</td></tr>
+        <tr><td>替代方案</td><td>指出原方案的缺點，提出新方案，從目標達成、可行性、公平、風險管理四方面比較</td></tr>
+      </table></div>
+    </div>
+    <div>
+      <h3 style="margin-bottom:10px">一個建議段落的三部曲</h3>
+      <div class="tw"><table>
+        <tr><th>部分</th><th>內容</th></tr>
+        <tr><td>建議方向</td><td>建議甚麼，為何切合政策目標</td></tr>
+        <tr><td>落實細節</td><td>由誰執行、財政、人手、程序、時間表；可先試行</td></tr>
+        <tr><td>預期成效</td><td>具體效果、主要風險、如何監察和調整</td></tr>
+      </table></div>
+      <p class="src" style="margin-top:8px">整理自《JRE 筆試攻略》。</p>
+    </div>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:10px">題目可能要求的內容</h3>
+    <div class="tw"><table>
+      <tr><th>要求</th><th>要寫甚麼</th></tr>
+      <tr><td>立場和理據</td><td>清楚支持或反對，理據與證據要扣連</td></tr>
+      <tr><td>剖析社會困境</td><td>問題成因及對社會的影響，配合數據和事例</td></tr>
+      <tr><td>政策利弊</td><td>從社會、經濟、環境等角度分析優缺點</td></tr>
+      <tr><td>評估政策成效</td><td>政策有否達到目標，用數據支持</td></tr>
+      <tr><td>困難和解決</td><td>推行時的困難（資金、法律、接受程度），每個配一個對策</td></tr>
+      <tr><td>反對時的替代政策</td><td>能解決同一問題的另一方案，並與原方案比較</td></tr>
+    </table></div>
+  </div>
+
+  <div class="grid2">
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">小標題：寫得好加分，寫得差扣分</h3>
+      <ul class="clean">
+        <li><b>有意義：</b>標題就是段落重點，例如「減少公帑支出」。不要寫「優點一」「優點二」。</li>
+        <li><b>精簡：</b>名詞組合，不要寫成一句。</li>
+        <li><b>一致：</b>統一用「動詞＋名詞」，如「鼓勵就業」「刺激經濟發展」「減少政府開支」「保護環境」。混用「就業率上升」「經濟發展」「環保」會令閱卷員要逐段重新理解。</li>
+        <li><b>與內容呼應：</b>緊張時寫着寫着離題，標題就會對不上段落。</li>
+      </ul>
+      <p style="color:var(--muted);font-size:.88rem;margin-top:8px">沒把握就不寫段落小標題，但章節標題（利弊、建議）一定要有。立法會文件的寫法：目的、考慮因素、建議、徵詢意見。</p>
+    </div>
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">常見失分位</h3>
+      <ul class="clean">
+        <li>未看清題目要求就寫大綱，漏答分支或數目</li>
+        <li>寫成時事評論：一面倒抨擊、要求政府認錯</li>
+        <li>批評現行政策；你代表整個政府，題目只要求分析建議本身</li>
+        <li>以為「修例」能解決一切，沒有落實細節</li>
+        <li>「大包圍」式長文，論點埋在段中</li>
+        <li>引經據典、句子冗長，以為詞藻華麗才有分</li>
+        <li>標新立異的創意；創意宜放在例子，論點保持務實</li>
+        <li>論點脫離現實或時局（例：投資、旅客論點硬套）</li>
+        <li>錯別字和明顯語病；政府文件不容許</li>
+        <li>前文說政策有利經濟，後文又說損害政府形象，風格前後矛盾</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tw"><table class="lbl">
+    <tr><th>用途</th><th>像政府文件的句式</th></tr>
+    <tr><td>表明立場</td><td>本人支持／反對上述建議，理由如下：</td></tr>
+    <tr><td>論利</td><td>此舉有助……，長遠而言更可……</td></tr>
+    <tr><td>論弊</td><td>然而，……的問題亦不容忽視。</td></tr>
+    <tr><td>權衡</td><td>權衡利弊，本人認為……，惟須配合適當措施。</td></tr>
+    <tr><td>過渡段</td><td>根據分析，調整急症室服務收費往往弊大於利。（《實戰攻略》附錄例句）</td></tr>
+    <tr><td>建議</td><td>建議政府分階段推行，先於……試行，再按成效檢討是否推展至全港。</td></tr>
+    <tr><td>回應反對</td><td>針對……的憂慮，當局可……，以釋除疑慮。</td></tr>
+    <tr><td>結論</td><td>總括而言，……既能……，亦能……，值得政府積極考慮。</td></tr>
+    <tr><td>數字</td><td>食環署……發現酒牌服務的整體成本收回率只達 38%，變相每年由納稅人補貼約 2,400 萬元。（《寫文心得》引用的政府文件句子，示範數字加含意）</td></tr>
+  </table></div>
+
+  <div class="grid2">
+    <div>
+      <h3 style="margin-bottom:10px">常用字彙</h3>
+      <div class="tw"><table>
+        <tr><th>作用</th><th>字詞</th></tr>
+        <tr><td>段落開首</td><td>第一、首先／第二、其次、再者／第三、此外、另外、除了上述之外</td></tr>
+        <tr><td>利</td><td>優點、有利、正面影響、加強</td></tr>
+        <tr><td>弊</td><td>缺點、倒退、受害、負面影響</td></tr>
+        <tr><td>舉例</td><td>例如、譬如、舉例說、亦即是</td></tr>
+        <tr><td>強調</td><td>顯然、尤其是、重要的是</td></tr>
+        <tr><td>原因</td><td>因為、由於、基於、為了……的目標</td></tr>
+        <tr><td>結果</td><td>所以、因此、故、結果</td></tr>
+        <tr><td>重申</td><td>換句話說、換言之、簡言之、即是說</td></tr>
+        <tr><td>轉折</td><td>然而、但是、儘管如此、反過來說</td></tr>
+        <tr><td>總結</td><td>綜上所述、總括而言、考慮過所有因素後</td></tr>
+      </table></div>
+      <p class="src" style="margin-top:8px">整理自《實戰攻略》附錄「JRE 文章常用字彙」。每類記兩三個就夠。</p>
+    </div>
+    <div style="display:grid;gap:14px;align-content:start">
+      <h3>化繁為簡</h3>
+      <div class="tw"><table>
+        <tr><th>不用</th><th>宜用</th></tr>
+        <tr><td>由於事實上</td><td>由於</td></tr>
+        <tr><td>政府已經作出決定</td><td>政府已決定</td></tr>
+        <tr><td>政府已經充分考慮到以下事實</td><td>政府已考慮到</td></tr>
+        <tr><td>在這種情況下</td><td>假如</td></tr>
+        <tr><td>在稍後的日子／近期的趨勢</td><td>稍後／趨勢</td></tr>
+        <tr><td>共同合作／最終結果</td><td>合作／結果</td></tr>
+        <tr><td>第一個優點是刺激經濟發展</td><td>第一，方案可刺激經濟發展</td></tr>
+      </table></div>
+      <h3>政策文章常寫錯的字</h3>
+      <div class="typo" id="typos"></div>
+      <p class="src">選自材料中的《常見錯別字一覽表》及《錯別字練習》。</p>
+    </div>
+  </div>
+
+  <div id="zhbank">
+    <h3 style="margin-bottom:4px">往年題目及練習題庫</h3>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:12px">只收錄材料或可查證來源出現過的題目，每張卡註明出處。按「用 75 分鐘練習」會把計時器設為中文題模式並跳到計時器。只有題目方向的卡，用官方樣題的指示句式作答：分析利弊，表明支持或反對並提出理據；贊成就提出確保方案有效的建議，反對就提出達到同一目標的其他措施。</p>
+    <div class="grid2" id="zhprompts"></div>
+  </div>
+
+  <div class="sheet">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline"><h3>中文題自評清單</h3><span class="mono" style="font-size:.75rem;color:var(--muted)">記錄練習時，中文題用這份清單計分（/8）</span></div>
+    <ul class="tasks" id="zhcheck" style="margin-top:8px"></ul>
+    <button class="btn small" type="button" id="zhcheckreset" style="margin-top:8px">清除清單</button>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:4px">議題庫 · 由這裏開始寫議題記錄</h3>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:12px">首六張卡來自 2026 年 9 月 16 日發表的《施政報告》；其餘是材料提到、仍在發展的議題，數字已按最新可查資料核實，出處列在每張卡下面。</p>
+    <div class="grid2" id="issues"></div>
+    <p class="src" style="margin-top:8px">首六張卡的數字來自 <a href="https://www.stheadline.com/society/3615181/" target="_blank" rel="noopener">星島頭條</a> 及 <a href="https://endowus.com/en-hk/insights/policy-address-2026-key-takeaways" target="_blank" rel="noopener">Endowus</a> 的施政報告摘要。部分措施仍需立法，引用前先查最新進展。</p>
+  </div>
+
+  <div class="sheet">
+    <h3 style="margin-bottom:8px">五星期內累積內容</h3>
+    <ul class="clean">
+      <li>每天讀新聞 20 分鐘。材料列出政府部門訂閱的報章：明報、星島日報、經濟日報、文匯報、東方日報、南華早報。</li>
+      <li>讀新聞時重點看持份者的取態和回應，而不是背數字。《實戰攻略》指 JRE 考分析，不考你記得多少政策細節。</li>
+      <li>涵蓋最新施政報告及熱門議題：房屋、安老、醫療、廢物管理、勞工、青年、經濟和旅遊。</li>
+      <li>在立法會網站看兩三個議題的事務委員會文件，學習官方用語和章節寫法。</li>
+      <li>每個議題在議題記錄寫一行（格式見計劃部分）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- MODELS -->
+<section id="models">
+  <div><div class="eyebrow">Section 07</div><h2>Model answers, annotated</h2></div>
+  <p class="lead">What a strong answer looks like, with the reason each part scores alongside. Try the question yourself first, then compare.</p>
+
+  <div class="sheet" style="display:grid;gap:6px">
+    <span class="tag en">English · Traffic Congestion · Hork</span>
+    <p style="font-size:.92rem;color:var(--muted)">Task: as an officer in the Transport Branch, prepare a report to (a) evaluate if a private car quota system is practical and effective; (b) evaluate if a congestion charge is practical and effective; (c) suggest another measure with justifications.</p>
+    <p style="font-size:.85rem;color:var(--muted)"><span class="ph">[ ]</span> marks where a real answer quotes the data file. The sample prompt has no data file, so no figures are invented here.</p>
+  </div>
+
+  <div class="model">
+    <div class="row"><div class="txt"><p class="mono" style="font-size:.84rem;line-height:1.6">To: Secretary for Transport<br>From: Officer, Transport Branch<br>Date: 5 December 2026<br>Subject: Options to Relieve Road Congestion in Hork</p></div><div class="why">The task says "report": a memo header puts you in role straight away.</div></div>
+    <div class="row"><div class="txt"><h4>1. Purpose</h4><p>This report evaluates two options for relieving road congestion in Hork, a private car quota and a congestion charge, and recommends a further measure.</p></div><div class="why">One sentence that repeats the task. The marker knows what is coming.</div></div>
+    <div class="row"><div class="txt"><h4>2. Background</h4><p>Hork's 7.5 million residents live in one of the world's densest cities, and its roads are the most congested in the region. Congestion lengthens journeys, raises vehicle emissions and harms the health of people living near major roads. <span class="ph">[peak-hour speed, growth in private cars]</span></p></div><div class="why">Three sentences only. Background earns little, so it stays short and adds one figure.</div></div>
+    <div class="row"><div class="txt"><h4>3. Option A: Private car quota system</h4><p><b>Practicality.</b> The quota could be run through the existing vehicle licensing system, with new car permits issued by monthly auction, as Singapore has done since 1990. However, it would need new legislation and would face strong opposition from car owners and the motor trade, who would see it as restricting a lawful purchase.</p><p><b>Effectiveness.</b> A quota caps the growth of the car fleet, which tackles one root cause of congestion over the long term. Its short-term effect is weak: it does nothing about how often the cars already on the road are used, and peak-hour congestion depends on use, not ownership. It also risks making car ownership a privilege of the wealthy.</p><p><b>Assessment:</b> effective in the long run but slow and politically costly.</p></div><div class="why">The heading copies task (a). Both criteria the task names (practical, effective) get their own paragraph. An overseas precedent shows research. The fairness point shows an officer's view. It ends with a clear verdict.</div></div>
+    <div class="row"><div class="txt"><h4>4. Option B: Congestion charge</h4><p><b>Practicality.</b> The technology is proven: charging gantries can read the electronic tags many vehicles already carry for tunnel tolls. The main hurdles are legislation, the cost of the gantries, privacy safeguards for journey data, and drawing a boundary that does not simply push traffic onto nearby streets.</p><p><b>Effectiveness.</b> The charge targets driving at the exact time and place where congestion happens, so it works quickly. Cities such as London and Singapore saw marked falls in traffic within charged zones. Revenue can be ring-fenced for public transport, which makes the charge easier to accept. The main weakness is that it weighs more heavily on lower-income drivers and small delivery businesses, so concessions would be needed. <span class="ph">[survey: % of drivers who would switch to public transport]</span></p><p><b>Assessment:</b> the most effective option in the short to medium term, provided safeguards are in place.</p></div><div class="why">Same structure as Option A, so the two options can be compared directly. The weakness comes with its fix (concessions), which is how a policy officer writes.</div></div>
+    <div class="row"><div class="txt"><h4>5. Further measure: Bus priority corridors with park-and-ride</h4><p>The Transport Department should introduce full-time bus lanes and signal priority on the three most congested corridors <span class="ph">[named in the data file]</span>, and open park-and-ride sites at suburban rail stations.</p><ul><li><b>Gives drivers a real alternative</b>, which is what makes a charge acceptable to the public.</li><li><b>Quick and low-cost:</b> lane marking and signal changes can be done within 12 months, partly funded by charge revenue.</li><li><b>Cleaner air:</b> fewer cars and faster buses cut roadside emissions near the roads named in the background.</li></ul></div><div class="why">Task (c) asks for "justifications", so they are labelled. The measure names who does it, where and how fast, and links back to Options A and B.</div></div>
+    <div class="row"><div class="txt"><h4>6. Recommendations</h4><ul><li>Adopt a congestion charge for the central business district, in phases: 6-month public consultation, legislation, then a pilot zone reviewed after 12 months.</li><li>Ring-fence the revenue for bus priority and public transport improvements.</li><li>Offer concessions for disabled drivers, emergency vehicles and, for a transition period, small goods vehicles.</li><li>Hold the car quota in reserve, to be reconsidered if traffic has not fallen by <span class="ph">[target]</span> after two years.</li></ul></div><div class="why">Specific and phased, with a timeline and a review point. Option A isn't wasted: it becomes the fallback.</div></div>
+    <div class="row"><div class="txt"><h4>7. Conclusion</h4><p>A congestion charge backed by faster buses offers the quickest and fairest route to freer roads in Hork. A car quota is a slower and more contentious fallback.</p></div><div class="why">Two sentences: the position and the main action. It adds nothing new.</div></div>
+  </div>
+
+  <div class="sheet zh" style="display:grid;gap:6px">
+    <span class="tag zh">中文 · 大牌檔 (official sample)</span>
+    <p style="font-size:.92rem;color:var(--muted)">A full outline plus model paragraphs. Stance: conditional support. Both stances can pass; what matters is choosing one and following the matching branch of the question.</p>
+  </div>
+  <div class="model zh">
+    <div class="row"><div class="txt"><h4>引言</h4><p>「大牌檔」是香港庶民飲食文化的象徵，惟現存數目寥寥可數。有意見建議政府在市區覓地發展新的大牌檔攤檔。本人認為建議利多於弊，值得支持，但須配合妥善的選址、發牌及衞生管理措施，方能達致推動「美食天堂」的政策目的。</p></div><div class="why">The stance appears in the opening paragraph, with its condition. No hedging.</div></div>
+    <div class="row"><div class="txt"><h4>建議的好處</h4><ul><li><b>保育本土文化：</b>大牌檔承載集體回憶，新攤檔可讓年輕一代及旅客親身體驗。</li><li><b>推動旅遊及夜經濟：</b>特色街頭美食是吸引旅客的賣點，有助帶動周邊消費。</li><li><b>小本創業機會：</b>攤檔投資成本較舖位低，為年輕人及基層提供創業途徑。</li></ul></div><div class="why">A 小標題 copied from the question (利弊). Each point opens with a bolded label so a skimming marker sees all three points.</div></div>
+    <div class="row"><div class="txt"><h4>建議的壞處</h4><ul><li><b>環境衞生：</b>油煙、噪音及垃圾可能滋擾附近居民。</li><li><b>公共空間及安全：</b>市區土地緊張，攤檔或阻塞行人路及緊急通道。</li><li><b>管理成本及公平競爭：</b>政府需投入巡查人手；附近食肆或質疑不公平競爭。</li></ul></div><div class="why">The cons are real, not token ones. Each one sets up a recommendation below.</div></div>
+    <div class="row"><div class="txt"><h4>立場及理據</h4><p>權衡利弊，本人支持建議。上述弊處大多屬管理問題，可透過選址及規管解決；而文化保育及旅遊效益則難以其他方式取代。鄰近地區的成功經驗亦顯示，只要規劃得宜，街頭小食與城市管理可以並存。</p></div><div class="why">This explains why the pros win: the cons can be managed, the pros can't be replaced. That is the analysis markers want.</div></div>
+    <div class="row"><div class="txt"><h4>建議（確保方案達致政策目的）</h4><ul><li><b>選址：</b>先於海濱長廊或公共休憩空間等遠離民居的地點試行兩至三個據點。</li><li><b>發牌：</b>公開招標，牌照設年期且不可轉讓，防止炒賣；優先考慮具經驗或年輕經營者。</li><li><b>衞生：</b>統一攤檔設計，設排煙及集中洗碗、垃圾處理設施，由食環署定期巡查。</li><li><b>推廣：</b>與旅發局合作，把大牌檔納入美食旅遊路線。</li><li><b>檢討：</b>試行兩年後評估客流、投訴及經營情況，再決定是否擴展。</li></ul></div><div class="why">Each recommendation answers one con (location solves nuisance, hygiene solves smoke). There's a pilot and a review, and the departments are named.</div></div>
+    <div class="row"><div class="txt"><h4>結論</h4><p>總括而言，發展新大牌檔既能保育本土飲食文化，亦能為旅遊業注入新動力。只要政府做好選址、發牌及衞生配套，建議值得積極推行。</p></div><div class="why">The stance is restated. It closes on the question's own goal (美食天堂).</div></div>
+  </div>
+
+  <div class="sheet zh" style="display:grid;gap:8px">
+    <span class="tag zh">中文 · 管制或禁制即棄塑膠餐具（《實戰攻略》模擬題）</span>
+    <p style="font-size:.92rem">題目：疫情期間外賣大增，即棄塑膠餐具造成嚴重環境問題。有意見指政府應研究修例管制或禁制即棄塑膠餐具，以減少固體廢物。請分析利弊，表明支持或反對並提出理據；贊成的話提出確保方案有效的建議，反對的話提出其他減少本地固體廢物量的措施。</p>
+    <p style="font-size:.85rem;color:var(--muted)">書中有支持和反對兩篇範文，各約 1,400 字，附逐段評語。下面是逐段拆解：左欄是該段的撮要（不是原文），右欄是書中評語和溫習重點。完整範文見《JRE 聯合招聘考試實戰攻略》5.2 節。</p>
+  </div>
+
+  <h3 class="zh" style="margin-bottom:-8px">範文一：支持立場</h3>
+  <div class="model zh">
+    <div class="row"><div class="txt"><h4>引言</h4><p>交代疫情下外賣增加令塑膠廢物問題惡化，引述題目建議，表示會按建議的可行性及效用認真考慮。</p></div><div class="why">只從題目抽重點，不照抄。未決定立場也寫得出，所以支持和反對兩篇的引言可以一樣。</div></div>
+    <div class="row"><div class="txt"><h4>利一：減少污染，改善環境</h4><p>減少即棄餐具和固體垃圾，減輕堆填區和海洋生態負擔，並提升環保意識。</p></div><div class="why">環保題第一段先寫環保角度，最重要的放最前。關鍵詞在第一句，結尾句換個說法重申。</div></div>
+    <div class="row"><div class="txt"><h4>利二：有利政府形象</h4><p>政府帶頭推行環保，可取得世界自然基金會、綠色和平、長春社等環團信任，日後推其他環保政策更順利。</p></div><div class="why">舉出真實團體名稱，令論點「落地」。段落長度與上一段一致。</div></div>
+    <div class="row"><div class="txt"><h4>利三：減少政府長遠開支</h4><p>垃圾量減少，收集、處理垃圾的開支和堆填用地需求隨之下降。</p></div><div class="why">支持立場，所以利要比弊多。</div></div>
+    <div class="row"><div class="txt"><h4>弊一：不利本地經濟發展</h4><p>膠餐具生產商和食品零售商職位流失，行業盈利下跌；疫情下經濟已疲弱，會再受打擊。</p></div><div class="why">把經濟發展和失業兩個同角度論點併成一段，內容更實在。用負面程度較輕的「不利」，配合支持立場。</div></div>
+    <div class="row"><div class="txt"><h4>弊二：減少社會凝聚力</h4><p>家中不宜煮食的劏房戶等要承擔轉嫁的餐具成本，疫情中百上加斤，對社會不滿增加。</p></div><div class="why">點出具體受影響群體。到此第一部分已覆蓋環境、政府、經濟、社會四個角度，顯示照顧到不同群體。</div></div>
+    <div class="row"><div class="txt"><h4>過渡段</h4><p>承認利弊有矛盾，但塑膠污染對環境的傷害不可逆轉，為可持續發展，認為有修例必要，引出建議。</p></div><div class="why">在這裏講清立場，一兩句就夠。</div></div>
+    <div class="row"><div class="txt"><h4>建議一至三</h4><ul><li><b>公眾諮詢：</b>約見業界及環團，開放公眾提交意見，再研究可行性。</li><li><b>參考海外經驗：</b>歐盟成員國，以及消費背景相近的台灣。</li><li><b>教育推廣：</b>學校巡迴講座、電視電台、巴士站及網上廣告。</li></ul></div><div class="why">三個都是「百搭」建議，一段一個重點。書中提醒：三個建議是最低要求。</div></div>
+    <div class="row"><div class="txt"><h4>建議四：押後實施、設寬限期</h4><p>首半年或更長時間初犯只作警告，讓業界轉用含少量塑膠的紙質或植物纖維替代品。</p></div><div class="why">直接回應弊一（業界受打擊），建議與第一部分前後呼應，是這篇最有針對性的一段。</div></div>
+    <div class="row"><div class="txt"><h4>總結</h4><p>一句：除修例外，會繼續多方面推動環保，減少固體廢物。</p></div><div class="why">總結只為結構完整。書中建議：有時間不如回到第二部分多寫一個建議。</div></div>
+  </div>
+
+  <h3 class="zh" style="margin-bottom:-8px">範文二：反對立場（與範文一的分別）</h3>
+  <div class="model zh">
+    <div class="row"><div class="txt"><h4>利只寫兩個</h4><p>減少污染、減少政府長遠開支。刻意不寫「有利政府形象」。</p></div><div class="why">反對立場，利要比弊少。以政府身份寫「有利政府形象」卻又反對，角色會尷尬。</div></div>
+    <div class="row"><div class="txt"><h4>弊寫三個</h4><ul><li><b>有損本地經濟發展：</b>改用負面程度較重的「有損」。</li><li><b>減少社會凝聚力：</b>與範文一相同。</li><li><b>現時貿然修例不利政府形象：</b>疫情下會被視為「離地」，日後推其他走塑措施更難。</li></ul></div><div class="why">「現時貿然」點明論點只適用於疫情期間，顯示貼近時事。字眼屬性與立場一致。</div></div>
+    <div class="row"><div class="txt"><h4>過渡段</h4><p>環保重要，但社會在疫情打擊下已疲弱，修例並非目前最有利的做法，改為提出其他減廢措施。</p></div><div class="why">反對時，第二部分要改寫「其他減少固體廢物的措施」，跟足題目分支。</div></div>
+    <div class="row"><div class="txt"><h4>替代措施</h4><ul><li><b>公眾諮詢：</b>主題改為「如何減少即棄餐具」。</li><li><b>參考海外經驗：</b>日本、南韓要求市民回收塑膠製品。</li><li><b>教育推廣：</b>目的改為鼓勵市民自發少用。</li><li><b>經濟手段：</b>對即棄餐具收費或提供誘因，兼顧生活與環保。</li></ul></div><div class="why">同一組百搭建議，換個目的就適用於反對立場。日本、南韓的例子來自生活常識，不需要背資料。</div></div>
+  </div>
+
+  <div class="note">
+    <b>今日再寫這題要更新背景。</b>走塑第一階段已於 2024 年 4 月 22 日實施，禁止發泡膠餐具、膠飲管、膠餐具等；第二階段（外賣餐盒、杯蓋等）至 2025 年仍未有時間表，政府表示要先與業界試用替代品。疫情論點已過時，應改為討論「應否、何時推第二階段」。詳見議題庫的「即棄塑膠餐具」。
+  </div>
+</section>
+
+<!-- PRACTICE -->
+<section id="practice">
+  <div><div class="eyebrow">Section 08</div><h2>Practice &amp; exam timer</h2></div>
+  <p class="lead">Practise under real time limits from week 2. The timer follows the suggested split and tells you when to move on.</p>
+
+  <div class="timer" id="timer">
+    <div class="modes" role="group" aria-label="Timer mode">
+      <button type="button" data-mode="full" aria-pressed="true">Full paper · 180</button>
+      <button type="button" data-mode="en" aria-pressed="false">English only · 105</button>
+      <button type="button" data-mode="zh" aria-pressed="false">Chinese only · 75</button>
+      <button type="button" data-mode="outline" aria-pressed="false">Outline drill · 15</button>
+      <button type="button" data-mode="cre" aria-pressed="false">CRE mock · 45</button>
+    </div>
+    <div style="display:grid;gap:6px">
+      <div class="clock" id="clock" aria-live="off">3:00:00</div>
+      <div class="phase" id="phase">Ready. Phase: <b>中文 讀題</b></div>
+    </div>
+    <div class="tl" id="tl"></div>
+    <div class="legend" id="legend"></div>
+    <div class="ctl">
+      <button type="button" id="tstart">Start</button>
+      <button type="button" class="ghost" id="tnext">Skip to next phase</button>
+      <button type="button" class="ghost" id="treset">Reset</button>
+    </div>
+    <p id="tprompt" style="font-size:.88rem;opacity:.85" hidden=""></p>
+  </div>
+
+  <div class="grid2">
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">Self-marking checklist</h3>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:6px">Run through it after every answer.</p>
+      <ul class="tasks" id="check"></ul>
+      <button class="btn small" type="button" id="checkreset" style="margin-top:8px">Clear checklist</button>
+    </div>
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">How to review a mock</h3>
+      <ul class="clean">
+        <li>Note where the time went for each phase; fix the slowest one next time</li>
+        <li>Count your points per task item against what was asked</li>
+        <li>Rewrite your weakest paragraph, not the whole paper</li>
+        <li>Swap papers with a friend: can they find each point in 5 seconds?</li>
+        <li>Pasting an answer into Claude with the prompt gets quick feedback against this checklist</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sheet log">
+    <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline"><h3>Practice log</h3><span class="mono" style="font-size:.75rem;color:var(--muted)" id="logsum">0 attempts</span></div>
+    <p style="color:var(--muted);font-size:.9rem">After each attempt, tick the checklist above (for Chinese answers, the 中文題自評清單 in Section 06), then log it here. The chart shows whether the checklist score is rising.</p>
+    <form class="logform" id="logform">
+      <label for="lgtype">Type<select id="lgtype"><option value="full">Full paper (180)</option><option value="en">English only</option><option value="zh">Chinese only</option><option value="outline">Outline drill</option><option value="cre">CRE mock</option></select></label>
+      <label for="lgname">Question<input id="lgname" type="text" placeholder="e.g. Landfill"></label>
+      <label for="lgmin">Minutes used<input id="lgmin" type="number" min="1" max="240" placeholder="105"></label>
+      <label for="lgscore">Checklist score /8<input id="lgscore" type="number" min="0" max="8"></label>
+      <button class="btn primary" type="submit">Log attempt</button>
+    </form>
+    <div id="logchart"></div>
+    <ul class="loglist" id="loglist"></ul>
+  </div>
+
+  <div>
+    <h3 style="margin-bottom:10px">English prompt bank · 8 prompts from the sample files</h3>
+    <div class="grid2" id="prompts"></div>
+  </div>
+</section>
+
+<!-- CRE -->
+<section id="cre">
+  <div><div class="eyebrow">Section 09 · Only if needed</div><h2>CRE Use of English</h2></div>
+  <div class="note">Skip this if she already holds Level 2 in CRE Use of English, or an accepted equivalent such as DSE English Level 5 or IELTS 6.5 (with no band below 6, within 2 years). Applicants without the required results are scheduled for special CRE papers.</div>
+  <div class="tw"><table>
+    <tr><th>Type</th><th>Tests</th><th>Common trap</th></tr>
+    <tr><td>Comprehension</td><td>Main idea, inference, vocabulary in context</td><td>An answer that is true but not stated in the passage</td></tr>
+    <tr><td>Error Identification</td><td>Spot the grammar error, or "No error"</td><td>"along with" / "as well as" don't make a subject plural; "committee" takes "its"</td></tr>
+    <tr><td>Sentence Completion</td><td>The word or phrase that fits</td><td>Connectors that flip meaning: however, despite, whereas</td></tr>
+    <tr><td>Paragraph Improvement</td><td>Sentence order, insertion, best edit</td><td>Changing a sentence that was already fine</td></tr>
+  </table></div>
+  <p style="color:var(--muted)">40 questions in 45 minutes, about 67 seconds each. Results: Level 2 (higher), Level 1, or Fail. AO and EO posts need Level 2.</p>
+
+  <div class="drill" id="drill" aria-live="polite">
+    <div class="top"><span>Error identification drill · from the 130-question bank</span><span id="dscore">Score 0 / 0</span></div>
+    <div class="q" id="dq"></div>
+    <div class="opts" id="dopts"></div>
+    <div class="fb" id="dfb"></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn primary" type="button" id="dnext">Next question</button><button class="btn" type="button" id="drestart">Restart</button></div>
+  </div>
+  <p style="color:var(--muted);font-size:.9rem">Pattern to notice: almost every item is about agreement, subject with verb, noun with number, pronoun with its noun. Find the true subject first, then check everything that refers to it.</p>
+</section>
+
+<!-- EXAM DAY -->
+<section id="examday">
+  <div><div class="eyebrow">Section 10</div><h2>Exam day</h2></div>
+  <p class="lead">Almost everyone runs short of time in the JRE. The day is about keeping to the clock.</p>
+  <div class="grid2">
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">In the room</h3>
+      <ul class="clean">
+        <li><b>Order:</b> Chinese first (75 min), then English (105 min), so the lighter reading is cleared early. Use the order you practised.</li>
+        <li><b>Hard stop:</b> write the switch time on the question paper and move on even mid-section.</li>
+        <li><b>Short of time:</b> finish with clear headed bullet points instead of leaving a part blank.</li>
+        <li><b>Last 2 minutes per question:</b> tick every task item against a heading.</li>
+      </ul>
+    </div>
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">Before</h3>
+      <ul class="tasks" id="before"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section id="materials">
+  <div><div class="eyebrow">Section 11</div><h2>Materials &amp; sources</h2></div>
+  <p class="lead">Two batches of files. English batch: 4 of 20 files are for the JRE, the other 16 are CRE Use of English practice. Chinese batch: 5 of 14 files are for the JRE question (two of them identical), the other 9 are CRE Use of Chinese practice.</p>
+  <h3>Chinese batch</h3>
+  <div class="tw"><table>
+    <tr><th>File</th><th>Exam</th><th>Use</th></tr>
+    <tr><td class="zh">JRE聯合招聘考試實戰攻略（EO Classroom，2022，157 頁）</td><td><span class="tag zh">JRE</span></td><td>Main source for Section 06: five-part structure, 皇牌答題框架, plastic tableware mock with two annotated model essays, nine exam tips, vocabulary</td></tr>
+    <tr><td class="zh">5.JRE重點 ＝ 12.JRE題目（44 頁，內容相同）</td><td><span class="tag zh">JRE</span></td><td>Text version of chapters 2–4 of the book above; the framework tables are readable here</td></tr>
+    <tr><td class="zh">7.JRE寫文心得（8 頁）</td><td><span class="tag zh">JRE</span></td><td>Time split, idea angles, human rights (Cap. 383), government-paper phrasing</td></tr>
+    <tr><td class="zh">6.JRE筆試攻略（20 頁）</td><td><span class="tag zh">JRE</span></td><td>Official sample (大牌檔), two past Chinese topics, six content requirements, three recommendation types</td></tr>
+    <tr><td class="zh">常見錯別字一覽表 · 錯別字練習</td><td><span class="tag ok">Both</span></td><td>CRE drills; the typo list in Section 06 comes from here</td></tr>
+    <tr><td class="zh">Chinese.pdf（206 頁掃描）</td><td><span class="tag cre">CRE</span></td><td>《投考公務員題解 EASY PASS 中文運用》: question types and 3 mock tests</td></tr>
+    <tr><td class="zh">CRE中文運用問題庫 120 題</td><td><span class="tag cre">CRE</span></td><td>Reading, word, sentence and usage MCQs with answers</td></tr>
+    <tr><td class="zh">CRE中文模擬試卷 · 模擬練習卷（一）至（四）</td><td><span class="tag cre">CRE</span></td><td>45-minute Use of Chinese mock papers (scanned)</td></tr>
+  </table></div>
+  <h3>English batch</h3>
+  <div class="tw"><table>
+    <tr><th>File</th><th>Exam</th><th>Use</th></tr>
+    <tr><td class="zh">JRE 寫文心得 (8 pp)</td><td><span class="tag en">JRE</span></td><td>Read first. Format, timing, writing tips, idea angles, government phrasing</td></tr>
+    <tr><td class="zh">JRE 筆試攻略 (20 pp)</td><td><span class="tag en">JRE</span></td><td>Reading the question, document types, recommendation types, past topics</td></tr>
+    <tr><td>Sample Q&amp;A 2023 lesson (11 pp)</td><td><span class="tag en">JRE</span></td><td>2 prompts for practice</td></tr>
+    <tr><td>Sample Q&amp;A 2024 lesson (30 pp)</td><td><span class="tag en">JRE</span></td><td>6 prompts for practice</td></tr>
+    <tr><td class="zh">投考公務員題解 EASY PASS 英文運用 (196 pp)</td><td><span class="tag cre">CRE</span></td><td>Question types and 2 mock papers</td></tr>
+    <tr><td class="zh">CRE 英文運用測試實戰攻略 (238 pp)</td><td><span class="tag cre">CRE</span></td><td>Question types and mock papers</td></tr>
+    <tr><td class="zh">英文運用模擬試卷 1–9 + answers</td><td><span class="tag cre">CRE</span></td><td>Nine full 40-question mocks</td></tr>
+    <tr><td class="zh">CRE 英文運用問題庫 130 題 (47 pp)</td><td><span class="tag cre">CRE</span></td><td>Questions with explanations</td></tr>
+    <tr><td class="zh">CRE 英文模擬試卷 (27 pp)</td><td><span class="tag cre">CRE</span></td><td>One timed mock</td></tr>
+    <tr><td>Error Identification Exercise (4 pp)</td><td><span class="tag cre">CRE</span></td><td>Grammar drill; also helps JRE accuracy</td></tr>
+    <tr><td class="zh">無痛英文文法 (56 pp)</td><td><span class="tag ok">Both</span></td><td>Grammar reference</td></tr>
+  </table></div>
+  <div class="grid2">
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">Official and useful links</h3>
+      <ul class="clean">
+        <li><a href="https://www.ao-recruitment.gov.hk/mobile/tc_chi/sample_questions_for_JRE.html" target="_blank" rel="noopener">Government JRE sample questions</a></li>
+        <li><a href="https://www.legco.gov.hk/tc/education/teach/legco_panel_papers.html" target="_blank" rel="noopener">LegCo panel papers by policy area</a></li>
+        <li><a href="https://www.moneyhero.com.hk/blog/zh/%E6%94%BF%E5%BA%9C%E5%B7%A5-%E6%8B%9B%E8%81%98-cre-jre-%E6%8A%95%E8%80%83-%E6%94%BF%E5%BA%9C%E5%B7%A5-%E6%94%BB%E7%95%A5-%E6%99%82%E9%96%93%E8%A1%A8-%E8%81%B7%E4%BD%8D%E7%A9%BA%E7%BC%BA" target="_blank" rel="noopener">2026 JRE and CRE dates (MoneyHero)</a></li>
+      </ul>
+    </div>
+    <div class="sheet">
+      <h3 style="margin-bottom:8px">How competitive it is</h3>
+      <div class="tw" style="border:0"><table class="num">
+        <tr><th>Year</th><th>Sat JRE</th><th>Passed</th><th>EOII hired</th></tr>
+        <tr><td>2019-20</td><td>~11,000</td><td>~3,100 (28%)</td><td>~260</td></tr>
+        <tr><td>2018-19</td><td>~14,000</td><td>~4,500 (32%)</td><td>~320</td></tr>
+        <tr><td>2017-18</td><td>~15,000</td><td>~3,300 (22%)</td><td>~330</td></tr>
+      </table></div>
+      <p style="color:var(--muted);font-size:.82rem;margin-top:6px">Figures as quoted in the JRE 筆試攻略 guide. The 實戰攻略 book gives about 190 EOII hires for 2019-20, and about 21,000 and 15,000 applicants for 2020-21 and 2021-22; neither source is official.</p>
+    </div>
+  </div>
+  <footer>
+    <span>Dates are tentative; if exam details have not arrived by 23 Nov 2026, contact the Civil Service Examinations Section.</span>
+    <span>Ticks and drill score are saved only in this browser.</span>
+  </footer>
+</section>
+</main>
+</div>
+
+<script>
+(function(){
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const $=s=>document.querySelector(s);
+
+/* countdown */
+const exam=new Date(2026,11,5);const today=new Date();today.setHours(0,0,0,0);
+const d=Math.round((exam-today)/864e5);$('#days').textContent=d>0?d:(d===0?'Today':'Done');
+
+/* plan */
+const weeks=[
+ {n:1,s:'2026-11-02',e:'2026-11-08',dates:'2–8 Nov',title:'Learn the format',tasks:[
+  'Read the JRE 寫文心得 guide in full',
+  'Read the JRE 筆試攻略 guide; note the document types and recommendation types',
+  'Untimed: Traffic Congestion (Hork). Focus on structure, not speed',
+  'Untimed: Activate Jubilance',
+  'Write your own paper skeleton from memory',
+  'Start the issue log: 6 HK policy issues, one line each',
+  'Read 實戰攻略 chapters 2, 3 and 6 (structure, 皇牌答題框架, exam tips)']},
+ {n:2,s:'2026-11-09',e:'2026-11-15',dates:'9–15 Nov',title:'Timed single questions',tasks:[
+  'English in 105 min: Landfill (Pleasantville)',
+  'English in 105 min: Parking Tax (City P)',
+  'Chinese in 75 min: an issue from the log',
+  'Chinese in 75 min: the 大牌檔 sample question',
+  'Mark all four with the checklist; rewrite one weak paragraph',
+  'Chinese in 75 min: 即棄塑膠餐具 mock, then compare with the 範文拆解 in Section 07']},
+ {n:3,s:'2026-11-16',e:'2026-11-22',dates:'16–22 Nov',title:'Full papers',tasks:[
+  'Saturday full 3-hour mock: Aero City + a Chinese issue',
+  'Sunday full 3-hour mock: Water Charges + a Chinese issue',
+  'Log the time spent on each phase; adjust the split if needed',
+  'Three 15-minute outline drills on weekdays']},
+ {n:4,s:'2026-11-23',e:'2026-11-29',dates:'23–29 Nov',title:'Fix weak spots',tasks:[
+  'Check the exam notice has arrived (else contact CSB)',
+  'Full mock: Mental Health Centres (City of Jade) + a Chinese issue',
+  'Full mock: Transport System (City P) + a Chinese issue',
+  'Rewrite the weakest section of an earlier answer',
+  'Grow the issue log to 12 issues']},
+ {n:5,s:'2026-11-30',e:'2026-12-04',dates:'30 Nov–4 Dec',title:'Taper',tasks:[
+  'One 15-minute outline drill a day, no new full papers',
+  'Re-read the issue log and the Policy Address highlights',
+  'Re-read the "Finding points" angles and the traps list',
+  'Friday: rest, pack the bag, early night']}
+];
+const done=store.get('jre-plan',{});
+const W=$('#weeks');const iso=today.toISOString().slice(0,10);
+const tLocal=new Date(today.getTime()-today.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+weeks.forEach(w=>{
+  const now=tLocal>=w.s&&tLocal<=w.e;
+  const el=document.createElement('article');el.className='week'+(now?' now':'');
+  el.innerHTML=`<div class="wk">Week<b>${w.n}</b>${w.dates}${now?'<br><span class="nowtag">This week</span>':''}</div><div><h3>${w.title}</h3><ul class="tasks">${w.tasks.map((t,i)=>{const id=`w${w.n}t${i}`;return `<li><label><input type="checkbox" id="${id}" ${done[id]?'checked':''}><span>${t}</span></label></li>`}).join('')}</ul></div>`;
+  W.appendChild(el);
+});
+/* activity + progress hub */
+const act=store.get('jre-act',{});
+function bump(){act[tLocal]=(act[tLocal]||0)+1;store.set('jre-act',act)}
+function fmtD(s){const d=new Date(s+'T00:00:00');return d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})}
+function weekPct(w){const ids=w.tasks.map((_,i)=>`w${w.n}t${i}`);return Math.round(ids.filter(i=>done[i]).length/ids.length*100)}
+function curIdx(){if(tLocal<weeks[0].s)return -1;for(let i=0;i<weeks.length;i++){if(tLocal<=weeks[i].e)return i}return tLocal<'2026-12-06'?5:6}
+function hub(){
+ const ci=curIdx();
+ /* journey */
+ const J=$('#journey');const stages=[...weeks.map(w=>({t:w.title,d:w.dates,p:weekPct(w),n:w.n,e:w.e})),{t:'Exam day',d:'Sat 5 Dec',p:ci>=6?100:0,n:'考',e:'2026-12-05'}];
+ J.innerHTML=stages.map((s,i)=>{const cls=[i<ci?'past':'',i===ci?'cur':'',s.p===100&&i<5?'full':''].join(' ');
+  return `<li class="${cls}"><span class="node" style="--p:${s.p}"><span>${s.p===100&&i<5?'✓':s.n}</span></span><b>${s.t}</b><small>${s.d}${i<5?' · '+s.p+'%':''}</small>${i===ci?'<span class="here">You are here</span>':(ci===-1&&i===0?'<span class="here">Starts Mon 2 Nov</span>':'')}</li>`}).join('');
+ $('#jfill').style.width=`calc(${Math.max(0,Math.min(ci,5))/5} * (100% * 5 / 6))`;
+ /* today card */
+ const T=$('#today');
+ if(ci>=6){T.innerHTML='<span class="k">After the exam</span><h3>Well done. The exam is over.</h3><p>Results and interview invitations follow from the Civil Service Bureau.</p>'}
+ else if(ci===5){T.innerHTML=`<span class="k">Exam day · Sat 5 Dec</span><h3>Today is the day.</h3><ul><li>Chinese first, 75 minutes, then English, 105</li><li>Headings copy the task; point first in every paragraph</li><li>Switch at the planned time, even mid-section</li></ul>`}
+ else{const w=weeks[Math.max(ci,0)];const left=w.tasks.map((t,i)=>({t,id:`w${w.n}t${i}`})).filter(x=>!done[x.id]);
+  T.innerHTML=`<span class="k">${ci===-1?'Starting tomorrow':'Today'} · ${$('#days').textContent} days to go · Week ${w.n} of 5</span><h3>${w.title}</h3>${left.length?`<p style="opacity:.8;font-size:.9rem">Next up this week:</p><ul>${left.slice(0,3).map(x=>`<li>${x.t}</li>`).join('')}</ul>`:'<p>All of this week’s tasks are ticked. Use spare time for an outline drill or the issue log.</p>'}<button class="go" type="button" data-goto="plan">Open the plan</button>`}
+ /* rings */
+ const b=W.querySelectorAll('input');const c=[...b].filter(x=>x.checked).length;const pc=b.length?Math.round(c/b.length*100):0;
+ $('#r1').style.setProperty('--p',pc);$('#r1t').textContent=pc+'%';$('#r1s').textContent=`${c} of ${b.length} ticked`;
+ const fulls=logs.filter(l=>l.type==='full').length;$('#r2').style.setProperty('--p',Math.min(100,fulls/4*100));$('#r2t').textContent=fulls+'/4';
+ let st=0;const dd=new Date(today);if(!act[tLocal])dd.setDate(dd.getDate()-1);
+ for(;;){const k=new Date(dd.getTime()-dd.getTimezoneOffset()*6e4).toISOString().slice(0,10);if(act[k]){st++;dd.setDate(dd.getDate()-1)}else break}
+ $('#r3').style.setProperty('--p',Math.min(100,st/34*100));$('#r3t').textContent=st;$('#r3s').textContent=st===1?'day with study activity':'days in a row with study activity';
+ /* heatmap */
+ const H=$('#heat');let h='<span></span>'+['M','T','W','T','F','S','S'].map(x=>`<span class="dl">${x}</span>`).join('');
+ const start=new Date(2026,10,2);
+ for(let wk=0;wk<5;wk++){h+=`<span class="wl">W${wk+1}</span>`;for(let dy=0;dy<7;dy++){const d=new Date(start);d.setDate(start.getDate()+wk*7+dy);
+  const k=new Date(d.getTime()-d.getTimezoneOffset()*6e4).toISOString().slice(0,10);const n=act[k]||0;
+  const ex=k==='2026-12-05';const lv=n>=4?'l3':n>=2?'l2':n>=1?'l1':'';const post=k>'2026-12-05';
+  h+=`<span class="cell ${ex?'ex':lv} ${k===tLocal?'td':''} ${post?'off':''}" title="${fmtD(k)}${ex?' · Exam':n?' · '+n+' activities':''}">${ex?'考':d.getDate()}</span>`}}
+ H.innerHTML=h;
+}
+document.addEventListener('click',e=>{const g=e.target.closest('[data-goto]');if(g)document.getElementById(g.dataset.goto).scrollIntoView({behavior:'smooth'})});
+function prog(){const b=W.querySelectorAll('input');const c=[...b].filter(x=>x.checked).length;const p=b.length?c/b.length*100:0;
+ $('#planbar').style.width=$('#navbar').style.width=p+'%';$('#planpct').textContent=`${c} of ${b.length} tasks done`;$('#navpct').textContent=`${c} of ${b.length} tasks`;if(typeof logs!=='undefined')hub()}
+W.addEventListener('change',e=>{if(e.target.type==='checkbox'){done[e.target.id]=e.target.checked;store.set('jre-plan',done);if(e.target.checked)bump();prog()}});
+var logs=store.get('jre-logs',[]);prog();
+$('#planreset').onclick=()=>{$('#planconfirm').hidden=false;$('#planreset').hidden=true};
+$('#planno').onclick=()=>{$('#planconfirm').hidden=true;$('#planreset').hidden=false};
+$('#planyes').onclick=()=>{W.querySelectorAll('input').forEach(i=>{i.checked=false});for(const k in done)delete done[k];store.set('jre-plan',done);prog();$('#planno').onclick()};
+
+/* checklists */
+function checklist(sel,key,items){const st=store.get(key,{});const ul=$(sel);
+ ul.innerHTML=items.map((t,i)=>`<li><label><input type="checkbox" id="${key}${i}" ${st[i]?'checked':''}><span>${t}</span></label></li>`).join('');
+ ul.addEventListener('change',e=>{st[e.target.id.replace(key,'')]=e.target.checked;store.set(key,st)});
+ return ()=>{ul.querySelectorAll('input').forEach(i=>i.checked=false);for(const k in st)delete st[k];store.set(key,st)}}
+const resetCheck=checklist('#check','jre-check',[
+ 'Every item in the task has its own heading',
+ 'Each paragraph opens with its point',
+ 'The required number of points for each item',
+ 'At least 2 figures from the data file, with what they mean',
+ 'Stakeholders on both sides considered',
+ 'Recommendations say who, how, cost and timing',
+ 'A clear stance, no fence-sitting',
+ 'Both questions finished within time']);
+$('#checkreset').onclick=resetCheck;
+const resetZh=checklist('#zhcheck','jre-zhcheck',[
+ '引言兩三行內交代背景',
+ '立場清晰，過渡段講明支持或反對',
+ '跟足題目分支和要求的數目',
+ '每段主旨句先行，結尾句重申關鍵詞',
+ '利弊最少涵蓋三個角度，己方論點比對方多',
+ '最少三個建議，每個回應一個弊處，有落實細節',
+ '以政府身份寫，沒有抨擊現行政策或評論腔',
+ '75 分鐘內完成，並檢查過錯別字']);
+$('#zhcheckreset').onclick=resetZh;
+checklist('#before','jre-before',[
+ 'Exam notice, HKID card and pens packed',
+ 'Route and travel time to the venue checked',
+ 'A watch (no phone in the room)',
+ 'Early night; no new material the evening before']);
+
+/* phrases */
+const P=[
+ ['This paper sets out the problems facing Jubilance and recommends measures to address them.','Purpose line'],
+ ['This paper seeks Members’ views on the proposal to…','Purpose line (consultation)'],
+ ['Against this background, the Government commissioned a study in January 2025 to…','Linking background to the proposal'],
+ ['Over the past decade, the number of cases has surged by 521% to 92 115 in 2017.','Reporting a trend with a figure'],
+ ['The cost recovery rate stands at only 38%, meaning taxpayers subsidise about $24 million a year.','Turning a number into an implication'],
+ ['It is recommended that the Government pilot the scheme in two districts before rolling it out territory-wide.','Recommendation with phasing'],
+ ['To address the concerns of residents, we propose…','Answering a stakeholder'],
+ ['On balance, the benefits outweigh the costs, provided that…','Taking a position with a condition']];
+$('#phrases').innerHTML=P.map((p,i)=>`<div><span><q>${p[0]}</q><small>${p[1]}</small></span><button class="btn small" type="button" data-copy="${i}">Copy</button></div>`).join('');
+$('#phrases').addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(!b)return;const t=P[b.dataset.copy][0];
+ const ok=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1400)};
+ try{navigator.clipboard.writeText(t).then(ok,()=>{b.textContent='Select text'})}catch(err){b.textContent='Select text'}});
+
+/* prompts */
+const PR=[
+ {t:'Traffic Congestion · Hork',src:'2023 lesson',doc:'Report',role:'Officer, Transport Branch',items:['Evaluate whether a private car quota system is practical and effective','Evaluate whether a congestion charge is practical and effective','Suggest another measure, with justifications']},
+ {t:'Integrated Mental Health Centres · City of Jade',src:'2023 lesson · also the official sample',doc:'Internal discussion paper',role:'Ministry of Welfare',items:['Set out two major problems facing the setting up of integrated centres and explain their implications','Recommend feasible measures to address them']},
+ {t:'Activate Jubilance',src:'2024 lesson',doc:'Paper',role:'Planning consultancy office, writing for the Planning Department',items:['Problems residents face in Jubilance','Pros and cons of the "Activate Jubilance" flea market proposal','Other recommendations and how to carry them out']},
+ {t:'Landfills · Pleasantville',src:'2024 lesson',doc:'Paper',role:'Environmental Protection Department',items:['Problems residents face from landfills','Pros and cons of the two proposed solutions','Other recommendations and how to carry them out']},
+ {t:'Aero City · Southorn',src:'2024 lesson',doc:'Discussion paper',role:'Technology investment officer, writing for the PM’s Investment Project Evaluation Group',items:['Pros and cons of the project','Likely impact on Southorn','Implications of the proponent’s requests and other considerations','Recommendations with arguments, and actions the government should take']},
+ {t:'Parking Tax · City P',src:'2024 lesson',doc:'Paper',role:'Transport officer',items:['Illustrate the problem','Rationale for a parking tax: pros and cons, and how to persuade all parties','How to carry out the policy','Two alternative approaches']},
+ {t:'Transport System · City P',src:'2024 lesson',doc:'Discussion paper',role:'Transport officer, writing for the Transport Department',items:['Problems of the transport system','Recommendations and how to carry them out']},
+ {t:'Domestic Water Charges',src:'2024 lesson',doc:'Internal discussion paper',role:'Ministry of Development',items:['Assess the pros and cons of adjusting domestic fresh water charges','Recommend whether to adjust. If yes, two arguments to win over the public and the legislature; if no, two new methods for long-term water shortage']}
+];
+$('#prompts').innerHTML=PR.map((p,i)=>`<article class="prompt"><div class="meta"><span class="tag en">${p.doc}</span>${p.src}</div><h3>${p.t}</h3><p>You are: ${p.role}</p><ol>${p.items.map(x=>`<li>${x}</li>`).join('')}</ol><div class="row"><span class="mono" style="font-size:.72rem;color:var(--faint)">${p.items.length} task items</span><button class="btn small" type="button" data-p="${i}">Practise in 105 min</button></div></article>`).join('');
+$('#prompts').addEventListener('click',e=>{const b=e.target.closest('[data-p]');if(!b)return;setMode('en');const p=PR[b.dataset.p];$('#lgname').value=p.t;
+ const tp=$('#tprompt');tp.hidden=false;tp.textContent='Practising: '+p.t+' · '+p.items.length+' task items';$('#timer').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})});
+
+/* timer */
+const C={zr:'var(--zh-soft)',zo:'color-mix(in srgb, var(--zh) 55%, var(--zh-soft))',zw:'var(--zh)',er:'var(--en-soft)',eo:'color-mix(in srgb, var(--en) 55%, var(--en-soft))',ew:'var(--en)',c:'var(--amber)'};
+const MODES={
+ full:[['中文 讀題',10,'zr'],['中文 大綱',5,'zo'],['中文 寫作',60,'zw'],['English: read data file',25,'er'],['English: outline',5,'eo'],['English: write',75,'ew']],
+ en:[['Dissect the task',3,'er'],['Read the data file',22,'er'],['Outline',5,'eo'],['Write',73,'ew'],['Check against the task',2,'eo']],
+ zh:[['讀題',10,'zr'],['大綱',5,'zo'],['寫作',58,'zw'],['檢查',2,'zo']],
+ outline:[['Read the task',3,'er'],['Outline the headings and points',12,'eo']],
+ cre:[['40 questions (~67 s each)',45,'c']]};
+let mode='full',total=0,left=0,run=null,last=0;
+function phases(){return MODES[mode]}
+function setMode(m){mode=m;document.querySelectorAll('.modes button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===m));
+ total=phases().reduce((a,p)=>a+p[1],0)*60;left=total;stop();$('#tstart').textContent='Start';$('#tprompt').hidden=true;
+ $('#tl').innerHTML=phases().map(p=>`<i style="flex:${p[1]};background:${C[p[2]]}"></i>`).join('')+'<span class="cur" id="cur"></span>';
+ $('#legend').innerHTML=phases().map(p=>`<span style="--c:${C[p[2]]}">${p[0]} · ${p[1]}m</span>`).join('');draw()}
+function fmt(s){s=Math.max(0,Math.ceil(s));const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(x).padStart(2,'0')}
+function cur(){let el=total-left,acc=0;for(const p of phases()){acc+=p[1]*60;if(el<acc)return [p,acc-el]}return [null,0]}
+function draw(){$('#clock').textContent=fmt(left);const [p,rem]=cur();
+ $('#phase').innerHTML=left<=0?'<b>Time. Pens down.</b>':`${run?'Now':'Ready'}: <b>${p[0]}</b> · ${fmt(rem)} left in this phase`;
+ const c=$('#cur');if(c)c.style.left=`calc(${(total-left)/total*100}% - 1px)`}
+function tick(){const n=performance.now();left-=(n-last)/1000;last=n;if(left<=0){left=0;stop();$('#tstart').textContent='Start'}draw()}
+function stop(){if(run){clearInterval(run);run=null}}
+$('#tstart').onclick=()=>{if(run){stop();$('#tstart').textContent='Resume'}else{if(left<=0)left=total;last=performance.now();run=setInterval(tick,250);$('#tstart').textContent='Pause'}draw()};
+$('#treset').onclick=()=>setMode(mode);
+$('#tnext').onclick=()=>{const [p,rem]=cur();if(p){left-=rem;if(left<0)left=0;draw()}};
+document.querySelectorAll('.modes button').forEach(b=>b.onclick=()=>setMode(b.dataset.mode));
+setMode('full');
+
+/* practice log */
+const TY={full:['Full paper','var(--seal)'],en:['English','var(--en)'],zh:['Chinese','var(--zh)'],outline:['Outline drill','var(--muted)'],cre:['CRE mock','var(--amber)']};
+function renderLog(){
+ $('#logsum').textContent=`${logs.length} attempt${logs.length===1?'':'s'} · ${logs.filter(l=>l.type==='full').length} full papers`;
+ const L=$('#loglist');L.innerHTML=logs.map((l,i)=>({l,i})).reverse().map(({l,i})=>`<li><span><span class="tag" style="background:var(--tint);color:${TY[l.type][1]}">${TY[l.type][0]}</span> ${l.name?l.name.replace(/[<>&]/g,''):''}</span><span class="mono num" style="font-size:.8rem;color:var(--muted)">${fmtD(l.d)} · ${l.min?l.min+' min · ':''}${l.score}/8 <button class="x" type="button" data-del="${i}" aria-label="Delete entry">✕</button></span></li>`).join('');
+ const C=$('#logchart');const pts=logs.filter(l=>l.type!=='cre'&&l.type!=='outline');
+ if(!pts.length){C.innerHTML='<div class="empty">No attempts logged yet. Your first timed answer will appear here as a point on the score chart.</div>';return}
+ const Wd=640,Hd=200,pl=44,pr=30,pt=14,pb=30;const n=pts.length;const x=i=>pl+(n===1?(Wd-pl-pr)/2:i*(Wd-pl-pr)/(n-1));const y=v=>pt+(8-v)*(Hd-pt-pb)/8;
+ let s=`<svg class="chart" viewBox="0 0 ${Wd} ${Hd}" role="img" aria-label="Checklist score per attempt">`;
+ [0,4,6,8].forEach(v=>{s+=`<line x1="${pl}" x2="${Wd-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1" ${v===6?'stroke-dasharray="4 4"':''}/><text x="${pl-8}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--faint)" font-family="IBM Plex Mono,monospace">${v}</text>`});
+ s+=`<text x="${pl+4}" y="${y(6)-5}" text-anchor="start" font-size="10.5" fill="var(--faint)" font-family="IBM Plex Mono,monospace">target 6+</text>`;
+ if(n>1)s+=`<polyline fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" points="${pts.map((p,i)=>x(i)+','+y(p.score)).join(' ')}"/>`;
+ pts.forEach((p,i)=>{s+=`<circle cx="${x(i)}" cy="${y(p.score)}" r="${i===n-1?6.5:5}" fill="${TY[p.type][1]}" stroke="var(--sheet)" stroke-width="2"><title>${TY[p.type][0]} ${fmtD(p.d)}: ${p.score}/8</title></circle>`;
+  if(n<=12)s+=`<text x="${x(i)}" y="${Hd-10}" text-anchor="middle" font-size="10.5" fill="var(--faint)" font-family="IBM Plex Mono,monospace">${fmtD(p.d)}</text>`});
+ s+='</svg>';C.innerHTML=s+`<div class="hkey" style="margin-top:4px">${['full','en','zh'].map(k=>`<span style="display:inline-flex;gap:5px;align-items:center"><i style="background:${TY[k][1]};border-radius:50%"></i>${TY[k][0]}</span>`).join(' ')}</div>`;
+}
+function ckSel(){return $('#lgtype').value==='zh'?'#zhcheck input:checked':'#check input:checked'}
+function fillScore(){const m=$('#lgtype');if(!m.dataset.touched)m.value=mode;
+ if($('#lgscore').value==='')$('#lgscore').value=document.querySelectorAll(ckSel()).length;
+ const used=Math.round((total-left)/60);if(used>0&&!$('#lgmin').value)$('#lgmin').value=used}
+$('#logform').addEventListener('focusin',fillScore);
+$('#lgtype').addEventListener('change',e=>{e.target.dataset.touched='1'});
+$('#logform').addEventListener('submit',e=>{e.preventDefault();const raw=$('#lgscore').value;const sc=Math.max(0,Math.min(8,parseInt(raw===''?document.querySelectorAll(ckSel()).length:raw,10)||0));const wasZh=$('#lgtype').value==='zh';
+ logs.push({d:tLocal,type:$('#lgtype').value,name:$('#lgname').value.trim().slice(0,60),min:parseInt($('#lgmin').value,10)||0,score:sc});store.set('jre-logs',logs);bump();
+ $('#lgname').value='';$('#lgmin').value='';$('#lgscore').value='';delete $('#lgtype').dataset.touched;if(wasZh)resetZh();else resetCheck();renderLog();hub()});
+$('#loglist').addEventListener('click',e=>{const b=e.target.closest('[data-del]');if(!b)return;
+ if(b.dataset.armed){logs.splice(+b.dataset.del,1);store.set('jre-logs',logs);renderLog();hub()}else{b.dataset.armed='1';b.textContent='Delete?';setTimeout(()=>{if(b.isConnected){delete b.dataset.armed;b.textContent='✕'}},2500)}});
+renderLog();hub();
+
+/* issue bank */
+const SRC={
+ std25:'<a href="https://www.thestandard.com.hk/news/article/300947/Hong-Kong-marks-early-success-of-plastic-ban-eyes-next-phase" target="_blank" rel="noopener">The Standard，2025-04-23</a>；<a href="https://photonmedia.net/cut-the-plastic-law/" target="_blank" rel="noopener">光傳媒，2024-10-22</a>',
+ waste:'<a href="https://www.thestandard.com.hk/news/article/313297/HK-keeps-waste-charging-scheme-on-hold-but-eyes-future-revival" target="_blank" rel="noopener">The Standard，2025-10-04</a>',
+ bhu:'<a href="https://www.stheadline.com/society/3505258/" target="_blank" rel="noopener">星島頭條，2025-10-03</a>',
+ mpf:'<a href="https://www.legco.gov.hk/yr2026/chinese/panels/mp/papers/mp20260518cb1-482-4-c.pdf" target="_blank" rel="noopener">立法會人力事務委員會文件 CB(1)482/2026(04)，2026-05</a>',
+ esls:'<a href="https://www.stheadline.com/society/3583315/" target="_blank" rel="noopener">星島頭條，2026-06-15</a>；<a href="https://www.humanresourcesonline.net/hong-kong-s-unemployment-rate-edges-up-to-3-8-in-june-august-2026-chi" target="_blank" rel="noopener">HRO 引統計處，2026-09-18</a>',
+ swh:'<a href="https://www.hk01.com/article/895007" target="_blank" rel="noopener">HK01（2025-02 更新）</a>；<a href="https://www.humanresourcesonline.net/hong-kong-s-legco-has-approved-the-lowering-of-the-working-hours-threshold-of-the-continuous-contract-requirement-to-468-rule-chi" target="_blank" rel="noopener">HRO，2025-06-19</a>',
+ hawk:'<a href="https://www.scmp.com/news/hong-kong/society/article/3316600/hong-kongs-hawkers-could-disappear-2033-unless-licensing-rules-are-eased-lawmaker" target="_blank" rel="noopener">SCMP 引立法會研究，2025-07-02</a>',
+ turs:'<a href="https://www.humanresourcesonline.net/hong-kong-s-temporary-unemployment-relief-scheme-concludes-chi" target="_blank" rel="noopener">HRO，2022-08-02</a>；<a href="https://www.humanresourcesonline.net/hong-kong-s-unemployment-rate-edges-up-to-3-8-in-june-august-2026-chi" target="_blank" rel="noopener">HRO 引統計處，2026-09-18</a>',
+ truck:'<a href="https://www.hk01.com/article/587745" target="_blank" rel="noopener">HK01，2021-02-17</a>',
+ teach:'<a href="https://www.teacholic.com/jre-%E8%81%AF%E5%90%88%E6%8B%9B%E8%81%98%E8%80%83%E8%A9%A6%E8%A9%B3%E7%B4%B0%E6%94%BB%E7%95%A5%E5%8F%8A%E5%85%8D%E8%B2%BB%E8%A9%A6%E9%A1%8C%E4%B8%8B%E8%BC%89/" target="_blank" rel="noopener">開學啦！（teacholic）</a>',
+ tenmin:'<a href="https://www.10minquiz.com/zh-hant/blog/jre-civil-service-exam-guide/" target="_blank" rel="noopener">10minquiz</a>'
+};
+const IS=[
+ ['鼓勵生育','Encouraging births','HK$20,000 newborn bonus extended 3 years; HK$30,000 for a 2nd+ child; child allowance HK$160,000 for a 2nd+ child; up to 95% mortgage in next HOS sale for families with a newborn','現金及稅務誘因能否有效提升生育率？','即時減輕育兒開支；表明政府重視人口問題','一次性津貼難抵長期育兒成本；住屋、工時、托兒才是根本'],
+ ['安老及照顧者','Elderly care and carers','Community care vouchers +2,000 to 18,000; residential care vouchers +1,000 to 8,000 (2027-28); carer allowance +10% to HK$3,300 a month','居家安老應否優先於院舍照顧？','長者留在社區、成本較低、減輕院舍輪候','照顧者壓力大；社區服務人手不足'],
+ ['公營房屋','Public housing supply','About 196,000 public units in 5 years incl. 30,000 Light Public Housing; target wait 4.5 years in 2026-27, under 4 by 2030-31; Tenancy-Purchase Scheme still under study','應否重推「租者置其屋」？簡約公屋是否善用資源？','加快上樓、改善劏房戶生活','重推租置減少可流轉公屋；簡約公屋屬臨時，成本效益受質疑'],
+ ['公營醫療','Healthcare waiting times','Aim to halve specialist outpatient waiting in 5 years (10% cut in 2027-28); family medicine +220,000 appointments a year; community pharmacy scheme in 4 districts','如何縮短專科輪候？應否擴大公私營協作？','善用私營及基層資源，分流病人','醫護人手短缺；公帑長期承擔'],
+ ['青年就業','Youth employment','"30,000 Youth Jobs and Internship Scheme": 10,000 jobs with up to HK$6,000 a month wage subsidy; 10,000+ tech internships; 10,000 construction training places','以工資補貼促進青年就業是否有效？','降低僱主聘用門檻，累積工作經驗','補貼期後或被解僱；或只製造短期職位'],
+ ['北部都會區','Northern Metropolis','About 70,000 flats in the next 5 years; subsidised share rising to 25% from 2031/32 (per press summary)','發展與保育如何平衡？','增加土地及房屋供應、創造就業','生態影響、交通配套及跨區通勤'],
+ ['即棄塑膠餐具','Disposable plastic tableware','第一階段 2024 年 4 月 22 日起實施（首半年為適應期，至同年 10 月 21 日）：禁發泡膠餐具、膠飲管、膠餐具等。第二階段（外賣餐盒、杯蓋等）至 2025 年仍未有時間表，政府先與業界試用替代品。','應否、何時立法推行第二階段走塑？','源頭減廢、減輕堆填區負擔；延續第一階段成果','湯類外賣的替代品未成熟；成本轉嫁小店及基層',SRC.std25],
+ ['垃圾徵費','Waste charging','2024 年擱置；2025 年 10 月政府表示至少擱置至 2027 年 6 月，不排除日後重推。據報道每日送往堆填區的廢物由 2021 年約 11,500 公噸降至約 10,100 公噸。','政府應否重推垃圾按量收費？','源頭減廢、用者自付','市民負擔、執法困難、回收配套不足',SRC.waste],
+ ['劏房規管（簡樸房）','Subdivided flats','《簡樸房條例》2025 年 10 月 3 日刊憲，2026 年 3 月 1 日生效。登記期至 2027 年 2 月 28 日；已登記單位有 36 個月寬限期（至 2030 年 2 月 28 日）改善及申請認證。全港約 11 萬個劏房，住約 22 萬人。','規管劏房會否令基層租戶無家可歸？','改善居住安全及衞生','租金上升、單位減少，需要過渡安排',SRC.bhu],
+ ['取消強積金對沖','Abolishing MPF offsetting','2025 年 5 月 1 日起取消。政府資助計劃為期 25 年，總額超過 330 億元；至 2026 年 4 月，僱主申請 23,444 宗，已發放 5,639 萬元資助。勞工處會在實施五年後檢討。','取消對沖後，如何平衡僱員保障與中小企負擔？','保障僱員退休儲蓄，不再「用自己的錢解僱自己」','中小企遣散成本上升；資助計劃行政成本',SRC.mpf],
+ ['輸入外勞','Imported labour','「補充勞工優化計劃」2023 年起：至 2026 年 5 月約 17,000 宗申請獲批，涉及約 11 萬名外勞，已抵港約 4.38 萬人。2026 年 6 月 16 日起，餐飲業出品及樓面職位改為第二級審批，本地全職員工對外勞比例由 2:1 收緊至 3:1。2026 年 6 至 8 月整體失業率 3.8%。','輸入外勞會否影響本地基層就業？','紓緩人手短缺，維持服務及經濟運作','本地基層就業、工資受壓；勞方與商界對政府觀感不同',SRC.esls],
+ ['標準工時','Standard working hours','2012 年勞工處發表政策研究；2013 年成立標準工時委員會；2017 年委員會建議改推「合約工時」；2018 年政府改為制訂 11 個行業工時指引，未有立法。另：連續性合約「468」新規 2026 年 1 月 18 日生效（每週 17 小時，或四星期合計 68 小時）。','應否立法規管標準工時？','保障健康、減少過勞','中小企成本上升、工作彈性下降',SRC.swh],
+ ['小販及大牌檔','Hawkers and dai pai dong','固定攤位小販由 2000 年起減少四成，2024 年剩 4,848 個；流動小販減少八成至 233 個。官方樣題（大牌檔）與此相關。','政府應否放寬發牌，保育大牌檔及小販文化？','本土飲食文化、旅遊賣點、小本創業','衞生滋擾、阻塞街道、市區土地緊張',SRC.hawk],
+ ['失業支援','Unemployment support','2022 年「臨時失業支援計劃」（一筆過資助）收到約 47 萬宗申請，約 35 萬人獲批，總額約 35 億元。往年 JRE 中文題曾問應否把計劃恆常化。2026 年 6 至 8 月失業率 3.8%。','應否設立恆常失業援助？','經濟逆轉時即時支援，穩定社會','長期公帑承擔、或影響求職意欲、甄別行政成本高',SRC.turs]
+];
+$('#issues').innerHTML=IS.map((i,k)=>`<article class="issue"><div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><h3 class="zh">${i[0]}</h3><span class="mono" style="font-size:.72rem;color:var(--faint)">${i[1]}</span></div><div class="fig">${i[2]}</div><p class="q zh">爭議點：${i[3]}</p><div class="pc zh"><span><b>利 / 支持</b>${i[4]}</span><span><b>弊 / 反對</b>${i[5]}</span></div>${i[6]?`<p class="src">出處：${i[6]}</p>`:''}<div class="row"><span class="src">用官方樣題句式作答</span><button class="btn small" type="button" data-zi="${k}">用 75 分鐘練習</button></div></article>`).join('');
+
+/* chinese prompt bank */
+const ZP=[
+ {t:'發展新「大牌檔」攤檔',kind:'官方樣題',src:'公務員事務局樣本試題（《筆試攻略》《實戰攻略》均有轉載）',text:'有意見認為，香港素有「美食天堂」之稱，有條件推動「大牌檔」文化的發展，因此建議政府應在市區尋覓適合的地段，發展新的「大牌檔」攤檔。事實上，鄰近地區亦有不少類似的成功經驗。請分析上述建議有何利弊，表明你是支持抑或反對有關建議，並就你的立場提出理據。如果是贊成的話，請提出建議，確保方案可有效達致其政策目的；如果是反對的話，請提出其他推動香港成為「美食天堂」的措施。',note:'第 07 節有示範答案。背景數字見議題庫「小販及大牌檔」。',go:'models'},
+ {t:'藝術發展資助',kind:'往年題（概括）',src:'《JRE 筆試攻略》「JRE 曾出過的題目」',text:'1. 分析政府對不同規模藝團資助方式的優缺點；2. 指出政府在推動藝術發展中擔任甚麼角色，提供最少兩個財政資助以外的方法，以支援藝術業界及推動藝術發展。',note:'材料沒有原題全文和年份。此題沒有贊成／反對分支，屬「評估現行政策＋提出建議」。'},
+ {t:'恆常化臨時失業支援計劃',kind:'往年題（概括）',src:'《JRE 筆試攻略》「JRE 曾出過的題目」',text:'1. 政府應否恆常化臨時失業支援計劃；2. 如果支持就提出兩項措施確保能有效推行；如果反對就提出優化現時失業保障制度的方案。',note:'背景數字見議題庫「失業支援」。題目指明「兩項」措施，數目要對。'},
+ {t:'管制或禁制即棄塑膠餐具',kind:'模擬題',src:'《實戰攻略》4.1 及 5.2 節（作者自擬）',text:'在 2019 冠狀病毒病蔓延期間，因應本港政府一系列的限聚措施，包括一度禁止餐廳堂食（或只禁晚市堂食），以避免社交活動加劇本港疫情。很多市民因此改為購買外賣飯盒或外賣服務，並養成習慣，衍生大量即棄塑膠餐盒或餐具，造成嚴重的環境問題。有意見指出，政府應研究透過修例，管制或禁制即棄塑膠餐具，減少本港的固體廢物量，減輕疫情對環境造成的負擔。請分析上述建議有何利弊，表明你是支持抑或反對有關建議，並就你的立場提出理據。如果是贊成的話，請提出建議，確保方案可有效達致其政策目的；如果是反對的話，請提出其他減少本地固體廢物量的措施。',note:'寫完對照第 07 節兩篇範文的拆解。第一階段走塑已於 2024 年實施，題目背景已過時。',go:'models'},
+ {t:'立法規管銀行分行數目',kind:'網上流傳（2014）',src:SRC.teach+'，未經官方證實',text:'近年銀行不斷削減分行數目，使基層人士及殘疾人士無法享用銀行服務，你是否贊成透過立法規管銀行在多基層人士的地區開設一家數量的分行？',note:'按來源原文轉載（「一家數量」疑為「一定數量」）。'},
+ {t:'銀行分行與郵局代辦',kind:'網上流傳（2013）',src:SRC.teach+'，未經官方證實',text:'有人建議立例規定銀行在某些社區保持一定數目的分行，方便基層人士。你同意嗎? 另有建議透過郵局提供提款及存款服務，你認為可行嗎?',note:'兩問各要表態。第二問可用「替代方案」的寫法比較。'},
+ {t:'標準工時立法',kind:'題目方向',src:SRC.tenmin+' 指為往屆 Q2 題目，未有原題字眼及年份',text:'只有議題名稱。用官方樣題的指示句式作答：分析立法規管標準工時的利弊，表明立場及理據；贊成就提出確保有效推行的建議，反對就提出其他保障僱員工時的措施。',note:'背景見議題庫「標準工時」。'},
+ {t:'美食車發牌政策',kind:'題目方向',src:'《JRE 筆試攻略》舉例為中文題的議題類型',text:'只有議題名稱。用官方樣題的指示句式作答。',note:'美食車先導計劃 2017 年推出，延至 2022 年 2 月 2 日；2021 年 2 月只餘 12 架持牌（'+SRC.truck+'）。'}
+];
+$('#zhprompts').innerHTML=ZP.map((p,i)=>`<article class="prompt zh"><div class="meta"><span class="tag zh">${p.kind}</span></div><h3>${p.t}</h3><p style="color:var(--ink)">${p.text}</p><p class="src">${p.note}</p><p class="src">出處：${p.src}</p><div class="row">${p.go?`<button class="btn small" type="button" data-goto="${p.go}">看示範</button>`:'<span></span>'}<button class="btn small primary" type="button" data-zp="${i}">用 75 分鐘練習</button></div></article>`).join('');
+function zhPractise(name){setMode('zh');$('#lgname').value=name.slice(0,60);$('#lgtype').value='zh';const tp=$('#tprompt');tp.hidden=false;tp.textContent='練習：'+name+' · 中文題 75 分鐘';
+ $('#timer').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-zp],[data-zi]');if(!b)return;zhPractise(b.dataset.zp!==undefined?ZP[b.dataset.zp].t:IS[b.dataset.zi][0])});
+
+/* typos */
+const TY2=[['參予','參與'],['支助','資助'],['防礙','妨礙'],['評擊','抨擊'],['幣病','弊病'],['頻臨','瀕臨'],['重覆','重複'],['決擇','抉擇'],['接恰','接洽'],['付責','負責'],['格守','恪守'],['渡假','度假'],['慎密','縝密'],['收獲','收穫'],['震憾','震撼'],['掘起','崛起'],['熟暗','熟諳'],['鬆馳','鬆弛'],['暄染','渲染'],['貫輸','灌輸'],['渺視','藐視'],['按裝','安裝'],['幅射','輻射'],['天翻地復','天翻地覆'],['言簡意駭','言簡意賅'],['按步就班','按部就班'],['以偏蓋全','以偏概全'],['責無旁貨','責無旁貸'],['無容置疑','毋庸置疑'],['從詳計議','從長計議'],['胖腳石','絆腳石'],['轉淚點','轉捩點']];
+$('#typos').innerHTML=TY2.map(t=>`<span><s>${t[0]}</s> → <b>${t[1]}</b></span>`).join('');
+
+/* drill */
+const D=[
+ ['Unfamiliar customs and a sharp intelligence is intimidating, but a good sense of humor is very disarming.',[['A','No error'],['B','is'],['C','very disarming'],['D','Unfamiliar'],['E','but']],'B','Two subjects joined by "and" (customs and intelligence) take a plural verb: "are".'],
+ ['The event director, along with the administrative staff, are responsible for making sure the entire program runs smoothly.',[['A','along with'],['B','No error'],['C','smoothly'],['D','are'],['E','making sure']],'D','"Along with…" does not add to the subject. The subject is "the event director", so "is".'],
+ ['Recognizing that the inhabitants of Earth suffered from many wars, disasters, and diseases, the aliens hoped to be welcomed as a savior.',[['A','suffered from'],['B','No error'],['C','wars, disasters, and diseases'],['D','Recognizing'],['E','as a savior']],'E','"The aliens" is plural, so "as saviors".'],
+ ['After days of deliberation, the hiring committee has decided to interview their three most promising candidates for the executive director position.',[['A','deliberation'],['B','their'],['C','executive director'],['D','has decided'],['E','No error']],'B','"The committee" is treated as singular here ("has decided"), so the pronoun is "its".'],
+ ['The five best friends all vowed to become a great lawyer when they got older.',[['A','a great lawyer'],['B','vowed'],['C','older'],['D','No error'],['E','The five']],'A','Five friends cannot become one lawyer: "great lawyers".'],
+ ['My favorite history professor, as well as some of his administrative staff, were asked to resign because fewer students were taking history courses than ever before.',[['A','were'],['B','No error'],['C','as well as'],['D','than'],['E','because']],'A','"As well as…" does not make the subject plural. "Professor" is singular, so "was asked".'],
+ ['The politician, along with his many constituents, are opposed to the new reforms being enacted by the government.',[['A','along with'],['B','opposed to'],['C','being enacted'],['D','No error'],['E','are']],'E','The subject is "the politician", singular: "is opposed".'],
+ ['The protest of students, professors, and community members were unsuccessful in their attempt to change the university’s policy.',[['A','on'],['B','were unsuccessful in their'],['C','to change'],['D','No error'],['E','harsher']],'B','The subject is "the protest", singular: "was unsuccessful in its attempt".'],
+ ['“That blond man is real suspicious,” said John.',[['A','blond'],['B','suspicious,” said'],['C','is'],['D','No error'],['E','real']],'E','An adjective ("suspicious") is modified by an adverb: "really suspicious".'],
+ ['Let’s not get caught up in all this problems, we should solve them and move forward.',[['A','forward'],['B','No error'],['C','this'],['D','we should'],['E','Let’s not']],'C','"Problems" is plural, so "these problems".'],
+ ['The schools in that area have always been known for its strong academics, athletic program, and up-to-date facilities.',[['A','its'],['B','been known'],['C','have'],['D','No error'],['E','and']],'A','"The schools" is plural, so the possessive is "their".'],
+ ['The book of fairy tales are one of the grandfather’s favorite books to read to his grandchildren before they fall asleep at night.',[['A','No error'],['B','grandchildren'],['C','books'],['D','asleep'],['E','are']],'E','The subject is "the book" ("of fairy tales" is a phrase after it), so "is".'],
+ ['Reading, writing, and arithmetic are essential skill to learn in elementary school.',[['A','No error'],['B','skill'],['C','and'],['D','in elementary school'],['E','are']],'B','Three subjects, so the noun must be plural: "essential skills".'],
+ ['Each individual has their right to the freedom of speech and expression according to the Constitution.',[['A','their'],['B','No error'],['C','freedom'],['D','according to'],['E','Each']],'A','In this exam’s grammar, "each individual" is singular, so "his or her right".'],
+ ['The tortoise at the aquarium, as well as some of the older seals, do not generate a lot of excitement from visitors.',[['A','a lot'],['B','do'],['C','at the'],['D','No error'],['E','as well as']],'B','The subject is "the tortoise", singular: "does not".'],
+ ['Shana, Joe, and Marcel was incredible in each of their performances and the audience rewarded them through cheers and applause.',[['A','through'],['B','was'],['C','No error'],['D','their'],['E','and']],'B','Three people joined by "and" take a plural verb: "were".'],
+ ['Bob’s story was not only more interesting than John, but it was more realistic.',[['A','more'],['B','No error'],['C','was'],['D','it'],['E','John']],'E','Illogical comparison: a story is compared with a person. It should be "John’s".'],
+ ['Michael could never understand why the children were so tired in the afternoon, since they always had there nap every day at noon.',[['A','there'],['B','why'],['C','were'],['D','could'],['E','No error']],'A','The possessive is "their nap", not "there".'],
+ ['The threat of the winter storm caused Bob to delay his flight to New York to visit their family for Christmas.',[['A','No error'],['B','to delay'],['C','to visit'],['D','caused'],['E','their']],'E','Only one person, Bob, so "his family".'],
+ ['The tennis courts, which are made of clay and often wet after a bad storm, is my least favorite place to play sports.',[['A','No error'],['B','which'],['C','often wet'],['D','is'],['E','place']],'D','Skip the "which…" clause: "the tennis courts… are".'],
+ ['Many of the recording instrument used in various branches of science are tomography.',[['A','Many of'],['B','instrument'],['C','used'],['D','No error'],['E','are']],'B','"Many of the" needs a plural noun: "instruments".'],
+ ['Rex and Rita hope to become the world’s best singer someday.',[['A','hope'],['B','world’s'],['C','No error'],['D','singer'],['E','someday']],'D','Two people cannot become one singer: "best singers".']
+];
+let order=[],qi=0,score=0,seen=0,answered=false;
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startDrill(){order=shuffle(D.map((_,i)=>i));qi=0;score=0;seen=0;showQ()}
+function showQ(){answered=false;const q=D[order[qi]];$('#dq').textContent=`${qi+1}. ${q[0]}`;$('#dfb').textContent='';
+ $('#dopts').innerHTML=q[1].map(o=>`<button type="button" data-o="${o[0]}"><b>${o[0]}</b><span>${o[1]}</span></button>`).join('');
+ $('#dscore').textContent=`Score ${score} / ${seen} · ${D.length} questions`;$('#dnext').disabled=true}
+$('#dopts').addEventListener('click',e=>{const b=e.target.closest('[data-o]');if(!b||answered)return;answered=true;seen++;const q=D[order[qi]];
+ const ok=b.dataset.o===q[2];if(ok)score++;
+ $('#dopts').querySelectorAll('button').forEach(x=>{x.disabled=true;if(x.dataset.o===q[2])x.classList.add('right');else if(x===b)x.classList.add('wrong')});
+ $('#dfb').innerHTML=`<b style="color:var(${ok?'--jade':'--seal'})">${ok?'Correct.':'Not quite. Answer: '+q[2]+'.'}</b> ${q[3]}`;
+ $('#dscore').textContent=`Score ${score} / ${seen} · ${D.length} questions`;$('#dnext').disabled=false;
+ if(qi===order.length-1){$('#dnext').textContent='See result'}});
+$('#dnext').onclick=()=>{if(qi<order.length-1){qi++;showQ()}else{$('#dq').textContent=`Done: ${score} out of ${D.length}.`;$('#dopts').innerHTML='';$('#dfb').textContent=score>=D.length*0.8?'Strong. Agreement errors are under control.':'Review the explanations: find the true subject first, then check the verb and pronouns.';$('#dnext').disabled=true;$('#dnext').textContent='Next question'}};
+$('#drestart').onclick=()=>{$('#dnext').textContent='Next question';startDrill()};
+startDrill();
+
+/* nav highlight */
+const links=[...document.querySelectorAll('#nav a')];const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+en.target.id));const a=links.find(l=>l.classList.contains('on'));if(a&&matchMedia('(max-width:960px)').matches)a.scrollIntoView({block:'nearest',inline:'center'})}})},{rootMargin:'-30% 0px -60% 0px'});
+secs.forEach(s=>s&&io.observe(s));
+})();
+</script>
+
+</body></html>
