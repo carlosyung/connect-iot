@@ -1,0 +1,173 @@
+{
+ "title": "特遣隊首擊破億元圍標案 OpenAI估值突破萬億",
+ "summary": "香港打擊樓宇維修工程圍標的聯合特遣隊展開首個行動拘捕28人，涉及12份總額約1億元的工程合約。科技方面，OpenAI新一輪融資估值達1.25萬億美元，而歐洲多國超市製冷系統遭受網絡攻擊操控溫度，引發物聯網基建保安關注。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "聯合特遣隊瓦解樓宇維修圍標集團拘28人 涉款達1億元",
+     "analysis": "政府新成立的打擊樓宇維修工程圍標聯合特遣隊採取首個打擊行動，瓦解一個犯罪集團並拘捕28人，包括承建商、顧問公司及物管公司人員，牽涉12份總值約1億元的合約。集團涉嫌以買入單位滲透法團等方式取得合約，當局已設立24小時舉報圍標熱線182000，並表明執法行動將陸續有來。事件反映舊樓維修市場的結構性風險，有助增強業主對大型維修工程招標公正性的保障與警惕。",
+     "sources": [
+      {
+       "title": "28 nabbed in first task force raid against bid-rigging",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1876858-20261106.htm"
+      },
+      {
+       "title": "鄧炳強：特遣隊已成立24小時舉報圍標熱線182000",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876857-20261106.htm"
+      },
+      {
+       "title": "聯合特遣隊瓦解一個圍標集團 鄧炳強：行動將陸續有來",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876855-20261106.htm"
+      }
+     ]
+    },
+    {
+     "headline": "科大校長葉玉如榮獲聯合國教科文組織國際生命科學研究獎",
+     "analysis": "香港科技大學校長葉玉如獲頒「聯合國教科文組織-赤道幾內亞國際生命科學研究獎」，表揚其在大腦功能、阿茲海默症研究及生物標誌物發現上的卓越貢獻，為該獎設立以來第6位獲獎的中國科學家。這項殊榮彰顯香港在生命科學與神經醫學研發領域的國際前沿地位，強化本地科研團隊在國際學術界的競爭力。此成就亦為香港推動創科中心建設及吸引頂尖科研人才提供重要實例證明。",
+     "sources": [
+      {
+       "title": "科大校長葉玉如獲教科文組織國際生命科學研究獎",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876910-20261107.htm"
+      }
+     ]
+    },
+    {
+     "headline": "私隱專員稱土地查冊新安排有助制度清晰化並保障私隱",
+     "analysis": "政府公布業權註冊制度附屬法例，規定土地查冊必須符合指定目的，發展局指若申請被拒可再補交理據。個人資料私隱專員鍾麗玲表示，新安排令查冊制度更清晰化，在加強保障業主私隱的同時，亦便利政府部門審批並避免市民誤墮法網。對於香港物業市場與企業盡職審查而言，業界需適應指定用途要求，在個人隱私保護與商業資料透明度之間尋求新平衡。",
+     "sources": [
+      {
+       "title": "鍾麗玲：土地查冊新安排令制度清晰化",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876869-20261106.htm"
+      },
+      {
+       "title": "'Unlimited land searches raise privacy concerns'",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1876833-20261106.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "OpenAI融資額外籌集110億美元 估值攀升至1.25萬億美元",
+     "analysis": "市場消息指OpenAI在尚未完全關閉的最新一輪融資中籌集額外110億美元，整體估值推升至1.25萬億美元水平，與此同時競爭對手Anthropic亦逐步走向IPO階段。然而有企業開支數據顯示，雖然AI使用量持續上升，但企業AI開支因降價及成本控制而有放緩趨勢。高估值與企業追求高性價比模型並存，反映生成式AI領域正面臨商業落地成本效益的深層檢驗。",
+     "sources": [
+      {
+       "title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/"
+      },
+      {
+       "title": "OpenAI valued at $1.25 trillion, as rival Anthropic nears its IPO",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation"
+      },
+      {
+       "title": "Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "IoT",
+   "items": [
+    {
+     "headline": "歐洲多國超市物聯網製冷系統遭黑客攻擊 凸顯關鍵設施安全風險",
+     "analysis": "歐洲多國超市的連鎖製冷設備日前遭受網絡攻擊，物聯網系統的運作溫度遭到黑客遠程操控，干擾日常商業運作與供應鏈穩定。分析指出此類攻擊意在干擾公共秩序、增加社會營運成本，而非直接造成人身傷亡。事件向香港及跨國零售與物流企業敲響警鐘，展示商業物聯網（IoT）邊緣設備的安全防護已成為維持基建正常運作的關鍵環節。",
+     "sources": [
+      {
+       "title": "《環看天下》：歐洲客機炸彈威脅及超市系統被攻擊干擾社會運作",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876907-20261107.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "美國非農就業增長強勁美債息反彈 美股科技股低位回升",
+     "analysis": "美國10月非農新增就業達16.5萬個遠超預期，失業率微跌至4.1%，推升市場對聯儲局下月加息的預期，美元指數與美債孳息率反彈。美股市場個別發展，道指微跌，而晶片與科技股在早前大幅受壓後趁低吸納帶動納指反彈逾1%，美光及英偉達等晶片股均告走高。市場對利率政策的敏感度依然極高，強勁勞工數據為資產估值帶來波動，本地投資者需密切留意利率走向對資金流的衝擊。",
+     "sources": [
+      {
+       "title": "美元指數升穿102 美國10年期債息曾觸及4.9厘",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876902-20261107.htm"
+      },
+      {
+       "title": "道指低收237點 納指反彈逾1% 多隻科技股回升",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876896-20261107.htm"
+      },
+      {
+       "title": "美股初段個別發展 晶片股反彈",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876881-20261106.htm"
+      },
+      {
+       "title": "美國10月非農就業新增職位16.5萬個 失業率降至4.1%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876876-20261106.htm"
+      },
+      {
+       "title": "威廉姆斯：美國通脹過高 必須降至2%目標水平",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876861-20261106.htm"
+      }
+     ]
+    },
+    {
+     "headline": "深交所擬修訂創業板指編制方案 限制單一成分股權重至15%",
+     "analysis": "深圳證券交易所宣布修訂創業板指數編制方案，將單隻樣本股權重上限逐步調降至15%，以降低超級權重個股對指數的過度影響及集中風險，新方案將於下月14日生效。有關舉措有助令指數表現更客觀反映板塊整體走勢，避免單一龍頭股劇烈波動左右大市。對於參與內地股市及透過互聯互通配置A股資產的香港機構與散戶而言，將帶來更平衡的指數投資環境。",
+     "sources": [
+      {
+       "title": "深交所擬修訂創業板指數編制方案 股份權重上限逐步下調至15%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876875-20261106.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "中美元首會晤共識逐步推進 經貿通話與大熊貓赴美成亮點",
+     "analysis": "國務院副總理何立峰與美國財長貝森特及貿易代表格里爾舉行視像通話，就落實元首會晤共識及近期美國對華經貿限制措施展開深入交流並表達關切；同日旅美大熊貓「平平」和「福雙」在亞特蘭大動物園正式亮相，獲駐美大使謝鋒肯定為落實元首共識的人文交流成果。兩國在經貿博弈的同時保持官方溝通渠道，展現雙軌互動格局。中美關係的局部穩定有助減低跨國供應鏈與區域貿易的不確定性。",
+     "sources": [
+      {
+       "title": "新一對大熊貓美國亮相 謝鋒稱是中美落實元首會晤共識最新成果",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876913-20261107.htm"
+      },
+      {
+       "title": "何立峰與貝森特通話 就近期美國對華經貿限制措施表達嚴正關切",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1876909-20261107.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點貫穿本地工程規管、前沿科研成就與全球科技金融走向。執法部門成立特遣隊首戰瓦解過億元工程圍標網絡，彰顯整頓多年樓宇維修積弊的決心，切實保障小業主權益；而在全球科技版圖上，科大校長葉玉如榮獲國際頂級殊榮，展現香港科研的雄厚實力。國際方面，OpenAI再獲巨額融資推高估值，但歐洲物聯網製冷系統被黑客攻破的事件亦暴露出連網設備的脆弱防線。面對強勁就業數據帶來的利率走勢預期升溫，本地企業與投資者在擁抱創科的同時，更須平衡資產風險與基建資安防範。",
+ "en_summary": "Hong Kong's newly formed task force arrested 28 people in its first operation against a building maintenance bid-rigging syndicate involving HK$100 million in contracts, while HKUST President Nancy Ip was awarded the prestigious UNESCO life sciences prize for her Alzheimer's research. Globally, OpenAI reportedly raised an additional $11 billion reaching a $1.25 trillion valuation, as cyberattacks targeting IoT refrigeration systems in European supermarkets heightened critical infrastructure security concerns.",
+ "date": "2026-11-07",
+ "model": "gemini-3.8-flash"
+}
