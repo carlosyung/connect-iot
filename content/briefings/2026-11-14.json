@@ -1,0 +1,229 @@
+{
+ "title": "美全美停飛解除與微軟故障連鎖反應",
+ "summary": "美國聯邦航空管理局因空管通訊故障實施罕見的全美停飛令，現已解除；微軟365大範圍故障波及全球及本港金融航空通訊，當局證實關鍵系統如常。科技方面，OpenAI推出可代客結帳的ChatGPT Wallet，而深圳APEC峰會前夕本港亦公佈空域管制安排。",
+ "sections": [
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "美國空管通訊故障引發罕見全美停飛令　目前已正式解除",
+     "analysis": "美國聯邦航空管理局因空管中心通訊問題，一度發布自911恐襲以來第二次全國地面停飛令，導致近1萬5千班機延誤或取消，官方已解除禁令並澄清事件非網絡攻擊。事件凸顯重大基建對通訊系統極度依賴，亦提醒跨國出行及物流企業需為關鍵基礎設施的突發中斷準備應變方案。",
+     "sources": [
+      {
+       "title": "聯邦航空管理局解除全美航班停飛令 特朗普稱事件與網絡攻擊無關",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877785-20261114.htm"
+      },
+      {
+       "title": "美國聯邦航空管理局因空管通訊問題發布全國地面停飛令",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877767-20261114.htm"
+      },
+      {
+       "title": "FAA lifted National Ground Stop at 0119Z",
+       "source": "Hacker News",
+       "link": "https://www.fly.faa.gov/adv/adv_otherdis?adv_date=11142026&advn=5"
+      },
+      {
+       "title": "美國空管中心通訊故障全國航班停飛 官員稱沒跡象是襲擊",
+       "source": "RTHK News",
+       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBobFlQYk90bVdYczZ6TUc0ZEw2d2hLRTBPR1RUbUl6QjFtRVVrV3podk1sc2w2WjdEYjBHY2lNMVJWaGJJbVBRYTJwTkN6SllzMTFrM3pobU92NFVZRE1ROGg0SXUyRmZ3WG4yT0VvTQ?oc=5"
+      },
+      {
+       "title": "US government grounds all flights across the United States ‘due to extraordinary circumstances’",
+       "source": "TechCrunch",
+       "link": "https://techcrunch.com/2026/11/13/u-s-government-grounds-all-flights-across-the-united-states-due-to-extraordinary-cirumstances/"
+      },
+      {
+       "title": "All US airports are currently ground stopped",
+       "source": "Hacker News",
+       "link": "https://twitter.com/flightradar24/status/2121347654714077605"
+      },
+      {
+       "title": "FAA lifts nationwide ground stop that blocked takeoffs for hours",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/news/1033489/faa-ground-stop"
+      }
+     ]
+    },
+    {
+     "headline": "白宮稱美中俄元首擬下周四在深圳APEC舉行三方會晤",
+     "analysis": "美方表示總統特朗普計劃於下周深圳亞太經合組織峰會期間，與國家主席習近平及俄羅斯總統普京舉行史無前例的三方會晤，商討削減核武等議題。此次元首互動若成真，將直接影響中美與大國間的經貿及地緣政治走向，備受香港各界高度關注。",
+     "sources": [
+      {
+       "title": "白宮：特朗普與習近平及普京下周四在深圳舉行三方會晤",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877782-20261114.htm"
+      },
+      {
+       "title": "紐約郵報：特朗普周四深圳與習近平及普京舉行三方會談",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877772-20261114.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "微軟365全球大範圍故障　金管局與證監會評估本港運作穩定",
+     "analysis": "微軟365因網絡容量升級問題出現大規模服務中斷，官方致歉並澄清非黑客或AI問題；本港金管局及證監會均表示銀行關鍵系統與市場維持有序運作，國泰與快運則提醒旅客或無法收到通知電郵。這反映出公有雲服務高度集中帶來的系統性依賴，香港企業與公營機構需審視雲端備援及跨平台通訊架構。",
+     "sources": [
+      {
+       "title": "微軟365服務未完全恢復 公司致歉指故障與網絡攻擊或AI無關",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877760-20261114.htm"
+      },
+      {
+       "title": "國泰和快運稱使用微軟服務的旅客或無法收到航空公司電郵",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877751-20261113.htm"
+      },
+      {
+       "title": "證監會：已聯絡市場參與者評估業務影響 港交所確認市場有序運作",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877737-20261113.htm"
+      },
+      {
+       "title": "金管局：銀行關鍵系統維持正常運作 密切留意微軟服務故障影響",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877736-20261113.htm"
+      }
+     ]
+    },
+    {
+     "headline": "Uber證實黑客入侵第三方AI雲端服務　司機執照資料遭竊",
+     "analysis": "Uber確認黑客從其合作的AI雲端服務商Fireworks AI中竊取了數千名司機的駕駛執照資料。這項資安漏洞突顯了企業在將數據接入第三方AI及雲端供應商時所面臨的供應鏈安全風險，對正在推進AI外判的香港機構是一大警示。",
+     "sources": [
+      {
+       "title": "Uber confirms hackers stole thousands of drivers’ license information in data breach",
+       "source": "TechCrunch",
+       "link": "https://techcrunch.com/2026/11/13/uber-confirms-hackers-stole-thousands-of-drivers-license-information-in-data-breach/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "OpenAI推ChatGPT Wallet　AI代理具備自主代購結帳功能",
+     "analysis": "OpenAI為其AI代理平台推出ChatGPT Wallet功能，容許代理代表用戶完成購物及訂酒店結帳，並以生物認證確認付款。這代表生成式AI正從純文本對話跨入具備實質經濟行動力的商業代理階段，為香港電商與數碼零售生態開闢新應用場景。",
+     "sources": [
+      {
+       "title": "科技｜OpenAI推ChatGPT Wallet AI代理可代客結帳",
+       "source": "Yahoo 財經",
+       "link": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQVlNxeUI4RlJiVkF0MnBYYlpqT2JFVDA5NmJhTlJjdENMMXF4dGNRd0dOdmtLRm1XWGlTYU96R0pCRUlNZjREaUVnM3A5NmJKZWdmNkh1amROeE1XYUhlUTBjOTdJOC1wNkNhSFg2OW54M0VsNzI5UHBwRVRHbC1tU0YwS1ZZNXNoa1VaWERrMnJQdndWRWVqUEhMT1ZqdFdMSEVuaTAyTmxBSmI5S2Q1WjFHdmpBbkVXbHhBTko4THhpVWRuNndhX2UtRWFtblZIcWt1VmhNQjZuc25nNFBDZkh0dzJsSEJHUlVTQkI4OU9SQVJnZEE?oc=5"
+      },
+      {
+       "title": "【OpenAI】ChatGPT推出電子錢包 AI代理可代買衫訂酒店 Face ID確認付款",
+       "source": "香港經濟日報HKET",
+       "link": "https://news.google.com/rss/articles/CBMihANBVV95cUxNMDdZYXU2U3Q0blphTi1ZcjdVbzFiSFVMZGNvazNVNFlOVzJzOXRzS2dINmY5bDROU1FlRFRoUHNxVnZaN3hYcS1UbHVjVXo1YWU1N0g3dFlIbGdyb0prbEgzU1FQS2Fud20wU00tdVVpM09rMWdjczBWWjlwN2ZvYjBaR0E2LWJ2ajQ1NWMyMXVjcWo1SUNRQjhFQy1EQndQOFZoU2UxX0ZPaFpjWmo4bnNoazFyWkRPLWZFSXFfWEVlZ1MzUmRCYnlpUGxvcjhCY25GeDdTcHR5aldHNzZiOEJGa25HeDFrbnpVQzA0dElCcGQ4a3JONGl6TWpyMWtNV29ETDVKaGx2VG9nM2RxWmhHZTJyUWUyNVRZcFlISnZDMENfWlpiRjhtMDBXN1JYaVNpbkdfQkZiRnIwV3RISWZpU2gwUzcza2xEUTc4bURpR2ZkNzgxUEpoWjFoX2NweXhGb0NTMFd4SEpsUzlNcU5VVUhLY2t1MENTRmVuY2l2LVBX?oc=5"
+      },
+      {
+       "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
+      },
+      {
+       "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet"
+      }
+     ]
+    },
+    {
+     "headline": "黃仁勳突離職引發晶片股震盪　業界憂AI初創融資與估值受壓",
+     "analysis": "Nvidia創辦人黃仁勳傳出離職消息，市場憂慮該公司對AI初創的數百億注資將受影響，創投圈預期後續融資規模與估值可能調整，拖累費城半導體指數下挫。依賴大型算力生態及硬體支援的香港AI初創，需留意未來融資環境與晶片供應策略的變數。",
+     "sources": [
+      {
+       "title": "美股3大指數本周升逾2% Nvidia跌近13%連跌6周",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877771-20261114.htm"
+      },
+      {
+       "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/"
+      },
+      {
+       "title": "The unfolding Jensen Huang scandal: a timeline",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
+      },
+      {
+       "title": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "配合深圳APEC會議　新界北部下周實施臨時限制飛行區",
+     "analysis": "為配合下周在深圳舉行的亞太經合組織領導人非正式會議，香港警方與民航處宣布下周二至周五於新界北部設立臨時限制飛行區，嚴禁無人機、滑翔傘及氣球等飛行活動。無人機航拍及物流應用相關的香港科技業界需提早調配作業，以符合安保管制法規。",
+     "sources": [
+      {
+       "title": "深圳APEC｜本港下周二至周五設臨時限制飛行區 禁放無人機等",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877746-20261113.htm"
+      }
+     ]
+    },
+    {
+     "headline": "本港全年GDP增長預測上調至4.8%　外匯基金境外資產增加",
+     "analysis": "特區政府將2026年香港全年經濟增長預測上調至4.8%，同時金管局公布10月外匯基金境外資產增加570億港元至逾3.6萬億元。宏觀數據回暖反映本地經濟基本面展現韌性，惟市場仍須面對美息預期及外圍地緣變數。",
+     "sources": [
+      {
+       "title": "外匯基金上月境外資產增加570億港元",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877723-20261113.htm"
+      },
+      {
+       "title": "Govt raises full-year GDP growth forecast to 4.8pc",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1877720-20261113.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "美10月PPI升6.5%增強加息預期　美匯高位徘徊金價周挫4.6%",
+     "analysis": "美國10月PPI按年升6.5%創近4年新高，聯儲局大幅加息預期升溫推動美元指數連升3周，現貨金全周累跌約4.6%並觸及年內低位。高息與強美元環境持續，將直接牽動香港資金流向、匯率避險策略及股市資金成本。",
+     "sources": [
+      {
+       "title": "美元持續高位徘徊 美債息上升",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877777-20261114.htm"
+      },
+      {
+       "title": "現貨金本周累跌逾4% 創逾5個月最差表現",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877776-20261114.htm"
+      },
+      {
+       "title": "美國10月PPI按年升6.5%創近4年新高 按月升幅放緩",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877742-20261113.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點集中於基礎設施與雲端平台面臨的系統性脆弱性：微軟服務故障與美國全美停飛令接連發生，說明全球運作對單一雲端與集中式通訊的脆弱程度。與此同時，OpenAI推出錢包功能標誌着AI由諮詢走向交易，但AI供應鏈外判帶來的資安問題亦已浮現。香港企業在加速數碼化及引進AI時，必須將第三方依賴與災難復原機制置於最高優先順位。",
+ "en_summary": "The FAA lifted a rare nationwide ground stop caused by communication outages, while Microsoft 365 suffered extensive service disruptions that impacted global and Hong Kong communications. Meanwhile, OpenAI unveiled ChatGPT Wallet to enable AI agents to execute online purchases, and Hong Kong announced northern airspace flight restrictions ahead of next week's Shenzhen APEC meetings.",
+ "date": "2026-11-14",
+ "model": "gemini-3.8-flash"
+}
