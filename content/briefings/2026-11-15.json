@@ -1,0 +1,178 @@
+{
+ "title": "迪士尼票務遭竊與全球科技系統警訊",
+ "summary": "香港迪士尼樂園官方票務系統疑遭黑客入侵並盜取1.7萬個二維碼，警方正展開調查；機管局則引入自動噴油機械人提升跑道維修效率。國際方面，美國聯邦航空局與微軟故障逐步修復，歐洲監管機構亦向Meta開出巨額個資罰單。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "香港迪士尼票務系統疑遭盜取1.7萬個門票二維碼 警方接手調查",
+     "analysis": "香港迪士尼樂園偵測到電腦系統異常活動，約1.7萬個網上門票二維碼懷疑被盜取，樂園已即時暫停官方網上售票並報警處理，警方暫列「有犯罪或不誠實意圖而取用電腦」跟進。業界人士推測系統可能存在漏洞致被黑客入侵，並提醒市民應經官方途徑購票以防受騙。此事件凸顯本港旅遊及大型票務平台的網絡防禦迫切性，企業必須強化身分驗證與API存取監控以保障客戶權益。",
+     "sources": [
+      {
+       "title": "方保僑料迪士尼票務系統或存漏洞 攻擊者大量擷取第三方平台憑證",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877842-20261114.htm"
+      },
+      {
+       "title": "香港迪士尼官網暫停售票 據了解票務系統疑被盜1.7萬個二維碼",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877834-20261114.htm"
+      },
+      {
+       "title": "香港迪士尼樂園發現網絡事件 警方暫列不誠實意圖而取用電腦",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877832-20261114.htm"
+      },
+      {
+       "title": "香港迪士尼1.7萬門票二維碼疑被盜 警方將案件列作不誠實使用電腦",
+       "source": "Yahoo",
+       "link": "https://news.google.com/rss/articles/CBMi5gNBVV95cUxNV1RaeWtNcUZ3akZ1ZDY0U2VaSkhUcG56Snp6SVJHc3FQaHdhWmNTOGdHc0RUcFhZeHdRdVNSa0gwajhmM0JHb1hPQklIVi1YdElfY0kxSmpHN0xNeHhza2l1d2hIMGZpeGRjdGxDbjJDTDNwanRidHN4cTV4SVpwZ2FxYWllMndLaG9HSTFDblY0ZUgxM3VibzVwYnlZcE9lcUYyQUVkb2xUQTJtdGlESjBhUkZ2X21JaTRLZk9GdEFPUlJ0SEhjX1RvSVpraFBBd3Z3b2paSE1XS21YVGNleVliV2dINWlTRWpqLUJoaXVJNlB0a3JGemVTdkJjY25PNzczYjI5WUQyUWYtN2x1N2IyaHRfeG9IMVJLQlB6VHhvRXVpd3lGTTQ0VEhRMHV5UzkyUFoxdFRqd2h2cTdqc2FIb0JNbTJDQUhvVWtaNm5WcHE0YS04cUZxUlc5NS1nZnVLMFBFMkRyYkVzWWlrUmw0Z3JTVzFmZUM4QWFzTTR4MFh1ek42MHlvc3BTa2thZjFKWnk3NGtSUTBHMllfTzNfYTVBS3QzR1E4QWJzaWo3U2V3WlhrVmFCSmk2dVF4Zjc0cllaWnFnQ3Y3UUlCUWg4UVBqT1VmdVk2dF9HUURCMzc2Tmc?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "機管局全球首創應用「自動噴油機械人」 跑道標識劃線工時大減三分二",
+     "analysis": "香港機場管理局自今年9月起引入「自動噴油機械人」，負責逾11公里跑道的標識劃線工序，成為全球首個應用此技術的機場。局方表示新技術將維護工序所需時間縮短三分之二，大幅改善原本通宵封閉單一跑道的人手施工模式。這項創新展示了本港大型基礎建設將自動化與機械人技術融入日常運作的成效，為智慧機場發展樹立標竿。",
+     "sources": [
+      {
+       "title": "機管局應用「自動噴油機械人」跑道劃線及標識 工序需時減三分二",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877848-20261115.htm"
+      }
+     ]
+    },
+    {
+     "headline": "微軟服務大範圍故障修復 本港政府系統未受波及",
+     "analysis": "微軟旗下多項服務早前發生廣泛故障，現已完成修復並恢復正常，微軟澄清事件屬內部技術問題，與網絡攻擊或人工智能無關。特區政府數字政策辦公室表示高度關注，確認暫未接獲政府部門系統受影響報告。這顯示本地公共部門具備一定程度的系統備援能力，但跨國雲端服務相繼出現事故，亦提醒企業及機構需要審視混合雲及本地備份策略以降低營運中斷風險。",
+     "sources": [
+      {
+       "title": "No government systems hit by Microsoft outage",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1877816-20261114.htm"
+      },
+      {
+       "title": "微軟表示已完成修復 稱故障與網絡攻擊或人工智能無關",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877812-20261114.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "美國航空管制系統更換光纖引發全美混亂 運輸部門料周日全面復常",
+     "analysis": "美國聯邦航空局因承包商更換銅纜至光纖設備引發系統故障，導致全美航班一度全面停飛，多間航空公司取消數千架次航班，往返香港的多班航班亦受到延誤或取消。當局已排除事件與人工智能有關，並預計全美航空運輸可在星期日晚逐步恢復正常。事件反映傳統關鍵基礎設施在進行現代化升級過渡時極具脆弱性，通訊備援架構若不完善將牽連全球客運物流。",
+     "sources": [
+      {
+       "title": "美當局料航空運輸周日復常 指故障時承包商正將銅纜換光纖",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877852-20261115.htm"
+      },
+      {
+       "title": "L3Harris statement on the Nov. 13 ground stop",
+       "source": "Hacker News",
+       "link": "https://www.l3harris.com/newsroom/press-release/2026/11/l3harris-statement-nov-13-ground-stop"
+      },
+      {
+       "title": "受空管系統故障影響 美國周六仍有3千多航班取消",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877844-20261114.htm"
+      },
+      {
+       "title": "截至傍晚6時 16班來往美國與香港航班取消或延誤",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877831-20261114.htm"
+      },
+      {
+       "title": "Over a dozen HK flights affected by US groundstop",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1877828-20261114.htm"
+      },
+      {
+       "title": "Transportation secretary blames ‘routine’ equipment upgrade for grounding flights nationwide",
+       "source": "TechCrunch",
+       "link": "https://techcrunch.com/2026/11/14/transportation-secretary-blames-routine-equipment-upgrade-for-grounding-flights-nationwide/"
+      },
+      {
+       "title": "Work to replace old copper wire led to the FAA’s ground stop",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/transportation/1033898/faa-ground-stop-sean-duffy-faa-copper-wire"
+      }
+     ]
+    },
+    {
+     "headline": "Tesla Cybercab 開放私人訂購 每月需額外支付299美元自駕訂閱費",
+     "analysis": "Tesla 宣布旗下無軚盤及踏板的雙座位自動駕駛車 Cybercab 開放部分受邀客戶私人預訂，空車售價為 29,990 美元，但車主須每月支付 299 美元訂閱費才可使用自動駕駛功能上路。連同訂閱費用在內，5 年擁有成本預計顯著增加，連行政總裁馬斯克亦承認月費偏高。此一商業模式顯示自駕載具的收費正從一次性買斷轉向軟體服務持續變現，對未來智慧出行與電動車普及定價帶來深遠影響。",
+     "sources": [
+      {
+       "title": "Tesla opens Cybercab pre-orders ‘for personal use,’ with geo restrictions and a $299 monthly fee",
+       "source": "TechCrunch",
+       "link": "https://techcrunch.com/2026/11/14/tesla-opens-cybercab-pre-orders-for-personal-use-with-geo-restrictions-and-a-299-monthly-fee/"
+      },
+      {
+       "title": "Tesla Cybercab 私人訂購 5 年連月費約 4.8 萬美元未計保險充電",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/11/14/tesla-cybercab-personal-orders-subscription/life-tech/auto/?utm_source=rss&utm_medium=rss&utm_campaign=tesla-cybercab-personal-orders-subscription"
+      }
+     ]
+    },
+    {
+     "headline": "SpaceX 成功以發射塔「機械臂」凌空捕獲星艦完成第15次試飛",
+     "analysis": "SpaceX 在進行星艦（Starship）第 15 次試飛期間，成功利用被稱為「Mechazilla」的發射發射塔架機械臂，在空中精準接住返回的星艦本體。這項工程創舉驗證了火箭第一級與太空船全面快速重複使用的可行性。若未來大規模應用，將可大幅壓低太空運輸成本，亦為低軌道通訊衛星部署及商業航天物流奠定更成熟的硬體基礎。",
+     "sources": [
+      {
+       "title": "SpaceX catches the Starship to end Flight 15",
+       "source": "Hacker News",
+       "link": "https://www.spacex.com/launches/starship-flight-15"
+      },
+      {
+       "title": "Watch SpaceX successfully execute the first ‘chopstick’ catch of Starship",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/science/1033930/spacex-chopstick-starship-catch"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "意大利對Meta開罰8.05億歐元 指未經充分知會讀取相簿資料",
+     "analysis": "意大利個人資料保護局宣布向 Meta 愛爾蘭公司處以 8.05 億歐元罰款，指其在 Android 版本的 Facebook 應用程式中，未取得專項同意便私自讀取使用者的照片、影片及元數據。當局指出涉事功能自 2023 年推出以來嚴重侵害消費者知情權。歐洲監管風向對科技巨頭資料合規的審查日趨嚴苛，香港涉足跨國業務的科技及應用程式開發商亦須警惕隱私條款的合法性及透明度。",
+     "sources": [
+      {
+       "title": "意國當局對Meta旗下公司罰款 指未充分知會下讀取使用者照片",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877853-20261115.htm"
+      }
+     ]
+    },
+    {
+     "headline": "深圳 APEC 峰會籌備就緒 中美俄元首預定周四舉行三方會晤",
+     "analysis": "亞太經合組織（APEC）第三十三次領導人非正式會議即將在深圳舉行，廣東籌備工作已全面就緒，而克里姆林宮及美方均表示中美元首與普京將於周四在峰會期間舉行三方會談。作為相隔 12 年中國再次主辦的 APEC 盛會，深圳會談備受全球矚目。大灣區作為主辦地，將直接受惠於高規格外交經貿交流帶來的區域合作及國際投資機遇。",
+     "sources": [
+      {
+       "title": "深圳APEC｜克宮稱俄中美領導人三方會晤將於周四深圳舉行",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877845-20261114.htm"
+      },
+      {
+       "title": "深圳APEC｜王曦：有信心向世界呈現一屆高水平盛會",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1877807-20261114.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點集中在數位基建的安全與穩定性。香港迪士尼票務遭竊與美國全美停航事件，同時敲響了雲端連線、實體管線升級與系統邊界防護的警鐘；不論是消費者平台還是國家級交通骨幹，單點故障與權限疏漏均能帶來連鎖衝擊。與此同時，自動化與航天硬體技術持續突破，本港機場噴油機械人與 SpaceX 凌空接力展示了新世代工程效率。在科技加速演進之際，香港企業需同步深化個資合規與網路韌性，方能在複雜多變的數位環境中穩步前行。",
+ "en_summary": "Hong Kong Disneyland is investigating a suspected security breach involving 17,000 ticketing QR codes, while the Hong Kong Airport Authority deployed an automated line-painting robot to cut runway maintenance time. Globally, the US aviation system is recovering from a major network failure, SpaceX achieved a historic mid-air booster catch, and Italy fined Meta over privacy violations.",
+ "date": "2026-11-15",
+ "model": "gemini-3.8-flash"
+}
