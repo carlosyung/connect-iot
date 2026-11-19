@@ -1,0 +1,160 @@
+{
+ "title": "今日重點：深圳APEC峰會與科技市場動態",
+ "summary": "國家主席習近平在深圳主持APEC領導人非正式會議，中美俄元首會晤成為焦點。同時，科技與AI界迎來重大突破，Anthropic公布首次公開招股（IPO）定價，而本地則關注醫療事故及港股表現。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "中大醫院發生醫療事故 女病人手術期間被錯誤切除雙側卵巢",
+     "analysis": "中大醫院證實一名女病人在接受腹腔鏡手術時，負責的醫生因出現「失神」情況而錯誤切除其雙側卵巢。院方已向病人及家屬致歉並採取預防措施，事件突顯手術室內監管與醫護專注力的重要性，引起香港社會對私家醫院醫療質素的關注。這對本地醫療機構敲響了警號，提醒必須加強手術流程的覆核機制，以保障病人安全。",
+     "sources": [
+      {
+       "title": "女病人被錯切卵巢 中大醫院稱已採取措施防止類似事件再發生",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878393-20261119.htm"
+      },
+      {
+       "title": "Doctor 'zoned out' in wrong ovary removal: CUHKMC",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1878303-20261118.htm"
+      }
+     ]
+    },
+    {
+     "headline": "深圳APEC領導人非正式會議舉行 習近平宣佈資助亞太經合組織務實合作",
+     "analysis": "亞太經合組織第三十三次領導人非正式會議在深圳開幕，國家主席習近平主持會議並宣佈中方將提供2000萬美元資助亞太經合組織合作，同時在深圳設立亞太共同體研究中心。峰會期間亦舉行了多場備受矚目的雙邊及三方會談，促進區域經濟一體化與科技交流。這為香港發揮大灣區「超級聯繫人」角色提供了更廣闊的區域合作機遇。",
+     "sources": [
+      {
+       "title": "深圳APEC｜習近平：提供2千萬美元資助開展亞太經合組織合作",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878399-20261119.htm"
+      },
+      {
+       "title": "深圳APEC｜習近平：秉持開放區域主義 穩步推進經濟一體化",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878398-20261119.htm"
+      },
+      {
+       "title": "深圳APEC｜習近平與嘉賓握手並合照 分別戴上紅色和藍色圍巾",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878396-20261119.htm"
+      },
+      {
+       "title": "深圳APEC｜習近平：會議定圓滿成功 為世界和平穩定貢獻力量",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878392-20261119.htm"
+      },
+      {
+       "title": "深圳APEC｜特朗普：昨日與習近平討論人工智能議題",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878386-20261119.htm"
+      },
+      {
+       "title": "深圳APEC｜中俄美元首今日舉行三方會談",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878362-20261119.htm"
+      },
+      {
+       "title": "深圳APEC｜普京和特朗普預計將於峰會期間舉行雙邊會談",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878361-20261119.htm"
+      },
+      {
+       "title": "深圳APEC｜加拿大稱特朗普與卡尼會晤討論貿易問題",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878359-20261119.htm"
+      },
+      {
+       "title": "APEC深圳最新｜習近平主持領導人非正式會議 中美俄元首今午會晤",
+       "source": "香港01",
+       "link": "https://news.google.com/rss/articles/CBMitgNBVV95cUxQcHZuNWU1VFkxa0ZnbG5TenUzVFdDNW0tbGZuVkRsUVdFNUtjRWQtS3F0U3g3dzNTWGJFeXhLSnBCMk1QU0F0UEFyd2QyMVFWOGE2c05IUXN3WEVFeXI0RTUxSHNnTk02cURyeG1WWTlOOHVpVlhkRng2ZG1SREVpTzhtQ0VnUEZiTlhqbzNVX0xxdzhnZ1Qyd2JiZERaekthc0lRamt1VUVRUWVYb1JDZ21iNUJrNXRNV3hKajU3MlBBdjJfbUIweGhqaktsTlhnTVE3LUtQTGxadFdqM3hSSmUzZUt5b0hWTkZ0SnduaHFjNUUtekQ5eDNKbG1BeXdMVndpYmtmdW9BdVlFdE9jdU9RYUd2UWVzQzJIbVI2T0VHaWRBdE9OdWFtcWZfWGFVTWtkS0N0UGJwc1dkYkYzWE03eUdrMl9wMHB0Z0JKSGpUQW9uQkIwaFkzUjJpNHVuTlFuX1BPdjZTVDRVUlllQmxZdW1MTFM5clVMdmJ0U0Z2RUc2RGZEQTlKdmZBLXBKdEwxaXpyS3BVa2Y4YjNyR1RkRDJFUVFxODg4TmNONjhUekFrb1E?oc=5"
+      },
+      {
+       "title": "Evening News on TV32 - Nov 18",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1878339-20261118.htm"
+      },
+      {
+       "title": "RTHK, CGTN present highlights from Apec summit",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1878338-20261118.htm"
+      },
+      {
+       "title": "CE holds bilateral talks at Apec summit",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1878305-20261118.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "Anthropic 首次公開招股定價每股 83 美元 估值高企備受矚目",
+     "analysis": "人工智能企業 Anthropic 宣佈其首次公開招股（IPO）定價為每股 83 美元，發行 9.8 億股，完全攤薄後估值達 1.5 萬億美元，超越以往部分科技巨頭的上市規模。這反映資本市場對生成式 AI 與大型語言模型商業前景的高度熱情。對於業界而言，這標誌着 AI 產業正加速走向大規模資本化與商業落地，並考驗企業能否持續維持高增長以支撐估值。",
+     "sources": [
+      {
+       "title": "AI泡沫 | Anthropic定價每股83美元，發行9.8億股，超越SpaceX上市紀錄，集資813億美元",
+       "source": "etnet 經濟通",
+       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUm5qWFYxRWowR012ZVk0aUtMeExiWTJHY0FvamNGS0xIaDE5THVJb1d3V3o3dnA3SGlzaU1Hek9WdnZZVmpLY3FNVU1acWNTb0xGWjdmNmFWX1AyeWVfTkdSRTlQSWVlZjFDN3BMdFVydTExYlhzMUotNGNEYjdBaGYzZ1JZZDQwRmdJekFHc2hka1BB?oc=5"
+      },
+      {
+       "title": "Anthropic prices initial public offering",
+       "source": "Hacker News",
+       "link": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+      },
+      {
+       "title": "Anthropic reportedly prices IPO at $83 a share, above projected range",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "NordPass 公布年度最常用密碼榜 簡單數字組合數秒可破",
+     "analysis": "密碼管理工具 NordPass 發布年度最常用密碼榜，「123456」再次登上榜首，而夾雜流行文化的密碼亦容易被撞庫破解。專家提醒用戶加強網絡安全意識，避免使用過於簡單或容易被預測的密碼。這對香港企業及市民而言，再次敲響日常數碼防禦的警鐘，突顯推行多重身份驗證（MFA）的必要性。",
+     "sources": [
+      {
+       "title": "最常用密碼 123456 第 7 次登頂 「starwars」「pokemon」上榜數秒可破",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/11/19/nordpass-minecraft-pop-culture-passwords/tech-secure/?utm_source=rss&utm_medium=rss&utm_campaign=nordpass-minecraft-pop-culture-passwords"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "港股失守 23000 點關口 科技股及重磅股表現受壓",
+     "analysis": "港股跌幅擴大，恒生指數失守 23000 點關口，創近三星期新低，科技指數亦顯著回落。騰訊在業績後急挫，阿里巴巴在業績公布前夕連跌多日，拖累大市表現。這反映市場對大型科企的盈利前景審慎，短期內投資氣氛偏向保守，本地投資者需密切留意科企財報數據及外圍經濟走向。",
+     "sources": [
+      {
+       "title": "港股跌逾400點 失守23000點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878394-20261119.htm"
+      },
+      {
+       "title": "港股競價時段跌245點 下試23000點 騰訊績後跌近3%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878388-20261119.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點集中於深圳舉行的 APEC 峰會，國家領導人的重要講話及多邊會談為區域經貿與科技合作定下基調。同時，AI 產業的資本浪潮持續，Anthropic 的巨額 IPO 展示了市場對大模型的強大信心，但資安風險如密碼漏洞及醫療與金融市場的波動亦提醒各界必須保持危機意識。香港企業與市民應緊貼區域合作新機遇，並在數碼轉型中加強風險管理。",
+ "en_summary": "President Xi Jinping chaired the APEC informal leaders' meeting in Shenzhen, focusing on regional cooperation and high-level bilateral talks. Meanwhile, Anthropic priced its massive IPO, signaling strong capital market enthusiasm for AI, as local markets and tech sectors navigated economic fluctuations and security challenges.",
+ "date": "2026-11-19",
+ "model": "gemini-3.5-flash-lite"
+}
