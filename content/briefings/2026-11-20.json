@@ -1,0 +1,264 @@
+{
+ "title": "財政部在港發債獲超購36倍 科技股與晶片出口限制成焦點",
+ "summary": "國家財政部在香港順利發行20億美元主權債券，錄得逾36倍超額認購；深圳APEC峰會圓滿閉幕並發布多項成果宣言。與此同時，AI代理技術研發戰升溫，但美國對華晶片出口限制進一步擴大，拖累亞太股市顯著調整。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "財政部在港發行20億美元主權債券 錄逾36倍超額認購",
+     "analysis": "國家財政部在香港發行期限3年的20億美元主權債券，發行利率4.821厘，總認購額達723億元，獲超過36倍超額認購，國際投資者分布廣泛，其中亞洲佔52%、歐洲及中東佔34%。這項交易全數於香港聯交所上市，彰顯國際資本對中國主權信用的信心，並進一步鞏固香港作為全球離岸離岸金融與優質主權債發行中心的地位。",
+     "sources": [
+      {
+       "title": "財政部在香港發行20億美元主權債券 超額認購逾35倍",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878556-20261120.htm"
+      }
+     ]
+    },
+    {
+     "headline": "港府將檢視兩電明年電費調整 天文台錄入秋最低15.3度",
+     "analysis": "兩家電力公司將於下周二向立法會環境事務委員會交代明年電費調整方案，今年11月中電及港燈淨電價已較年初分別上調約5.7%及約1%。與此同時，受強烈東北季候風及雲雨帶影響，天文台錄得入秋最低氣溫15.3度並發出強烈季候風信號。公用事業收費調整及氣溫驟降將直接影響本港企業營運成本及民生支出。",
+     "sources": [
+      {
+       "title": "立法會下周將討論兩電提出明年電費調整方案",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878557-20261120.htm"
+      },
+      {
+       "title": "天文台預測今日日間氣溫續降至約13度",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878549-20261120.htm"
+      },
+      {
+       "title": "天文台今早錄得最低氣溫15.3度 是入秋以來最低紀錄",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878529-20261120.htm"
+      },
+      {
+       "title": "強烈季候風信號生效",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878521-20261120.htm"
+      },
+      {
+       "title": "天文台清晨7時半錄15.3度 今年入秋以來最低",
+       "source": "Yahoo",
+       "link": "https://news.google.com/rss/articles/CBMipwJBVV95cUxPcVpZd21JbmFOdndBMFkwMDhVV2tOSzNMay1GYVNHQ2FnRFFmZGxiQjhyNERmYnNMa003V3RCQU9Mb0Fldk5TRjNEaFI1cFVUX0NEbHVzRkVSVEo4WkxaRVRPUDlTQno5WHlOU2dvbEpnYjF4OUpDbGQ2TVQtN0pPZEMxdE1pNlVYOVVTdlBoUDdVdWIwWENMdzlLeEJXeDFrZEE0WTk3X2dralRwSXd4OHhvc3R0bzZncVBQX19xdlBFLVJaOEFxVlM5MGE1MnoteGlmLUJIbFgzWjVBeW50OTVmS2hIMGVvR09PMGExTEpZRWdCeGhNN3hqOE9sdEdrLTI0MVJBcnM3SFBxRWRPZkRPMzNXUlZHalo1WlU2cl9SZFMtWTJz?oc=5"
+      },
+      {
+       "title": "天文台：明日日間氣溫續降加上風寒效應 提醒市民注意保暖",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878498-20261119.htm"
+      }
+     ]
+    },
+    {
+     "headline": "赤洲恐龍化石獲證實或源自同一泰坦巨龍形類個體",
+     "analysis": "發展局聯同中國科學院古脊椎動物與古人類研究所公布，兩年前於赤洲出土的多件恐龍化石，經專家深入研究後，鑑定很可能屬於同一隻「泰坦巨龍形類」恐龍。此項發現不僅填補了香港古生物歷史的空白，更為本地科研、地質公園保育與科普教育帶來寶貴資源。",
+     "sources": [
+      {
+       "title": "專家鑑定赤洲兩年前出土恐龍化石 或屬同一泰坦巨龍形類恐龍",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878499-20261119.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "科技巨頭競逐自主AI代理 蘋果加入戰局而Google升級Mac功能",
+     "analysis": "蘋果公司最新招聘啟事顯示其正研發可代替用戶操控電腦、瀏覽網絡及編寫代碼的自主AI代理（AI Agent），Google亦同步讓Gemini具備在Mac上自動整理檔案與填表的能力。這項趨勢預示人機協作即將進入全自動執行複雜工作流程的階段，但伴隨的數據安全及跨系統權限控制亦為企業資安帶來全新挑戰。",
+     "sources": [
+      {
+       "title": "蘋果招聘廣告揭正研發自主AI代理 可代操控電腦及寫程式 目標最快明年底推出",
+       "source": "星島頭條",
+       "link": "https://news.google.com/rss/articles/CBMi8wNBVV95cUxNX1gyaUxvT2VXZllTc3JBclF6NWlSa1l5ZnVIaDlha0VHSGNEaExjTXlGSkd5Y0pfUG83eUo3bG1zRE5vekstdDlJdEVabkpJeDVib2dPbWItcllBRXctTDFvd2d6YzdFUkE0VFg0a0xKZ2NiNEw0VkE5eEpic04zbWZxWmprT3FvS3NhYlpBdDRkUWphVHdCQ2lpbmNRZGZGYmNmWXhtZGFuWmxCNFRBdW81RHRqWUkwd01zN0dEeGpxcVg0Yk05Mm9WTU5FQVpHdTNCWmh0ck13YkZnUU9mRlFSME9Ic0Z1aXZ1RUpwWUE5R2xqUXNMc2FiX3FmTEM5S2VNV3ktUHFEMWdFR1B4MUhHdjFMZTZnWU1qc2hZcW93Wml2a0UzOTZMOFNYZG5QU1RuODlyQ3NabXM0ZDMzZFhZX1NESjNNdXBUM09QQ3hsN0xXSzdvVnV6ajVJUXZORWx1Z1JIXzhPM29JdV9fWE9oUS1LcVRTUEFSa2RXeDZCRVU4dmlHam5CQjd5d2dPWW4zbW9VZkluVGdUNUpob1JFV2txekJaeV9sSWtTZ1VJMTI4M3BkeUdVamh3ZFFtY2NsbVlJaklhQmp1LUpyU25oMXdwejdqVHhfclNQa2dRWDR2MlNRMzFMa21wRGdKSDFZ?oc=5"
+      },
+      {
+       "title": "科技｜蘋果招聘啟事露端倪 自主AI代理最快2027年底推出",
+       "source": "Yahoo 財經",
+       "link": "https://news.google.com/rss/articles/CBMi5AJBVV95cUxNaUtTMGpOZUZEX3hwdmI4STMwUHd5NEVOdlExLUxpc2NyNDlTSVZOUy0yTGxSUTNZdTBzR3pKZ3h3Z1A2V2libWx0R0ZkbC1SXzBlbzZlQ0dqU1QxckdTNmRmdGpERm10TVVaNVZuRXAwdFlsOVAxNUNWTjRuNFlVSEhkd0lNdzRlWG16c0M0bE9wVjBNX0VqWmp1SjJWTUVtNE9TZ19BZHFYQ2tKQV8zZ0I0RDNXaE5IRGphd3gyWG9XMkhibHYtOC1VZDhiOUFQTTJhdzZpSDNkeWZGeXFBaEFnaXE4dGRacjVjV1BCSzZWTWszVFd5b2FuWi1EY2VJM1lmMG5uYlFkZzNfSkpFYnpSZ051bkU3RVFjRC1STVpzRF9sX0Jvd2FCbXlGT3FwNC1LdnpJUDYxU3lfMEFIR3pZTUxpT1pqLTJUWnV6ZDBtOGhoeDFOZUUzalB0TUQ1R1hrQQ?oc=5"
+      },
+      {
+       "title": "Apple may be developing its own AI agent that runs your Mac",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/"
+      },
+      {
+       "title": "Google gives Gemini the ability to use your Mac for you",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/"
+      },
+      {
+       "title": "Apple is hiring engineers to build its own AI agent",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing"
+      }
+     ]
+    },
+    {
+     "headline": "Anthropic登陸納斯達克首日高開 估值突破千億美元",
+     "analysis": "AI初創巨頭Anthropic正式在納斯達克上市，定價83美元並於首日飆升至111美元，首發融資籌集逾800億美元，公司估值突破千億美元。然而，同業競爭者亦指出開源模型能大幅降低企業成本，市場在熱捧前沿大模型的同時，正更加審視高昂算力支出的投資回報率。",
+     "sources": [
+      {
+       "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/"
+      },
+      {
+       "title": "Anthropic rival says companies can (mostly) skip the pricey models",
+       "source": "TechCrunch",
+       "link": "https://techcrunch.com/2026/11/19/anthropic-rival-says-companies-can-mostly-skip-the-pricey-models/"
+      },
+      {
+       "title": "【美股收市】道指瀉1101點 納指標指同挫逾2% 英偉達倒跌3.3% Anthropic掛牌升幅收窄",
+       "source": "香港經濟日報HKET",
+       "link": "https://news.google.com/rss/articles/CBMiygNBVV95cUxObEk3S1lfOFV5UFNaOEVoeGhpWVUycG16UVNUTkVvTkxMR3NfZ24zNHJVNlRyMHB2X1cwLUVVSkxNQlZGa3NmWExZWEFBbUlaZkVJNmdmMTlnYkYzOHJ3bW1NRldpc3NQOGFIT1lmY1BJRExTR2ttZkRSamZUZmpFcnFuQ1d4akUyMXZHcTJuQ3Byb3cyMV9fUGl4elZqWWh4aDRQbmZReUlNMUZlNW1NNmdDTk44Z25FWGR2eVNldG10WG44aDRCOC1Wc2hodU5EYW5QYXg4X1N6enV6dFJrdGs3bFRNaG1aRzZ5a19UR1ozcTg2eGpIYjd0RXo2MFRsU0dFR3lSdDl6aUg0M2ZLVkMteFBWN19USnphVFZZdHBkRHpfMEZKMmRUTlFDYVV6cDB3U21zbVVpa29xaVFDYnIyU3VGWUZUdi1ZemFGa2p2b1g5eFV1Q3RJR0NpaHhZd2N6cDJ1R1Ftbm92NXV5c3h2elA3Wk9TMzRfaGhuVzZWNHp0eHYtUDhOdDlzR3lrN3o4VVBMRHF1MG1HUVFON3BsWXlDVmxHejlkV3Fmc3dIalgtUHRfNi1GLXRRemZtaVJoVGFVbi0yQQ?oc=5"
+      },
+      {
+       "title": "Anthropic’s IPO could deliver $156B to charity",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/"
+      },
+      {
+       "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "美收緊AI晶片限制 台積電暫停部分中國16納米以下代工",
+     "analysis": "美國進一步收緊針對人工智能晶片的出口限制，台積電已暫停向部分中國客戶供應16納米及以下先進製程晶片訂單，三星亦停止部分出貨。半導體供應鏈管制的持續擴大，迫使中國AI軟硬件生態加速本土替代研發，亦為依賴先進算力的本港與內地科企帶來供應鏈重組壓力。",
+     "sources": [
+      {
+       "title": "【中美AI角力｜TSM】美國收緊AI芯片出口限制台積電暫停部分中國客戶16納米以下製程訂單三星亦停部分出貨",
+       "source": "香港經濟日報HKET",
+       "link": "https://news.google.com/rss/articles/CBMihAVBVV95cUxNWVNvVFF0dEwwckIzZWhwSHVjUDk1d1Z6Snhjc0VRZDd1TW5Hb2RXSldLUGdHUFNwUHc4ajgwRWdHWGlBUXhLSVVVTWR5azVQc0dhdUhuWDZEeW40OEdpSGczQ25JZ1p1djB2eGJqTVNvSURCMV9NMS1XbUFnRzUxVjUwa3Z2UXpDNzhpUTBaUEd6NG5YdGVsOExCb0Vqc3ozUExsZmtSdi1lS0hIckotbWNkRUVmb2kxbnRGRVdDbmtsNVR5WGJMQ1FsUEEtYWY4bDdZOFN1WWNxNzN5SzZDM2hqalRsNjR3RUg2M241NVdUcUpndHhRbmxQRWpzUDBaYl9OVF9fUGdHWHh3ZmFxaHZteE03dlRDM2xVMHRYMFB1ZU9YekRWWVlWa3Q1YkZuUlhzVXRfUmxMdEVkbGtFNWdidzFSMUNRVWJFZkZvbEd4QVFfZUpuUlVtV1E5eTBydGhORDhyakhZZE5HdFIwbk5vRVJPdjh0NjZ0NlhJV2R4SjBsN3JPR1JCbUtVczRESkdsX2xwZ0NfaHYyMHNsb3BkZ2x3SHJpQkxMaDRjOFRSc0h4TTc0WVlVQWwtSXhmd1d4dVBFMHR2UnBQcjNZSjAzaXIzZGVXcjJXOWRxTXYtU1lzWDBqUm5Wa2JoX2lIUUkzN1ktOHNuckNuU29JODZWR1hIUzlfWVhvTURkRVN5V3M3dXNHWjA0bUFXd3BTczZFVXplanFZV0ZXTk4zWGl0cUJZV2ZaMHUzQUs0dzRlV0haZkVGWmxmUzVZX2ZNT2YyeFo2Unc2R0tuaGhtZGw1VjUxRVd5R0hMRWlUUTRzM0I3dEtBNURudGR4V3RrU3ZzbQ?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "OpenSSL曝高危緩衝區溢出漏洞 CVSS評分高達9.8",
+     "analysis": "安全社區披露OpenSSL在EVP_EncodeBlock函數中存在緩衝區溢出漏洞（CVE-2026-121481），CVSS評分高達9.8，屬於極高風險安全威脅。由於OpenSSL被全球大量網絡基礎設施、雲端及企業伺服器廣泛採用，本港科技企業及IT運維團隊需儘速審查並修補相關代碼庫以防遭受攻擊。",
+     "sources": [
+      {
+       "title": "OpenSSL: Buffer overflow in EVP_EncodeBlock() (CVE-2026-121481, CVSS 9.8)",
+       "source": "Hacker News",
+       "link": "https://github.com/openssl/openssl/pull/33652"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "亞太股市普遍下挫 港股開市跌359點創年內新低",
+     "analysis": "受外圍隔夜美股急挫逾千點影響，亞太市場顯著受壓，恒生指數開市競價時段跌359點創下年內新低，科指跌約3%，台股與日韓股市亦分別下挫2%至4%以上。與此同時，內地11月LPR維持不變，在強勢美元與避險情緒升溫下，黃金價格亞洲時段一度失守每盎司3600美元。",
+     "sources": [
+      {
+       "title": "滬深股市初段跌逾1%至逾2%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878550-20261120.htm"
+      },
+      {
+       "title": "港股競價時段跌359點 創年內新低",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878548-20261120.htm"
+      },
+      {
+       "title": "內地11月貸款市場報價利率維持不變",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878545-20261120.htm"
+      },
+      {
+       "title": "台股初段挫逾4%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878544-20261120.htm"
+      },
+      {
+       "title": "日股初段跌逾2% 韓股急挫約4%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878539-20261120.htm"
+      },
+      {
+       "title": "金價亞洲時段持續受壓 曾失守3600美元",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878538-20261120.htm"
+      },
+      {
+       "title": "美元指數再創逾1年半新高 美國10年期債息下試5厘",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878531-20261120.htm"
+      },
+      {
+       "title": "金價下試3600美元關口 創逾14個月新低",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878527-20261120.htm"
+      },
+      {
+       "title": "【美股收市】道指瀉1101點 納指標指同挫逾2% 英偉達倒跌3.3% Anthropic掛牌升幅收窄",
+       "source": "香港經濟日報HKET",
+       "link": "https://news.google.com/rss/articles/CBMiygNBVV95cUxObEk3S1lfOFV5UFNaOEVoeGhpWVUycG16UVNUTkVvTkxMR3NfZ24zNHJVNlRyMHB2X1cwLUVVSkxNQlZGa3NmWExZWEFBbUlaZkVJNmdmMTlnYkYzOHJ3bW1NRldpc3NQOGFIT1lmY1BJRExTR2ttZkRSamZUZmpFcnFuQ1d4akUyMXZHcTJuQ3Byb3cyMV9fUGl4elZqWWh4aDRQbmZReUlNMUZlNW1NNmdDTk44Z25FWGR2eVNldG10WG44aDRCOC1Wc2hodU5EYW5QYXg4X1N6enV6dFJrdGs3bFRNaG1aRzZ5a19UR1ozcTg2eGpIYjd0RXo2MFRsU0dFR3lSdDl6aUg0M2ZLVkMteFBWN19USnphVFZZdHBkRHpfMEZKMmRUTlFDYVV6cDB3U21zbVVpa29xaVFDYnIyU3VGWUZUdi1ZemFGa2p2b1g5eFV1Q3RJR0NpaHhZd2N6cDJ1R1Ftbm92NXV5c3h2elA3Wk9TMzRfaGhuVzZWNHp0eHYtUDhOdDlzR3lrN3o4VVBMRHF1MG1HUVFON3BsWXlDVmxHejlkV3Fmc3dIalgtUHRfNi1GLXRRemZtaVJoVGFVbi0yQQ?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "中美俄發表和平宣言 深圳APEC達成領導人共同展望",
+     "analysis": "在深圳舉行的APEC峰會圓滿結束，各方達成推動亞太共同體建設的「深圳展望」。會議期間中俄美三國元首舉行歷史性會晤並發表《和平宣言》，承諾推動聯合國改革、增加精煉石油產品供應，並就防擴散及減少核風險展開對話，為動盪的地緣局勢釋出大國協調的積極訊號。",
+     "sources": [
+      {
+       "title": "中俄美三國發表《和平宣言》 學者料可為聯合國改革提供方向",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878555-20261120.htm"
+      },
+      {
+       "title": "特朗普結束訪華行程回國 當地周五將召開記者會",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878519-20261120.htm"
+      },
+      {
+       "title": "深圳APEC｜王毅稱會議達成深圳展望 推動亞太共同體建設",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878510-20261119.htm"
+      },
+      {
+       "title": "深圳APEC｜王毅稱宣言凝聚三方共識 對維護和平具重大意義",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878509-20261119.htm"
+      },
+      {
+       "title": "Evening News on TV32 - Nov 19",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1878495-20261119.htm"
+      },
+      {
+       "title": "RTHK, CGTN deliver Apec highlights for the day",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1878493-20261119.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日市場焦點在於主權融資的亮眼表現與地緣科技博弈的雙重交織。財政部在港超額發行美元主權債，顯示國際長線資本對香港平台投下信心一票；但另一邊廂，美國對16納米以下AI晶片出口的加碼管制，結合外圍股市的全面下挫，反映全球科技鏈的不確定性仍在加劇。對香港創科業界而言，在擁抱AI Agent等前沿自動化工具的同時，必須加速建立軟硬件供應鏈的彈性防禦，才能在外部環境多變的週期中穩步前行。",
+ "en_summary": "China's Ministry of Finance successfully issued $2 billion in sovereign bonds in Hong Kong with a 36-fold oversubscription, underscoring strong international capital demand. Meanwhile, tech giants accelerate the race for autonomous AI agents even as tighter US export restrictions on sub-16nm chips trigger broad sell-offs across Asia-Pacific equity markets.",
+ "date": "2026-11-20",
+ "model": "gemini-3.8-flash"
+}
