@@ -1,0 +1,183 @@
+{
+ "title": "亞投行落戶香港設辦事處 國際關注AI私隱與武器規管",
+ "summary": "亞投行與國家簽署協定正式確立在香港設立辦公室，進一步彰顯本港國際金融中心地位；同時選委會界別分組選舉亦全面展開投票。科技領域上，聯合國就致命自主武器的規管談判未能達成具法律約束力的協議，而 Signal 與 Apple 則分別針對 AI 代理的私隱防範與跨應用操作展示最新動向。",
+ "sections": [
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "國家與亞投行簽署協定 正式確立在港設立辦公室",
+     "analysis": "國家財政部與亞洲基礎設施投資銀行在香港簽署協定，落實亞投行在香港開設辦事處，財政司司長陳茂波及立法會議員均指出此舉肯定香港國際金融中心地位。這有助香港發揮匯聚國際資本與專業服務的獨特優勢，為本地金融機構開拓參與跨國基礎建設投融資的新機遇。",
+     "sources": [
+      {
+       "title": "亞投行將在港設辦公室 陳茂波稱彰顯香港匯聚國際資本獨特角色",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878717-20261121.htm"
+      },
+      {
+       "title": "Asian infrastructure bank to set up office in HK",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1878708-20261121.htm"
+      },
+      {
+       "title": "陳振英相信亞投行在港設辦公室 肯定本港國際金融中心地位及優勢",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878707-20261121.htm"
+      },
+      {
+       "title": "國家及特區政府與亞投行簽署協議 確立亞投行在港設辦事處",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878697-20261121.htm"
+      },
+      {
+       "title": "亞投行設香港辦公室 藍佛安與亞投行行長簽署協定",
+       "source": "Yahoo",
+       "link": "https://news.google.com/rss/articles/CBMi3AJBVV95cUxPckdkTWVmVXgyMTZocVBld2lwUFp1UzMtTnNkRUY2TXFReXhVc2U4M3laRldNUE9ETkF0dXhTM1o2WDExdEp0RUtBTUlhUGFOaWFBQ05tSFBkRkVmbHotX2pOeXI1b1ZXTFVYY1BldjRPSWxfdS1sUjRPalpFM3BCSV9tTlhqWGdPZ2RLb0k5aXB4WFctdjB0ZmxRREw5aXBPQmFyQm5nQ3htV0xyNm1NSlU2WVBEV2l6eWtTQTBVMi1naWNKajdJZmFRWTBRa0tsS2NFcjZsZ2JTS2R6a0ZuRF9hV3g5Y3lwengwb3dPX2doQVZxbXowUktxbjg2ZzM4WTFjdnM0d2dBWjJ3b0hDVlNxVFdYN01mOVpyN2R5TVp3eHQ5MUJRSHl6YWtNNTF2bnEwM3ozNkpqcUUwRl9tNU9rQ2VNR2lhQXY3SkZIU21kOER5VnlDSU5DOHg?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "選委會界別分組選舉展開 31個組別競逐700多席",
+     "analysis": "選舉委員會界別分組一般選舉正式展開投票，31個界別分組共856名候選人爭奪723個席位，全港設有5個一般投票站及專用投票站。當局繼續採用電子選民登記冊系統提升發票效率，反映香港公共選舉運作持續推進電子化管理與程序優化。",
+     "sources": [
+      {
+       "title": "選委會界別分組一般選舉早上9時開始投票 鄧炳強到票站視察",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878744-20261122.htm"
+      },
+      {
+       "title": "選委會界別分組投票今日舉行 共31個組別需要競逐",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878731-20261122.htm"
+      },
+      {
+       "title": "選管會主席陸啟康呼籲合資格投票人 明日選委會選舉踴躍投票",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878725-20261121.htm"
+      },
+      {
+       "title": "選委會界別分組一般選舉明日舉行 李家超到訪投票站",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878710-20261121.htm"
+      }
+     ]
+    },
+    {
+     "headline": "AEON信貸財務系統遭未經授權查閱 委聘專家跟進",
+     "analysis": "AEON信貸財務發出告示，證實近日發現內部系統遭到未經授權查閱，目前無證據顯示資料外洩被不當使用，並已聘請獨立第三方網絡安全專家加強防護。事件為本港金融消費信貸機構敲響警鐘，企業必須持續檢視資安架構及防範潛在網絡入侵的風險。",
+     "sources": [
+      {
+       "title": "AEON系統遭未經授權查閱 稱目前並無證據顯示資料被不當使用",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878730-20261121.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "電話卡實名制未能完全防範電騙 首九個月損失近19億元",
+     "analysis": "商務及經濟發展局局長丘應樺承認，推行全面電話卡實名登記制以來未能完全阻止電話騙案，本港今年首9個月已錄得近萬宗案件及約19億元損失。這反映單靠登記制度難以徹底根治詐騙活動，本港電訊業與相關部門未來需在防騙技術與宣傳上面對更多挑戰。",
+     "sources": [
+      {
+       "title": "丘應樺承認電話卡實名制未能完全阻電騙 網民多年質疑成效",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/11/21/hong-kong-sim-card-real-name-limit-fraud-2026/tech-secure/?utm_source=rss&utm_medium=rss&utm_campaign=hong-kong-sim-card-real-name-limit-fraud-2026"
+      }
+     ]
+    },
+    {
+     "headline": "Apple 招聘廣告透露研發 AI 代理平台 支援跨應用程式操作",
+     "analysis": "Apple 刊登工程經理招聘廣告，披露公司正研發能操作電腦的 AI 代理平台，功能涵蓋瀏覽網頁、跨 App 執行工作、使用指令列及編寫程式。這顯示科技巨頭正將大型模型應用推向系統層面操作，預示未來開發者與用家在程式開發及自動化流程上將迎來全新工具。",
+     "sources": [
+      {
+       "title": "Apple 招聘廣告揭自家 AI 代理計劃 可跨 App 操作及編寫程式",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/11/21/apple-agentic-ai-job-computer-coding/ai/?utm_source=rss&utm_medium=rss&utm_campaign=apple-agentic-ai-job-computer-coding"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "聯合國致命自主武器談判未達共識 僅擬定自願性質框架",
+     "analysis": "聯合國審議會議在日內瓦就規管致命自主武器展開一星期談判，最終未能就具法律約束力的條例達成共識，改為用兩年時間提出可能只屬自願性質的規則。這凸顯國際社會在人工智慧軍事化管制上的嚴重分歧，亦顯示全球高新科技治理在跨國法規制定層面面臨重重阻力。",
+     "sources": [
+      {
+       "title": "International UN talks on controlling use of autonomous weapons collapse",
+       "source": "Hacker News",
+       "link": "https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse"
+      },
+      {
+       "title": "聯合國殺手機械人談判一周無果 2 年內擬規則或只屬自願",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/11/22/un-killer-robots-talks-2028/life-tech/robotics/?utm_source=rss&utm_medium=rss&utm_campaign=un-killer-robots-talks-2028"
+      },
+      {
+       "title": "The UN fails to agree on rules regulating ‘killer robots’",
+       "source": "The Verge",
+       "link": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots"
+      },
+      {
+       "title": "聯合國128國達共識 兩年內草擬AI致命自主武器監管協議",
+       "source": "香港01",
+       "link": "https://news.google.com/rss/articles/CBMihgNBVV95cUxPYlFjckdkVEZWOVhOaWxvelRTdENEY2Z2Q0FjWHFyRlpmRzdnOGloRi0xSmtwZ2VrM2ZUaEZTek5Sby0yR25NMHNxRk1ueEEwOXpacmFldE1xcUxZODUtWkg4WmRic2lKOEhlcUl4bjhSQ24xOTBrc0VLVVNXYXBwOFZZbW5QeGw0RTlvWXhicG4yV25KNXhLbU9HdkdtSEcwODNyTG5WQ0lRUFotOEZvYWFEaWxETVItbXVNQU84aUhVU1YtcS1oN28zZDd0MXc0U1FIWlZwRUhUajBXWGdrLWlIRjhRSXc1MXRsSVFaUk96LWRwdHl4Q3ZoV2FQcnJxZHFzUUt5NzFQZVpDR0c0TjNjUXIyd1libWQ3b0V6UDRBdlZCVWtNRnhSaUpCajlzdEVtNXNvU180WW1NS28zN3Yzb0N0TVhDbGhGcTZhb0xGdnA3WEM5cl8zd1A2RE5JaHBPUXI3clBFMm80bnNybFdxb0poWFF4dkl0V1BQNHJEWWkzanc?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "Signal 更新限制截圖功能 防止系統級 AI 代理讀取加密對話",
+     "analysis": "加密通訊軟件 Signal 宣布加強畫面私隱保護，限制用戶在手機端截圖，以阻止 Siri 或 Gemini 等系統級 AI 代理透過讀屏獲取並保存對話內容。這項舉措反映隨著作業系統全面引入 AI 助理，私隱安全技術與智慧應用的界線正面臨衝突，科技業界及用戶對個人資料自主權的警惕日益提高。",
+     "sources": [
+      {
+       "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/"
+      },
+      {
+       "title": "Signal 新功能阻止 AI 讀取對話 iOS 27 禁截圖、Mac 須手動設定",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/11/21/signal-block-siri-gemini-ai-screenshots/tech-secure/?utm_source=rss&utm_medium=rss&utm_campaign=signal-block-siri-gemini-ai-screenshots"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "俄羅斯貨船在芬蘭灣疑遭無人機襲擊 起火後漂入芬蘭領海",
+     "analysis": "芬蘭邊防軍與俄方證實，一艘前往加里寧格勒的俄羅斯貨船在芬蘭灣公海疑遭無人機襲擊起火，並漂入芬蘭領海，搜救及防污染工作隨即展開。波羅的海航道安全再度受到軍事衝突威脅，對國際航運物流及沿岸地區安全形勢增添不確定性。",
+     "sources": [
+      {
+       "title": "芬蘭國防部指監測到一艘俄羅斯貨船受損起火 疑遭無人機襲擊",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878735-20261122.htm"
+      },
+      {
+       "title": "俄羅斯貨船於芬蘭灣遭無人機攻擊 芬蘭稱貨船遇襲後進入領海",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878721-20261121.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "從亞投行落戶香港到金融機構面臨系統未經授權查閱，顯示香港在擴大國際資本樞紐優勢的同時，數碼基礎設施的安全管理更顯關鍵。與此同時，全球正步入 AI 深度整合操作系統的新階段，然而從 Signal 防範 AI 讀屏到聯合國難以確立自主武器約束規範，均反映出技術推進與法規治理之間的巨大落差。面對日趨複雜的智能環境與網絡安全挑戰，香港企業與市民在享受自動化便利之際，亦須全面提升資訊保安與風險防範意識。",
+ "en_summary": "The Asian Infrastructure Investment Bank has signed an agreement to establish an office in Hong Kong, reaffirming the city's unique role as an international financial and capital-raising hub. Meanwhile, international talks on regulating AI-powered autonomous weapons stalled at the United Nations, and tech players are adjusting their privacy frameworks to counteract the potential intrusion of operating-system-level AI agents.",
+ "date": "2026-11-22",
+ "model": "gemini-3.8-flash"
+}
