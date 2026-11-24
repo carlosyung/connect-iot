@@ -1,0 +1,238 @@
+{
+ "title": "今日重點：黃仁勳復職Nvidia、香港無紙證券啟動與亞洲數學聯盟落戶",
+ "summary": "Nvidia 董事會一致通過恢復黃仁勳的 CEO 職務，消除市場隱憂；香港無紙證券市場正式運作，先通醫藥成為首隻無紙化上市新股。同時，由丘成桐牽頭的亞洲數學聯盟落戶香港，深化本地 AI 與統計學基礎研究。",
+ "sections": [
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "Nvidia 董事會一致通過黃仁勳復職 CEO 重申無國安風險帶動股價反彈",
+     "analysis": "Nvidia 公布董事會一致通過恢復黃仁勳的行政總裁職務，並表示在諮詢美國政府高層意見後，確認其復職不會構成國家安全風險，帶動盤前股價顯著上升。此舉為近期動盪的全球 AI 生態與供應鏈注入強心針，減低了市場對科技領頭羊決策層變動的焦慮。對香港投資者及 AI 產業而言，龍頭企業領導層穩定有助維持晶片供應與技術發展前景。",
+     "sources": [
+      {
+       "title": "分析：黃仁勳復職可確保AI生態持續 惟多個因素困擾後市走向",
+       "source": "RTHK News",
+       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1aeGo0Zm5Qem9Samd0bXMxSjJqMzdaUWNBc2ZwNjRXNTNhaEQ0c2tLUHBjVUVLVU9TQ2I1cFNPSkdqZURvWnhsNVpZc3owV3dLSnEtdzdOd1B6b0tMZllZNGppR0h6NVlrYXF4Q2ptQQ?oc=5"
+      },
+      {
+       "title": "觀海論道｜寫在黃仁勳復職一刻：關於人工智能未來的幾個簡要觀點- 來論",
+       "source": "香港文匯報",
+       "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE84bmp3cGJDTm5DM0tHUENqT1Y1SnVjNHI4VW5iYXFIVk02VGdnQVdXUzRGdkR3WFdQbkFuRGJGVWNOTFpBd2lneVlSVFc3Wkd4bUJaQ0VtNFlrN2RVOVpUV1hFZnNLQVNFWk1jUGlBcXgxMlRyUTc0?oc=5"
+      },
+      {
+       "title": "特朗普形容黃仁勳是需保護天才 指Nvidia董事會通情達理",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879002-20261124.htm"
+      },
+      {
+       "title": "黃仁勳稱感榮幸於新工業革命開始時領導Nvidia",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879001-20261124.htm"
+      },
+      {
+       "title": "特朗普：沒理由相信黃仁勳回歸Nvidia會帶來國家安全風險",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878987-20261123.htm"
+      },
+      {
+       "title": "輝達市值暴增近1兆美元！川普：沒人能像黃仁勳讓股價起死回生",
+       "source": "Yahoo 財經",
+       "link": "https://news.google.com/rss/articles/CBMimgNBVV95cUxNdHFYNFNwZkpZc29VN1FNckc0c1UzWDRrTHdPOVJiSTJyT1MzOHhfbWgxa1o2ekowNXpzSlRmUUUyM2hBM24xc2RXVW9scVZ3TnJfcGxRRmRkQXZZRDI5TFFzeG5wN2R5Zy0tYzVoZXNrZEtQR2FGNTBDdzRHb3FlQTVLcnVoMFdscWZ2ZkVITVVCUGtLTTI4QnZod0N4VHhLQjdMbmNMbFJpQkF5T2F4QkRCaW1jNUY4N3dhdHJKbkgzeUpEcWZhcnI2NzJ1b3h0MHk1QVRZdFItenhsekp5WVlMNl9UUFhDZU1abm5ySWgxMWtlZjg1UW1PQmJPLWxhS2tmcTRlZHl3ckVzN0JxSEdKV0VnSjM0aHhQamEzcnlPMHhwV0RyUGVmRUEtZTREX0ZLNEdfMUk2SzZmWk1BYjVqNFBfTkJXWUJzc3RsMlJpTWcwd2w2VmpZRGpmb3V1VEg2OU1xLUZHWXB6RVY5ZXJnUUpncEZjVUVnWnFHM2VvODRhTktScHFrQ09zVG80ZEZETVhLZnBUdw?oc=5"
+      },
+      {
+       "title": "Nvidia董事會恢復黃仁勳行政總裁職務",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878983-20261123.htm"
+      },
+      {
+       "title": "Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia amid scandal",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/"
+      },
+      {
+       "title": "Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/23/nvidia-employees-greet-jensen-huang-like-a-hero-as-he-returns-to-companys-hq/"
+      }
+     ]
+    },
+    {
+     "headline": "DeepSeek 估值傳達6078億元 阿里加快自研晶片強化算力",
+     "analysis": "內地 AI 企業 DeepSeek 傳出完成新一輪融資且估值達到 6078 億人民幣，同時阿里巴巴正加快平頭哥自研 AI 晶片建設。這顯示出內地科技巨頭與新創公司在外部環境挑戰下，正加大自主研發與 AI 算力的投入。香港科技業界應密切關注國產模型與自研晶片生態的成熟度，評估商業應用轉型的可行性。",
+     "sources": [
+      {
+       "title": "AI熱潮｜DeepSeek傳完成新一輪集資 估值達6078億",
+       "source": "橙新聞",
+       "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNR3FwaVptV2NidnVKUVlKSEtXbnpqNXVrcWx6REYtSGJITnRoYWp1Zi0tZENUdXVmdVNjVGlPc1Jkd3VzQ2hYc1pEQ29nVE5uWENIeDRRb0h0M0t2VHVXNktBMjJ4OEN1dVNIaWdGVklrNmRELUc3OFY5QnF1YTRHdFNxLTJtRm14czBBMTVrcnVTMkNkOHRBd2c0RWZ5SXJ1S0dQNFhJdkxMR0RKdjhVQ0xnTi1PVWp3VDZIeEp1dTNaU0xqS0NscXh6ZTB2S190RzRTakFNZW5vbnhyTEg5TC1MMGVqV2NwRjJPZm9Zb1l0NEtTWmFSM0tHM2ItZ0dwcm9aQzJreFhZYTBrcHdyRHJleFA?oc=5"
+      },
+      {
+       "title": "阿里巴巴加快平頭哥自研芯片建設 強化AI增長能力｜彭偉新",
+       "source": "香港01",
+       "link": "https://news.google.com/rss/articles/CBMimwNBVV95cUxQZkVKWk5WLVpveGNTV2tDVnEtX1JaTW5RZU1wYUJKR3J0dG95SFdyU2xrdXh6VERpTjMzUUVGWkRrbU4wU0hzaTBCdFlmUWZfcmRXbENwRFJHQURwOTB0UjJtaWFqMmMyUmNGYzlFTUh3YWFvU2cyZ0NJQ1FNcFZ1dktYZHV2QnhKLWlKXzVNbVpud2ZTTHAzdlRES1ZCSEw3aHRhWjN1LWtBUFlzRnpQamFSOU1Yb3kwOUR2c3EyZHJXcUYycmxVdnc3MzlWdEJkQ19TR1dWZ3hKVDRiMTIxb3M5bU01Y3pEZk5qYUdxbTc4SHF0b3hnME8tU2Z2UERqczhIbUxGNFJLaFZZS29oVHJCLXExWG0tdEdVMjROWEtFMFliZmVCbDVvVE9nS1pqX1BuNnhpdjlxYWo0RDYwNEpxbkNNTFVIek5wTlA0Uk1WLWVtdl8wYTUtcHo2Ny1SZGM3ZkJBdUN2NzNhdjA3X1hfalJveW5GZVhOcnJQVldpX2pyS2lUb3p4UDR1ZlhoenZVTDJtcG9FeXc?oc=5"
+      },
+      {
+       "title": "AI丨DeepSeek最新估值或達6078億人民幣",
+       "source": "信報網站",
+       "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNQlVkVl93N2RsQ1dRd3AtbG9uMmVNcnNBZDQ3N2YtREJXTkdlSXFNX2NscFJjRHZ0bFVQc1BKWU1yMGkxcllaMHdPTXU5eTVOcDdfaG9aeDJJTVktZFNXV2VTd25YZ2swVWFETWFCdUU0cm1wWGs5bmRYV0VXSjlkZ2JOMEhXR2NXdW5OeUh3bUxjTWZ1RTdoS3VCRGtmRG81VEEtek1NQnRqVUx3RDJ4X3g5X09DNEo4aTVnWExNUjIwY2NGZnhNeWo5TXJHNkJKTGcxNURaVTJrMFNSV0JTYkN0SmNTS0pWTnBIQWxpY2IxYkFCTmNBOFV4cTg?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "香港正式過渡至無紙證券市場 首隻無紙新股先通醫藥掛牌上市",
+     "analysis": "先通醫藥以無紙化形式首日掛牌上市，標誌著香港證券市場開始邁入無紙化新時代。證監會主席黃天祐與港交所主席唐家成表示，無紙證券市場是資本市場重要的現代化基礎建設，為未來金融改革創造空間。這項轉型能有效提高本港證券市場的運作效率與數碼化水平，進一步鞏固香港作為國際金融中心的競爭力。",
+     "sources": [
+      {
+       "title": "黃天祐：無紙證券市場為未來改革創造空間",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879060-20261124.htm"
+      },
+      {
+       "title": "唐家成：無紙證券市場支持香港持續發展為具競爭力國際金融中心",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879038-20261124.htm"
+      },
+      {
+       "title": "恒指競價時段升243點 科指升逾2%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879033-20261124.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "菲爾茲獎得主丘成桐牽頭成立亞洲數學聯盟 落戶香港聚焦 AI 等領域研究",
+     "analysis": "由國際著名數學家丘成桐牽頭的「亞洲數學聯盟」在香港成立，匯聚區域內資深學者與青年人才，推動人工智能及統計學等範疇的研究。該聯盟將總部設於香港，充分發揮本港「背靠祖國、聯通世界」的優勢。此舉能吸引更多國際級頂尖科研人才進駐，推動本港成為區域學術研究與 AI 基礎科學的重鎮。",
+     "sources": [
+      {
+       "title": "'HK perfect place for asian maths research body'",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879051-20261124.htm"
+      },
+      {
+       "title": "丘成桐牽頭成立亞洲數學聯盟 將聚焦人工智能及統計學等四大範疇",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879047-20261124.htm"
+      }
+     ]
+    },
+    {
+     "headline": "神舟二十四號即將發射 首迎巴基斯坦航天員 本港首位航天員黎家盈準備返航",
+     "analysis": "神舟二十四號載人飛船發射在即，除了首次迎來巴基斯坦航天員參與聯合飛行外，本港首位航天員黎家盈亦已圓滿完成空間科學研究及科普授課任務，準備隨神舟二十三號返回地球。這反映出國家載人航天工程國際化進程，同時展現香港科研人才深度參與國家太空任務的成果，對激勵本地科技創新及人才培養具積極意義。",
+     "sources": [
+      {
+       "title": "湯洪波稱未想過能三度飛天 巴基斯坦航天員稱感謝中國助實現夢想",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879057-20261124.htm"
+      },
+      {
+       "title": "Hong Kong SAR's first astronaut set to return home",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879052-20261124.htm"
+      },
+      {
+       "title": "中國空間站將首迎外籍航天員 開展4個中巴合作科學項目",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879044-20261124.htm"
+      },
+      {
+       "title": "當局稱香港航天員黎家盈在空間科學研究和科普授課等很好完成任務",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879039-20261124.htm"
+      },
+      {
+       "title": "巴基斯坦航天員執行短期飛行任務後將隨神二十三飛船返回",
+       "source": "RTHK News",
+       "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5LcmNPYzJwNHBzYzJUNHdkNGdsTXNINXJ1ZWNTSFE2SGt4VGpJRjZrd3VuOUVweWc0NGU2U3Z6SnVNRWZrcm1vanV0NHFrTHI3VzVzUEw4bXp4X2UwN28wQ2FDMTRyZy1QM0tON3ZPSQ?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "政府加碼支援大埔宏福苑居民 全數落實獨立委員會120項建議",
+     "analysis": "特區政府宣布在「大埔宏福苑援助基金」下推出兩項新生活支援補助，向每戶業主發放30萬元及每名罹難者家屬發放20萬元，並表明會全數落實獨立委員會提出的120項建議。政府著手加快樓宇維修制度改革及公務員責任問責，展示出改善基層住屋安全與善後支援的決心，有助提升社會對樓宇安全管理及公共治理的信心。",
+     "sources": [
+      {
+       "title": "Building-upkeep sector warned bid-rigging days over",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879042-20261124.htm"
+      },
+      {
+       "title": "陳國基稱會全數落實宏福苑獨立委員會建議 政府不會組織悼念活動",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879036-20261124.htm"
+      },
+      {
+       "title": "HK$630m new support measures for Wang Fuk Court",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879026-20261124.htm"
+      },
+      {
+       "title": "宏福苑援助基金向業主發兩期共30萬及向罹難者家屬發20萬補助",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879031-20261124.htm"
+      },
+      {
+       "title": "大埔宏福苑援助基金過去一年推出10多項措施 報告稍後交立法會",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878993-20261124.htm"
+      },
+      {
+       "title": "麥美娟：大埔宏福苑援助基金再推出兩項措施 提供新生活支援補助",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1878992-20261124.htm"
+      },
+      {
+       "title": "Govt to speed up building maintenance reforms: CE",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1878978-20261123.htm"
+      }
+     ]
+    },
+    {
+     "headline": "私隱公署提醒環球網絡風險加劇 本港企業資料外洩通報上升",
+     "analysis": "個人資料私隱專員公署指出，近期本港資料外洩事故通報增加，受影響行業涵蓋航空、金融及零售業。公署呼籲所有機構未雨綢繆，定期進行資料保安風險評估並檢視防禦系統。本地企業需大幅提高資安警覺性，防禦惡意攻擊，避免因數據洩漏造成重大財務與商譽損失。",
+     "sources": [
+      {
+       "title": "私隱公署稱本港資料外洩事故通報增加 籲機構採取資料保安措施",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879059-20261124.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "IoT",
+   "items": [
+    {
+     "headline": "Soracom 推物聯網安全加固服務 Iridium 擴展衛星物聯網連接能力",
+     "analysis": "Soracom 推出針對 IoT 與物理 AI 系統的安全評估及加固服務，同時 Iridium 發表了全新的衛星物聯網連接方案。隨著物理 AI 與邊緣設備迅速普及，網絡安全與極端環境下的通訊穩定度成為企業部署 IoT 的首要考量。這些新方案能為香港推動智慧城市發展及遠端工業監控提供更具韌性的技術支撐。",
+     "sources": [
+      {
+       "title": "Soracom launches security assessment and Hardening Service for IoT and Physical AI Systems",
+       "source": "Cyprus Shipping News",
+       "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQb2ZMem54TzYyQlRoTUxaVGVqaV9Qc2l6N29YY2R0d2hiaHViNHlRdktyLWJvb0tKR1YydFlrSV9qcVZ2OWlCWWhEUmdheDdzeS1XbDBieDdmOG5TaGlCSHRvTFg4dFpHMzdid201R0VYRXItT2I4ZEdCZFgxZHowakhQdWtURG1EU3o2NllybWRaTmw2T1psNngzbmIyR0hTM05DTVMwallnZHlzWVBrQ01tM1RBalBURW1YY21HV3hqcE41WkVuLWN2T2I1Zw?oc=5"
+      },
+      {
+       "title": "Iridium launches satellite connectivity for IoT devices",
+       "source": "mediasat.info",
+       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPV3NXS0VEbGxXOWVaZTQ2QW8zSmdFcmZXVENUenFWdjExQ1RZRmxFell1MWR6R2VXX2dzdllPbHNXMGFycEhMc1pvTkNfZTcyNFNQV3p0X0ZBbGFiZ0wtbWhNNjdqX1EzTG85NmtwN3JvS1RvYUhKU3NfUTZpQ0RycUxiZFEyQ1ZZb2ZFbVcxVnNIZXROVXcw?oc=5"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點集中於科技領袖重返崗位帶動的市場信心修復，以及香港本地在金融基礎設施與基礎科學研究上的重大進展。Nvidia 決策層疑慮消退為全球 AI 發展奠定穩定基調，而香港透過無紙證券市場與亞洲數學聯盟的成立，展現出金融科技數碼化與國際科研樞紐的強勁雙軌動能。企業在擁抱 AI 與物聯網創新技術的同時，亦需警惕網絡安全防範，實現發展與安全的動態平衡。",
+ "en_summary": "Jensen Huang has been reinstated as Nvidia CEO, resolving market uncertainties around leadership and national security. Hong Kong officially transitioned to an uncertificated securities market with its first paperless IPO, while the newly established Asian Mathematical Union in HK aims to advance AI and statistical research.",
+ "date": "2026-11-24",
+ "model": "gemini-3.5-flash"
+}
