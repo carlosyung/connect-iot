@@ -1,0 +1,193 @@
+{
+ "title": "今日重點：港府推圍標刑事化、Nvidia黃仁勳復職與電費調整",
+ "summary": "本日焦點關注香港本地民生與國際科技管治局勢。港府推進樓宇維修圍標刑事化並公佈兩電明年加價幅度，同時陳茂波率團訪倫敦深化中英經貿合作；國際方面，黃仁勳重返Nvidia執掌大局並面臨國會聽證，美國法院亦裁定華為多項罪名成立。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "兩家電力公司明年一月調升電費 港燈按年加幅接近八成引立法會關注",
+     "analysis": "中電與港燈升公布明年1月起調整電費，中電按年加價1.8%，港燈則按年大加7.9%，環境及生態局表示政府會審核帳目並努力壓抑電價。電費上調直接增加市民生活負擔及中小企營運成本，企業與市民需強化能源管理應對開支上漲。",
+     "sources": [
+      {
+       "title": "有議員關注政府會否在壓抑及監督港燈基本電價「下大苦功」",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879124-20261124.htm"
+      },
+      {
+       "title": "Evening News on TV32 - Nov 24",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879109-20261124.htm"
+      },
+      {
+       "title": "7.9pc increase in HK Electric tariffs, 1.8pc for CLP",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879110-20261124.htm"
+      }
+     ]
+    },
+    {
+     "headline": "特區政府推進樓宇維修圍標刑事化 聯合特遣隊已展開巡查及震懾行動",
+     "analysis": "保安局局長鄧炳強表示打擊樓宇維修圍標聯合特遣隊運作暢順，當局正爭取早日完成修例將圍標刑事化，並賦予執法機構新權力。此舉旨在從法律與執法層面打擊工程圍標非法鏈條，保護香港業主利益及規範物業管理市場。",
+     "sources": [
+      {
+       "title": "'Bid-rigging task force proves powerful deterrent'",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879181-20261125.htm"
+      },
+      {
+       "title": "鄧炳強稱打擊圍標聯合特遣隊行動起震懾效果 籲業主關心維修事務",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879173-20261125.htm"
+      },
+      {
+       "title": "鄧炳強稱爭取早日完成修例將圍標刑事化 反圍標熱線接逾百來電",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879162-20261125.htm"
+      }
+     ]
+    },
+    {
+     "headline": "香港國際中醫藥大會開幕 本地中醫醫院年底開展24小時住院服務",
+     "analysis": "醫務衞生局局長盧寵茂在大會上表示，香港中醫醫院將於今年底開展24小時住院服務，並建立草藥與西藥相互作用國際聯席。這有助提升本港中西醫協作醫療水平，並推動香港成為國際中醫藥信息交流與創新合作樞樞。",
+     "sources": [
+      {
+       "title": "香港國際中醫藥大會開幕 盧寵茂稱打造香港成中醫藥信息交流樞紐",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879187-20261125.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "黃仁勳重返Nvidia行政總裁職務 坦承接受心理治療並將赴美國國會作證",
+     "analysis": "黃仁勳獲董事會與白宮支持重任Nvidia行政總裁，他在全體員工大會上道歉並透露正接受心理治療，美國國會亦預計下月聽證會要求其交代公司管治與晶片出口政策。此事件突顯出全球AI晶片龍頭在高管治理與監管審查下的挑戰，市場將繼續關注全球AI產業鏈與出口限制的發展。",
+     "sources": [
+      {
+       "title": "《環看天下》：黃仁勳重掌Nvidia 下月須赴國會作證",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879175-20261125.htm"
+      },
+      {
+       "title": "黃仁勳向員工透露正接受心理治療",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879164-20261125.htm"
+      },
+      {
+       "title": "黃仁勳全體員工大會致歉 坦承違反公司行為準則 正接受心理治療",
+       "source": "香港01",
+       "link": "https://news.google.com/rss/articles/CBMiyANBVV95cUxQZEREeXFleUJLdzBhdWN5dDFzNFJfd0dPcnVoZGpVQ0dqYXhneUc3T1JGdjhabGYtTXVFYzlJN05iQkZIVFdpUGFCWEw4VU1xc1M0T3R5blNkSG9mX3kteVp6UlRLR1YxSTNJaGtJSldPRjk4S3V4RmIwM2tKSThqUmtBd3FLUFBXSlhvTkR6bnk5aDBJbmI0bWlFRHR2el8yYUhMLVhqcnBGYV9QS2xORktOR1dfb0JuNGE4WUdmUGFLRUlfLUt5TmRPU0kwV2R3aWdmbm5kXzJsdkRKcnFHMlRGOWtsd0xNQVppYzlhWXNFSGFEZGxQWk1RbnExYjRjTXhTdzlyMmRyS1pEaWpmc1phNGdKX0NCUm0zOURsQnZmVE9kWjFONWYtbTdNOFdmUlBCdHhkbjdmZEltUFhuNHdDTzZLdl9peUdBS0tFQ0xYUFI2dk5KNkpqNkhvUzFUc2dpODd0LWlqYmtzamhEd2VHMWVCQ2VXX283Mkd3REVyTnZKZXBqekxzY19ERjd3R2dZaTZqRXhIdlh4c1pKVmlVYk92NmpOVEF2NHZVZTh1RkNSMWZaVTFsZzBtLW1XV2ZhVm55X2U?oc=5"
+      },
+      {
+       "title": "黃仁勳復職｜重返英偉達 美國開源AI政策爭論升溫",
+       "source": "香港01",
+       "link": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxNWXBic0ZhQ0ZITjB5WDU5SHNNMFJOT0lBX2I3VUpDcmtGUmpkMXBoQW5MTVR5dDBDLXNJbUo1VkVwUUw2YU1Ya2VycUNibEZBUkhhTVRKU01LOGtpZ0NVQU5SbVVtc0dzU3JlRHNzb1pfbmQyRERnWkRoVVVQMlE2UXRBUl9JOElNTWxtMjlyT0pPSVlkOUtKT3BBQTJ1NmM5bXhKc1ZhM0xZazNqTEMtRmc4QTJPZ0g4MktJN19PakgzVm1XUnN4alNlajVYV0xlWlhvYzdRNlJFY1Z2MlJ6NVd4WU1nckZ6SXlKa0Q4eURaNjVKVFc4NXcyTEhNUnNjeUliUUIzNTA1OUhjWHhOdzlWaS1WM3ZzUlBKa0JzRUdCU0x0Y3RqQVpDRE5Gekw3UkRyRHczSXBiZmRUNlYtM1E3cWxSTVNkTlhjN096N3A2QjVVQ3lzZ2dPRWFucnhwdE1rM3JLY1Nldk0?oc=5"
+      },
+      {
+       "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to US industrial might — not a champion",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/"
+      },
+      {
+       "title": "Trump reportedly says pardoning Jensen Huang is ‘an option’",
+       "source": "TechCrunch",
+       "link": "https://techcrunch.com/2026/11/24/trump-reportedly-says-pardoning-jensen-huang-is-an-option-but-that-he-doesnt-think-it-will-be-necessary/"
+      },
+      {
+       "title": "特朗普力挺回巢 華府押注人工智能 黃仁勳炒不得｜國際分析",
+       "source": "TVB",
+       "link": "https://news.google.com/rss/articles/CBMi8wJBVV95cUxOTGhnNDIxQXRmcHo4OTVoTjNpTm1CTlRrWFB2LWZhQXVtY19CdEZvNE5vdElIVVZtQmctV1BQSjlEMDdQeVEzeDlBcVJnb0I2dHNnc01mRlNkLW5nb2NMdVZMZXRmNE12bGw5QUVVanozcWRWSEFSbnJ6c2p2UHJPM1psLWRBTXgxTUpQM1RDUm5VT08zTmpUczZfd09KczNmbnZIcmtzSVRTaEtqV18ycDM0WW9aWmZMbFBXZUlGejFVLVlIbVRIXzVuZzJDbXB1NVktMWM5bHRKTVpWbm9HUnQ5eGFZQ1hWaWVnSGtYZ1dMMzV0UnAwMUE3QnVmQ1BsYWVlbUVGRERiRFNLM0ZQU0lPQjFqQmhfdUNDdVNGT3ZfREZ0MjkxM2prQTRoVTlUcTd3TmxGbExpUzhIS1lGWnRKUmIwM2ZLQkNaZF9CaTRreG5oU01OOGtfcnpWSVB5MUJsNzlZdzRSX0tJVzItaVpPUQ?oc=5"
+      },
+      {
+       "title": "Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/"
+      },
+      {
+       "title": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
+       "source": "TechCrunch AI",
+       "link": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "IoT",
+   "items": [
+    {
+     "headline": "美國FCC擬強化物聯網資安標章認證 專家警告聯網家電資安風險加劇",
+     "analysis": "美國FCC擬推動物聯網資安標章制度並要求認證產品每三年更新一次，同時卡巴斯基報告警告智能冰箱等不安全物聯網設備遭受攻擊的風險上升。這反映國際市場對物聯網資安要求日趨嚴格，香港科技企業與硬體開發商需提升產品安全防護及合規標準。",
+     "sources": [
+      {
+       "title": "形勢嚴峻：針對冰箱的攻擊與不安全物聯網帶來的風險日益加劇 #卡巴斯基",
+       "source": "Media OutReach Newswire",
+       "link": "https://news.google.com/rss/articles/CBMi-wJBVV95cUxOU3JHeTQ5dWRJN2JYZ0lmanFaLXo1eDlNZFk2VVJLOF8wMzkzbjNmUTI0ejBOMTZ6RlMwRzlkYWFkWnFLUlU5Rmtaal8xT0xmRXZYTjhmMURKSTNGcU10Y2VwRTBBX0FwTmhpT3RTbVhQa2JJbzhWOTVjVk51Um9iSnpNdHpCdGdPdExJV29peHpDSzEyay0zU1JfUzdDNDhrUUFYOUNPMVB1Z3hVdTJiVmhrVHNvdVd6Tm1PYkhUTUp4NHhTLThHV0oyQWZVN0FuY2lsa3VlNUpWNjdHMm9qM3FTaEFyTFZMb1JPZmtPSmh5OTYwUkNiemJLNlNhVDl5N2F0QkJnbXlac3BTYk83U2tDR1I1MklRZVo0ZkVFSy1SbThmbUg4X3hDTmI5eW5BN2IxUGhiQmItRGZBVUtKU0JWOUxBWHhKSl94UjBKSVBhQnFWSTU3T2pYWmxDYVU0WnpqdmxBQ0pnWjNjN2cxeEU3VVhZOUM1cVFV?oc=5"
+      },
+      {
+       "title": "美國FCC擬強化物聯網資安標章制度，獲認證產品每3年須更新認證",
+       "source": "iThome",
+       "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE8wbloxZE9lLWhnNV9JVzBJeFEwd3FHQlJDbE1KbFNfNVE0M1VCV0pCVzJzbU9Xc2dCR1dUczZFeHpENEtlWkVJSnNBMXRfZw?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "首十個月訪港旅客按年升一成一 政府預計全年旅遊相關消費達2380億元",
+     "analysis": "文化體育及旅遊局局長羅淑佩表示今年首10個月共有4580萬人次訪港，預計全年入境旅遊總消費將達2380億元。旅遊消費回升將持續為香港餐飲、零售及酒店業注入動力，商界亦能透過盛事經濟探索更多商業機會。",
+     "sources": [
+      {
+       "title": "羅淑佩稱盛事帶動訪港旅客升 料全年相關總消費達2380億元",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879190-20261125.htm"
+      }
+     ]
+    },
+    {
+     "headline": "陳茂波訪倫敦推廣香港優勢 鼓勵英國企業以港為基地拓展內地市場",
+     "analysis": "財政司司長陳茂波在倫敦出席活動時介紹香港最新經濟狀況，指出香港可作為「超級聯繫人」協助英企引進技術並在港融資與研發。這有助深化港英雙邊經貿與創科合作，為香港金融及專業服務業開拓國際案源。",
+     "sources": [
+      {
+       "title": "陳茂波在倫敦與工商金融界交流 介紹香港最新發展",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879163-20261125.htm"
+      },
+      {
+       "title": "陳茂波：香港可助英國企業將技術帶進內地 倡以香港為基地",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879123-20261124.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "美國紐約法院陪審團裁定華為十項罪名成立 華為表示將提出上訴",
+     "analysis": "美國紐約聯邦法院陪審團裁定華為包括銀行欺詐與違反制裁在內的10項罪名成立，法官將於明年9月判刑，華為對此表示失望並計劃提出上訴。國際訴訟的發展凸顯跨國科技供應鏈面臨的法律與地緣政治風險，業界須重視國際合規挑戰。",
+     "sources": [
+      {
+       "title": "華為被紐約法院陪審團裁定10項罪名成立",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879169-20261125.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日新聞顯示香港正從法律執法與基礎建設層面穩步提升治理效率，無論是樓宇圍標刑事化還是中醫醫院服務升級，均有助建立更穩定健康的社會環境。同時，兩電加價與國際資安監管趨嚴，提醒本港企業需加強成本控管與科技合規能力。在 AI 與國際半導體局勢劇烈波動下，香港應充分利用其作為「超級聯繫人」的獨特優勢，持續深化國際經貿與創科合作。",
+ "en_summary": "Today's briefing covers key developments in Hong Kong local affairs and global tech dynamics. Hong Kong is pushing forward to criminalize building maintenance bid-rigging and reported upcoming electricity tariff adjustments for next year. Internationally, Nvidia's Jensen Huang has returned to his CEO role amid upcoming US congressional hearings, while a US court found Huawei guilty on 10 counts.",
+ "date": "2026-11-25",
+ "model": "gemini-3.5-flash"
+}
