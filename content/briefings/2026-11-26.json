@@ -1,0 +1,153 @@
+{
+ "title": "港股急升五百點與科技關稅動態",
+ "summary": "港股在科技及AI概念股帶動下顯著造好，盤中急升逾五百點重上二萬二關口；同時本港URBTIX系統遭黑客入侵，約130萬名用戶個人資料外洩。國際方面，美國宣布擬對包括中國在內的14個貿易夥伴開徵新關稅，而內地亦正式發布規劃推動大模型等AI服務拓展海外市場。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "URBTIX系統遭黑客攻擊洩漏130萬用戶資料",
+     "analysis": "政府城市售票網系統遭遇網絡攻擊，導致約130萬名用戶的個人資料遭非法存取，當局已接獲通報並展開調查。今次事件反映公共資訊服務系統的安全防線亟待加強與檢視。對於經常使用該平台的廣大香港市民及文娛團體而言，須提高警覺提防潛在的網絡釣魚及資料外洩風險。",
+     "sources": [
+      {
+       "title": "Data of 1.3 million URBTIX users compromised in attack",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879255-20261125.htm"
+      }
+     ]
+    },
+    {
+     "headline": "宏福苑大火一周年當局續跟進業權收購與善後",
+     "analysis": "大埔宏福苑火災發生滿一周年，多名市民前往現場獻花悼念遇難街坊。政府表示已有逾1730戶完成業權轉讓，下月會繼續接觸仍未同意出售業權的13個住戶。事件持續提醒香港社會及政府部門必須汲取教訓並推進改革，以切實保障市民住屋安全與權益。",
+     "sources": [
+      {
+       "title": "宏福苑火災一周年 有市民到廣福公園空地獻花及默哀",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879339-20261126.htm"
+      },
+      {
+       "title": "黃偉綸稱宏福苑逾1730戶完成業權轉讓 下月接觸無意售業權戶",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879328-20261126.htm"
+      },
+      {
+       "title": "宏福苑火災一周年 黃偉綸稱政府汲取教訓作出改革並繼續支援居民",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879318-20261126.htm"
+      },
+      {
+       "title": "政府擬立法收回宏福苑餘下業權 黃偉綸指下月將再與13住戶商討",
+       "source": "Yahoo",
+       "link": "https://news.google.com/rss/articles/CBMimwNBVV95cUxQVjJ3MVd3aFlsTjB2S2xaSGdYZXlOa29SZWNLdXRxcVZYdXB5N3hkUGM1bUNxbldnT3pzWVVYV1VXYnNkNVptYnl1ZzJqeURlQ1RSUkhkTXY1bndJSFl2NXd1dktfNm1SX2FrWGRTNzBFUHk1Wk9DN011OUdjUVphaVp4T1VmV29LdlZQZHBNcU9OdWxJdVdadDNMS2hLRndyc3AzNG84M0diV3VmR3AtTW1rdFlodHNuNkV0S21PUlJpb2JOb0w5MDdNZEhDeG4wbEZCRDRuTm1kLUsxVzViNUdYa05iY21DZThrVUd4LXRaU3Z3Mk9XZ1E4dDFXYnBaRm5sbXQybFk2SEtnNlJxZkRWZk5BTnBUNmc3RWJZT1NqcTJ0aFNaTnF2WnJmcjAtNUJpY0xKRkFiQ1gzUWpTamdhcER6MTljNktGZzd4TWxZZ095eDN0Mlgza3RYUUx6ejVXNXN5WVBFLWZfQmtxb29tLWRpZTJaN21IWGwtTnppUFRqWFlQcFYwd2tnTUUxMVhDaHNyclltSjQ?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "10月私人住宅樓價指數按月微跌0.6%",
+     "analysis": "差餉物業估價署數據顯示，10月私人住宅售價指數按月回落約0.6%至319點，結束連續兩個月的升勢，首10個月累計升幅約6.5%。各類型單位價格均見微調，反映樓市在早前上升後呈現整固格局。本地置業人士及投資者需審慎評估資產價格變動與後續市場走勢。",
+     "sources": [
+      {
+       "title": "本港10月私人住宅樓價指數按月跌約0.6% 結束2個月升勢",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879327-20261126.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "港股盤中急升逾五百點重上二萬二關口",
+     "analysis": "恒生指數盤中升幅擴大至逾500點並重上22400點水平，科技指數亦顯著造好，突破3500點關口。盤面上三桶油、晶片股及MINIMAX等AI相關股份普遍錄得顯著漲幅。市場資金回流科技板塊，反映投資者對創科商業化及宏觀經濟前景的信心逐步回暖。",
+     "sources": [
+      {
+       "title": "港股升幅擴大至逾500點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879329-20261126.htm"
+      },
+      {
+       "title": "港股競價時段升268點",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879316-20261126.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "內地發布規劃推動大模型及雲計算服務出海",
+     "analysis": "商務部發布服務貿易發展規劃，明確提出將推動雲計算及大模型等人工智能服務出海。這標誌著國家正積極引導AI研發成果開拓海外市場，增強產業的國際競爭力。對於具備國際融資平台與專業服務網絡優勢的香港科技業界，將迎來更多協助內地AI服務落地的商業機遇。",
+     "sources": [
+      {
+       "title": "內地發布服務貿易發展規劃 推動大模型等AI服務出海",
+       "source": "on.cc東網",
+       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNUs4YkIzdVhPWEJuWmVPekVQYnA1a2g0RnNSWjBRSjd6cEhqZEh2Mi1Od0J6NUNPNGdnRDIyYzNaWFViS2ZoaUxSZVVIRWF4U1pUWFBzN1V5RjctVGhDUEdoSmlvN24zbHgzeVo1NHRUV1d4QS1LVWJIOGNiM3JuTF9aTE11WnFtUGo0S1JmUQ?oc=5"
+      },
+      {
+       "title": "AI產業丨商務部:推動雲計算大模型等服務出海",
+       "source": "信報網站",
+       "link": "https://news.google.com/rss/articles/CBMixwJBVV95cUxQRGhtVVRrXzItU3VOOFVHWUlkZWFZM0huRlhxQ244eEwtTVplSWpQSzlOTlptX3lnSjd3bWhQemdKMFNJWDJfcGZ2RW5INXAtbGJuODFIMkI4bmFqcE1oYlNjS3hwakNDbEZlVU1OMFRLb21aR0FaN0p0TDlQS1RNamNSejNSbHZXTnU3RGV6REVVMkRqV2JNQ1BjSkpmeEVsNTFVQThxbC1CdlktRzBGa1Z4SVdHYjlDcXZxVHhhWHl2RERxRWRLNjgwVmlnakhhdTllMWRIVGktazBjMEFuVUc4a0ZfaWF6M3ZORU53U3JOSkZwMmFnV2hmWWQ2WUFjZXdPcDMzSW12a2I0TGFRalJ0c1p5SnBzalZJVmQxczNYTDU3YWoxdXkxX2JvSDY1OWxjV1p5Q1M2ejBwVEFmMVhGV3VfcEE?oc=5"
+      }
+     ]
+    },
+    {
+     "headline": "OpenAI GPT-6 Astra 挑戰未公開物理難題展現推理實力",
+     "analysis": "OpenAI 的 GPT-6 Astra 在以未公開物理研究題設計的測試中，於50道難題中成功答對49題，並挑出原人手答案中的細微謬誤。該模型在未公開數據集的覆核前評分接近九成，展現出高階的科研邏輯推理能力。這項進展為香港與全球學術界運用生成式AI輔助複雜學術研究及數據驗證提供了極具價值的參考。",
+     "sources": [
+      {
+       "title": "GPT-6 Astra 做未公開物理題 50 題答對 49 題兼挑出人手答案錯處",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/11/26/gpt-6-astra-theophyseval-physics-benchmark/ai/?utm_source=rss&utm_medium=rss&utm_campaign=gpt-6-astra-theophyseval-physics-benchmark"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "FCC批准SpaceX在太空部署AI數據中心構想",
+     "analysis": "美國聯邦通訊委員會正式批准SpaceX在太空部署AI數據中心的計劃，並駁回反對者提出對科學研究干擾等顧慮。監管機構的放行為新一代軌道算力基礎設施的建設掃除法規障礙。這項發展向全球科技產業展示了突破地面電力及空間限制的新型太空計算架構可行性。",
+     "sources": [
+      {
+       "title": "FCC approves SpaceX plan to put AI data centers in space",
+       "source": "TechCrunch",
+       "link": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "國際",
+   "items": [
+    {
+     "headline": "美國完成301調查擬對中歐等貿易夥伴加徵新關稅",
+     "analysis": "美國貿易代表署完成301條款不公平貿易行為調查後，宣布將對來自14個主要貿易夥伴的進口商品提出新關稅，其中中國商品面臨最高稅率。華府指控相關貿易夥伴政策造成或助長了製造業結構性問題，預料將進一步衝擊全球供應鏈。香港作為外向型轉口港，本地進出口貿易商需高度警惕國際貿易規則變化帶來的成本壓力。",
+     "sources": [
+      {
+       "title": "美國宣布對14個貿易夥伴進口商品提出新關稅 其中中國稅率最高",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879261-20261125.htm"
+      },
+      {
+       "title": "美國宣布擬以產能過剩為由對中國、歐盟等經濟體加徵新關稅",
+       "source": "Yahoo 財經",
+       "link": "https://news.google.com/rss/articles/CBMilwNBVV95cUxQN1VYZ09LQ3ZHcVk1X3JZeUdUcndEYmR0a2ZFOXI3NWF4OUtWc0J1NFVqQUo0RmpoUWR0TU9vVWZyMXdnQWc4T3RjbkROcTBBQndha21TMnQ4NVFlYzBIQ29QUVloYjFmX1cwUVpNMnp6dmNLMW9paVVNVVR0YnBzTWpYV3JBMGJTbXlwMDVJM1l3cnVlNGlMTFpJNUc0cndxcGpyWEtQSUEwQnlSNzVtZGtSbEx1aFlPcGZJbU5tVzFKM3R4OTZpb2ZUcVJKWk5EOE1qb1JRWTFFMlF2Yk12R2tYRm9UWExzSTRMOEttT014S1Q0aElEQ1R5SkFtcDV0eDY2RVc0V1BJaGVMOGpZZ1otWUZaQmdEXzE3RWlUS0FjR09PNU9qZm15WnpqeEl1RDZvU0YwMlRRZmZNeTYwczU4d3pPM2ZFTWtWUTlwRTRCVDVLejBBNnpNbjhaclJWZzJJZkJ2OTJ5bmdFQjVZVndwcXVkZTl6NE5EWFlOZFc2dmhnWEhGNGhxSWcycnJ5SVhScmdHTQ?oc=5"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日多項重點反映出科技創新與地緣政治、網絡安全深度交織。資本市場對大模型及半導體等科技股展現熱烈追捧，內地更推出政策引導AI服務進軍海外，而SpaceX亦獲准探索太空算力中心。然而，美國即將推行的新關稅與本港公共售票系統遭黑客入侵等事件，警示香港企業在擁抱AI轉型與科技商機的同時，必須同步強化資訊安全並做好應對地緣貿易風險的防禦措施。",
+ "en_summary": "Hong Kong stocks rallied by over 500 points led by AI and technology shares, while the URBTIX platform suffered a cyberattack exposing data of 1.3 million users. Internationally, the US proposed new tariffs on 14 trading partners, and the FCC approved SpaceX's initiative to deploy orbital AI data centers.",
+ "date": "2026-11-26",
+ "model": "gemini-3.8-flash"
+}
