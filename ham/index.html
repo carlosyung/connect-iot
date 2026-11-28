@@ -1,0 +1,1279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<title>Zoo 6.0 Quest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;700;800;900&display=swap">
+<style>
+/* One bright, sunny zoo world (deliberately single-theme). Sky-to-grass page, each zone is its own coloured island with a cartoon banner. */
+:root{
+  color-scheme:light;
+  --ink:#1d2a44; --muted:#4f5d78; --paper:#ffffff;
+  --sky1:#bfe7ff; --sky2:#e9f8ff; --grass:#8fd694; --grass2:#5cbf6a;
+  --coral:#ff6b4a; --sun:#ffd23f; --berry:#ff5d8f; --ocean:#2fa8ff; --grape:#7b61ff; --leaf:#2bb673; --tang:#ff9f1c;
+  --ok:#1f9d55; --ok-bg:#dcfce7; --bad:#e0412b; --bad-bg:#ffe4de;
+  --z1:#e3f1ff; --z2:#efe9ff; --z3:#ddf9ea; --z4:#fff0df; --z5:#fff8cf; --z6:#ffe6ee; --z7:#e0f5ff; --z8:#eaf9d6;
+  --display:"Baloo 2","Nunito",system-ui,sans-serif;
+  --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+body{color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55;font-weight:600;
+  background:var(--sky2) linear-gradient(180deg,var(--sky1) 0,var(--sky2) 520px,#f3fbf1 1400px,#e8f7e4 100%)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:#ffffff}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:4px solid var(--sun);outline-offset:2px}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+svg.ico{display:block}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;padding-block:18px 0}
+.hero-scene{position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(180deg,#7fd0ff,#c8ecff 60%);min-height:330px;box-shadow:0 8px 0 #9dc7e6}
+.hero-scene .bg{position:absolute;inset:0;width:100%;height:100%}
+.hero-text{position:relative;z-index:2;padding:22px 22px 0;display:flex;flex-direction:column;gap:6px;max-width:560px}
+.hero-text .tag{align-self:flex-start;background:#fff;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:900;letter-spacing:.06em;color:var(--grape)}
+.hero-text h1{font-size:clamp(44px,10vw,74px);color:#fff;text-shadow:0 4px 0 #1d2a44, 0 0 0 #000;-webkit-text-stroke:2px #1d2a44;letter-spacing:.01em;line-height:.95}
+.hero-text p{font-size:17px;font-weight:800;color:var(--ink);background:rgba(255,255,255,.85);border-radius:14px;padding:8px 12px;align-self:flex-start}
+.hero-pip{position:absolute;right:4%;bottom:44px;width:min(34%,190px);z-index:3}
+.hero-animals{position:absolute;left:0;right:0;bottom:30px;height:120px;z-index:1}
+.bubble{position:relative;background:#fff;border:3px solid var(--ink);border-radius:18px;padding:10px 14px;font-weight:800;font-size:16px;box-shadow:0 4px 0 var(--ink)}
+.hero .bubble{position:absolute;right:calc(4% + min(30%,170px));bottom:190px;max-width:260px;z-index:4}
+.hero .bubble::after{content:"";position:absolute;right:-14px;bottom:18px;border:10px solid transparent;border-left-color:var(--ink)}
+
+/* ---------- HUD ---------- */
+.hud{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;padding-block:10px}
+.hud-in{background:#fff;border:3px solid var(--ink);border-radius:20px;box-shadow:0 5px 0 var(--ink);padding:8px 10px;display:flex;align-items:center;gap:10px}
+.xp{display:flex;align-items:center;gap:6px;font-family:var(--display);font-size:22px;font-weight:800;white-space:nowrap}
+.xp .star{width:30px;height:30px}
+.badges{display:flex;gap:4px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+.badge{flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#eef1f6;border:2px dashed #b7c0d3;font-size:12px;font-weight:900;color:#9aa5bb}
+.badge.on{border:2px solid var(--ink);color:var(--ink);transform:rotate(-8deg)}
+.snd{flex:0 0 auto;border:2px solid var(--ink);background:var(--sun);border-radius:12px;padding:4px 10px;font-size:14px;font-weight:900}
+.snd[aria-pressed="false"]{background:#eef1f6}
+
+/* ---------- MAP ---------- */
+.mapsec{padding-block:8px 18px}
+.mapsec h2{font-size:30px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tile:first-child{grid-column:1/-1;flex-direction:row;justify-content:center;gap:12px}
+.tile{position:relative;text-decoration:none;color:var(--ink);border:3px solid var(--ink);border-radius:20px;padding:10px 8px 12px;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;box-shadow:0 5px 0 var(--ink);transition:transform .15s}
+.tile:active{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+.tile svg{width:64px;height:64px}
+.tile b{font-family:var(--display);font-size:18px;line-height:1.1}
+.tile small{font-size:12px;color:var(--muted);font-weight:800}
+.tile .done{position:absolute;top:-10px;right:-8px;background:var(--ok);color:#fff;border:2px solid var(--ink);border-radius:999px;font-size:12px;padding:1px 8px;font-weight:900}
+@media (max-width:620px){.map{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ---------- ZONES ---------- */
+.zone{border:3px solid var(--ink);border-radius:30px;margin-block:26px;overflow:hidden;box-shadow:0 7px 0 var(--ink)}
+.zbanner{position:relative;min-height:190px;display:flex;align-items:flex-end;overflow:hidden}
+.zbanner svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.ztitle{position:relative;z-index:2;margin:16px;background:#fff;border:3px solid var(--ink);border-radius:18px;padding:8px 14px;box-shadow:0 4px 0 var(--ink);max-width:calc(100% - 32px)}
+.ztitle .num{font-size:13px;font-weight:900;letter-spacing:.08em;color:var(--grape)}
+.ztitle h2{font-size:clamp(26px,6vw,36px)}
+.ztitle .pages{font-size:13px;font-weight:800;color:var(--muted)}
+.zbody{padding:18px;display:flex;flex-direction:column;gap:18px}
+.pipsay{display:flex;gap:10px;align-items:flex-end}
+.pipsay svg{flex:0 0 64px;width:64px;height:76px}
+.pipsay .bubble{flex:1;min-width:0}
+.pipsay .bubble::before{content:"";position:absolute;left:-14px;bottom:16px;border:10px solid transparent;border-right-color:var(--ink)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.fact{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:6px;box-shadow:0 4px 0 var(--ink)}
+.fact .art{height:84px;display:flex;align-items:center;justify-content:center;border-radius:14px;margin:-4px -4px 4px}
+.fact .art svg{height:76px;width:auto}
+.fact h3{font-size:22px}
+.fact p{font-size:16px;font-weight:700}
+.word{background:var(--sun);border-radius:6px;padding:0 4px;font-weight:900;cursor:pointer;border:0;font-size:inherit;line-height:inherit}
+
+.timeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:10px;top:8px;bottom:8px;width:6px;border-radius:6px;background:repeating-linear-gradient(180deg,var(--ocean) 0 10px,#fff 10px 16px)}
+.tl{position:relative;padding:6px 0 10px}
+.tl::before{content:"";position:absolute;left:-23px;top:12px;width:18px;height:18px;border-radius:50%;background:var(--sun);border:3px solid var(--ink)}
+.tl b{font-family:var(--display);font-size:20px;color:var(--grape);margin-right:6px}
+
+/* activity box */
+.act{background:#fff;border:3px dashed var(--ink);border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.act.solved{border-style:solid;border-color:var(--ok);background:#f4fff7}
+.act-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.act-h .lbl{background:var(--grape);color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:900;letter-spacing:.05em}
+.act-h .xpv{background:var(--sun);border-radius:999px;padding:2px 10px;font-size:13px;font-weight:900}
+.act-h h3{font-size:22px;flex-basis:100%}
+.act .q{font-size:18px;font-weight:800}
+.opts{display:flex;flex-wrap:wrap;gap:10px}
+.opt{border:3px solid var(--ink);background:#fff;border-radius:16px;padding:10px 16px;font-weight:800;font-size:17px;box-shadow:0 4px 0 var(--ink);text-align:left}
+.opt:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+.opt.good{background:var(--ok);color:#fff}
+.opt.nope{background:var(--bad-bg);color:var(--bad);border-color:var(--bad);box-shadow:0 4px 0 var(--bad);animation:shake .35s}
+.opt[disabled]{cursor:default}
+.fb{font-weight:800;font-size:16px;border-radius:14px;padding:10px 12px}
+.fb.ok{background:var(--ok-bg);color:#11643a}
+.fb.bad{background:var(--bad-bg);color:#9b2a19}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes pop{0%{transform:scale(.7)}60%{transform:scale(1.1)}100%{transform:scale(1)}}
+
+.qrow{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:16px;background:#f6f8fc}
+.qrow.ok{background:var(--ok-bg)}
+.qrow .q{font-size:17px}
+
+/* picker grid (multi select) */
+.pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:10px}
+.pc{border:3px solid var(--ink);background:#fff;border-radius:18px;padding:8px;display:flex;flex-direction:column;align-items:center;gap:2px;font-weight:900;box-shadow:0 4px 0 var(--ink)}
+.pc svg{width:70px;height:70px}
+.pc.on{background:#fff6c7}
+.pc.right{background:var(--ok-bg);border-color:var(--ok)}
+.pc.wrong{background:var(--bad-bg);border-color:var(--bad)}
+.btn{border:3px solid var(--ink);background:var(--coral);color:#fff;border-radius:16px;padding:10px 20px;font-weight:900;font-size:18px;box-shadow:0 4px 0 var(--ink)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+.btn.alt{background:#fff;color:var(--ink)}
+.btn.blue{background:var(--ocean)}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* order game */
+.order{display:flex;flex-direction:column;gap:10px}
+.oc{display:flex;gap:12px;align-items:center;text-align:left;width:100%;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:10px 12px;box-shadow:0 4px 0 var(--ink);font-weight:800}
+.oc .n{flex:0 0 40px;height:40px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:22px;background:#eef1f6;border:2px solid var(--ink)}
+.oc.set .n{background:var(--sun);animation:pop .25s}
+.oc.right{background:var(--ok-bg);border-color:var(--ok)}
+.oc.wrong{background:var(--bad-bg);border-color:var(--bad)}
+.oc .t{min-width:0}
+
+/* time machine */
+.tm{background:#fff;border:3px solid var(--ink);border-radius:24px;overflow:hidden;box-shadow:0 5px 0 var(--ink)}
+.tm-dial{display:flex;gap:6px;padding:10px;background:#2b2160;overflow-x:auto}
+.tm-dial button{flex:1 0 auto;min-width:56px;border:3px solid #fff;background:#4a3aa8;color:#fff;border-radius:14px;padding:6px 8px;font-family:var(--display);font-size:18px}
+.tm-dial button[aria-pressed="true"]{background:var(--sun);color:var(--ink);border-color:var(--ink)}
+.tm-scene{background:#e9f6ff;aspect-ratio:12/7;max-width:100%}
+.tm-scene svg{width:100%;height:100%;display:block}
+.tm-info{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.tm-info .when{align-self:flex-start;background:var(--grape);color:#fff;border-radius:999px;padding:2px 12px;font-weight:900;font-size:14px}
+.tm-info h3{font-size:26px}
+.tm-info ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px;font-size:17px}
+.tm-info .ex{background:#f3f0ff;border-radius:14px;padding:8px 12px;font-size:16px}
+.tm-nav{display:flex;justify-content:space-between;gap:10px;padding:0 16px 16px}
+
+/* welfare */
+.wheel{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.wheel svg{width:220px;height:220px;flex:0 0 auto;max-width:100%}
+.wheel .legend{flex:1;min-width:200px;display:flex;flex-direction:column;gap:8px}
+.lg{display:flex;gap:10px;align-items:flex-start;font-size:16px}
+.lg i{flex:0 0 18px;height:18px;border-radius:6px;border:2px solid var(--ink);margin-top:3px}
+.patient{display:grid;grid-template-columns:110px 1fr;gap:14px;background:#fff;border:3px solid var(--ink);border-radius:20px;padding:12px;box-shadow:0 4px 0 var(--ink)}
+.patient .face{display:flex;flex-direction:column;align-items:center;gap:4px}
+.patient .face svg{width:100px;height:100px}
+.mood{width:100%;height:12px;border-radius:99px;background:#eef1f6;border:2px solid var(--ink);overflow:hidden}
+.mood i{display:block;height:100%;width:15%;background:var(--bad);transition:width .5s,background .5s}
+.patient .pbody{display:flex;flex-direction:column;gap:8px;min-width:0}
+.patient h4{font-size:22px}
+@media (max-width:520px){.patient{grid-template-columns:1fr}.patient .face{flex-direction:row}.patient .face svg{width:80px;height:80px}}
+
+/* podium */
+.podium{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:end;gap:8px}
+.pod{border:3px solid var(--ink);border-radius:18px 18px 8px 8px;padding:10px 6px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;box-shadow:0 4px 0 var(--ink);font-weight:900}
+.pod .medal{width:46px;height:46px}
+.pod b{font-family:var(--display);font-size:17px;line-height:1.1}
+.pod small{font-size:12px;color:var(--muted)}
+.pod.g{background:#ffe680;min-height:200px}.pod.s{background:#e5ecf5;min-height:165px}.pod.b{background:#ffd3b0;min-height:140px}
+.pod[aria-pressed="true"]{outline:4px solid var(--grape);outline-offset:2px}
+.podinfo{background:#fff;border:3px solid var(--ink);border-radius:20px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.podinfo ul{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:4px;font-size:17px}
+
+/* builder */
+.build{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+@media (max-width:760px){.build{grid-template-columns:1fr}}
+.poster{position:sticky;top:90px;background:#fff;border:3px solid var(--ink);border-radius:20px;overflow:hidden;box-shadow:0 5px 0 var(--ink)}
+.poster svg{display:block;width:100%;height:auto}
+.poster .ptitle{font-family:var(--display);font-size:22px;text-align:center;padding:6px 10px;background:var(--sun);border-bottom:3px solid var(--ink)}
+.steps{display:flex;flex-direction:column;gap:14px}
+.step h4{font-size:19px;margin-bottom:6px}
+.step h4 span{background:var(--ink);color:#fff;border-radius:8px;padding:0 8px;margin-right:6px;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:3px solid var(--ink);background:#fff;border-radius:999px;padding:6px 14px;font-weight:900;font-size:16px;box-shadow:0 3px 0 var(--ink)}
+.chip[aria-pressed="true"]{background:var(--leaf);color:#fff}
+.chip.no{animation:shake .35s;background:var(--bad-bg);border-color:var(--bad)}
+.txt{width:100%;border:3px solid var(--ink);border-radius:14px;padding:10px 12px;font:inherit;font-weight:800;background:#fff;color:var(--ink)}
+.prompt{background:#1d2a44;color:#e9f8ff;border-radius:16px;padding:14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere;font-weight:500}
+
+/* detective */
+.detimg{border:3px solid var(--ink);border-radius:20px;overflow:hidden;position:relative;background:#fff}
+.detimg img{display:block;width:100%;height:auto}
+.detimg .lens{position:absolute;top:10px;left:10px;background:#fff;border:3px solid var(--ink);border-radius:999px;padding:2px 12px;font-weight:900;font-size:14px}
+.checks{display:flex;flex-direction:column;gap:8px}
+.chk{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:3px solid var(--ink);border-radius:16px;background:#fff;cursor:pointer;font-weight:800}
+.chk input{width:24px;height:24px;flex:0 0 24px;margin-top:2px;accent-color:var(--grape)}
+.chk.right{border-color:var(--ok);background:var(--ok-bg)}.chk.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.chk .ex{display:block;font-size:15px;color:var(--muted);margin-top:2px;font-weight:700}
+
+/* speak */
+.lines{display:flex;flex-direction:column;gap:10px}
+.line{display:flex;gap:12px;align-items:center;padding:10px 12px;border:3px solid var(--ink);border-radius:18px;background:#fff}
+.line .tx{min-width:0;flex:1;font-weight:800;font-size:18px}
+.play{flex:0 0 50px;height:50px;border-radius:50%;border:3px solid var(--ink);background:var(--sun);display:grid;place-items:center;box-shadow:0 3px 0 var(--ink)}
+.play svg{width:22px;height:22px}
+.tally{flex:0 0 auto;display:flex;gap:5px}
+.dot{width:20px;height:20px;border-radius:50%;border:3px solid var(--ink);background:#fff;padding:0}
+.dot.on{background:var(--leaf)}
+.wbank{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.wb{border:3px solid var(--ink);background:#fff;border-radius:14px;padding:8px 10px;text-align:left;box-shadow:0 3px 0 var(--ink)}
+.wb b{display:block;font-family:var(--display);font-size:19px}
+.wb span{font-size:14px;color:var(--muted);font-weight:700}
+.script{display:flex;flex-direction:column;gap:12px}
+.sline{display:flex;flex-direction:column;gap:6px}
+.sline label{font-weight:900;font-size:16px}
+.sline label span{background:var(--grape);color:#fff;border-radius:8px;padding:0 7px;margin-right:6px}
+.fullscript{background:#fff;border:3px solid var(--ink);border-radius:18px;padding:14px;font-size:18px;font-weight:800;display:flex;flex-direction:column;gap:8px}
+.speed{display:flex;gap:6px;align-items:center;font-weight:900}
+
+/* quiz */
+.quiz{background:#fff;border:3px solid var(--ink);border-radius:22px;padding:16px;display:flex;flex-direction:column;gap:12px;box-shadow:0 5px 0 var(--ink)}
+.qbar{height:14px;border-radius:99px;border:2px solid var(--ink);background:#eef1f6;overflow:hidden}
+.qbar i{display:block;height:100%;width:0;background:var(--leaf);transition:width .3s}
+.big{font-family:var(--display);font-size:46px;text-align:center}
+
+.reader{display:flex;flex-direction:column;gap:12px}
+.rd-dots{display:flex;flex-wrap:wrap;gap:6px}
+.rd-dot{width:40px;height:40px;border-radius:50%;border:3px solid var(--ink);background:#fff;font-family:var(--display);font-size:18px;box-shadow:0 3px 0 var(--ink)}
+.rd-dot.read{background:var(--leaf);color:#fff}
+.rd-dot[aria-current="true"]{background:var(--sun);color:var(--ink);transform:scale(1.12)}
+.rd-card{background:#fff;border:3px solid var(--ink);border-radius:24px;overflow:hidden;box-shadow:0 6px 0 var(--ink)}
+.rd-scene{aspect-ratio:12/7;max-height:340px;width:100%;background:#e9f6ff;border-bottom:3px solid var(--ink)}
+.rd-scene svg{width:100%;height:100%;display:block}
+.rd-text{padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px;font-size:19px;line-height:1.6}
+.rd-text h3{font-size:clamp(24px,5.5vw,32px)}
+.rd-text p b{background:linear-gradient(transparent 60%,#ffe680 60%)}
+.rd-pg{background:var(--grape);color:#fff;border-radius:999px;padding:2px 12px;font-size:13px;font-weight:900}
+.rd-pg.alt{background:#ffe9f2;color:var(--ink);border:2px solid var(--ink)}
+.rd-q{background:#f3f0ff;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.rd-nav{display:flex;justify-content:space-between;gap:10px}
+footer{padding-block:20px 40px;font-size:14px;color:var(--muted);font-weight:700;display:flex;flex-direction:column;gap:6px}
+footer b{color:var(--ink)}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:50;width:100%;height:100%}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(140%);z-index:40;background:#fff;border:3px solid var(--ink);border-radius:20px;box-shadow:0 5px 0 var(--ink);padding:10px 16px;display:flex;align-items:center;gap:10px;font-weight:900;transition:transform .35s;max-width:calc(100% - 32px)}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast svg{width:44px;height:52px;flex:0 0 auto}
+.wave{transform-origin:78px 64px;animation:wave 1.6s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
+.float{animation:float 4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.cloud{animation:drift 40s linear infinite}
+@keyframes drift{from{transform:translateX(-30px)}to{transform:translateX(30px)}}
+@media (max-width:600px){.hero .bubble{display:none}.hero-pip{width:30%;bottom:34px}.hero-scene{min-height:300px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+
+
+<!-- ============ SVG SPRITES (original cartoon animals) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="pip" viewBox="0 0 100 120">
+      <ellipse cx="50" cy="72" rx="34" ry="42" fill="#22304a"/>
+      <ellipse cx="50" cy="80" rx="23" ry="31" fill="#fff"/>
+      <path d="M30 62 Q50 74 70 62" stroke="#22304a" stroke-width="4" fill="none"/>
+      <path d="M17 68 Q5 84 14 100 Q22 88 23 72Z" fill="#22304a"/>
+      <g class="wave"><path d="M83 68 Q98 54 97 40 Q86 50 78 64Z" fill="#22304a"/></g>
+      <circle cx="50" cy="40" r="26" fill="#22304a"/>
+      <ellipse cx="50" cy="46" rx="18" ry="15" fill="#fff"/>
+      <circle cx="43" cy="42" r="4.2" fill="#1d2a44"/><circle cx="57" cy="42" r="4.2" fill="#1d2a44"/>
+      <circle cx="44.4" cy="40.5" r="1.5" fill="#fff"/><circle cx="58.4" cy="40.5" r="1.5" fill="#fff"/>
+      <path d="M44 49 L56 49 L50 57Z" fill="#ff9f1c"/>
+      <circle cx="36" cy="51" r="3.6" fill="#ff8fab" opacity=".85"/><circle cx="64" cy="51" r="3.6" fill="#ff8fab" opacity=".85"/>
+      <ellipse cx="38" cy="113" rx="10" ry="5" fill="#ff9f1c"/><ellipse cx="62" cy="113" rx="10" ry="5" fill="#ff9f1c"/>
+      <path d="M26 24 Q50 2 74 24Z" fill="#8bc34a"/><rect x="18" y="21" width="64" height="7" rx="3.5" fill="#558b2f"/>
+      <rect x="40" y="16" width="20" height="4" rx="2" fill="#ffd23f"/>
+    </symbol>
+    <symbol id="giraffe" viewBox="0 0 100 120">
+      <rect x="30" y="28" width="13" height="64" rx="6.5" fill="#ffc94d" transform="rotate(-8 36 60)"/>
+      <ellipse cx="62" cy="88" rx="29" ry="15" fill="#ffc94d"/>
+      <rect x="40" y="94" width="7" height="24" rx="3.5" fill="#ffc94d"/><rect x="52" y="96" width="7" height="22" rx="3.5" fill="#ffc94d"/><rect x="68" y="96" width="7" height="22" rx="3.5" fill="#ffc94d"/><rect x="80" y="94" width="7" height="24" rx="3.5" fill="#ffc94d"/>
+      <path d="M90 84 Q99 92 96 104" stroke="#ffc94d" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="55" cy="84" r="5" fill="#e39b3a"/><circle cx="70" cy="90" r="6" fill="#e39b3a"/><circle cx="80" cy="80" r="4" fill="#e39b3a"/><circle cx="36" cy="58" r="3.5" fill="#e39b3a"/><circle cx="40" cy="74" r="3.5" fill="#e39b3a"/><circle cx="34" cy="42" r="3" fill="#e39b3a"/>
+      <line x1="31" y1="16" x2="29" y2="6" stroke="#c7832b" stroke-width="3.5" stroke-linecap="round"/><circle cx="29" cy="5" r="3.5" fill="#8a5a1c"/>
+      <line x1="40" y1="16" x2="41" y2="6" stroke="#c7832b" stroke-width="3.5" stroke-linecap="round"/><circle cx="41" cy="5" r="3.5" fill="#8a5a1c"/>
+      <ellipse cx="34" cy="24" rx="16" ry="11" fill="#ffc94d"/><ellipse cx="22" cy="28" rx="8" ry="7" fill="#ffe3a3"/>
+      <ellipse cx="47" cy="17" rx="7" ry="3.5" fill="#ffc94d" transform="rotate(-25 47 17)"/>
+      <circle cx="35" cy="21" r="2.6" fill="#1d2a44"/><circle cx="35.8" cy="20.2" r=".9" fill="#fff"/>
+      <circle cx="19" cy="27" r="1.2" fill="#8a5a1c"/><path d="M19 32 Q24 35 28 32" stroke="#8a5a1c" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+      <circle cx="42" cy="28" r="3" fill="#ff8fab" opacity=".8"/>
+    </symbol>
+    <symbol id="elephant" viewBox="0 0 120 100">
+      <ellipse cx="70" cy="56" rx="38" ry="28" fill="#a9b8d6"/>
+      <rect x="44" y="70" width="12" height="26" rx="5" fill="#a9b8d6"/><rect x="62" y="72" width="12" height="24" rx="5" fill="#97a7c8"/><rect x="82" y="72" width="12" height="24" rx="5" fill="#a9b8d6"/><rect x="96" y="68" width="10" height="26" rx="5" fill="#97a7c8"/>
+      <path d="M107 50 Q116 54 113 64" stroke="#a9b8d6" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="36" cy="44" r="23" fill="#a9b8d6"/>
+      <ellipse cx="48" cy="44" rx="15" ry="20" fill="#c9d4ec" stroke="#a9b8d6" stroke-width="3"/>
+      <path d="M20 54 Q8 74 18 86 Q26 92 30 84 Q24 80 24 72 Q26 62 32 58" fill="#a9b8d6"/>
+      <circle cx="30" cy="38" r="3" fill="#1d2a44"/><circle cx="31" cy="37" r="1" fill="#fff"/>
+      <circle cx="24" cy="48" r="3.4" fill="#ff8fab" opacity=".75"/>
+      <path d="M26 58 Q22 62 26 64" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="tiger" viewBox="0 0 100 100">
+      <circle cx="22" cy="24" r="12" fill="#ff9f43"/><circle cx="22" cy="24" r="6" fill="#ffd6a8"/>
+      <circle cx="78" cy="24" r="12" fill="#ff9f43"/><circle cx="78" cy="24" r="6" fill="#ffd6a8"/>
+      <circle cx="50" cy="54" r="38" fill="#ff9f43"/>
+      <path d="M50 18 L46 30 L54 30Z M30 26 L34 38 L26 36Z M70 26 L66 38 L74 36Z M14 52 L26 52 L16 58Z M86 52 L74 52 L84 58Z M18 66 L28 64 L20 72Z M82 66 L72 64 L80 72Z" fill="#1d2a44"/>
+      <ellipse cx="38" cy="70" rx="14" ry="11" fill="#fff"/><ellipse cx="62" cy="70" rx="14" ry="11" fill="#fff"/>
+      <ellipse cx="50" cy="62" rx="7" ry="5" fill="#ff5d8f"/>
+      <circle cx="36" cy="48" r="5" fill="#1d2a44"/><circle cx="64" cy="48" r="5" fill="#1d2a44"/><circle cx="37.5" cy="46.5" r="1.7" fill="#fff"/><circle cx="65.5" cy="46.5" r="1.7" fill="#fff"/>
+      <path d="M44 74 Q50 80 56 74" stroke="#1d2a44" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="monkey" viewBox="0 0 100 100">
+      <path d="M70 80 Q96 80 90 56 Q86 46 78 52" stroke="#8b4a26" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <ellipse cx="50" cy="80" rx="20" ry="16" fill="#a0522d"/>
+      <circle cx="20" cy="42" r="12" fill="#a0522d"/><circle cx="20" cy="42" r="6" fill="#f2c9a0"/>
+      <circle cx="80" cy="42" r="12" fill="#a0522d"/><circle cx="80" cy="42" r="6" fill="#f2c9a0"/>
+      <circle cx="50" cy="42" r="28" fill="#a0522d"/>
+      <path d="M30 44 Q30 26 44 30 Q50 34 56 30 Q70 26 70 44 Q72 64 50 66 Q28 64 30 44Z" fill="#f2c9a0"/>
+      <circle cx="42" cy="42" r="4" fill="#1d2a44"/><circle cx="58" cy="42" r="4" fill="#1d2a44"/><circle cx="43.3" cy="40.7" r="1.4" fill="#fff"/><circle cx="59.3" cy="40.7" r="1.4" fill="#fff"/>
+      <ellipse cx="47" cy="51" rx="1.6" ry="1.2" fill="#8b4a26"/><ellipse cx="53" cy="51" rx="1.6" ry="1.2" fill="#8b4a26"/>
+      <path d="M42 56 Q50 63 58 56" stroke="#8b4a26" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="seal" viewBox="0 0 120 80">
+      <path d="M14 62 Q10 30 40 22 Q70 16 96 46 Q110 58 116 52 Q114 70 96 68 Q60 76 14 62Z" fill="#9fb3c8"/>
+      <path d="M60 62 Q66 76 78 72 Q72 66 70 60Z" fill="#87a0b8"/>
+      <ellipse cx="30" cy="44" rx="20" ry="17" fill="#9fb3c8"/>
+      <circle cx="24" cy="38" r="3.4" fill="#1d2a44"/><circle cx="36" cy="38" r="3.4" fill="#1d2a44"/><circle cx="25" cy="37" r="1.1" fill="#fff"/><circle cx="37" cy="37" r="1.1" fill="#fff"/>
+      <ellipse cx="30" cy="47" rx="3" ry="2" fill="#1d2a44"/>
+      <path d="M22 50 L10 48 M22 52 L10 54 M38 50 L50 48 M38 52 L50 54" stroke="#5f7590" stroke-width="1.4" stroke-linecap="round"/>
+      <circle cx="18" cy="48" r="2.6" fill="#ff8fab" opacity=".7"/><circle cx="42" cy="48" r="2.6" fill="#ff8fab" opacity=".7"/>
+    </symbol>
+    <symbol id="deer" viewBox="0 0 100 110">
+      <path d="M34 26 L30 10 M30 16 L22 10 M32 20 L24 18 M66 26 L70 10 M70 16 L78 10 M68 20 L76 18" stroke="#8a5a1c" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <ellipse cx="24" cy="34" rx="11" ry="6" fill="#c98b4f" transform="rotate(-25 24 34)"/><ellipse cx="76" cy="34" rx="11" ry="6" fill="#c98b4f" transform="rotate(25 76 34)"/>
+      <ellipse cx="50" cy="90" rx="22" ry="16" fill="#c98b4f"/><circle cx="44" cy="86" r="2.5" fill="#fff"/><circle cx="56" cy="92" r="2.5" fill="#fff"/><circle cx="50" cy="80" r="2" fill="#fff"/>
+      <ellipse cx="50" cy="46" rx="22" ry="24" fill="#c98b4f"/>
+      <ellipse cx="50" cy="60" rx="12" ry="9" fill="#f3d2ad"/><ellipse cx="50" cy="56" rx="4.5" ry="3.2" fill="#1d2a44"/>
+      <circle cx="41" cy="42" r="4" fill="#1d2a44"/><circle cx="59" cy="42" r="4" fill="#1d2a44"/><circle cx="42.3" cy="40.7" r="1.4" fill="#fff"/><circle cx="60.3" cy="40.7" r="1.4" fill="#fff"/>
+      <circle cx="34" cy="52" r="3.2" fill="#ff8fab" opacity=".75"/><circle cx="66" cy="52" r="3.2" fill="#ff8fab" opacity=".75"/>
+    </symbol>
+    <symbol id="parrot" viewBox="0 0 80 100">
+      <path d="M36 70 L28 98 L40 76 L46 98 L46 72Z" fill="#2fa8ff"/>
+      <ellipse cx="40" cy="56" rx="20" ry="26" fill="#ff595e"/>
+      <path d="M48 44 Q66 56 56 80 Q46 70 44 56Z" fill="#2bb673"/>
+      <circle cx="38" cy="28" r="17" fill="#ff595e"/>
+      <ellipse cx="34" cy="28" rx="7" ry="8" fill="#fff"/><circle cx="34" cy="28" r="3.4" fill="#1d2a44"/><circle cx="35" cy="27" r="1.1" fill="#fff"/>
+      <path d="M20 26 Q12 32 18 42 Q22 36 26 34Z" fill="#ffd23f"/>
+      <path d="M30 12 Q36 2 44 8" stroke="#ff595e" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="goose" viewBox="0 0 100 100">
+      <ellipse cx="56" cy="66" rx="30" ry="20" fill="#fff" stroke="#c9d4ec" stroke-width="2"/>
+      <path d="M70 56 Q86 50 92 60 Q84 70 70 70Z" fill="#e7edf7"/>
+      <rect x="28" y="22" width="12" height="44" rx="6" fill="#fff" stroke="#c9d4ec" stroke-width="2"/>
+      <circle cx="34" cy="24" r="12" fill="#fff" stroke="#c9d4ec" stroke-width="2"/>
+      <path d="M22 24 L8 28 L22 31Z" fill="#ff9f1c"/>
+      <circle cx="32" cy="21" r="2.6" fill="#1d2a44"/>
+      <path d="M48 86 L44 96 M64 86 L68 96" stroke="#ff9f1c" stroke-width="4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="lion" viewBox="0 0 100 100">
+      <circle cx="50" cy="52" r="44" fill="#d9822b"/>
+      <circle cx="50" cy="54" r="30" fill="#ffc04d"/>
+      <circle cx="28" cy="28" r="8" fill="#ffc04d"/><circle cx="72" cy="28" r="8" fill="#ffc04d"/>
+      <ellipse cx="40" cy="66" rx="10" ry="8" fill="#ffe6b0"/><ellipse cx="60" cy="66" rx="10" ry="8" fill="#ffe6b0"/>
+      <ellipse cx="50" cy="60" rx="6" ry="4" fill="#8a5a1c"/>
+      <circle cx="40" cy="48" r="4" fill="#1d2a44"/><circle cx="60" cy="48" r="4" fill="#1d2a44"/>
+    </symbol>
+    <symbol id="panda" viewBox="0 0 100 100">
+      <circle cx="24" cy="24" r="13" fill="#1d2a44"/><circle cx="76" cy="24" r="13" fill="#1d2a44"/>
+      <circle cx="50" cy="54" r="38" fill="#fff" stroke="#1d2a44" stroke-width="3"/>
+      <ellipse cx="36" cy="50" rx="9" ry="12" fill="#1d2a44" transform="rotate(25 36 50)"/><ellipse cx="64" cy="50" rx="9" ry="12" fill="#1d2a44" transform="rotate(-25 64 50)"/>
+      <circle cx="37" cy="49" r="2.6" fill="#fff"/><circle cx="63" cy="49" r="2.6" fill="#fff"/>
+      <ellipse cx="50" cy="66" rx="6" ry="4" fill="#1d2a44"/>
+      <path d="M44 74 Q50 79 56 74" stroke="#1d2a44" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="zebra" viewBox="0 0 100 100">
+      <ellipse cx="50" cy="54" rx="30" ry="36" fill="#fff" stroke="#1d2a44" stroke-width="3"/>
+      <path d="M26 40 Q34 44 26 50 M74 40 Q66 44 74 50 M30 26 Q40 30 34 36 M70 26 Q60 30 66 36 M50 20 L50 34" stroke="#1d2a44" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="50" cy="74" rx="18" ry="13" fill="#4f5d78"/>
+      <circle cx="44" cy="74" r="2.2" fill="#1d2a44"/><circle cx="56" cy="74" r="2.2" fill="#1d2a44"/>
+      <circle cx="38" cy="52" r="4" fill="#1d2a44"/><circle cx="62" cy="52" r="4" fill="#1d2a44"/>
+      <path d="M36 16 Q50 2 64 16" fill="#1d2a44"/>
+    </symbol>
+    <symbol id="bear" viewBox="0 0 100 100">
+      <circle cx="24" cy="26" r="12" fill="#f4f7fb" stroke="#c9d4ec" stroke-width="3"/><circle cx="76" cy="26" r="12" fill="#f4f7fb" stroke="#c9d4ec" stroke-width="3"/>
+      <circle cx="50" cy="54" r="38" fill="#f4f7fb" stroke="#c9d4ec" stroke-width="3"/>
+      <ellipse cx="50" cy="68" rx="16" ry="12" fill="#fff" stroke="#c9d4ec" stroke-width="2"/>
+      <ellipse cx="50" cy="62" rx="6" ry="4" fill="#1d2a44"/>
+      <circle cx="38" cy="48" r="4" fill="#1d2a44"/><circle cx="62" cy="48" r="4" fill="#1d2a44"/>
+    </symbol>
+    <symbol id="star" viewBox="0 0 40 40"><path d="M20 3 L25 15 L38 15 L27.5 23 L31.5 36 L20 28 L8.5 36 L12.5 23 L2 15 L15 15Z" fill="#ffd23f" stroke="#1d2a44" stroke-width="3" stroke-linejoin="round"/></symbol>
+    <symbol id="medal" viewBox="0 0 40 40"><path d="M12 2 L20 16 L28 2Z" fill="#2fa8ff"/><circle cx="20" cy="26" r="12" fill="currentColor" stroke="#1d2a44" stroke-width="3"/></symbol>
+    <symbol id="tree" viewBox="0 0 60 80"><rect x="25" y="46" width="10" height="32" rx="4" fill="#8b5a2b"/><circle cx="30" cy="30" r="22" fill="#2bb673"/><circle cx="18" cy="40" r="14" fill="#25a065"/><circle cx="42" cy="40" r="14" fill="#25a065"/></symbol>
+    <symbol id="person" viewBox="0 0 20 40"><circle cx="10" cy="7" r="6" fill="#f2c9a0"/><rect x="3" y="14" width="14" height="16" rx="6" fill="currentColor"/><rect x="5" y="28" width="4" height="11" rx="2" fill="#1d2a44"/><rect x="11" y="28" width="4" height="11" rx="2" fill="#1d2a44"/></symbol>
+    <symbol id="speaker" viewBox="0 0 24 24"><path fill="#1d2a44" d="M3 9v6h4l5 4V5L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></symbol>
+  </defs>
+</svg>
+
+<canvas id="confetti"></canvas>
+<div class="toast" id="toast" role="status" aria-live="polite"><svg viewBox="0 0 100 120"><use href="#pip"/></svg><span id="toastText">Nice!</span></div>
+
+<div class="wrap">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-scene">
+      <svg class="bg" viewBox="0 0 900 340" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <circle cx="820" cy="60" r="44" fill="#ffd23f"/><circle cx="820" cy="60" r="60" fill="#ffd23f" opacity=".25"/>
+        <g class="cloud" fill="#fff"><ellipse cx="160" cy="70" rx="60" ry="22"/><ellipse cx="200" cy="56" rx="40" ry="22"/><ellipse cx="560" cy="110" rx="70" ry="20"/><ellipse cx="600" cy="96" rx="40" ry="20"/></g>
+        <path d="M0 250 Q150 190 300 240 T600 230 T900 220 V340 H0Z" fill="#8fd694"/>
+        <path d="M0 290 Q200 250 420 285 T900 270 V340 H0Z" fill="#5cbf6a"/>
+        <use href="#tree" x="20" y="170" width="70" height="95"/><use href="#tree" x="380" y="180" width="60" height="80"/><use href="#tree" x="690" y="160" width="80" height="105"/>
+        <path d="M120 300 Q300 280 480 310 T880 300" stroke="#fff3b0" stroke-width="14" fill="none" stroke-linecap="round" stroke-dasharray="2 22"/>
+      </svg>
+      <svg class="hero-animals" viewBox="0 0 900 120" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+        <g class="float"><use href="#giraffe" x="40" y="-20" width="110" height="132"/></g>
+        <use href="#elephant" x="170" y="34" width="120" height="96"/>
+        <g class="float" style="animation-delay:1s"><use href="#monkey" x="330" y="40" width="74" height="74"/></g>
+        <use href="#zebra" x="430" y="46" width="66" height="66"/>
+      </svg>
+      <div class="hero-text">
+        <span class="tag">STRAND 4B · ZOO STUDIES</span>
+        <h1>Zoo 6.0<br>Quest</h1>
+        <p>Read the journal. Play the games. Design your own future zoo!</p>
+      </div>
+      <div class="bubble" id="heroBubble">Hi Ham! I'm Pip, a Humboldt penguin. I'm your tour guide!</div>
+      <svg class="hero-pip float" viewBox="0 0 100 120" aria-label="Pip the penguin"><use href="#pip"/></svg>
+    </div>
+  </header>
+
+  <!-- HUD -->
+  <div class="hud">
+    <div class="hud-in">
+      <div class="xp" aria-live="polite"><svg class="star" viewBox="0 0 40 40" aria-hidden="true"><use href="#star"/></svg><span id="xp">0</span>&nbsp;XP</div>
+      <div class="badges" id="badges" aria-label="Badges"></div>
+      <button class="snd" id="snd" aria-pressed="true">Sound on</button>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <section class="mapsec" aria-labelledby="mapTitle">
+    <h2 id="mapTitle">Zoo Map</h2>
+    <div class="map" id="map"></div>
+  </section>
+
+  <div id="zones"></div>
+
+  <footer>
+    <p><b>For parents:</b> Story Time retells every section of Journal 29 ("Zoo 5.0 | Beyond Enclosure | Coexistence and Respect") in simple English, with page numbers for the English (p.1–15) and Chinese (p.16–30) PDF pages. It is a retelling, not the original text; read it alongside the PDF. Zones 1–4 turn it into games. Zone 5 uses the Strand 4 Booklet. The picture in Zone 6 was made by Gemini AI for practice only.</p>
+    <p>XP and badges are saved in this browser only.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+/* ================= helpers ================= */
+const $=s=>document.querySelector(s);
+const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+function el(tag,attrs,html){const e=document.createElement(tag);if(attrs)for(const k in attrs){if(k==='class')e.className=attrs[k];else if(k.startsWith('on'))e[k]=attrs[k];else e.setAttribute(k,attrs[k])}if(html!=null)e.innerHTML=html;return e}
+function icon(id,vb,w,h){return '<svg viewBox="'+vb+'" width="'+(w||64)+'" height="'+(h||64)+'" aria-hidden="true"><use href="#'+id+'"/></svg>'}
+const VB={pip:'0 0 100 120',giraffe:'0 0 100 120',elephant:'0 0 120 100',tiger:'0 0 100 100',monkey:'0 0 100 100',seal:'0 0 120 80',deer:'0 0 100 110',parrot:'0 0 80 100',goose:'0 0 100 100',lion:'0 0 100 100',panda:'0 0 100 100',zebra:'0 0 100 100',bear:'0 0 100 100'};
+const ic=(id,w,h)=>icon(id,VB[id],w,h);
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+
+/* ================= sound ================= */
+let soundOn=store.get('zq-sound',true),actx=null;
+function beep(type){
+  if(!soundOn)return;
+  try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+    const notes=type==='good'?[660,880,1175]:type==='badge'?[523,659,784,1047]:[220,180];
+    notes.forEach((f,i)=>{const o=actx.createOscillator(),g=actx.createGain();o.type=type==='bad'?'sawtooth':'triangle';o.frequency.value=f;g.gain.setValueAtTime(.0001,actx.currentTime+i*.09);g.gain.exponentialRampToValueAtTime(.18,actx.currentTime+i*.09+.02);g.gain.exponentialRampToValueAtTime(.0001,actx.currentTime+i*.09+.2);o.connect(g);g.connect(actx.destination);o.start(actx.currentTime+i*.09);o.stop(actx.currentTime+i*.09+.22)})
+  }catch(e){}
+}
+const sndBtn=$('#snd');
+function drawSnd(){sndBtn.setAttribute('aria-pressed',soundOn?'true':'false');sndBtn.textContent=soundOn?'Sound on':'Sound off'}
+sndBtn.onclick=()=>{soundOn=!soundOn;store.set('zq-sound',soundOn);drawSnd()};drawSnd();
+
+let rate=0.8;
+function say(t){try{if(!('speechSynthesis' in window))return false;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-GB';u.rate=rate;const v=speechSynthesis.getVoices().find(v=>/^en-(GB|US)/.test(v.lang));if(v)u.voice=v;speechSynthesis.speak(u);return true}catch(e){return false}}
+
+/* ================= confetti + toast ================= */
+const cv=$('#confetti'),cx=cv.getContext('2d');let parts=[],raf=null;
+function confetti(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  cv.width=innerWidth;cv.height=innerHeight;const cols=['#ff6b4a','#ffd23f','#2fa8ff','#7b61ff','#2bb673','#ff5d8f'];
+  for(let i=0;i<120;i++)parts.push({x:innerWidth/2,y:innerHeight/3,vx:(Math.random()-.5)*12,vy:Math.random()*-12-2,s:Math.random()*8+5,c:cols[i%6],r:Math.random()*6,life:120});
+  if(!raf)loop();
+}
+function loop(){cx.clearRect(0,0,cv.width,cv.height);parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.35;p.r+=.1;p.life--;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);cx.restore()});parts=parts.filter(p=>p.life>0&&p.y<cv.height+20);raf=parts.length?requestAnimationFrame(loop):(cx.clearRect(0,0,cv.width,cv.height),null)}
+let tt=null;function toast(msg){$('#toastText').textContent=msg;$('#toast').classList.add('show');clearTimeout(tt);tt=setTimeout(()=>$('#toast').classList.remove('show'),2600)}
+const CHEERS=['Flipper-tastic!','Ice cold correct!','Waddle you know, that\'s right!','Super cool!','You\'re on fire... careful, I\'m a penguin!','Brilliant, explorer!','Wow! Zoo genius!'];
+const OOPS=['Oops! Even penguins slip on ice. Try again!','Not quite! Have another look.','Almost! Read the clue again.','Hmm, nope. You can do it!'];
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+
+/* ================= progress ================= */
+const ZONES=[
+ {id:'z0',n:'Start here',t:'Story Time',sub:'Read the whole journal',icon:'pip',color:'#ffe9f2',badge:'Bookworm',bc:'#ffb3cf'},
+ {id:'z1',n:'Zone 1',t:'Hej, Sweden!',sub:'Slottsskogen Park',icon:'deer',color:'var(--z1)',badge:'Sweden Explorer',bc:'#9fd3ff'},
+ {id:'z2',n:'Zone 2',t:'Time Machine',sub:'5 phases of zoos',icon:'tiger',color:'var(--z2)',badge:'Time Traveller',bc:'#c8b8ff'},
+ {id:'z3',n:'Zone 3',t:'Animal Doctor',sub:'Animal welfare',icon:'bear',color:'var(--z3)',badge:'Animal Doctor',bc:'#8fe0b4'},
+ {id:'z4',n:'Zone 4',t:'Design Contest',sub:'Barcelona winners',icon:'giraffe',color:'var(--z4)',badge:'Design Judge',bc:'#ffc48a'},
+ {id:'z5',n:'Zone 5',t:'Build Zoo 6.0',sub:'Your poster idea',icon:'elephant',color:'var(--z5)',badge:'Zoo Architect',bc:'#ffe066'},
+ {id:'z6',n:'Zone 6',t:'AI Detective',sub:'Find AI mistakes',icon:'parrot',color:'var(--z6)',badge:'AI Detective',bc:'#ffa8c2'},
+ {id:'z7',n:'Zone 7',t:'Speak Studio',sub:'Practise English',icon:'monkey',color:'var(--z7)',badge:'Star Speaker',bc:'#9ee0ff'},
+ {id:'z8',n:'Zone 8',t:'Final Quiz',sub:'Become Zoo Master',icon:'pip',color:'var(--z8)',badge:'Zoo Master',bc:'#c5ef8f'}
+];
+let solved=new Set(store.get('zq-solved',[]));
+let badges=new Set(store.get('zq-badges',[]));
+const zoneNeeds={};
+function need(z,id){(zoneNeeds[z]=zoneNeeds[z]||new Set()).add(id)}
+function drawHud(){
+  $('#xp').textContent=solved.size*10+badges.size*50;
+  const b=$('#badges');b.innerHTML='';
+  ZONES.forEach((z,i)=>{const lb=z.id==='z0'?'J':z.id.slice(1);const d=el('div',{class:'badge'+(badges.has(z.id)?' on':''),title:z.badge+(badges.has(z.id)?' (earned)':'')},lb);if(badges.has(z.id))d.style.background=z.bc;b.appendChild(d)});
+  document.querySelectorAll('.tile').forEach(t=>{const d=t.querySelector('.done');if(d)d.hidden=!badges.has(t.dataset.z)});
+}
+function solve(id,z){
+  if(solved.has(id))return false;solved.add(id);store.set('zq-solved',[...solved]);
+  const a=document.querySelector('[data-act="'+id+'"]');if(a)a.classList.add('solved');
+  checkZone(z);drawHud();groupCheck();return true;
+}
+function checkZone(z){
+  if(badges.has(z)||!zoneNeeds[z])return;
+  for(const id of zoneNeeds[z])if(!solved.has(id))return;
+  badges.add(z);store.set('zq-badges',[...badges]);const Z=ZONES.find(x=>x.id===z);
+  beep('badge');confetti();toast('New badge: '+Z.badge+'! +50 XP');drawHud();
+}
+function good(msg){beep('good');toast(msg||pick(CHEERS))}
+function bad(){beep('bad')}
+
+/* ================= activity builders ================= */
+function actBox(z,id,label,title,xp,group){
+  if(!group)need(z,id);
+  const a=el('div',{class:'act'+(solved.has(id)?' solved':''),'data-act':group?'':id});
+  if(group)a.dataset.group=1;
+  a.appendChild(el('div',{class:'act-h'},'<span class="lbl">'+label+'</span><span class="xpv">'+(group?'+10 XP each':'+'+(xp||10)+' XP')+'</span><h3>'+title+'</h3>'));
+  return a;
+}
+function groupCheck(){document.querySelectorAll('.act[data-group]').forEach(a=>{const r=a.querySelectorAll('.qrow');if(r.length&&[...r].every(x=>x.classList.contains('ok')))a.classList.add('solved')})}
+/* single MCQ row; returns element */
+function mcq(z,id,q,opts,ans,why){
+  need(z,id);
+  const r=el('div',{class:'qrow'+(solved.has(id)?' ok':''),'data-act':id});
+  r.appendChild(el('p',{class:'q'},q));
+  const o=el('div',{class:'opts'}),fb=el('p',{class:'fb ok'},why||'Correct!');fb.hidden=!solved.has(id);
+  opts.forEach(t=>{const b=el('button',{class:'opt'},t);
+    if(solved.has(id)&&t===ans){b.classList.add('good')}
+    b.onclick=()=>{if(r.dataset.done)return;
+      if(t===ans){r.dataset.done=1;b.classList.add('good');r.classList.add('ok');fb.hidden=false;solve(id,z);good()}
+      else{b.classList.remove('nope');void b.offsetWidth;b.classList.add('nope');bad();toast(pick(OOPS))}};
+    o.appendChild(b)});
+  if(solved.has(id))r.dataset.done=1;
+  r.append(o,fb);return r;
+}
+/* order game */
+function orderGame(z,id,items,okMsg){
+  need(z,id);
+  const box=el('div',{class:'order'});let order=[],deck=shuffle(items),checked=false;
+  const msg=el('p',{class:'fb'});msg.hidden=true;
+  function draw(){box.innerHTML='';deck.forEach(it=>{const pos=order.indexOf(it.o);const b=el('button',{class:'oc'+(pos>-1?' set':'')});
+    if(checked)b.classList.add(pos+1===it.o?'right':'wrong');
+    b.innerHTML='<span class="n">'+(pos>-1?pos+1:'?')+'</span><span class="t">'+it.t+(checked&&it.r?'<br><small style="color:var(--muted)">'+it.r+'</small>':'')+'</span>';
+    b.onclick=()=>{if(checked)return;if(pos>-1)order.splice(pos);else order.push(it.o);draw()};box.appendChild(b)})}
+  draw();
+  const row=el('div',{class:'row'});
+  const c=el('button',{class:'btn'},'Check');const rs=el('button',{class:'btn alt'},'Shuffle again');
+  c.onclick=()=>{if(order.length<items.length){msg.hidden=false;msg.className='fb bad';msg.textContent='Tap all '+items.length+' cards first.';return}
+    checked=true;const n=order.filter((v,i)=>v===i+1).length;draw();msg.hidden=false;
+    if(n===items.length){msg.className='fb ok';msg.textContent=okMsg;solve(id,z);good()}else{msg.className='fb bad';msg.textContent=n+' of '+items.length+' in the right place. Tap "Shuffle again" and try once more!';bad()}};
+  rs.onclick=()=>{order=[];checked=false;deck=shuffle(items);msg.hidden=true;draw()};
+  row.append(c,rs);
+  const w=el('div');w.style.cssText='display:flex;flex-direction:column;gap:12px';w.append(box,row,msg);return w;
+}
+function pipSay(text,animal){return el('div',{class:'pipsay'},ic(animal||'pip',64,76)+'<div class="bubble">'+text+'</div>')}
+function wordBtn(w){return '<button class="word" data-say="'+w+'">'+w+'</button>'}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-say]');if(t)say(t.dataset.say)});
+
+/* ================= map ================= */
+const map=$('#map');
+ZONES.forEach(z=>{const a=el('a',{class:'tile',href:'#'+z.id,'data-z':z.id});a.style.background=z.color;
+  a.innerHTML=ic(z.icon,64,64)+'<b>'+z.t+'</b><small>'+z.n+' · '+z.sub+'</small><span class="done" hidden>Badge!</span>';map.appendChild(a)});
+
+/* ================= zone shells ================= */
+const zonesEl=$('#zones');
+function zone(z,pages,scene){
+  const s=el('section',{class:'zone',id:z.id,'aria-labelledby':z.id+'-t'});s.style.background=z.color;
+  s.innerHTML='<div class="zbanner">'+scene+'<div class="ztitle"><div class="num">'+z.n.toUpperCase()+' · BADGE: '+z.badge.toUpperCase()+'</div><h2 id="'+z.id+'-t">'+z.t+'</h2>'+(pages?'<div class="pages">'+pages+'</div>':'')+'</div></div>';
+  const body=el('div',{class:'zbody'});s.appendChild(body);zonesEl.appendChild(s);return body;
+}
+const sky=(c1,c2)=>'<defs><linearGradient id="g'+c1.slice(1)+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+c1+'"/><stop offset="1" stop-color="'+c2+'"/></linearGradient></defs><rect width="600" height="200" fill="url(#g'+c1.slice(1)+')"/>';
+
+/* ======================================================
+   ZONE 1 — SWEDEN
+   ====================================================== */
+(function(){
+ const Z=ZONES.find(z=>z.id==='z1');
+ const b=zone(Z,'Journal 29 · pages 1–2',
+ '<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky('#8fd0ff','#e3f1ff')+
+ '<rect x="440" y="24" width="120" height="76" rx="6" fill="#2f6db5"/><rect x="474" y="24" width="18" height="76" fill="#ffd23f"/><rect x="440" y="53" width="120" height="18" fill="#ffd23f"/>'+
+ '<path d="M0 150 Q150 110 300 140 T600 130 V200 H0Z" fill="#8fd694"/><path d="M0 170 Q200 150 600 165 V200 H0Z" fill="#5cbf6a"/>'+
+ '<rect x="330" y="88" width="70" height="56" fill="#c9b18a"/><path d="M322 90 L365 60 L408 90Z" fill="#a0522d"/><rect x="356" y="112" width="18" height="32" fill="#7a4a24"/>'+
+ '<use href="#tree" x="20" y="90" width="50" height="70"/><use href="#tree" x="250" y="96" width="44" height="62"/><use href="#tree" x="530" y="100" width="44" height="62"/>'+
+ '<use href="#deer" x="110" y="104" width="54" height="60"/><use href="#seal" x="180" y="138" width="60" height="40"/><use href="#goose" x="420" y="140" width="40" height="40"/><use href="#pip" x="470" y="118" width="46" height="56"/></svg>');
+
+ b.appendChild(pipSay('Hej! (That means "hi" in Swedish.) The writer of the journal visited <b>Gothenburg</b>, a city in <b>Sweden</b>. Let\'s explore a big park there. My cousins live there too!'));
+
+ b.appendChild(el('div',{class:'cards'},
+  '<div class="fact"><div class="art" style="background:#d9ecff">'+ic('deer',70,76)+'</div><h3>"Castle Forest"</h3><p><b>Slottsskogen</b> means "Castle Forest". It is one of the <b>oldest</b> and <b>biggest</b> parks in Gothenburg.</p></div>'+
+  '<div class="fact"><div class="art" style="background:#ffe8c7"><svg viewBox="0 0 120 80" width="110" height="76"><rect x="6" y="50" width="108" height="24" rx="10" fill="#2fa8ff"/><circle cx="30" cy="40" r="14" fill="#ff6b4a"/><rect x="70" y="20" width="10" height="34" fill="#8b5a2b"/><path d="M60 22 L75 6 L90 22Z" fill="#2bb673"/><circle cx="100" cy="44" r="8" fill="#fff" stroke="#1d2a44" stroke-width="3"/></svg></div><h3>Fun for families</h3><p>Flowers, forests, ponds, a volleyball court, an outdoor gym, mini-golf and the big <b>Plikta Playground</b>.</p></div>'+
+  '<div class="fact"><div class="art" style="background:#d8f3ff"><svg viewBox="0 0 140 70" width="130" height="66"><path d="M10 40 Q40 10 100 24 Q126 30 132 18 Q134 40 116 44 Q80 62 30 56 Q12 54 10 40Z" fill="#5b8bd6"/><circle cx="30" cy="36" r="3" fill="#1d2a44"/><path d="M40 46 Q70 52 100 44" stroke="#c9d4ec" stroke-width="3" fill="none"/></svg></div><h3>A giant whale!</h3><p>The <b>Natural History Museum</b> is in the park. It has a real <b>blue whale</b> specimen, called the Malmö Whale.</p></div>'+
+  '<div class="fact"><div class="art" style="background:#e9fbe6">'+ic('seal',90,60)+ic('goose',60,60)+'</div><h3>The children\'s zoo</h3><p>Nordic animals: <b>moose, deer, sheep, goats, seals, Gotland ponies</b> and <b>Öland geese</b>. Plus <b>Humboldt penguins</b> from South America!</p></div>'
+ ));
+
+ b.appendChild(el('h3',{style:'font-size:24px'},'The park\'s story'));
+ b.appendChild(el('div',{class:'timeline'},
+  '<div class="tl"><b>Long ago</b>It was just a forest.</div>'+
+  '<div class="tl"><b>1600s</b>Woods, fields and orchards, all run by the old <b>Älvsborg Fortress</b>. But the real castle was at the mouth of the Göta River, <b>not</b> in the park!</div>'+
+  '<div class="tl"><b>1700s</b>The area opened to the public and slowly became a park.</div>'+
+  '<div class="tl"><b>1876</b>It officially became a park. Ideas came from Hyde Park (London) and Skansen (Stockholm).</div>'+
+  '<div class="tl"><b>1891</b>The zoo opened. The first animals were a herd of <b>deer</b>.</div>'+
+  '<div class="tl"><b>Today</b>It is one of the <b>oldest zoos in Sweden</b>.</div>'));
+
+ // who lives here
+ const A1=actBox('z1','z1-who','GAME','Who lives at the children\'s zoo? Tap ALL the right animals.');
+ const ANIM=[['deer','Deer',1],['seal','Seal',1],['pip','Penguin',1],['goose','Goose',1],['lion','Lion',0],['panda','Panda',0],['elephant','Elephant',0]];
+ const grid=el('div',{class:'pick'});const sel=new Set();
+ shuffle(ANIM).forEach(a=>{const c=el('button',{class:'pc','aria-pressed':'false'},ic(a[0],70,70)+a[1]);c.onclick=()=>{if(A1.dataset.done)return;sel.has(a[1])?sel.delete(a[1]):sel.add(a[1]);c.classList.toggle('on');c.setAttribute('aria-pressed',sel.has(a[1]))};c.dataset.k=a[1];c.dataset.r=a[2];grid.appendChild(c)});
+ const f1=el('p',{class:'fb'});f1.hidden=true;
+ const c1=el('button',{class:'btn'},'Check');
+ c1.onclick=()=>{let ok=true;grid.querySelectorAll('.pc').forEach(c=>{const want=c.dataset.r==='1',has=sel.has(c.dataset.k);c.classList.remove('right','wrong');if(want===has){if(want)c.classList.add('right')}else{c.classList.add('wrong');ok=false}});
+  f1.hidden=false;if(ok){A1.dataset.done=1;f1.className='fb ok';f1.textContent='Yes! Deer, seals, penguins and geese. Lions, pandas and elephants do not live in this little Nordic zoo.';solve('z1-who','z1');good()}else{f1.className='fb bad';f1.textContent='Red cards are wrong. Fix them and check again!';bad()}};
+ A1.append(grid,el('div',{class:'row'}).appendChild(c1).parentNode,f1);b.appendChild(A1);
+
+ const A2=actBox('z1','z1-tf','TRUE OR FALSE','Quick check (like worksheet Q1)',0,true);
+ A2.append(
+  mcq('z1','z1-tf1','The park was first built as a military fortress.',['True','False'],'False','False! It started as a <b>forest</b>. The castle was at the river, not in the park.'),
+  mcq('z1','z1-tf2','The zoo is one of the oldest zoos in Sweden.',['True','False'],'True','True! It opened in 1891.'),
+  mcq('z1','z1-tf3','The first animals at the zoo were penguins.',['True','False'],'False','False! The first animals were a herd of <b>deer</b>. Sorry, cousins!'),
+  mcq('z1','z1-tf4','Humboldt penguins come from South America.',['True','False'],'True','True! That\'s me! We add an "international flair" to the zoo.'));
+ b.appendChild(A2);
+
+ const A3=actBox('z1','z1-ord','ORDER','Put the park\'s story in order (oldest first)');
+ A3.appendChild(orderGame('z1','z1-ord',[{o:1,t:'Woods, fields and orchards run by Älvsborg Fortress'},{o:2,t:'The area opens to the public'},{o:3,t:'It officially becomes a park (1876)'},{o:4,t:'The zoo opens with a herd of deer (1891)'}],'Perfect timeline! Forest → park → zoo.'));
+ b.appendChild(A3);
+})();
+
+/* ======================================================
+   ZONE 2 — TIME MACHINE (5 PHASES)
+   ====================================================== */
+const PH=[
+ {k:1,name:'Colonial Exhibition Architecture',when:'Mid-1800s',pages:'Journal p.2–3',
+  pts:['Zoos had <b>fancy buildings</b> in many different styles from faraway countries.','Big, exotic animals were shown like <b>trophies</b>, as curiosities for people to stare at.','People wanted to <b>magnify</b> everything → then <b>collect</b> it → then <b>classify</b> (sort) it. Museums were born this way.','Sorting the world is great for science. But the writer says it also made people feel like they <b>ruled</b> the world.'],
+  ex:'Cat Pavilion, Jardin des Plantes Zoo (Paris) · Antelope House, Berlin Zoo',
+  pip:'Being shown like a trophy? No thanks. I\'d rather be a swimming champion!',
+  scene:'<rect width="240" height="140" fill="#f6e3bf"/><rect x="40" y="18" width="160" height="96" fill="#e7c98f" stroke="#1d2a44" stroke-width="3"/><path d="M30 20 L120 0 L210 20Z" fill="#c9823a" stroke="#1d2a44" stroke-width="3"/><circle cx="120" cy="6" r="8" fill="#ffd23f" stroke="#1d2a44" stroke-width="2"/><rect x="50" y="30" width="10" height="84" fill="#fff3d6"/><rect x="180" y="30" width="10" height="84" fill="#fff3d6"/><use href="#tiger" x="88" y="48" width="64" height="64"/><g stroke="#4f5d78" stroke-width="5">'+[78,92,106,120,134,148,162].map(x=>'<line x1="'+x+'" y1="40" x2="'+x+'" y2="114"/>').join('')+'</g><rect x="72" y="36" width="96" height="6" fill="#4f5d78"/><rect x="0" y="114" width="240" height="26" fill="#b8a07a"/><use href="#person" x="14" y="92" width="18" height="36" style="color:#7b61ff"/><use href="#person" x="206" y="92" width="18" height="36" style="color:#ff6b4a"/>'},
+ {k:2,name:'Frameless Panoramas',when:'Early 1900s',pages:'Journal p.3',
+  pts:['"Frameless" means you <b>cannot see the cages</b>.','Hidden <b>moats</b> (ditches with water) and <b>artificial hills</b> replace iron bars.','Animals look like <b>actors on a natural stage</b>.','<b>Carl Hagenbeck</b> started this at his zoo in <b>Hamburg, Germany</b>. People called him <b>"The Man Who Opened the Cages"</b>!','Over 120 years later, zoos still copy his idea. Many still don\'t do it as well as he did.'],
+  ex:'Hagenbeck Zoo (Hamburg, Germany): moats, artificial hills and layers',
+  pip:'Bars? Gone! Moats? Yes, please! I love a good swim.',
+  scene:'<rect width="240" height="140" fill="#cdeeff"/><path d="M0 70 Q60 30 120 60 T240 50 V140 H0Z" fill="#8fd694"/><path d="M130 66 L160 30 L200 66Z" fill="#a8b3c4" stroke="#1d2a44" stroke-width="2"/><path d="M60 72 L82 46 L104 72Z" fill="#bfc8d6" stroke="#1d2a44" stroke-width="2"/><use href="#deer" x="96" y="56" width="40" height="44"/><use href="#giraffe" x="166" y="36" width="44" height="54"/><path d="M0 104 Q120 92 240 104 V118 Q120 108 0 118Z" fill="#2fa8ff"/><rect x="0" y="118" width="240" height="22" fill="#d9c49c"/><use href="#person" x="40" y="100" width="16" height="32" style="color:#ff6b4a"/><use href="#person" x="60" y="100" width="16" height="32" style="color:#2bb673"/>'},
+ {k:3,name:'Formalism and Functionalism',when:'1920s onwards',pages:'Journal p.4',
+  pts:['After Hagenbeck, hidden fences became normal. Then <b>modern, simple</b> buildings arrived from Britain.','<b>Formalism</b> = looks matter most. At London Zoo\'s <b>Penguin Pool</b>, penguins looked like decorations.','<b>Functionalism</b> = be practical. It can help only humans, <b>or</b> balance animals, staff and cost.','Good functionalism gives animals <b>just what they need</b>: a dead tree to climb, a rope to swing, a wooden box for privacy.','It may look plain, almost like a cell. The writer asks: what do <b>humans</b> want to see, and what do <b>animals</b> really need?'],
+  ex:'Penguin Pool, London Zoo (early functionalism) · Primate exhibit, Berlin Zoo (new-era functionalism)',
+  pip:'The Penguin Pool looked amazing. But concrete hurt my cousins\' feet. Ouch! They moved to a sandy Penguin Beach in 2011.',
+  scene:'<rect width="240" height="140" fill="#e9f6ff"/><ellipse cx="120" cy="96" rx="104" ry="34" fill="#fff" stroke="#1d2a44" stroke-width="3"/><ellipse cx="120" cy="98" rx="84" ry="22" fill="#2fa8ff"/><path d="M50 92 Q90 40 150 60 L160 66 Q100 52 62 96Z" fill="#fff" stroke="#1d2a44" stroke-width="3"/><path d="M190 92 Q150 44 90 64 L82 70 Q140 56 178 96Z" fill="#fff" stroke="#1d2a44" stroke-width="3"/><use href="#pip" x="104" y="32" width="24" height="30"/><use href="#pip" x="150" y="54" width="20" height="24"/><use href="#pip" x="70" y="62" width="20" height="24"/>'},
+ {k:4,name:'Landscaping and Naturalised Exhibits',when:'Mid-1900s',pages:'Journal p.4–5',
+  pts:['Animal science grew, and people cared more about the <b>environment</b>.','<b>Landscape</b> design replaced big buildings. Exhibits copied animals\' <b>natural habitats</b>.','Plants and <b>hidden fences</b> made visitors feel "inside" nature.','Landscape designers and animal scientists took the lead.','But small budgets and few trained designers meant many exhibits <b>did not work well</b>.'],
+  ex:'Indoor pavilions, Wrocław Zoo (Poland) · Hoofed animal exhibit, Chester Zoo (UK)',
+  pip:'More trees, fewer walls. My kind of place!',
+  scene:'<rect width="240" height="140" fill="#d9f5e1"/><use href="#tree" x="0" y="20" width="70" height="96"/><use href="#tree" x="60" y="34" width="56" height="78"/><use href="#tree" x="170" y="14" width="74" height="104"/><use href="#monkey" x="128" y="30" width="44" height="44"/><path d="M140 74 Q150 60 170 56" stroke="#8b5a2b" stroke-width="5" fill="none"/><rect x="0" y="108" width="240" height="32" fill="#8fd694"/><path d="M0 112 H240" stroke="#5cbf6a" stroke-width="3" stroke-dasharray="6 6"/><circle cx="110" cy="112" r="12" fill="#25a065"/><circle cx="96" cy="114" r="10" fill="#2bb673"/>'},
+ {k:5,name:'Iconic Architecture to Build a Brand',when:'1990s – today',pages:'Journal p.5–6',
+  pts:['Zoos added a feeling of <b>adventure</b>. Even old zoos redesigned their areas with an "exploring" <b>storyline</b>.','One story links many exhibits, like a <b>theatre</b>.','Big, story-driven buildings, like the <b>Tropical Rainforest</b> house at <b>Taipei Zoo</b>.','You can\'t copy nature exactly. Zoos must <b>balance</b> animal care, visitor fun and staff work.','These buildings also help people <b>care about nature</b>.'],
+  ex:'Mangrove Pavilion, Burgers\' Zoo (Netherlands): mudskippers, fiddler crabs, jellyfish · Gondwanaland, Leipzig Zoo (Germany): Earth\'s history tells the story · Australian Pavilion, Budapest Zoo: an old bird house became an Australia adventure',
+  pip:'It\'s like a movie, but the actors are real animals. And nobody needs a script!',
+  scene:'<rect width="240" height="140" fill="#fff4d6"/><path d="M20 120 Q120 -20 220 120Z" fill="#c9f0ff" stroke="#1d2a44" stroke-width="3"/><path d="M50 120 Q120 10 190 120 M120 30 V120 M34 90 H206 M60 60 H180" stroke="#1d2a44" stroke-width="1.5" fill="none" opacity=".5"/><use href="#tree" x="44" y="60" width="44" height="60"/><use href="#tree" x="150" y="56" width="46" height="62"/><use href="#parrot" x="104" y="44" width="30" height="38"/><path d="M30 120 Q120 92 210 120" stroke="#c9823a" stroke-width="8" fill="none"/><use href="#person" x="92" y="88" width="14" height="28" style="color:#ff6b4a"/><use href="#person" x="128" y="88" width="14" height="28" style="color:#7b61ff"/><rect x="0" y="120" width="240" height="20" fill="#8fd694"/><rect x="190" y="24" width="44" height="18" rx="4" fill="#ff6b4a"/><text x="212" y="37" text-anchor="middle" font-family="Baloo 2,sans-serif" font-size="11" fill="#fff" font-weight="800">GO!</text>'}
+];
+(function(){
+ const Z=ZONES.find(z=>z.id==='z2');
+ const b=zone(Z,'Journal 29 · pages 2–6',
+ '<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky('#4a3aa8','#b9a8ff')+
+ '<g fill="#fff" opacity=".8"><circle cx="40" cy="30" r="2"/><circle cx="120" cy="60" r="1.6"/><circle cx="260" cy="20" r="2"/><circle cx="380" cy="50" r="1.6"/><circle cx="520" cy="26" r="2.2"/><circle cx="570" cy="80" r="1.6"/></g>'+
+ '<circle cx="470" cy="110" r="70" fill="#ffd23f" stroke="#1d2a44" stroke-width="5"/><circle cx="470" cy="110" r="56" fill="#fff" stroke="#1d2a44" stroke-width="4"/><path d="M470 110 L470 80 M470 110 L494 124" stroke="#1d2a44" stroke-width="6" stroke-linecap="round"/><circle cx="470" cy="110" r="6" fill="#1d2a44"/>'+
+ '<text x="470" y="71" font-family="Baloo 2,sans-serif" font-weight="800" font-size="15" text-anchor="middle" fill="#7b61ff">1</text><text x="512" y="101" font-family="Baloo 2,sans-serif" font-weight="800" font-size="15" text-anchor="middle" fill="#7b61ff">2</text><text x="496" y="151" font-family="Baloo 2,sans-serif" font-weight="800" font-size="15" text-anchor="middle" fill="#7b61ff">3</text><text x="444" y="151" font-family="Baloo 2,sans-serif" font-weight="800" font-size="15" text-anchor="middle" fill="#7b61ff">4</text><text x="428" y="101" font-family="Baloo 2,sans-serif" font-weight="800" font-size="15" text-anchor="middle" fill="#7b61ff">5</text>'+
+ '<use href="#tiger" x="300" y="100" width="70" height="70"/><use href="#pip" x="360" y="96" width="60" height="72"/></svg>');
+
+ b.appendChild(pipSay('Hop in the time machine! A professor from Germany, <b>Natascha Meuser</b>, sorted zoo history into <b>5 phases</b>. She looked at the <b>buildings</b> and how people treat <b>nature</b>. A writer called Ho used her idea in his article.'));
+
+ const tm=el('div',{class:'tm'});
+ const dial=el('div',{class:'tm-dial',role:'group','aria-label':'Choose a phase'});
+ const scene=el('div',{class:'tm-scene'});const info=el('div',{class:'tm-info'});const nav=el('div',{class:'tm-nav'});
+ const prev=el('button',{class:'btn alt'},'◀ Back'),next=el('button',{class:'btn blue'},'Next phase ▶');
+ const seen=new Set(store.get('zq-seen',[]));need('z2','z2-seen');
+ let cur=0;
+ PH.forEach((p,i)=>{const d=el('button',{'aria-pressed':'false'},'Phase '+p.k);d.onclick=()=>show(i);dial.appendChild(d)});
+ function show(i){cur=i;const p=PH[i];[...dial.children].forEach((d,j)=>d.setAttribute('aria-pressed',j===i?'true':'false'));
+  scene.innerHTML='<svg viewBox="0 0 240 140" aria-hidden="true">'+p.scene+'</svg>';
+  info.innerHTML='<span class="when">'+p.when+' · '+p.pages+'</span><h3>Phase '+p.k+': '+p.name+'</h3><ul>'+p.pts.map(x=>'<li>'+x+'</li>').join('')+'</ul><p class="ex"><b>Real examples:</b> '+p.ex+'</p>';
+  info.appendChild(pipSay(p.pip));
+  prev.disabled=i===0;next.textContent=i===4?'Back to Phase 1 ▶':'Next phase ▶';
+  seen.add(i);store.set('zq-seen',[...seen]);if(seen.size===5&&solve('z2-seen','z2'))good('You visited all 5 phases!');}
+ prev.onclick=()=>{if(cur>0)show(cur-1)};next.onclick=()=>show((cur+1)%5);
+ nav.append(prev,next);tm.append(dial,scene,info,nav);
+ const tmWrap=actBox('z2','z2-seen','EXPLORE','Visit all 5 phases in the time machine');tmWrap.appendChild(tm);b.appendChild(tmWrap);
+ show(0);
+
+ b.appendChild(el('div',{class:'cards'},'<div class="fact"><h3>Easy way to remember</h3><p style="font-size:20px"><b>Cages → No cages → Simple → Natural → Story</b></p></div>'));
+
+ const A1=actBox('z2','z2-ord','ORDER','Put the 5 phases in order (worksheet Q3)');
+ A1.appendChild(orderGame('z2','z2-ord',[
+  {o:1,t:'Exotic animals shown like trophies in fancy buildings.',r:'Phase 1: Colonial Exhibition'},
+  {o:2,t:'Hidden fences. Animals look like actors on a natural stage.',r:'Phase 2: Frameless Panoramas'},
+  {o:3,t:'Simple designs that balance animal welfare and human needs.',r:'Phase 3: Formalism & Functionalism'},
+  {o:4,t:'Landscape design copies natural habitats.',r:'Phase 4: Naturalised Exhibits'},
+  {o:5,t:'Themed buildings and a story create a brand experience.',r:'Phase 5: Iconic Architecture'}],'All 5 in order! You are a real time traveller.'));
+ b.appendChild(A1);
+
+ const A2=actBox('z2','z2-which','WHICH PHASE?','Read the clue. Which phase is it?',0,true);
+ const P=['Phase 1','Phase 2','Phase 3','Phase 4','Phase 5'];
+ [['Moats and fake hills. No bars!','2','Phase 2. Hagenbeck\'s big idea.'],
+  ['Animals shown like trophies, in buildings from many styles.','1','Phase 1: colonial exhibition.'],
+  ['A huge rainforest house with an adventure story.','5','Phase 5: like Taipei Zoo\'s Tropical Rainforest.'],
+  ['Landscape designers copy wild habitats with plants.','4','Phase 4: naturalised exhibits.'],
+  ['Give animals just what they need: a rope, a box, a dead tree.','3','Phase 3: functionalism.'],
+  ['"The Man Who Opened the Cages"','2','Phase 2: Carl Hagenbeck!'],
+  ['Gondwanaland at Leipzig Zoo: Earth\'s history tells the story.','5','Phase 5: a story links the animals.'],
+  ['The Cat Pavilion in Paris.','1','Phase 1: early "scientific collection".']].forEach((q,i)=>A2.appendChild(mcq('z2','z2-w'+i,q[0],P,'Phase '+q[1],q[2])));
+ b.appendChild(A2);
+
+ const A3=actBox('z2','z2-fill','FILL THE GAP','Worksheet Q1(2) and Q4 practice',0,true);
+ A3.append(
+  mcq('z2','z2-f1','Phase Five uses ______ architecture to build a brand.',['colonial','iconic','invisible'],'iconic','Yes! <b>Iconic architecture</b>: famous, themed buildings.'),
+  mcq('z2','z2-f2','"Functionalism" only cares about animal welfare. True or false?',['True','False'],'False','False! It can put <b>humans</b> first, or <b>balance</b> humans and animals.'),
+  mcq('z2','z2-f3','An animal needs privacy. In Phase 3, what might the zoo give it?',['A wooden box','A big mirror','A TV'],'A wooden box','Right! Just what it needs. (A TV would be funny though.)'),
+  mcq('z2','z2-f4','Why did many Phase 4 exhibits not work well?',['Small budgets and few trained designers','Too many penguins','Animals did not like plants'],'Small budgets and few trained designers','Correct! Money and skills were the problem. Never too many penguins.'));
+ b.appendChild(A3);
+})();
+
+/* ======================================================
+   ZONE 3 — ANIMAL DOCTOR (welfare)
+   ====================================================== */
+(function(){
+ const Z=ZONES.find(z=>z.id==='z3');
+ const b=zone(Z,'Booklet + Zone 2 ideas',
+ '<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky('#7fe0b0','#ddf9ea')+
+ '<rect x="380" y="40" width="180" height="120" rx="14" fill="#fff" stroke="#1d2a44" stroke-width="4"/><rect x="455" y="58" width="30" height="84" rx="4" fill="#ff5d8f"/><rect x="428" y="85" width="84" height="30" rx="4" fill="#ff5d8f"/>'+
+ '<use href="#bear" x="60" y="80" width="90" height="90"/><use href="#zebra" x="160" y="90" width="80" height="80"/><use href="#pip" x="250" y="88" width="70" height="84"/>'+
+ '<path d="M282 96 Q300 80 318 96" stroke="#1d2a44" stroke-width="3" fill="none"/><circle cx="300" cy="100" r="6" fill="#c9d4ec" stroke="#1d2a44" stroke-width="2"/></svg>');
+
+ b.appendChild(pipSay('Quick question: if a zoo has <b>no cages</b>, is every animal happy? Hmm... not always! Scientists check <b>5 things</b>. It\'s called the <b>Five Domains</b>.'));
+
+ const w=el('div',{class:'wheel'});
+ w.innerHTML='<svg viewBox="0 0 220 220" aria-label="Five Domains wheel"><path d="M110 110 L110 10 A100 100 0 0 1 210 110Z" fill="#ffd23f" stroke="#1d2a44" stroke-width="3"/><path d="M110 110 L210 110 A100 100 0 0 1 110 210Z" fill="#2fa8ff" stroke="#1d2a44" stroke-width="3"/><path d="M110 110 L110 210 A100 100 0 0 1 10 110Z" fill="#ff6b4a" stroke="#1d2a44" stroke-width="3"/><path d="M110 110 L10 110 A100 100 0 0 1 110 10Z" fill="#2bb673" stroke="#1d2a44" stroke-width="3"/>'+
+ '<text x="152" y="62" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="13">Nutrition</text><text x="160" y="160" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="12" fill="#fff">Environment</text><text x="62" y="160" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="13" fill="#fff">Health</text><text x="62" y="62" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="12" fill="#fff">Behaviour</text>'+
+ '<circle cx="110" cy="110" r="40" fill="#fff" stroke="#1d2a44" stroke-width="3"/><path d="M110 132 C80 112 88 90 102 92 C106 92 110 98 110 98 C110 98 114 92 118 92 C132 90 140 112 110 132Z" fill="#ff5d8f"/><text x="110" y="148" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="10">Mental State</text></svg>';
+ w.appendChild(el('div',{class:'legend'},
+  '<div class="lg"><i style="background:#ffd23f"></i><div><b>Nutrition</b>: good food and fresh water.</div></div>'+
+  '<div class="lg"><i style="background:#2fa8ff"></i><div><b>Environment</b>: a comfy home with shade and soft ground.</div></div>'+
+  '<div class="lg"><i style="background:#ff6b4a"></i><div><b>Health</b>: no pain, and a vet when sick.</div></div>'+
+  '<div class="lg"><i style="background:#2bb673"></i><div><b>Behaviour</b>: things to do, places to hide, choices to make.</div></div>'+
+  '<div class="lg"><i style="background:#ff5d8f"></i><div><b>Mental State</b>: how the animal <b>feels</b>. It is the result of the other four!</div></div>'));
+ b.appendChild(w);
+
+ const A1=actBox('z3','z3-clinic','ANIMAL CLINIC','Four animals need help! Find the problem, then fix it.',40);
+ const PAT=[
+  {id:'tia',a:'tiger',name:'Tia the Tiger',story:'Tia walks the same path again and again. She has nothing to do and nowhere to hide.',dom:'Behaviour',fixes:[['Hide her food and add logs to explore, plus a quiet den',1,'Now Tia can sniff, search and rest in private. Happy tiger!'],['Paint her wall a nice colour',0,'Pretty for us. Still boring for Tia.'],['Let more visitors watch her',0,'That makes it worse! She needs somewhere to hide.']]},
+  {id:'bo',a:'bear',name:'Bo the Polar Bear',story:'Bo lives on hot, hard concrete. There is no shade and no cool water.',dom:'Environment',fixes:[['Give him a funny hat',0,'Cute, but no. His home is still too hot.'],['Add shade, soft ground and a cool pool',1,'Splash! Bo feels much better.'],['Play loud music',0,'Bears don\'t need a party. They need a cool home.']]},
+  {id:'momo',a:'monkey',name:'Momo the Monkey',story:'Momo\'s water bowl is always empty, and he eats the same food every day.',dom:'Nutrition',fixes:[['Give him lots of candy',0,'Yum for one minute. Bad for his health!'],['Fresh water, and different foods hidden for him to find',1,'Fresh water, tasty food AND a fun search game!'],['Feed him once a week',0,'Way too hungry! No way.']]},
+  {id:'zuri',a:'zebra',name:'Zuri the Zebra',story:'Zuri hurt her leg. Nobody has checked it.',dom:'Health',fixes:[['Put a sticker on it',0,'Stickers don\'t fix legs, sadly.'],['Wait and see',0,'Waiting could make the pain worse.'],['Call the vet for a check-up',1,'The vet helps Zuri heal. Thanks, Doctor!']]}
+ ];
+ const DOMS=['Nutrition','Environment','Health','Behaviour'];
+ let healed=new Set(store.get('zq-healed',[]));
+ const face=(happy)=>'<svg viewBox="0 0 100 100">'+(happy?'':'')+'</svg>';
+ PAT.forEach(p=>{
+  const card=el('div',{class:'patient'});
+  const fz=el('div',{class:'face'});fz.innerHTML=ic(p.a,100,100)+'<div class="mood" aria-label="mood"><i></i></div><small style="font-weight:900" class="ml">Mood: sad</small>';
+  const pb=el('div',{class:'pbody'});pb.innerHTML='<h4>'+p.name+'</h4><p>'+p.story+'</p>';
+  const s1=el('p',{class:'q'},'Step 1: Which part has the problem?');const o1=el('div',{class:'opts'});
+  const s2=el('p',{class:'q'},'Step 2: What is the best fix?');const o2=el('div',{class:'opts'});s2.hidden=true;o2.hidden=true;
+  const fb=el('p',{class:'fb ok'});fb.hidden=true;
+  const mood=fz.querySelector('.mood i'),ml=fz.querySelector('.ml');
+  function setMood(v){mood.style.width=v+'%';mood.style.background=v>80?'var(--ok)':v>40?'var(--tang)':'var(--bad)';ml.textContent='Mood: '+(v>80?'happy!':v>40?'better':'sad')}
+  setMood(15);
+  DOMS.forEach(d=>{const bt=el('button',{class:'opt'},d);bt.onclick=()=>{if(card.dataset.s1)return;if(d===p.dom){card.dataset.s1=1;bt.classList.add('good');setMood(50);s2.hidden=false;o2.hidden=false;beep('good');toast('Yes, it\'s '+d+'!')}else{bt.classList.remove('nope');void bt.offsetWidth;bt.classList.add('nope');bad();toast(pick(OOPS))}};o1.appendChild(bt)});
+  p.fixes.forEach(f=>{const bt=el('button',{class:'opt'},f[0]);bt.onclick=()=>{if(card.dataset.s2)return;if(f[1]){card.dataset.s2=1;bt.classList.add('good');setMood(100);fb.hidden=false;fb.className='fb ok';fb.textContent=f[2];healed.add(p.id);store.set('zq-healed',[...healed]);if(healed.size===4)solve('z3-clinic','z3');good()}else{bt.classList.remove('nope');void bt.offsetWidth;bt.classList.add('nope');bad();fb.hidden=false;fb.className='fb bad';fb.textContent=f[2]}};o2.appendChild(bt)});
+  if(healed.has(p.id)){card.dataset.s1=1;card.dataset.s2=1;setMood(100);s2.hidden=false;o2.hidden=false;[...o1.children].forEach(x=>{if(x.textContent===p.dom)x.classList.add('good')});[...o2.children].forEach((x,i)=>{if(p.fixes[i][1])x.classList.add('good')});fb.hidden=false;fb.textContent=p.fixes.find(f=>f[1])[2]}
+  pb.append(s1,o1,s2,o2,fb);card.append(fz,pb);A1.appendChild(card);
+ });
+ b.appendChild(A1);
+
+ const A2=actBox('z3','z3-think','THINK','Big questions',0,true);
+ A2.append(
+  mcq('z3','z3-q1','A zoo has no cages. Are ALL its animals happy?',['Yes, always!','Not always. All five parts matter.'],'Not always. All five parts matter.','Exactly! No cages is a good start, but animals also need food, a good home, health care and things to do.'),
+  mcq('z3','z3-q2','Mental State (how an animal feels) comes from...',['the other four parts','the colour of the zoo','how many visitors come'],'the other four parts','Right! Good food + good home + good health + good things to do = a happy animal.'),
+  mcq('z3','z3-q3','Phase 3 match: an animal likes to <b>climb</b>. What does the zoo add?',['A dead tree','A rope','A wooden box'],'A dead tree','Yes! Climb = dead tree. Swing = rope. Hide = wooden box.'),
+  mcq('z3','z3-q4','An animal wants to <b>swing</b>. What does the zoo add?',['A dead tree','A rope','A wooden box'],'A rope','Wheee! A rope for swinging.'));
+ b.appendChild(A2);
+})();
+
+/* ======================================================
+   ZONE 4 — DESIGN CONTEST
+   ====================================================== */
+(function(){
+ const Z=ZONES.find(z=>z.id==='z4');
+ const b=zone(Z,'Journal 29 · pages 6–15',
+ '<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky('#ffb877','#fff0df')+
+ '<rect x="230" y="96" width="80" height="80" fill="#ffe066" stroke="#1d2a44" stroke-width="4"/><rect x="150" y="122" width="80" height="54" fill="#e5ecf5" stroke="#1d2a44" stroke-width="4"/><rect x="310" y="138" width="80" height="38" fill="#ffd3b0" stroke="#1d2a44" stroke-width="4"/>'+
+ '<text x="270" y="150" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="30">1</text><text x="190" y="160" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="26">2</text><text x="350" y="166" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="22">3</text>'+
+ '<use href="#giraffe" x="236" y="18" width="70" height="84"/><use href="#elephant" x="150" y="68" width="76" height="60"/><use href="#monkey" x="320" y="88" width="54" height="54"/>'+
+ '<g fill="#ff6b4a"><rect x="60" y="30" width="8" height="8" transform="rotate(20 64 34)"/><rect x="480" y="40" width="8" height="8" fill="#2fa8ff"/><rect x="520" y="90" width="8" height="8" fill="#7b61ff"/><rect x="100" y="80" width="8" height="8" fill="#2bb673"/></g><use href="#pip" x="470" y="104" width="64" height="76"/></svg>');
+
+ b.appendChild(pipSay('Big question time! Some people say <b>close all zoos</b>, because some zoos treated animals badly. Others say zoos help us <b>learn</b> and do <b>science</b>. Is there a <b>middle way</b>? A contest tried to find out!'));
+
+ b.appendChild(el('div',{class:'cards'},
+  '<div class="fact"><div class="art" style="background:#ffe1c4"><svg viewBox="0 0 120 70" width="120" height="66"><rect x="10" y="10" width="100" height="50" rx="8" fill="#fff" stroke="#1d2a44" stroke-width="3"/><path d="M20 50 L40 26 L56 42 L72 22 L100 50Z" fill="#2bb673"/><circle cx="90" cy="22" r="6" fill="#ffd23f"/></svg></div><h3>The contest</h3><p>Name: <b>"Coexist: Rethinking Zoos"</b>, run by <b>Archstorming</b>. Goal: redesign the <b>Zoo of Barcelona</b> in Spain. Teams could move animals and buildings!</p></div>'+
+  '<div class="fact"><div class="art" style="background:#dff0ff"><svg viewBox="0 0 120 70" width="120" height="66"><circle cx="60" cy="36" r="28" fill="#2fa8ff" stroke="#1d2a44" stroke-width="3"/><path d="M36 30 Q50 20 60 32 T84 30 M40 46 Q56 40 70 50" stroke="#2bb673" stroke-width="6" fill="none" stroke-linecap="round"/></svg></div><h3>40+ countries</h3><p>Teams from over 40 countries joined. Some ideas were wild, some were very practical.</p></div>'+
+  '<div class="fact"><div class="art" style="background:#e7ffe7">'+ic('elephant',80,66)+ic('pip',50,60)+'</div><h3>What the judges wanted</h3><p>Good <b>human–animal interaction</b>, <b>sustainability</b> and protecting <b>biodiversity</b>. These matter more than just entertainment.</p></div>'));
+
+ const W=[
+  {k:'g',m:'#ffd23f',place:'1st · Gold',name:'RE-HABITAT',from:'Thailand · Journal p.7–10',pts:['Four architects from Thailand.','Step by step: <b>sort the animals</b> by species and where they come from. Find the best habitat for each. Then <b>move them into new zones</b>.','Zones like rainforest, woodland, savannah, savannah + highland, savannah + water pond, and wetland.','A shared <b>"Habitat Parc"</b> where people and animals can both be, safely.','Special <b>"thresholds"</b> (barriers) are shaped for each animal\'s body and movement.','Elevated walkways, only <b>native species</b> that suit the local climate, and even <b>3D virtual animals</b>.','The zoo should not be an "urban prison". It should be a place for art, history and learning.']},
+  {k:'s',m:'#c9d4ec',place:'2nd · Silver',name:'This is Not a Zoo',from:'France · Journal p.10–11',pts:['By French architects <b>Elias Vogel</b> and <b>Estelle Filliat</b>.','A <b>lightweight, elevated pedestrian bridge</b> on stilts, above natural ground.','It links the <b>vet school, labs, exhibition halls, conference centres</b>, and even biogas (methane) tanks.']},
+  {k:'b',m:'#ff9f5a',place:'3rd · Bronze',name:'Limit: Only for Visitors',from:'Turkey · Journal p.12–14',pts:['Four architects from <b>Istanbul, Turkey</b>.','Big idea: most zoo animals <b>can\'t go back to the wild</b>, so the zoo is their only home.','So <b>limit the humans, not the animals</b>! No cages. Animals roam free in natural-style habitats.','Visitors stay on a long, winding <b>elevated walkway</b>.','<b>Six kinds of bridges</b> made of steel and wood, like "Low Mesh Protection", "High Protection" and "Low Unprotected". The height fits each animal\'s size and behaviour.','Only animals that suit the <b>local climate</b>.']}
+ ];
+ const pod=el('div',{class:'podium'});const pinfo=el('div',{class:'podinfo'});
+ const order=[1,0,2];const seenW=new Set();need('z4','z4-pod');
+ order.forEach(i=>{const w=W[i];const p=el('button',{class:'pod '+w.k,'aria-pressed':'false'},'<svg class="medal" viewBox="0 0 40 40" style="color:'+w.m+'"><use href="#medal"/></svg><small>'+w.place+'</small><b>'+w.name+'</b><small>Tap me!</small>');
+  p.onclick=()=>{[...pod.children].forEach(x=>x.setAttribute('aria-pressed','false'));p.setAttribute('aria-pressed','true');pinfo.innerHTML='<h3 style="font-size:24px">'+w.name+'</h3><p style="color:var(--muted);font-weight:900">'+w.place+' · '+w.from+'</p><ul>'+w.pts.map(x=>'<li>'+x+'</li>').join('')+'</ul>';seenW.add(i);if(seenW.size===3&&solve('z4-pod','z4'))good('You met all 3 winners!')};
+  pod.appendChild(p)});
+ pinfo.innerHTML='<p>Tap a winner on the podium to read about it.</p>';
+ const AP=actBox('z4','z4-pod','EXPLORE','Meet the 3 winners (tap each one)');AP.append(pod,pinfo);b.appendChild(AP);
+
+ const A1=actBox('z4','z4-which','WHICH DESIGN?','Gold, Silver or Bronze?',0,true);
+ const G=['Gold: RE-HABITAT','Silver: This is Not a Zoo','Bronze: Limit'];
+ [['People and animals share a "Habitat Parc".',0],['A light bridge links the vet school, labs and halls.',1],['Visitors stay on a high walkway. Animals roam free below.',2],['Special "thresholds" keep people and animals safe.',0],['Six kinds of bridges: some high, some low.',2],['Its name says it is NOT a zoo!',1],['First, sort the animals by species and habitat.',0]]
+ .forEach((q,i)=>A1.appendChild(mcq('z4','z4-w'+i,q[0],G,G[q[1]],'Yes! '+G[q[1]]+'.')));
+ A1.appendChild(mcq('z4','z4-free','In "Limit: Only for Visitors", who has more freedom?',['The animals','The visitors'],'The animals','Correct! The humans are the ones with limits. Funny, right?'));
+ b.appendChild(A1);
+
+ // opinion builder (worksheet Q5)
+ const A2=actBox('z4','z4-op','YOUR OPINION','What do YOU think? (worksheet Q5)');
+ A2.appendChild(el('p',{},'There is no wrong answer! Pick your idea and a reason. Then read your sentence out loud.'));
+ const o1=el('div',{class:'chips'}),o2=el('div',{class:'chips'});let ch1='',ch2='';
+ const out=el('div',{class:'fullscript'},'<span style="color:var(--muted)">Your sentence will appear here.</span>');
+ const playO=el('button',{class:'btn blue'},'Hear it');
+ [['close all zoos','I think we should close all zoos'],['keep zoos, but change them','I think zoos should stay, but they should change'],['keep zoos the same','I think zoos should stay the same']].forEach(x=>{const c=el('button',{class:'chip','aria-pressed':'false'},x[0]);c.onclick=()=>{[...o1.children].forEach(y=>y.setAttribute('aria-pressed','false'));c.setAttribute('aria-pressed','true');ch1=x[1];upd()};o1.appendChild(c)});
+ [['animals need freedom','animals need more freedom and space'],['zoos help us learn','zoos help children learn about nature'],['zoos help science','zoos help scientists protect endangered animals'],['cages make animals sad','small cages can make animals stressed']].forEach(x=>{const c=el('button',{class:'chip','aria-pressed':'false'},x[0]);c.onclick=()=>{[...o2.children].forEach(y=>y.setAttribute('aria-pressed','false'));c.setAttribute('aria-pressed','true');ch2=x[1];upd()};o2.appendChild(c)});
+ function upd(){if(ch1&&ch2){out.textContent=ch1+', because '+ch2+'.';if(solve('z4-op','z4'))good('Great opinion! That is your answer for Q5.')}}
+ playO.onclick=()=>{if(ch1&&ch2)say(out.textContent)};
+ A2.append(el('p',{class:'q'},'1. My idea:'),o1,el('p',{class:'q'},'2. My reason:'),o2,out,el('div',{class:'row'}).appendChild(playO).parentNode);
+ b.appendChild(A2);
+
+ // Eden 2.0
+ b.appendChild(el('div',{class:'fact'},'<div class="art" style="background:linear-gradient(90deg,#ffe6f0,#e6f3ff)">'+ic('deer',60,66)+ic('pip',50,60)+ic('lion',60,60)+'</div><h3>The last page: "Eden 2.0" <small style="font-size:14px;color:var(--muted)">Journal p.15</small></h3><p>The journal ends with an idea from a Christian writer. In a future <b>"New Heaven and New Earth"</b>, like a new <b>Garden of Eden</b>, animals would be there too. They might be <b>created new</b>, <b>created again</b> (re-created), or a mix of both. Humans and animals would live together in <b>harmony</b>.</p><p style="background:#fff6c7;border-radius:12px;padding:6px 10px">Note: this is a <b>religious belief</b>, not science.</p>'));
+ const A3=actBox('z4','z4-eden','WORKSHEET Q2','Eden 2.0 check',0,true);
+ A3.appendChild(mcq('z4','z4-e1','In the "Eden 2.0" idea, how might animals exist in the New Heaven and New Earth?',['They would no longer exist','They would be recreated or brought back to life','Only a few pets would be kept','They would still be kept in enclosures'],'They would be recreated or brought back to life','Correct! That is answer B on your worksheet.'));
+ b.appendChild(A3);
+})();
+
+/* ======================================================
+   ZONE 5 — BUILD ZOO 6.0
+   ====================================================== */
+const BUILD=store.get('zq-build',{hab:'',bar:'',homes:[],path:'',tech:false,slogan:''});
+(function(){
+ const Z=ZONES.find(z=>z.id==='z5');
+ const b=zone(Z,'Strand 4 Booklet · pages 24–32',
+ '<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky('#ffe066','#fff8cf')+
+ '<g stroke="#1d2a44" stroke-width="3"><rect x="400" y="40" width="10" height="130" fill="#ff9f1c"/><path d="M405 44 L540 44 L540 54" fill="none" stroke-width="5"/><line x1="540" y1="54" x2="540" y2="90"/></g><rect x="520" y="90" width="40" height="22" fill="#2fa8ff" stroke="#1d2a44" stroke-width="3"/>'+
+ '<path d="M0 160 Q300 130 600 160 V200 H0Z" fill="#8fd694"/><path d="M60 150 Q200 90 340 150" stroke="#c9823a" stroke-width="10" fill="none"/><g stroke="#8b5a2b" stroke-width="5"><line x1="110" y1="124" x2="110" y2="160"/><line x1="200" y1="112" x2="200" y2="160"/><line x1="290" y1="124" x2="290" y2="160"/></g>'+
+ '<use href="#elephant" x="150" y="130" width="70" height="56"/><use href="#pip" x="440" y="106" width="60" height="72"/><use href="#person" x="190" y="86" width="14" height="28" style="color:#ff6b4a"/></svg>');
+
+ b.appendChild(pipSay('Now YOU are the designer! The Booklet calls today\'s ideas <b>Zoo 5.0</b>. Your job on 31 October is a <b>Zoo 6.0</b> poster. (Zoo 5.0 and 6.0 are ideas from your programme, not official science words.)'));
+
+ b.appendChild(el('h3',{style:'font-size:24px'},'Zoo 5.0: the 5 big ideas'));
+ b.appendChild(el('div',{class:'cards'},
+  '<div class="fact"><h3>1. No cages</h3><p>Invisible barriers like water, rocks and plants. Big glass <b>eco-domes</b> with the right light and temperature.</p></div>'+
+  '<div class="fact"><h3>2. Smart welfare tech</h3><p>Cameras and sensors <b>help keepers</b> watch behaviour. Animals can choose paths between areas.</p></div>'+
+  '<div class="fact"><h3>3. Digital learning</h3><p>Apps and screens teach visitors <b>without disturbing</b> animals. Maybe holograms for sharks and whales one day.</p></div>'+
+  '<div class="fact"><h3>4. Green zoo</h3><p>Solar power, rainwater collection, and turning animal waste into energy and fertiliser.</p></div>'+
+  '<div class="fact"><h3>5. Rescue &amp; rewilding</h3><p>Care for injured wild animals and help endangered animals <b>go back to the wild</b>.</p></div>'));
+
+ const A0=actBox('z5','z5-nf','NOW OR FUTURE?','Is it real today, or still a dream?',0,true);
+ const NF=['Real today','Future idea'];
+ [['Using moats, rocks and plants instead of cages.','Real today','Real! Hagenbeck did it over 100 years ago.'],
+  ['Cameras record animal behaviour to help keepers.','Real today','Real! But keepers and vets make the decisions.'],
+  ['AI can tell exactly how an animal feels and decide its care.','Future idea','Future idea! AI sees behaviour, not feelings. Humans decide.'],
+  ['Holograms replace real sharks and whales.','Future idea','Future idea. In your talk, say "may" or "in the future".'],
+  ['Solar panels and rainwater collection.','Real today','Real! Lots of buildings use them.'],
+  ['A 100% zero-waste zoo.','Future idea','A goal, not a fact yet. Say "aims to reduce waste".']]
+ .forEach((q,i)=>A0.appendChild(mcq('z5','z5-n'+i,q[0],NF,q[1],q[2])));
+ b.appendChild(A0);
+
+ // ---- builder ----
+ const A=actBox('z5','z5-build','BUILD','Design your Zoo 6.0 and get your AI poster prompt!',50);
+ const wrap=el('div',{class:'build'});
+ const poster=el('div',{class:'poster'});const pt=el('div',{class:'ptitle'});const psvg=el('div');poster.append(pt,psvg);
+ const steps=el('div',{class:'steps'});
+ const HAB={rain:{n:'Rainforest',a:['monkey','parrot'],names:'monkeys and parrots',bg:'#2bb673'},sav:{n:'Savannah',a:['giraffe','zebra','elephant'],names:'giraffes, zebras and elephants',bg:'#e9c46a'},cold:{n:'Cold Coast',a:['seal','pip'],names:'seals and penguins',bg:'#bfe3ff'}};
+ const BAR={moat:'a water moat',rocks:'big rocks',plants:'thick plants'};
+ const HOM={cave:'a quiet cave',pond:'a pond',trees:'climbing trees',shade:'a shady shelter'};
+ const PATH={bridge:'high bridge',tunnel:'glass tunnel'};
+ const pipMsg=el('div');
+ BUILD.homes=BUILD.homes||[];BUILD.techSel=BUILD.tech?'cam':'';
+ function stepEl(n,title,chips,multi,key,bads){
+  const s=el('div',{class:'step'});s.appendChild(el('h4',{},'<span>'+n+'</span>'+title));const c=el('div',{class:'chips'});
+  chips.forEach(([v,label])=>{const btn=el('button',{class:'chip','aria-pressed':'false'},label);
+   const isOn=()=>multi?BUILD[key].includes(v):BUILD[key]===v;btn.setAttribute('aria-pressed',isOn());
+   btn.onclick=()=>{
+    if(bads&&bads[v]){btn.classList.remove('no');void btn.offsetWidth;btn.classList.add('no');bad();pipMsg.innerHTML='';pipMsg.appendChild(pipSay(bads[v]));return}
+    if(multi){const i=BUILD[key].indexOf(v);i>-1?BUILD[key].splice(i,1):BUILD[key].push(v)}else BUILD[key]=v;
+    [...c.children].forEach(x=>{const vv=x.dataset.v;x.setAttribute('aria-pressed',multi?BUILD[key].includes(vv):BUILD[key]===vv)});
+    beep('good');pipMsg.innerHTML='';render()};btn.dataset.v=v;c.appendChild(btn)});
+  s.appendChild(c);return s;
+ }
+ steps.append(
+  stepEl(1,'Pick ONE habitat area',[['rain','Rainforest'],['sav','Savannah'],['cold','Cold Coast']],false,'hab'),
+  stepEl(2,'Pick a barrier (no cages!)',[['moat','Water moat'],['rocks','Big rocks'],['plants','Thick plants'],['bars','Iron bars']],false,'bar',{bars:'Whoa! Iron bars? That\'s Phase One! Pick something natural.'}),
+  stepEl(3,'Add animal homes (pick 1 or more)',[['cave','Quiet cave'],['pond','Pond'],['trees','Climbing trees'],['shade','Shady shelter']],true,'homes'),
+  stepEl(4,'How do visitors move?',[['bridge','High bridge'],['tunnel','Glass tunnel'],['walk','Walk into the habitat']],false,'path',{walk:'Uh-oh! Walking into the habitat would scare the animals. Try a bridge or tunnel.'}),
+  (()=>{const s=stepEl(5,'Smart tech (optional)',[['cam','Cameras that help keepers'],['mind','Robot that reads animal minds']],false,'techSel',{mind:'Nice dream! But AI can\'t read minds. Keepers and vets decide.'});return s})()
+ );
+ const sl=el('div',{class:'step'});sl.appendChild(el('h4',{},'<span>6</span>Pick or write your slogan'));
+ const slc=el('div',{class:'chips'});const slin=el('input',{class:'txt',id:'slogan',type:'text',maxlength:'60',placeholder:'Or type your own slogan here'});slin.value=BUILD.slogan||'';
+ ['Room to Roam','No Cages, Just Homes','Animals Below, Friends Above','Free Feet, Quiet Paths'].forEach(t=>{const c=el('button',{class:'chip'},t);c.onclick=()=>{slin.value=t;BUILD.slogan=t;beep('good');render()};slc.appendChild(c)});
+ slin.oninput=()=>{BUILD.slogan=slin.value;render()};
+ sl.append(slc,slin);steps.append(sl,pipMsg);
+ const out=el('div',{style:'display:flex;flex-direction:column;gap:10px'});
+ wrap.append(poster,steps);A.append(wrap,out);b.appendChild(A);
+
+ function sceneSVG(){
+  const h=HAB[BUILD.hab]||{bg:'#cfe9d6',a:[]};
+  let s='<svg viewBox="0 0 300 200" aria-label="Your zoo poster preview"><rect width="300" height="200" fill="#bfe7ff"/><circle cx="260" cy="30" r="16" fill="#ffd23f"/><rect x="0" y="110" width="300" height="90" fill="'+h.bg+'"/>';
+  if(BUILD.hab==='rain')s+='<use href="#tree" x="0" y="50" width="70" height="90"/><use href="#tree" x="230" y="44" width="70" height="96"/>';
+  if(BUILD.hab==='sav')s+='<path d="M220 110 Q240 70 270 80 Q300 74 296 92" fill="#2bb673"/><rect x="250" y="84" width="6" height="30" fill="#8b5a2b"/>';
+  if(BUILD.hab==='cold')s+='<path d="M0 130 Q60 110 120 130 T300 128 V200 H0Z" fill="#fff"/>';
+  if(BUILD.homes.includes('cave'))s+='<path d="M20 170 Q50 120 90 170Z" fill="#8a7f72" stroke="#1d2a44" stroke-width="2"/><path d="M40 170 Q55 146 70 170Z" fill="#3b3530"/>';
+  if(BUILD.homes.includes('pond'))s+='<ellipse cx="200" cy="170" rx="44" ry="14" fill="#2fa8ff" stroke="#1d2a44" stroke-width="2"/>';
+  if(BUILD.homes.includes('trees'))s+='<use href="#tree" x="100" y="96" width="40" height="56"/>';
+  if(BUILD.homes.includes('shade'))s+='<path d="M236 130 L286 130 L276 120 L246 120Z" fill="#ff6b4a" stroke="#1d2a44" stroke-width="2"/><rect x="244" y="130" width="4" height="26" fill="#8b5a2b"/><rect x="274" y="130" width="4" height="26" fill="#8b5a2b"/>';
+  const pos=[[120,128],[160,134],[70,140]];
+  h.a.forEach((a,i)=>{const p=pos[i];s+='<use href="#'+a+'" x="'+p[0]+'" y="'+p[1]+'" width="40" height="44"/>'});
+  if(BUILD.bar==='moat')s+='<rect x="0" y="182" width="300" height="10" fill="#2fa8ff"/>';
+  if(BUILD.bar==='rocks')s+='<g fill="#a8b3c4" stroke="#1d2a44" stroke-width="2"><ellipse cx="30" cy="188" rx="22" ry="10"/><ellipse cx="90" cy="190" rx="18" ry="9"/><ellipse cx="150" cy="188" rx="24" ry="11"/><ellipse cx="216" cy="190" rx="18" ry="9"/><ellipse cx="276" cy="188" rx="22" ry="10"/></g>';
+  if(BUILD.bar==='plants')s+='<g fill="#25a065">'+[10,40,70,100,130,160,190,220,250,280].map(x=>'<circle cx="'+x+'" cy="190" r="14"/>').join('')+'</g>';
+  if(BUILD.path==='bridge')s+='<path d="M0 70 Q150 30 300 70" stroke="#c9823a" stroke-width="9" fill="none"/><g stroke="#8b5a2b" stroke-width="4"><line x1="60" y1="56" x2="60" y2="112"/><line x1="150" y1="46" x2="150" y2="112"/><line x1="240" y1="56" x2="240" y2="112"/></g><use href="#person" x="96" y="26" width="14" height="28" style="color:#ff6b4a"/><use href="#person" x="186" y="24" width="14" height="28" style="color:#7b61ff"/>';
+  if(BUILD.path==='tunnel')s+='<rect x="0" y="62" width="300" height="34" rx="17" fill="#c9f0ff" fill-opacity=".7" stroke="#1d2a44" stroke-width="2"/><use href="#person" x="90" y="64" width="14" height="28" style="color:#ff6b4a"/><use href="#person" x="190" y="64" width="14" height="28" style="color:#7b61ff"/>';
+  if(BUILD.techSel==='cam')s+='<g transform="translate(266 92)"><rect width="22" height="14" rx="3" fill="#1d2a44"/><circle cx="11" cy="7" r="4" fill="#2fa8ff"/></g>';
+  if(!BUILD.hab)s+='<text x="150" y="104" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="16" fill="#1d2a44">Start with step 1!</text>';
+  return s+'</svg>';
+ }
+ function render(){
+  BUILD.tech=BUILD.techSel==='cam';store.set('zq-build',BUILD);
+  pt.textContent=BUILD.slogan||'Your slogan here';psvg.innerHTML=sceneSVG();
+  out.innerHTML='';
+  const ready=BUILD.hab&&BUILD.bar&&BUILD.homes.length&&BUILD.path&&BUILD.slogan.trim();
+  if(!ready){out.appendChild(el('p',{class:'fb bad'},'Finish steps 1, 2, 3, 4 and 6 to unlock your AI prompt.'));return}
+  const h=HAB[BUILD.hab];const homes=BUILD.homes.map(x=>HOM[x]);const hs=homes.length>1?homes.slice(0,-1).join(', ')+' and '+homes.slice(-1):homes[0];
+  const prompt='You are a friendly anime artist!\nPlease draw a poster picture for my Zoo 6.0 design, in an anime art style. Make it a sunny, colourful zoo park.\n\nTitle: "'+BUILD.slogan.trim()+'"\n\nShow these key ideas:\n- Animal Welfare First: no cages. Use '+BUILD_bar()+' as a natural barrier. The animals have '+hs+', and they can choose where to be. (Idea from Hagenbeck Zoo, Hamburg, Germany.)\n- Quiet visitors: people walk in a '+PATH[BUILD.path]+', so they do not scare the animals.\n- One '+h.n.toLowerCase()+' area with only '+h.names+', because they can live together.'+(BUILD.tech?'\n- A small camera helps the keepers watch the animals.':'')+'\n\nRules: Do not draw cages or metal bars. Do not put all kinds of animals together. Only write the title, and spell it correctly.';
+  out.appendChild(el('h4',{style:'font-size:20px'},'Your DouBao AI prompt (Role → Task → Details)'));
+  out.appendChild(el('div',{class:'prompt',id:'promptBox'},prompt.replace(/&/g,'&amp;').replace(/</g,'&lt;')));
+  const cp=el('button',{class:'btn'},'Copy prompt');cp.onclick=()=>{try{navigator.clipboard.writeText(prompt).then(()=>toast('Copied! Paste it into DouBao.'),()=>sel())}catch(e){sel()}};
+  function sel(){const r=document.createRange();r.selectNodeContents($('#promptBox'));const s=getSelection();s.removeAllRanges();s.addRange(r);toast('Text selected. Tap Copy.')}
+  out.appendChild(el('div',{class:'row'}).appendChild(cp).parentNode);
+  out.appendChild(pipSay('Remember: AI might still draw cages or spell the title wrong. If it does, write a fix prompt and <b>tell the judges</b> what you changed. That earns points!'));
+  if(solve('z5-build','z5')){good('Your Zoo 6.0 is ready! +50 XP')}
+ }
+ function BUILD_bar(){return BAR[BUILD.bar]||'natural barriers'}
+ render();
+})();
+
+/* ======================================================
+   ZONE 6 — AI DETECTIVE
+   ====================================================== */
+(function(){
+ const Z=ZONES.find(z=>z.id==='z6');
+ const b=zone(Z,'Practice for the "AI Process" score',
+ '<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky('#ff8fb1','#ffe6ee')+
+ '<circle cx="420" cy="96" r="58" fill="#e9f8ff" stroke="#1d2a44" stroke-width="10"/><line x1="462" y1="138" x2="530" y2="196" stroke="#1d2a44" stroke-width="18" stroke-linecap="round"/><text x="420" y="112" text-anchor="middle" font-family="Baloo 2,sans-serif" font-weight="800" font-size="44" fill="#ff5d8f">?</text>'+
+ '<use href="#parrot" x="80" y="70" width="80" height="100"/><use href="#pip" x="190" y="86" width="70" height="84"/><path d="M196 92 Q225 70 254 92" fill="#7a4a24"/><rect x="190" y="88" width="70" height="8" rx="4" fill="#5a3418"/></svg>');
+
+ b.appendChild(pipSay('Detective time! An AI drew this Zoo 6.0 picture. It looks great... but it made <b>mistakes</b>. On 31 October, the judges want to hear: <b>What did the AI get wrong? How did you fix it?</b>'));
+ const im=el('div',{class:'detimg'},'<img src="zoo6-ai.jpg" alt="AI-made Future Zoo 6.0 picture: a park with rope bridges, glass domes, caves, and elephants, giraffes, gorillas and rhinos all on the same land" loading="lazy"><span class="lens">Zoom in with two fingers</span>');
+ b.appendChild(im);
+ const A=actBox('z6','z6-det','FIND THE MISTAKES','Tick every sentence that is an AI MISTAKE, then check.',30);
+ const CL=[
+  ['Elephants, giraffes, gorillas and rhinos all share the same land.',1,'Mistake! Different animals need different homes, and may not get along. The champion design sorted animals into zones.'],
+  ['It says "100% Clean Solar Energy Powers the Whole Park", like it is already true.',1,'Mistake! That is a goal. Also, it drew a wind turbine, which doesn\'t match "solar".'],
+  ['It says "Zero-Waste", like it is already true.',1,'Mistake! A goal, not a fact.'],
+  ['Some English words are spelled wrong, like "Borriers" and "Rooming".',1,'Mistake! AI is bad at writing words in pictures. Type your own text.'],
+  ['It says Zoo 6.0 is an "educational design concept", not official science.',0,'Not a mistake. That is honest and correct!'],
+  ['Visitors walk on high bridges above the animals.',0,'Not a mistake. Just like the Bronze winner\'s idea.'],
+  ['There are rock caves where animals can hide and rest.',0,'Not a mistake. Hiding places are good for animal welfare.']];
+ const list=el('div',{class:'checks'});
+ CL.forEach((c,i)=>{const l=el('label',{class:'chk'},'<input type="checkbox" id="cl'+i+'"><span>'+c[0]+'<span class="ex" hidden>'+c[2]+'</span></span>');list.appendChild(l)});
+ const fb=el('p',{class:'fb'});fb.hidden=true;const chk=el('button',{class:'btn'},'Check my answers');
+ const fix=el('div',{style:'display:flex;flex-direction:column;gap:10px'});fix.hidden=true;
+ fix.innerHTML='<h4 style="font-size:20px">Fix it with a better prompt</h4><div class="prompt">Do not put all the animals together.\nEach area only has animals that can live together.\nOnly write the title, and spell it correctly.</div><p><b>Say it in your talk:</b> "At first, the AI put all the animals together. We changed our prompt, so each area only has animals that can live together."</p>';
+ chk.onclick=()=>{let ok=0;CL.forEach((c,i)=>{const bx=$('#cl'+i),l=bx.closest('.chk'),r=bx.checked===!!c[1];l.classList.remove('right','wrong');l.classList.add(r?'right':'wrong');l.querySelector('.ex').hidden=false;if(r)ok++});
+  fb.hidden=false;fix.hidden=false;if(ok===CL.length){fb.className='fb ok';fb.textContent='Case closed! You found all 4 mistakes.';solve('z6-det','z6');good()}else{fb.className='fb bad';fb.textContent=ok+' of 7 correct. Read the red ones and try again.';bad()}};
+ A.append(list,el('div',{class:'row'}).appendChild(chk).parentNode,fb,fix);b.appendChild(A);
+
+ const A2=actBox('z6','z6-tips','AI SMARTS','How should we use AI?',0,true);
+ A2.append(
+  mcq('z6','z6-t1','The AI draws metal bars by mistake. What do you do?',['Give up','Write a new prompt: "No cages. Use rivers and rocks."','Use the picture anyway'],'Write a new prompt: "No cages. Use rivers and rocks."','Yes! That is "revision". The Booklet says you should do this.'),
+  mcq('z6','z6-t2','Who is the main author of your poster?',['The AI','You and your team'],'You and your team','Right! The rubric says students are the main authors. AI is just a helper.'),
+  mcq('z6','z6-t3','The AI says a fact. What should you do?',['Check it in the journal','Believe it, AI is always right'],'Check it in the journal','Smart! Always check AI facts against the source.'));
+ b.appendChild(A2);
+})();
+
+/* ======================================================
+   ZONE 7 — SPEAK STUDIO
+   ====================================================== */
+(function(){
+ const Z=ZONES.find(z=>z.id==='z7');
+ const b=zone(Z,'Booklet · pages 33–39',
+ '<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky('#5ec8ff','#e0f5ff')+
+ '<rect x="0" y="150" width="600" height="50" fill="#7b61ff"/><path d="M0 0 Q60 80 0 160Z M600 0 Q540 80 600 160Z" fill="#ff5d8f"/>'+
+ '<rect x="300" y="70" width="8" height="90" fill="#1d2a44"/><rect x="290" y="56" width="28" height="30" rx="14" fill="#c9d4ec" stroke="#1d2a44" stroke-width="4"/>'+
+ '<use href="#monkey" x="200" y="80" width="80" height="80"/><use href="#pip" x="330" y="76" width="70" height="84"/>'+
+ '<g fill="#ffd23f" stroke="#1d2a44" stroke-width="2"><path d="M120 40 l6 14 15 0 -12 9 5 14 -14 -9 -14 9 5 -14 -12 -9 15 0z"/><path d="M480 30 l5 11 12 0 -10 7 4 12 -11 -8 -11 8 4 -12 -10 -7 12 0z"/></g></svg>');
+
+ b.appendChild(pipSay('Showtime! Your group will speak <b>English</b> on stage. Tap the yellow button to hear each line. Then say it out loud. Tap a dot each time you practise!'));
+ const sp=el('div',{class:'speed'},'Speed: ');const s1=el('button',{class:'chip','aria-pressed':'true'},'Slow'),s2=el('button',{class:'chip','aria-pressed':'false'},'Normal');
+ s1.onclick=()=>{rate=0.8;s1.setAttribute('aria-pressed','true');s2.setAttribute('aria-pressed','false')};s2.onclick=()=>{rate=1;s2.setAttribute('aria-pressed','true');s1.setAttribute('aria-pressed','false')};
+ sp.append(s1,s2);b.appendChild(sp);
+
+ const A=actBox('z7','z7-lines','PRACTISE','Say each line 3 times',30);
+ const LINES=['Our zoo puts animals first.','We use water, rocks and plants instead of cages.','Animals can hide in quiet caves when they want to rest.','Visitors walk on high bridges, so they do not scare the animals.','We learned this idea from Hagenbeck Zoo in Germany.','At first, the AI put all the animals together. We changed our prompt.','AI is a helpful tool, but we must check its work.'];
+ const counts=store.get('zq-lines',LINES.map(()=>0));
+ const ls=el('div',{class:'lines'});
+ LINES.forEach((t,i)=>{const r=el('div',{class:'line'});const p=el('button',{class:'play','aria-label':'Play: '+t},'<svg viewBox="0 0 24 24"><use href="#speaker"/></svg>');p.onclick=()=>{if(!say(t))toast('No voice on this device. Try NaturalReader.')};
+  const tx=el('div',{class:'tx'},t);const ta=el('div',{class:'tally'});
+  for(let k=0;k<3;k++){const d=el('button',{class:'dot'+(counts[i]>k?' on':''),'aria-label':'Practice '+(k+1)});d.onclick=()=>{counts[i]=counts[i]>k?k:k+1;[...ta.children].forEach((x,j)=>x.classList.toggle('on',j<counts[i]));store.set('zq-lines',counts);if(counts[i]===3)beep('good');if(counts.every(c=>c>=3)&&solve('z7-lines','z7'))good('All lines practised! Star speaker!')};ta.appendChild(d)}
+  r.append(p,tx,ta);ls.appendChild(r)});
+ A.appendChild(ls);b.appendChild(A);
+
+ b.appendChild(el('h3',{style:'font-size:24px'},'Word bank (tap to hear)'));
+ const wb=el('div',{class:'wbank'});
+ [['cage','a box with metal bars'],['moat','a ditch filled with water'],['barrier','something that keeps things apart'],['habitat','an animal\'s natural home'],['animal welfare','how well an animal lives and feels'],['enrichment','toys and challenges for animals'],['elevated walkway','a path up high'],['coexist','live together in peace'],['conservation','protecting nature'],['rewilding','helping animals return to the wild'],['exotic','from a faraway country'],['iconic','very famous and special']]
+ .forEach(w=>{const x=el('button',{class:'wb','data-say':w[0]},'<b>'+w[0]+'</b><span>'+w[1]+'</span>');wb.appendChild(x)});
+ b.appendChild(wb);
+
+ const B=actBox('z7','z7-script','SCRIPT MAKER','Build your 6-part talk (from the Booklet)',30);
+ const bd=store.get('zq-build',{});const SC=store.get('zq-script',{});
+ const HABN={rain:'monkeys and parrots',sav:'giraffes, zebras and elephants',cold:'seals and penguins'};
+ const BARN={moat:'a water moat',rocks:'big rocks',plants:'thick plants'};
+ const PARTS=[
+  ['s1','Topic & slogan','Hello everyone! Our poster is called','e.g. '+(bd.slogan||'Room to Roam')],
+  ['s2','Using AI','We used DouBao AI. We told it to be','e.g. a friendly anime artist'],
+  ['s3','Problem & fix','At first, the AI','e.g. put all the animals together. We changed our prompt.'],
+  ['s4','Animal welfare','In our zoo, animals are happy because','e.g. there are no cages and they have '+(BARN[bd.bar]||'a water moat')],
+  ['s5','Visitors','Visitors walk on a','e.g. '+(bd.path==='tunnel'?'glass tunnel':'high bridge')+', so they do not scare the animals'],
+  ['s6','What we learned','We learned that AI is helpful, but','e.g. we must check its work']];
+ const scr=el('div',{class:'script'});const full=el('div',{class:'fullscript'});
+ PARTS.forEach((p,i)=>{const w=el('div',{class:'sline'});w.innerHTML='<label for="'+p[0]+'"><span>'+(i+1)+'</span>'+p[1]+'</label><div style="font-weight:800">'+p[2]+' …</div>';const inp=el('input',{class:'txt',id:p[0],type:'text',placeholder:p[3]});inp.value=SC[p[0]]||'';inp.oninput=()=>{SC[p[0]]=inp.value;store.set('zq-script',SC);drawFull()};w.appendChild(inp);scr.appendChild(w)});
+ function drawFull(){const lines=PARTS.map(p=>{const v=(SC[p[0]]||'').trim();return v?p[2]+' '+v.replace(/^e\.g\.\s*/,'')+(/[.!?]$/.test(v)?'':'.'):''}).filter(Boolean);
+  full.innerHTML=lines.length?lines.map(l=>'<p>'+l.replace(/</g,'&lt;')+'</p>').join(''):'<span style="color:var(--muted)">Fill in the boxes. Your full talk appears here.</span>';
+  if(lines.length===6&&solve('z7-script','z7'))good('Your script is ready! Practise it with "Hear my talk".')}
+ const hear=el('button',{class:'btn blue'},'Hear my talk');hear.onclick=()=>{const t=full.innerText;if(t&&!say(t))toast('No voice on this device.')};
+ B.append(scr,el('h4',{style:'font-size:20px'},'My talk'),full,el('div',{class:'row'}).appendChild(hear).parentNode);drawFull();
+ b.appendChild(B);
+})();
+
+/* ======================================================
+   ZONE 8 — FINAL QUIZ
+   ====================================================== */
+(function(){
+ const Z=ZONES.find(z=>z.id==='z8');
+ const b=zone(Z,'Everything together',
+ '<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky('#9be15d','#eaf9d6')+
+ '<path d="M220 40 H380 V90 Q380 130 300 140 Q220 130 220 90Z" fill="#ffd23f" stroke="#1d2a44" stroke-width="5"/><path d="M220 54 Q180 54 184 84 Q190 110 226 108 M380 54 Q420 54 416 84 Q410 110 374 108" stroke="#1d2a44" stroke-width="5" fill="none"/><rect x="280" y="138" width="40" height="22" fill="#ffd23f" stroke="#1d2a44" stroke-width="4"/><rect x="250" y="160" width="100" height="20" rx="4" fill="#ff6b4a" stroke="#1d2a44" stroke-width="4"/>'+
+ '<use href="#pip" x="274" y="48" width="52" height="62"/><use href="#giraffe" x="70" y="70" width="90" height="108"/><use href="#elephant" x="440" y="100" width="110" height="88"/></svg>');
+ b.appendChild(pipSay('Final challenge! 10 questions from every zone. Get <b>8 or more</b> to become a <b>Zoo Master</b>. Good luck, explorer!'));
+ const BANK=[
+  ['What does "Slottsskogen" mean?',['Castle Forest','Penguin Park','Big Zoo'],'Castle Forest'],
+  ['When did the Slottsskogen zoo open?',['1876','1891','1990'],'1891'],
+  ['Who was "The Man Who Opened the Cages"?',['Carl Hagenbeck','Natascha Meuser','Pip the Penguin'],'Carl Hagenbeck'],
+  ['What did Hagenbeck use instead of cages?',['Moats and artificial hills','Glass boxes','Robots'],'Moats and artificial hills'],
+  ['Why is a beautiful building not always good for animals?',['It might not give animals what they need','Animals hate art','Buildings are too big'],'It might not give animals what they need'],
+  ['Which phase uses a story and themed buildings?',['Phase 1','Phase 3','Phase 5'],'Phase 5'],
+  ['What is the right order of the first two phases?',['Colonial exhibition, then frameless panoramas','Frameless panoramas, then colonial exhibition'],'Colonial exhibition, then frameless panoramas'],
+  ['Mental State is the result of...',['Nutrition, environment, health and behaviour','How many visitors come','The zoo\'s colours'],'Nutrition, environment, health and behaviour'],
+  ['Which design keeps visitors on an elevated walkway?',['Limit: Only for Visitors','This is Not a Zoo','RE-HABITAT'],'Limit: Only for Visitors'],
+  ['Which city\'s zoo was the contest about?',['Barcelona','Hamburg','Taipei'],'Barcelona'],
+  ['What can AI cameras do in a zoo?',['Record behaviour to help keepers','Read animals\' minds','Feed the animals by magic'],'Record behaviour to help keepers'],
+  ['"A 100% zero-waste zoo" is...',['A goal for the future','Already true everywhere'],'A goal for the future'],
+  ['The AI draws all animals together. What do you do?',['Change the prompt and check again','Keep it','Delete the poster'],'Change the prompt and check again'],
+  ['Who is the main author of your poster?',['You and your team','The AI'],'You and your team'],
+  ['Where do Humboldt penguins come from?',['South America','Sweden','Antarctica'],'South America']
+ ];
+ const box=el('div',{class:'quiz'});b.appendChild(box);need('z8','z8-master');
+ let qs=[],qi=0,score=0;
+ function start(){qs=shuffle(BANK).slice(0,10);qi=0;score=0;q()}
+ function q(){box.innerHTML='';if(qi>=qs.length)return end();const [t,o,a]=qs[qi];
+  box.innerHTML='<div class="qbar"><i style="width:'+(qi/10*100)+'%"></i></div><p style="font-weight:900;color:var(--muted)">Question '+(qi+1)+' of 10 · Score '+score+'</p><p class="q" style="font-size:22px">'+t+'</p>';
+  const opts=el('div',{class:'opts'});let done=false;
+  shuffle(o).forEach(x=>{const bt=el('button',{class:'opt'},x);bt.onclick=()=>{if(done)return;done=true;if(x===a){score++;bt.classList.add('good');beep('good')}else{bt.classList.add('nope');bad();[...opts.children].forEach(y=>{if(y.textContent===a)y.classList.add('good')})}
+   const n=el('button',{class:'btn blue'},qi===9?'See my score':'Next');n.onclick=()=>{qi++;q()};box.appendChild(n)};opts.appendChild(bt)});
+  box.appendChild(opts)}
+ function end(){box.innerHTML='<div class="big">'+score+' / 10</div>';
+  const m=score>=8?'ZOO MASTER! Pip is doing a happy dance!':score>=5?'Good job! Try again to reach 8.':'Keep exploring the zones, then try again!';
+  box.appendChild(pipSay(m));if(score>=8){solve('z8-master','z8');good('Zoo Master!')}
+  const again=el('button',{class:'btn'},'Play again');again.onclick=start;box.appendChild(el('div',{class:'row'}).appendChild(again).parentNode)}
+ box.appendChild(pipSay('Ready? Tap start!'));const st=el('button',{class:'btn'},'Start the quiz');st.onclick=start;box.appendChild(el('div',{class:'row'}).appendChild(st).parentNode);
+})();
+
+/* ======================================================
+   ZONE 0 — STORY TIME (the whole journal, retold)
+   ====================================================== */
+(function(){
+ const Z=ZONES.find(z=>z.id==='z0');
+ const body=zone(Z,'Journal 29 · all 15 pages',
+ '<svg class="scene" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+sky('#ff9fc0','#ffeaf2')+
+ '<path d="M150 170 L300 150 L450 170 L450 60 L300 40 L150 60Z" fill="#fff" stroke="#1d2a44" stroke-width="5"/><line x1="300" y1="40" x2="300" y2="150" stroke="#1d2a44" stroke-width="4"/>'+
+ '<g stroke="#c9d4ec" stroke-width="4"><line x1="170" y1="78" x2="285" y2="64"/><line x1="170" y1="94" x2="285" y2="80"/><line x1="170" y1="110" x2="270" y2="98"/><line x1="315" y1="64" x2="430" y2="78"/><line x1="315" y1="80" x2="430" y2="94"/><line x1="315" y1="96" x2="420" y2="110"/></g>'+
+ '<use href="#pip" x="250" y="96" width="50" height="60"/><use href="#deer" x="330" y="104" width="46" height="50"/><use href="#giraffe" x="40" y="60" width="90" height="110"/><use href="#elephant" x="470" y="104" width="110" height="88"/></svg>');
+ const sec=body.parentNode;zonesEl.prepend(sec);
+
+ body.appendChild(pipSay('Story time! This is the <b>whole journal</b> in easy English, one page at a time. Open your <b>Journal 29 PDF</b> too, and look at the same page. Tap <b>"Read it to me"</b> to listen.'));
+
+ const G='font-family="Baloo 2,sans-serif" font-weight="800"';
+ const SC={
+  park:'<rect width="240" height="140" fill="#cdeeff"/><circle cx="210" cy="24" r="12" fill="#ffd23f"/><path d="M0 84 Q60 60 120 80 T240 74 V140 H0Z" fill="#8fd694"/><use href="#tree" x="4" y="36" width="44" height="60"/><use href="#tree" x="190" y="40" width="44" height="58"/><ellipse cx="90" cy="112" rx="40" ry="12" fill="#2fa8ff"/><use href="#seal" x="70" y="96" width="36" height="24"/><use href="#pip" x="140" y="84" width="24" height="30"/><use href="#pip" x="160" y="90" width="20" height="24"/><path d="M196 104 L214 84 L220 84 L204 104Z" fill="#ff6b4a" stroke="#1d2a44" stroke-width="2"/><rect x="0" y="126" width="240" height="14" fill="#5cbf6a"/><rect x="60" y="56" width="70" height="18" rx="9" fill="#2fa8ff" stroke="#1d2a44" stroke-width="2"/><rect x="66" y="60" width="10" height="8" fill="#fff"/><rect x="82" y="60" width="10" height="8" fill="#fff"/><rect x="98" y="60" width="10" height="8" fill="#fff"/>',
+  history:'<rect width="240" height="140" fill="#e3f1ff"/><path d="M150 140 Q170 90 240 80 V140Z" fill="#2fa8ff"/><g fill="#c9b18a" stroke="#1d2a44" stroke-width="2"><rect x="186" y="54" width="40" height="34"/><rect x="180" y="40" width="12" height="20"/><rect x="220" y="40" width="12" height="20"/></g><path d="M178 40 L186 30 L194 40Z M218 40 L226 30 L234 40Z" fill="#ff6b4a"/><path d="M0 110 Q80 90 160 110 V140 H0Z" fill="#8fd694"/><use href="#tree" x="10" y="54" width="40" height="56"/><use href="#tree" x="44" y="62" width="34" height="48"/><use href="#deer" x="90" y="80" width="36" height="40"/><g '+G+' font-size="12"><rect x="10" y="10" width="54" height="20" rx="6" fill="#ffd23f" stroke="#1d2a44" stroke-width="2"/><text x="37" y="25" text-anchor="middle">1876</text><rect x="74" y="10" width="54" height="20" rx="6" fill="#ff5d8f" stroke="#1d2a44" stroke-width="2"/><text x="101" y="25" text-anchor="middle" fill="#fff">1891</text></g>',
+  five:'<rect width="240" height="140" fill="#efe9ff"/><path d="M14 100 Q60 60 120 90 T228 70" stroke="#c8b8ff" stroke-width="10" fill="none" stroke-linecap="round"/>'+[[24,98,'1','#ff6b4a'],[70,78,'2','#2fa8ff'],[120,90,'3','#fff'],[170,88,'4','#2bb673'],[218,70,'5','#ffd23f']].map(a=>'<circle cx="'+a[0]+'" cy="'+a[1]+'" r="18" fill="'+a[3]+'" stroke="#1d2a44" stroke-width="3"/><text x="'+a[0]+'" y="'+(a[1]+7)+'" text-anchor="middle" '+G+' font-size="20">'+a[2]+'</text>').join('')+'<use href="#pip" x="100" y="16" width="40" height="48"/><text x="120" y="132" text-anchor="middle" '+G+' font-size="13" fill="#7b61ff">buildings + people and nature</text>',
+  contest:'<rect width="240" height="140" fill="#fff0df"/><circle cx="70" cy="70" r="44" fill="#2fa8ff" stroke="#1d2a44" stroke-width="3"/><path d="M40 60 Q56 44 72 58 T104 56 M44 86 Q64 76 86 92" stroke="#2bb673" stroke-width="10" fill="none" stroke-linecap="round"/><text x="70" y="128" text-anchor="middle" '+G+' font-size="14">40+ countries</text><path d="M150 30 H210 V56 Q210 80 180 84 Q150 80 150 56Z" fill="#ffd23f" stroke="#1d2a44" stroke-width="3"/><rect x="170" y="84" width="20" height="14" fill="#ffd23f" stroke="#1d2a44" stroke-width="3"/><rect x="156" y="98" width="48" height="12" rx="3" fill="#ff6b4a" stroke="#1d2a44" stroke-width="3"/><text x="180" y="62" text-anchor="middle" '+G+' font-size="22">1</text><text x="180" y="130" text-anchor="middle" '+G+' font-size="12">Zoo of Barcelona</text>',
+  gold:'<rect width="240" height="140" fill="#fff8cf"/><rect x="0" y="40" width="80" height="80" fill="#2bb673"/><rect x="80" y="40" width="80" height="80" fill="#e9c46a"/><rect x="160" y="40" width="80" height="80" fill="#7fd1c7"/><use href="#tree" x="6" y="44" width="34" height="46"/><use href="#monkey" x="38" y="70" width="34" height="34"/><use href="#giraffe" x="96" y="44" width="44" height="54"/><ellipse cx="200" cy="96" rx="30" ry="10" fill="#2fa8ff"/><use href="#goose" x="186" y="56" width="30" height="30"/><path d="M80 120 V60 Q80 40 96 40 M160 120 V60 Q160 40 176 40" stroke="#1d2a44" stroke-width="4" fill="none"/><text x="40" y="34" text-anchor="middle" '+G+' font-size="11">Rainforest</text><text x="120" y="34" text-anchor="middle" '+G+' font-size="11">Savannah</text><text x="200" y="34" text-anchor="middle" '+G+' font-size="11">Wetland</text><rect x="0" y="120" width="240" height="20" fill="#c9823a"/><use href="#person" x="110" y="104" width="10" height="20" style="color:#ff6b4a"/><use href="#person" x="124" y="104" width="10" height="20" style="color:#7b61ff"/>',
+  silver:'<rect width="240" height="140" fill="#e5ecf5"/><rect x="0" y="110" width="240" height="30" fill="#8fd694"/><g fill="#fff" stroke="#1d2a44" stroke-width="2"><rect x="12" y="84" width="34" height="26"/><rect x="100" y="80" width="40" height="30"/><rect x="190" y="86" width="36" height="24"/></g><g '+G+' font-size="8" text-anchor="middle"><text x="29" y="100">VET</text><text x="120" y="98">LAB</text><text x="208" y="101">HALL</text></g><path d="M10 60 Q60 30 120 56 T230 52" stroke="#c9b18a" stroke-width="10" fill="none" stroke-linecap="round"/><g stroke="#8b5a2b" stroke-width="3">'+[30,70,110,150,190,220].map(x=>'<line x1="'+x+'" y1="'+(x<100?48:56)+'" x2="'+x+'" y2="110"/>').join('')+'</g><use href="#person" x="60" y="20" width="10" height="20" style="color:#ff6b4a"/><use href="#person" x="160" y="30" width="10" height="20" style="color:#2fa8ff"/>',
+  bronze:'<rect width="240" height="140" fill="#ffe6d2"/><rect x="0" y="96" width="240" height="44" fill="#c7d98f"/><path d="M0 50 Q60 30 120 54 T240 44" stroke="#c9823a" stroke-width="12" fill="none"/><g stroke="#8b5a2b" stroke-width="3">'+[30,90,150,210].map(x=>'<line x1="'+x+'" y1="50" x2="'+x+'" y2="100"/>').join('')+'</g><use href="#person" x="50" y="20" width="10" height="20" style="color:#ff6b4a"/><use href="#person" x="64" y="22" width="10" height="20" style="color:#7b61ff"/><use href="#person" x="170" y="16" width="10" height="20" style="color:#2bb673"/><use href="#elephant" x="20" y="88" width="60" height="48"/><use href="#giraffe" x="110" y="64" width="50" height="62"/><use href="#zebra" x="186" y="94" width="36" height="36"/><text x="120" y="14" text-anchor="middle" '+G+' font-size="12">People up here. Animals free below!</text>',
+  eden:'<rect width="240" height="140" fill="#e6f3ff"/><g fill="none" stroke-width="7"><path d="M20 120 A100 100 0 0 1 220 120" stroke="#ff6b4a"/><path d="M30 120 A90 90 0 0 1 210 120" stroke="#ffd23f"/><path d="M40 120 A80 80 0 0 1 200 120" stroke="#2bb673"/><path d="M50 120 A70 70 0 0 1 190 120" stroke="#2fa8ff"/><path d="M60 120 A60 60 0 0 1 180 120" stroke="#7b61ff"/></g><rect x="0" y="112" width="240" height="28" fill="#8fd694"/><use href="#lion" x="60" y="80" width="44" height="44"/><use href="#deer" x="108" y="78" width="40" height="46"/><use href="#pip" x="150" y="86" width="30" height="36"/><use href="#person" x="186" y="90" width="14" height="28" style="color:#ff6b4a"/>'
+ };
+ const CH=[
+  {t:'A Day in Castle Forest',pg:'Page 1 (Chinese p.16)',sc:SC.park,p:[
+   'On 14 August 2023, the writer was in <b>Gothenburg</b>, a city in <b>Sweden</b>. The journal visits <b>Slottsskogen Park</b>. The name means <b>"Castle Forest"</b>. It is one of the oldest and largest parks in the city.',
+   'Long ago, in the late Middle Ages, this woodland belonged to the old <b>Älvsborg fortress</b>. The castle is gone now, but the park is still a peaceful green space in the middle of the city.',
+   'The park has exotic flowers, thick forests, ponds and neat lawns. You can play volleyball, use the outdoor gym, or try mini-golf. The writer enjoyed walking along the winding paths.',
+   'The visit was mainly for the <b>children\'s zoo</b> and the big playground. At the zoo there are Nordic animals: <b>moose, deer, sheep, goats, seals, Gotland ponies and Öland geese</b>. There are also <b>Humboldt penguins</b>, which come from South America!',
+   'The <b>Plikta Playground</b> has lots of fun equipment, plus ping pong and boules. There is an after-school centre with sandboxes, balls and games. The park also has the <b>Gothenburg Natural History Museum</b>. Its star is the <b>Malmö Whale</b>, a huge blue whale specimen.'],
+   w:['fortress','lawn','playground','specimen'],q:'Which animals at the children\'s zoo come from far away?',a:'The Humboldt penguins. They come from South America. (Hi, cousins!)'},
+  {t:'The Park\'s History',pg:'Page 2 (Chinese p.17)',sc:SC.history,p:[
+   'At first, Slottsskogen was <b>just a forest</b>. In the 1600s it had woods, pastures, hay meadows and orchards, all looked after by Älvsborg fortress.',
+   'But the real castle was <b>not</b> in the park. It was at the mouth of the <b>Göta River</b>.',
+   'In the 1700s, more middle-class families lived in Gothenburg, and the area <b>opened to the public</b>. Slowly it became the park we know today, and it got the name "Slottsskogen".',
+   'The city grew fast and needed more green space. In <b>1876</b>, the area officially became a park. The city council took charge and got ideas from <b>Hyde Park</b> in London and <b>Skansen</b> in Stockholm.',
+   'Early on, the council decided to build a zoo in the park. It opened in <b>1891</b>. The first residents were a herd of <b>deer</b>. Today it is one of the <b>oldest zoos in Sweden</b>.'],
+   w:['pasture','orchard','council','resident'],q:'Was the park first built as a military fortress?',a:'No! It started as a forest. The castle was at the river, not in the park. (Worksheet Q1)'},
+  {t:'Five Phases of Zoos',pg:'Page 2 (Chinese p.17)',sc:SC.five,p:[
+   'Now the journal changes topic. It talks about an article called <b>"Not Just a Zoo"</b>, by a writer named <b>Ho</b>.',
+   'Ho uses the work of <b>Professor Natascha Meuser</b> from Germany. She wrote about the history of zoo buildings, from "living trophy collections" to theme parks.',
+   'Meuser split zoo history into <b>five phases</b>. Most people sort history by time periods. But she looked at two things: the <b>buildings</b>, and how the <b>relationship between people and nature</b> changed. (Here, "nature" means more than just animals.)',
+   'Ho explains each phase and adds examples from zoos he visited around the world. Turn the page and let\'s travel through all five!'],
+   w:['phase','architecture','relationship'],q:'What two things did Meuser look at to make the five phases?',a:'The buildings (architecture), and the relationship between people and nature.'},
+  {t:'Phase 1: Colonial Exhibition Architecture',pg:'Pages 2–3 (Chinese p.17–18)',sc:PH[0].scene,p:[
+   'In the <b>mid-1800s</b>, zoo buildings mixed many different styles, often from colonial powers.',
+   'These "exhibition" buildings held large, <b>exotic</b> animals. The animals were shown like <b>trophies</b>, curiosities for the public to stare at. The buildings were also linked to archaeology.',
+   'This idea came from the <b>Enlightenment</b>. People wanted to "magnify" everything and look closely. They were curious about the world and about science. Looking led to <b>collecting</b>, and collecting led to <b>classifying</b> (sorting). Museums were born at this time.',
+   'At first, collecting was a hobby for rich people, a way to show off. Later, scholars joined in, and museum studies began.',
+   'Naming and sorting things is very important in science. But the writer says that, deep down, classifying can also feel like <b>conquering</b> the world.',
+   '<b>Examples:</b> the Cat Pavilion at the Jardin des Plantes Zoo in Paris, and the Antelope House at Berlin Zoo.'],
+   w:['colonial','exotic','trophy','classify'],q:'Why might sorting the world feel like "conquering" it?',a:'When you name and sort everything, you feel like you are in charge of the world.'},
+  {t:'Phase 2: Frameless Panoramas',pg:'Page 3 (Chinese p.18)',sc:PH[1].scene,p:[
+   '<b>Frameless</b> means you can\'t see the cages any more. Animals walk through layered landscapes, like <b>actors on a natural stage</b>.',
+   'Grassland, plants and artificial hills make a natural-looking theatre. The iron bars have disappeared! Hidden <b>moats</b> and <b>artificial hills</b> make it look as if there is no barrier between visitors and animals. Many zoos still love this style today.',
+   '<b>Carl Hagenbeck</b> of Hamburg started this in the early 1900s at his own zoo, now called <b>Hagenbeck Zoo</b>. It was called the "Hagenbeck Revolution", and people called him <b>"The Man Who Opened the Cages!"</b>',
+   'More than 120 years later, zoos all over the world still feel his influence. But many zoos still have not fully reached his vision.',
+   '<b>Example:</b> classic Hagenbeck-style exhibits, with moats, artificial hills and layers.'],
+   w:['frameless','moat','artificial','vision'],q:'What replaced the iron bars?',a:'Hidden moats and artificial hills.'},
+  {t:'Phase 3: Formalism and Functionalism',pg:'Page 4 (Chinese p.19)',sc:PH[2].scene,p:[
+   'From the 1900s to the 1920s, after Hagenbeck, hidden enclosures became normal in new zoos. Then in the 1920s, modern buildings at a few British zoos changed everything. Designers focused on <b>function</b>, not decoration, and used simple designs.',
+   '<b>Formalism</b> cares most about looks. At London Zoo\'s <b>Penguin Pool</b>, the penguins seemed more like decorations than living animals.',
+   '<b>Functionalism</b>, also called pragmatism, is about being practical. It can put <b>humans</b> (staff or visitors) first and forget animal welfare. Or it can <b>balance</b> humans and animals.',
+   'New functionalist exhibits may look plain, almost like cages. But they balance animal well-being, staff work and cost. They give animals <b>only what they need</b>: a dead tree to climb, a rope to swing on, a small wooden box for privacy.',
+   'The visitor experience may not be perfect. But if the animals are healthy and the zoo shares the right message, there is little to complain about.',
+   '<b>Examples:</b> the Penguin Pool at London Zoo (early functionalism) and the primate exhibit at Berlin Zoo (new-era functionalism). The writer asks: <b>what do humans really want to see, and what do animals actually need?</b>'],
+   w:['formalism','functionalism','privacy','balance'],q:'Does functionalism only care about animal welfare?',a:'No! It can put humans first, or balance humans and animals. (Worksheet Q1(2): False)'},
+  {t:'Phase 4: Landscaping and Naturalised Exhibits',pg:'Pages 4–5 (Chinese p.19–20)',sc:PH[3].scene,p:[
+   'By the <b>mid-1900s</b>, animal science was growing. People also worried about the environment and about running out of natural resources.',
+   'So zoos focused on <b>landscaping</b> instead of big buildings. Old museum-style buildings were replaced by designs that copied animals\' <b>natural habitats</b>.',
+   'Outdoor exhibits used greenery and hidden fences, so visitors felt as if they were inside nature.',
+   'Architects stepped back. <b>Landscape designers</b> and animal science experts took charge. But small budgets and few trained designers meant many projects did not turn out as hoped.',
+   '<b>Examples:</b> the indoor landscaped pavilions at Wrocław Zoo in Poland, with a few free-roaming animals, and the hoofed animal exhibit at Chester Zoo in the UK.'],
+   w:['landscape','habitat','budget','greenery'],q:'Why did many Phase 4 projects not work well?',a:'Small budgets, and not enough trained designers.'},
+  {t:'Phase 5: Iconic Architecture to Build a Brand',pg:'Pages 5–6 (Chinese p.20)',sc:PH[4].scene,p:[
+   'Since the <b>1990s</b>, zoos have added a sense of <b>adventure</b>. Even old zoos redesigned their areas with an "exploration" storyline.',
+   'Most modern zoos link their exhibits with <b>one story</b>, like a theatre. Visitors may not notice it, but it makes the visit more exciting.',
+   'If there is enough money, new exhibits are big, story-driven buildings full of adventure, like the <b>Tropical Rainforest Pavilion at Taipei Zoo</b>.',
+   'Zoo designers now know that you can\'t copy nature exactly. The real challenge is to <b>balance</b> animal care and visitor experience, and let staff work easily too.',
+   'These <b>branded</b> buildings do more than house animals. They create a memorable experience and help people care about nature.',
+   '<b>Examples:</b> the Mangrove Pavilion at Royal Burgers\' Zoo in the Netherlands, about an ecosystem of mudskippers, fiddler crabs and jellyfish; the Gondwanaland Pavilion at Leipzig Zoo, where geology tells the story; and the Australian Pavilion at Budapest Zoo, an old bird house turned into an Australian adventure.'],
+   w:['iconic','brand','adventure','ecosystem'],q:'Phase Five uses ______ architecture to build a brand.',a:'Iconic architecture! (Worksheet Q4)'},
+  {t:'Beyond Enclosure: A Big Contest',pg:'Page 6 (Chinese p.21)',sc:SC.contest,p:[
+   'Next, the journal shares an article by <b>Zhengxuan Huang</b>. It is about the top three designs from a contest called <b>"Coexist: Rethinking Zoos"</b>, run by <b>Archstorming</b>.',
+   'Huang asks a big question. More and more people care about <b>animal rights</b>. There are news stories about zoo animals living in poor conditions, getting sick or even dying. So many people want to <b>close zoos</b> and set the animals free.',
+   'But zoos also help people learn about nature, and they help scientists. Between keeping zoos the same and closing them all, is there a <b>middle way</b>?',
+   'The contest asked teams to rethink zoos and improve the <b>Zoo of Barcelona</b> in Spain. The winners could decide where the animals should live, and even move the buildings.',
+   'Teams from <b>over 40 countries</b> took part. Some ideas were wild; others were very practical. Expert judges chose designs with good <b>visitor–animal interaction</b>, <b>sustainability</b> and <b>biodiversity conservation</b>, not just entertainment.'],
+   w:['enclosure','animal rights','sustainability','biodiversity'],q:'Do you think zoos should close, stay the same, or change?',a:'There is no wrong answer! Give one reason. (Worksheet Q5)'},
+  {t:'Gold: RE-HABITAT',pg:'Pages 7–10 (Chinese p.21–25)',sc:SC.gold,p:[
+   'The champion team was <b>four architects from Thailand</b>. Their design is called <b>RE-HABITAT</b>.',
+   'They worked step by step. First, they <b>sorted</b> the zoo\'s animals by species and where they come from, and found the best conditions for each. Then they moved the animals into <b>new zones</b>.',
+   'A key idea is the <b>"Habitat Parc"</b>: a shared natural space where people and animals can be together safely, with clear boundaries.',
+   'The design has <b>elevated walkways</b> that don\'t disturb the animals. It keeps only <b>native species</b> that suit the local climate, and it even uses <b>3D virtual animals</b>.',
+   'The zones look like real landscapes: rainforest, woodland, savannah, savannah with highland, savannah with a water pond, and wetland. Special <b>"thresholds"</b> separate people and animals. Each one is shaped for the animal\'s body and movement.',
+   'The team says a zoo should not be an "urban prison". It should be part of the city, and a place for art, history and learning, so people feel <b>empathy and respect</b> for wildlife.'],
+   w:['champion','zone','threshold','native species'],q:'What is a "threshold" for?',a:'It separates people and animals, so both are safe.'},
+  {t:'Silver: This is Not a Zoo',pg:'Pages 10–11 (Chinese p.25–26)',sc:SC.silver,p:[
+   'Second prize went to French architects <b>Elias Vogel</b> and <b>Estelle Filliat</b>. Their design is called <b>"This is Not a Zoo"</b>.',
+   'Their idea is a <b>lightweight, elevated pedestrian bridge</b> on stilts. It floats above the natural ground.',
+   'The bridge covers and connects many parts of Barcelona Zoo: the <b>veterinary school</b>, <b>laboratories</b>, <b>exhibition halls</b>, <b>conference centres</b>, and even biogas (methane) storage tanks.'],
+   w:['pedestrian','stilts','veterinary','laboratory'],q:'Why do you think it is called "This is Not a Zoo"?',a:'No fixed answer! Look at what the bridge connects: a vet school, labs, halls. It is more like a science and learning centre.'},
+  {t:'Bronze: Limit: Only for Visitors',pg:'Pages 12–14 (Chinese p.27–29)',sc:SC.bronze,p:[
+   'Third prize went to <b>four architects from Istanbul, Turkey</b>.',
+   'They say most zoo animals <b>cannot go back to the wild</b>, so the zoo is their only home. That means <b>humans</b>, not animals, should have their movement limited.',
+   'Their plan removes cage-like enclosures. Animals <b>roam freely</b> in spaces that copy their natural habitats. Visitors stay on a long, winding, <b>elevated walkway</b> and watch from a safe distance.',
+   'Only species that suit the <b>local climate</b> would live there, so the animals live as close to nature as possible.',
+   'The design is called <b>"Limit: Only for Visitors"</b>. There are <b>six kinds of bridge sections</b> made of steel and wood, such as "Low Mesh Protection", "High Protection" and "Low Unprotected". The height of each part fits the animals\' size and behaviour.',
+   'The team compared today\'s zoo with their idea. The borders, limits, routes and buildings are all different.'],
+   w:['limit','roam','walkway','climate'],q:'In this design, who has more freedom: the animals or the visitors?',a:'The animals! The visitors are the ones with limits.'},
+  {t:'Eden 2.0',pg:'Page 15 (Chinese p.30)',sc:SC.eden,p:[
+   'The journal ends with <b>"Eden 2.0"</b>. It comes from an article by <b>Zhiwei Hu</b> about animals in Christian belief.',
+   'He describes the idea of a <b>"New Creation"</b>. Many Christians believe the "New Heaven and New Earth" will be like a restored <b>Garden of Eden</b>.',
+   'Like humans, animals are also waiting to be saved. A writer named <b>Alcorn</b> suggests God will do three things: create <b>brand-new animals</b>; give animals that suffered on Earth bodies that live forever (maybe by <b>re-creating</b> them); or make a <b>mix</b> of new and restored animals.',
+   'The vision is humans and animals living together in <b>harmony</b>. The journal ends by asking: in a New Eden, how could animals be left out?',
+   '<b>Remember:</b> this part is a religious belief, not science.'],
+   w:['creation','harmony','restore','belief'],q:'In this idea, how might animals exist in the New Heaven and New Earth?',a:'They would be recreated or brought back to life. (Worksheet Q2: B)'}
+ ];
+ CH.forEach((c,i)=>need('z0','z0-c'+i));
+ const R=el('div',{class:'reader'});body.appendChild(R);
+ const dots=el('div',{class:'rd-dots',role:'group','aria-label':'Chapters'});
+ const card=el('div',{class:'rd-card'});
+ const nav=el('div',{class:'rd-nav'});const prev=el('button',{class:'btn alt'},'◀ Back'),next=el('button',{class:'btn blue'},'Next page ▶');nav.append(prev,next);
+ R.append(dots,card,nav);
+ let cur=Math.min(store.get('zq-page',0),CH.length-1);
+ CH.forEach((c,i)=>{const d=el('button',{class:'rd-dot','aria-label':'Chapter '+(i+1)+': '+c.t},String(i+1));d.onclick=()=>show(i);dots.appendChild(d)});
+ function drawDots(){[...dots.children].forEach((d,i)=>{d.classList.toggle('read',solved.has('z0-c'+i));d.setAttribute('aria-current',i===cur?'true':'false')})}
+ function show(i){cur=i;store.set('zq-page',i);const c=CH[i];
+  card.innerHTML='<div class="rd-scene"><svg viewBox="0 0 240 140" aria-hidden="true">'+c.sc+'</svg></div>';
+  const tx=el('div',{class:'rd-text'});
+  tx.innerHTML='<div class="row" style="gap:6px"><span class="rd-pg">Chapter '+(i+1)+' of '+CH.length+'</span><span class="rd-pg alt">Journal '+c.pg+'</span></div><h3>'+c.t+'</h3>'+c.p.map(x=>'<p>'+x+'</p>').join('');
+  const words=el('div',{class:'chips'});c.w.forEach(w=>words.appendChild(el('button',{class:'chip','data-say':w},w)));
+  const listen=el('button',{class:'btn'},'Read it to me');listen.onclick=()=>{const t=c.t+'. '+c.p.map(x=>x.replace(/<[^>]+>/g,'')).join(' ');if(!say(t))toast('No voice on this device. Read it yourself!')};
+  const stop=el('button',{class:'btn alt'},'Stop');stop.onclick=()=>{try{speechSynthesis.cancel()}catch(e){}};
+  const qbox=el('div',{class:'rd-q'});qbox.innerHTML='<p class="q">Pip asks: '+c.q+'</p>';const ans=el('p',{class:'fb ok'},c.a);ans.hidden=true;
+  const show1=el('button',{class:'chip'},'Show answer');show1.onclick=()=>{ans.hidden=!ans.hidden;show1.textContent=ans.hidden?'Show answer':'Hide answer'};qbox.append(show1,ans);
+  const done=el('button',{class:'btn'+(solved.has('z0-c'+i)?'':' alt')},solved.has('z0-c'+i)?'Read ✓':'I read this page!');
+  done.onclick=()=>{if(solve('z0-c'+i,'z0')){good(i===CH.length-1?'You finished the whole journal!':'+10 XP. Next page!')}done.textContent='Read ✓';done.classList.remove('alt');drawDots()};
+  tx.append(el('p',{class:'q',style:'margin-top:4px'},'Key words (tap to hear):'),words,el('div',{class:'row'}).appendChild(listen).parentNode,qbox,done);
+  tx.querySelector('.row:last-of-type');
+  const rr=tx.querySelectorAll('.row');rr[rr.length-1].appendChild(stop);
+  card.appendChild(tx);prev.disabled=i===0;next.textContent=i===CH.length-1?'Back to start ▶':'Next page ▶';drawDots()}
+ prev.onclick=()=>{if(cur>0){show(cur-1);R.scrollIntoView({block:'start'})}};
+ next.onclick=()=>{show((cur+1)%CH.length);R.scrollIntoView({block:'start'})};
+ show(cur);
+ body.appendChild(pipSay('Finished reading? Go to <b>Zone 1</b> and play the games. They use everything you just read!'));
+})();
+
+/* ================= final ================= */
+ZONES.forEach(z=>checkZone(z.id));
+drawHud();groupCheck();
+const hb=$('#heroBubble');const HB=['Hi Ham! I\'m Pip, a Humboldt penguin. I\'m your tour guide!','Start with Story Time: read the journal first!','Earn XP and collect all 9 badges!','Fun fact: my cousins live in Sweden. Zone 1!'];let hbi=0;
+setInterval(()=>{hbi=(hbi+1)%HB.length;hb.textContent=HB[hbi]},5000);
+})();
+</script>
+
+</body>
+</html>
