@@ -1,0 +1,157 @@
+{
+ "title": "今日重點：6號幹線下月全開 八達通遇襲防資安風險",
+ "summary": "香港6號幹線中九龍繞道將於12月6日全線通車，大幅縮短跨區車程；八達通系統遭受網絡攻擊致數千客戶資料受影響，提醒企業防範資安漏洞。國際方面，美國貿易數據反映AI基建進口需求強勁，同時擬擴大晶片出口限制。",
+ "sections": [
+  {
+   "topic": "香港",
+   "items": [
+    {
+     "headline": "6號幹線中九龍繞道下月全線開通 將軍澳至油麻地車程大幅縮短",
+     "analysis": "中九龍繞道九龍灣段將於12月6日啟用，標誌著6號幹線全線通車，行經車輛將劃一以「易通行」收取8元。土木工程拓展署預計，全線通車後在繁忙時間由將軍澳前往油麻地的車程將由65分鐘大幅減至12分鐘。此幹道能顯著紓緩九龍區東西交通擠塞，提升跨區物流與居民出行效率。",
+     "sources": [
+      {
+       "title": "Race to pave way for smooth run as Route 6 fully opens",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879579-20261128.htm"
+      },
+      {
+       "title": "中九龍繞道九龍灣段下月開通 逾80個臨時路牌擺放在分叉路口等",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879571-20261128.htm"
+      },
+      {
+       "title": "土拓署料6號幹線全線投入服務後約兩成跨區車輛會使用新路",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879568-20261128.htm"
+      },
+      {
+       "title": "Evening News on TV32 - Nov 27",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879528-20261127.htm"
+      }
+     ]
+    },
+    {
+     "headline": "八達通遭網絡攻擊洩漏逾7500名客戶與商戶資料",
+     "analysis": "八達通卡公司證實系統遭網絡攻擊，約7,500名客戶的個人資料（包括姓名、相片及部分自動增值資料）及約2.2萬名商戶資料受影響，但強調卡內餘額及金融交易安全。警方與零售業界亦相繼警告 API 安全漏洞及 AI 驅動網絡攻擊帶來的危機。這反映本港公私營機構在數碼轉型過程中，必須進一步強化網絡安全防禦機制。",
+     "sources": [
+      {
+       "title": "Personal data of 7,500 Octopus users leaked",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879534-20261127.htm"
+      },
+      {
+       "title": "八達通系統遭網絡攻擊 涉約7500客戶及2.2萬商戶資料",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879531-20261127.htm"
+      },
+      {
+       "title": "Police, retailers warn of data breaches and scams",
+       "source": "RTHK English",
+       "link": "https://news.rthk.hk/rthk/en/component/k2/1879484-20261127.htm"
+      },
+      {
+       "title": "八達通遭網絡攻擊 約 7,500 客戶及 2.2 萬商戶資料受影響",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/11/27/octopus-cyberattack-customer-and-merchant-data/tech-secure/?utm_source=rss&utm_medium=rss&utm_campaign=octopus-cyberattack-customer-and-merchant-data"
+      }
+     ]
+    },
+    {
+     "headline": "亞投行確認在港設立辦公室 許正宇指歐盟對本港代幣化政策高度關注",
+     "analysis": "國家財政部與亞投行簽署協定，確定在香港開設境外功能相對齊全的辦公室，當局正就相關法律修訂展開商討。此外，財經事務及庫務局局長許正宇透露，歐盟對香港在綠色金融及代幣化政策法規方面的經驗深感興趣。這展現了香港作為國際金融中心，在推進實體項目融資及創新虛擬資產規制上的雙重優勢。",
+     "sources": [
+      {
+       "title": "許正宇稱亞投行落戶香港意義大 當局與亞投行商討細節涉法律修訂",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879578-20261128.htm"
+      },
+      {
+       "title": "許正宇稱歐盟對本港代幣化政策法規很有興趣 想向香港取經",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879570-20261128.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "AI・LLM",
+   "items": [
+    {
+     "headline": "美國擬禁止向海外華資數據中心供應英偉達晶片",
+     "analysis": "消息指出美國政府正計劃擴大對先進 AI 晶片的出口管制，禁止將英偉達晶片供應給涉及華資的海外數據中心。此舉旨在封堵中資企業通過海外雲端設施獲取算力資源的漏洞。對於在全球布局算力設施的科技企業與數據中心運營商而言，將正面臨更高的合規與地緣政治風險。",
+     "sources": [
+      {
+       "title": "AI｜美國禁供英偉達晶片 封殺海外數據中心涉華業務",
+       "source": "am730",
+       "link": "https://news.google.com/rss/articles/CBMi4wJBVV95cUxPMzdPNjNhejdWOTlmNldRUHNSRTBTWXNPLV9LNTJTSTlWQnJsRG5abVpRVzVtWlNMcmt6U0kzbDVqN1JSTDBwUmRXQUVHVDBSaDdrUk01S00wdzgtdEhWakd2TkIyRTNtb3NoT2V0a2ZkanphUGhSSWE0Z2ZCcHBSQ0RMQTBRazZSV2NQeTk5Wk9zM1VKSF9vNUU4enlla1ppX0xrMklCN1g5QW9qWWxLekZUbTB4eFN1T09BMVRhYW1SazI4elF5d0JPRjdKaDlJamJEVHRvdjgyYWVaQWpXTDRIelZ3cW1QdnplWGRBTTlVZ05QTEtDS1pZTUhNNGc0Y0JBUUZCOWwwYjZyVkdOWFMzS2pMQ25ydGx0STJucjBqSjRiMmpXT0R2T0liTk83U2N2amNsanJWRC1WVG9TdUtDcGQ4LU1fRzlkTGFYVXVWRWFXUWRMd21DWjdERkgxSkxn?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "IoT",
+   "items": [
+    {
+     "headline": "NB-IoT市場預測2030年達130億美元 漫遊商加速5G獨立組網與衛星物聯網整合",
+     "analysis": "最新市場報告顯示，窄帶物聯網（NB-IoT）市場年複合增長率達29.3%，預計2030年規模將達130.4億美元；同時物聯網漫遊供應商正積極布局5G獨立組網及衛星連線。這顯示智慧城市及跨國資產監控的需求強勁，物聯網設備將具備更廣泛且低延遲的連線能力。",
+     "sources": [
+      {
+       "title": "Narrow Band Internet Of Things (IoT) Market Value Expected To Grow At 29.3% CAGR, Reaching $13.04 Billion By 2030",
+       "source": "EIN News",
+       "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQcGlzUW1uZTZvdVloWUd2Q2V0OWtoaDU1RU9LRndQVDl1ajJlYXZNcUhZclp2V2ZoMVVKX1NLRXBwMjFTdWtsOXNBemp3V1pHOUlnTFpjUkhOVTg2NGhkd3NpcmpPWkZQQjgtYXF5ODNHemZuS1JfOGhkNm1BVVdQOFNfTGw3RTA5V3Jha1dOdnJSRUJxOGcxUDRBbjI5bUYzY0YxRnFEbU9PeWtXclZBcmlacTMtYTZ1TW1YcUtUejF1X09oZy1wZWxaRlpiOV95RmxpUEFha01XY1BheXcyVF85Q1o?oc=5"
+      },
+      {
+       "title": "Roaming vendors gear up for 5G standalone and satellite connectivity",
+       "source": "IOT Insider",
+       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPaVdYMU8tVGdMUXFhWWNsVEc5emhfZ084ZUgtRGUyX0JxRjNOWGZOdnlQRTVMa05PVklpbWJYclp2LXBNR0pYX05yNTFialBiQnpKTndRajF5Q09iT2JHNXdHWEpMY09zU21JMkpLT3NmRV9hcndaREVRdFVFRGd1MDJvdUtvYTJWYkFKZ0xzZ1VLdEN1NnpBLXpDN05odk9Jd0lTTGluSjUxcGNZRHRyZjFzZC1xMmNjX25zX1Eyaw?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "科技",
+   "items": [
+    {
+     "headline": "Asgard EV 於柴灣啟用 720kW 超級充電站 提升本港電動車快充網絡",
+     "analysis": "Asgard EV 投資逾300萬港元於柴灣寶源中心設首個 720kW 旗艦超充站，提供8個充電車位，理想條件下最快可在15分鐘內完成指定電量充電。隨著本港電動車普及率提升，高功率快充基礎設施可有效解決車主充電等待時間過長的問題，為本港推動綠色交通提供強有力支撐。",
+     "sources": [
+      {
+       "title": "Asgard EV 柴灣啟用 720kW 超充站 設 8 個充電車位",
+       "source": "unwire.hk",
+       "link": "https://unwire.hk/2026/11/28/asgard-ev-chai-wan-720kw-fast-charging-station/life-tech/auto/?utm_source=rss&utm_medium=rss&utm_campaign=asgard-ev-chai-wan-720kw-fast-charging-station"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "topic": "財經",
+   "items": [
+    {
+     "headline": "美股半日市道指升近600點 AI基建需求推升美國貿易逆差",
+     "analysis": "感恩節假期後美股於周五半日市全線上揚，道指大升591點，晶片股反彈帶動納指升逾2.3%。同時，美國10月商品貿易逆差擴大近11%至1495億美元，主因是人工智慧基礎建設需求推動進口大幅增加。數據顯示市場對 AI 技術投資的需求依然強勁，繼續驅動全球供應鏈及資本市場走勢。",
+     "sources": [
+      {
+       "title": "美股半日市 道指高收591點 納指升逾2%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879557-20261128.htm"
+      },
+      {
+       "title": "美國10月商品貿易逆差擴大近11%",
+       "source": "香港電台",
+       "link": "https://news.rthk.hk/rthk/ch/component/k2/1879541-20261127.htm"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "takeaway": "今日焦點落在本港交通基建突破與資訊安全警訊。6號幹線全線通車將顯著優化九龍東西交通網絡，為市民及物流業帶來極大便利；然而八達通資料外洩事件則為企業數碼化轉型敲響警鐘。在AI技術與物聯網快速發展的背景下，香港企業在引入前端創新的同時，更需強化後端架構與資安防禦，以確保營運安全與用戶信任。",
+ "en_summary": "Hong Kong's Route 6 will fully open on December 6, cutting cross-district travel times significantly. Octopus reported a cyberattack affecting thousands of users, highlighting API security risks, while US tech stocks rallied led by strong demand for AI infrastructure.",
+ "date": "2026-11-28",
+ "model": "gemini-3.5-flash"
+}
